@@ -3,4 +3,5 @@ dist/
 .DS_Store
 coverage/
 *.tsbuildinfo
-
+apps/web/public/font/
+apps/web/public/soundfont/
