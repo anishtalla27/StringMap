@@ -96,6 +96,12 @@ final class FingeringEngineTests: XCTestCase {
         XCTAssertThrowsError(try FingeringEngine.optimize(melody([30]))) { error in
             XCTAssertEqual(error as? FingeringError, .unplayableNote(id: "n0", midi: 30))
         }
+        XCTAssertThrowsError(try FingeringEngine.optimize([
+            FingeringNote(id: "duplicate", midi: 60),
+            FingeringNote(id: "duplicate", midi: 62),
+        ])) { error in
+            XCTAssertEqual(error as? FingeringError, .duplicateNoteID("duplicate"))
+        }
     }
 
     func testCandidateOrderingMakesTiesDeterministic() throws {
@@ -175,6 +181,97 @@ final class FingeringEngineTests: XCTestCase {
         XCTAssertThrowsError(try FingeringEngine.positions(for: 64, capo: 21, maxFret: 20)) { error in
             XCTAssertEqual(error as? FingeringError, .invalidCapo(21))
         }
+    }
+
+    func testEveryCandidateProducesTheRequestedSoundingPitchAcrossTuningsAndCapos() throws {
+        let tunings: [GuitarTuning] = [.standard, .dropD, .dStandard, .halfStepDown, .dadgad,
+            try GuitarTuning(name: "Open G variant", openMIDIPitches: [62, 59, 55, 50, 43, 38])]
+        for tuning in tunings {
+            for capo in [0, 2, 5, 7] {
+                for midi in 38...88 {
+                    for position in try FingeringEngine.positions(
+                        for: midi,
+                        tuning: tuning,
+                        capo: capo,
+                        maxFret: 24
+                    ) {
+                        XCTAssertEqual(
+                            tuning.openMIDIPitches[position.string - 1] + capo + position.fret,
+                            midi,
+                            "\(tuning.name), capo \(capo), \(position)"
+                        )
+                        XCTAssertEqual(position.physicalFret, capo + position.fret)
+                    }
+                }
+            }
+        }
+    }
+
+    func testRepresentativePassagesRemainPlayableAndAuditable() throws {
+        let passages = [
+            [60, 62, 64, 65, 67, 69, 71, 72],             // major scale
+            [57, 59, 60, 62, 64, 65, 67, 69],             // minor scale
+            [40, 47, 52, 55, 59, 64, 59, 55],             // arpeggio
+            [60, 61, 62, 63, 64, 65, 66, 67],             // chromatic run
+            [40, 64, 43, 67, 45, 69],                     // large intervals
+            [64, 64, 64, 67, 64, 64],                     // repeated notes
+            [40, 41, 82, 83, 84],                         // low/high range
+        ]
+        for pitches in passages {
+            let result = try FingeringEngine.optimize(melody(pitches), options: .init(maxFret: 24))
+            XCTAssertEqual(result.steps.count, pitches.count)
+            XCTAssertEqual(result.debugLayers.count, pitches.count)
+            XCTAssertEqual(result.metrics.totalFretMovement,
+                zip(result.steps, result.steps.dropFirst()).reduce(0) {
+                    $0 + abs($1.0.position.physicalFret - $1.1.position.physicalFret)
+                })
+            XCTAssertEqual(result.metrics.maximumPhysicalFret,
+                result.steps.map(\.position.physicalFret).max())
+        }
+    }
+
+    func testCandidateDiagnosticsCompareCompleteRoutesAndExplainLocks() throws {
+        let notes = melody([60, 64, 67])
+        let unlocked = try FingeringEngine.optimize(notes)
+        for (index, layer) in unlocked.debugLayers.enumerated() {
+            XCTAssertEqual(layer.candidates.count, unlocked.steps[index].candidateCount)
+            XCTAssertEqual(layer.candidates.filter(\.selected).count, 1)
+            let cheapestRoute = try XCTUnwrap(layer.candidates.compactMap(\.bestPathCost).min())
+            XCTAssertEqual(cheapestRoute, unlocked.totalCost, accuracy: 0.000001)
+            XCTAssertTrue(layer.candidates.filter { !$0.selected }.allSatisfy { $0.rejectionReason != nil })
+        }
+
+        let lock = try XCTUnwrap(try FingeringEngine.positions(for: 64).last)
+        let locked = try FingeringEngine.optimize(notes, options: .init(lockedPositions: ["n1": lock]))
+        let lockedLayer = locked.debugLayers[1]
+        XCTAssertEqual(lockedLayer.candidates.filter(\.selected).map(\.position), [lock])
+        XCTAssertTrue(lockedLayer.candidates.filter { $0.position != lock }.allSatisfy {
+            $0.rejectionReason?.contains("locked") == true
+        })
+    }
+
+    func testDifficultyProfilesMakeDifferentMeasurableTradeoffs() throws {
+        let notes = melody([40, 43, 59, 57, 59, 61, 62, 59, 55])
+        let results = try Dictionary(uniqueKeysWithValues: FingeringProfile.allCases.map {
+            ($0, try FingeringEngine.optimize(notes, options: .init(profile: $0)))
+        })
+        let uniquePaths = Set(results.values.map { $0.steps.map(\.position) })
+        // Some weight sets legitimately agree on a globally dominant route;
+        // this passage must still expose at least two distinct tradeoffs.
+        XCTAssertGreaterThanOrEqual(uniquePaths.count, 2)
+        let beginner = try XCTUnwrap(results[.beginner])
+        let performance = try XCTUnwrap(results[.performance])
+        XCTAssertLessThanOrEqual(beginner.metrics.averagePhysicalFret, performance.metrics.averagePhysicalFret)
+        XCTAssertGreaterThanOrEqual(beginner.metrics.openStrings, performance.metrics.openStrings)
+    }
+
+    func testLongMonophonicPassageOptimizesWithinInteractiveBudget() throws {
+        let pitches = (0..<2_000).map { 55 + ($0 % 18) }
+        let started = ContinuousClock.now
+        let result = try FingeringEngine.optimize(melody(pitches))
+        let elapsed = started.duration(to: .now)
+        XCTAssertEqual(result.steps.count, 2_000)
+        XCTAssertLessThan(elapsed, .seconds(2))
     }
 
     private func melody(_ pitches: [Int]) -> [FingeringNote] {

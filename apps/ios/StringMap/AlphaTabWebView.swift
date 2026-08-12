@@ -64,6 +64,7 @@ final class AlphaTabController {
         isPlayerReady = false
         isPlaying = false
         cursorMilliseconds = 0
+        endMilliseconds = 0
         playbackStatus = "Preparing notation…"
     }
 

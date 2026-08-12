@@ -22,6 +22,11 @@ final class SongDocument {
     var lastPracticedPosition: Double
     var lockedPositionsData: Data
     var generatedArrangementState: String
+    var practiceSpeed: Double?
+    var loopStartMeasure: Int?
+    var loopEndMeasure: Int?
+    var metronomeEnabled: Bool?
+    var countInEnabled: Bool?
 
     init(
         id: UUID = UUID(),
@@ -48,6 +53,11 @@ final class SongDocument {
         lastPracticedPosition = 0
         lockedPositionsData = Self.encode([String: GuitarPosition]())
         generatedArrangementState = "Ready"
+        practiceSpeed = 1
+        loopStartMeasure = nil
+        loopEndMeasure = nil
+        metronomeEnabled = defaults.bool(forKey: "defaultMetronome")
+        countInEnabled = false
     }
 
     var tuningPreset: GuitarTuningPreset {
@@ -79,7 +89,12 @@ final class SongDocument {
             maxFret: maxFret,
             transposition: transposition,
             lastPositionMilliseconds: lastPracticedPosition,
-            lockedPositions: lockedPositions
+            lockedPositions: lockedPositions,
+            playbackSpeed: practiceSpeed ?? 1,
+            loopStartMeasure: loopStartMeasure,
+            loopEndMeasure: loopEndMeasure,
+            metronomeEnabled: metronomeEnabled ?? false,
+            countInEnabled: countInEnabled ?? false
         )
     }
 
@@ -101,6 +116,11 @@ final class SongDocument {
         transposition = model.transposition
         lastPracticedPosition = model.player.cursorMilliseconds
         lockedPositionsData = Self.encode(model.lockedPositionsForPersistence)
+        practiceSpeed = model.player.playbackSpeed
+        loopStartMeasure = model.loopStartMeasure
+        loopEndMeasure = model.loopEndMeasure
+        metronomeEnabled = model.player.isMetronomeEnabled
+        countInEnabled = model.player.isCountInEnabled
         updatedAt = .now
     }
 

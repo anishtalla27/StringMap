@@ -6,6 +6,8 @@ struct WorkspaceView: View {
     @Bindable var model: AppModel
     let save: () -> Void
     @State private var isPracticePresented = false
+    @State private var isFretboardExpanded = false
+    @AppStorage("leftHanded") private var leftHanded = false
 
     var body: some View {
         VStack(spacing: 8) {
@@ -16,7 +18,8 @@ struct WorkspaceView: View {
                     capo: result.fingering.capo,
                     maxFret: result.fingering.maxFret,
                     active: model.activeStep?.position,
-                    upcoming: upcomingPosition(in: result)
+                    upcoming: upcomingPosition(in: result),
+                    leftHanded: leftHanded
                 )
                 .frame(height: 124)
                 .contentShape(Rectangle())
@@ -24,11 +27,21 @@ struct WorkspaceView: View {
                     model.editingNoteID = model.activeStep?.note.id
                 }
                 .accessibilityHint("Tap to choose another valid fingering for the current note")
+                .overlay(alignment: .topTrailing) {
+                    Button("Expand fretboard", systemImage: "arrow.up.left.and.arrow.down.right") {
+                        isFretboardExpanded = true
+                    }
+                    .labelStyle(.iconOnly)
+                    .buttonStyle(.bordered)
+                    .padding(4)
+                }
             }
             AlphaTabWebView(controller: model.player)
                 .accessibilityIdentifier("notationView")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(.systemBackground))
+                // alphaTab's engraving palette is designed as dark ink on paper.
+                // Keep the score readable as a light document in both app themes.
+                .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .overlay { RoundedRectangle(cornerRadius: 12).stroke(.separator, lineWidth: 0.5) }
         }
@@ -50,6 +63,23 @@ struct WorkspaceView: View {
         }
         .sheet(isPresented: $isPracticePresented) {
             PracticeSettingsView(model: model)
+        }
+        .sheet(isPresented: $isFretboardExpanded) {
+            NavigationStack {
+                if let result = model.pipelineResult {
+                    FretboardView(
+                        tuning: result.fingering.tuning,
+                        capo: result.fingering.capo,
+                        maxFret: result.fingering.maxFret,
+                        active: model.activeStep?.position,
+                        upcoming: upcomingPosition(in: result),
+                        leftHanded: leftHanded
+                    )
+                    .frame(minHeight: 260)
+                    .padding()
+                }
+            }
+            .presentationDetents([.medium])
         }
         .sheet(isPresented: Binding(
             get: { model.editingNoteID != nil },
@@ -146,6 +176,7 @@ private struct TransportBar: View {
         VStack(spacing: 7) {
             HStack(spacing: 10) {
                 Text(formatTime(model.player.cursorMilliseconds))
+                    .accessibilityIdentifier("playbackTime")
                 Slider(value: Binding(
                     get: { model.player.endMilliseconds > 0 ? model.player.cursorMilliseconds / model.player.endMilliseconds : 0 },
                     set: { model.seek(fraction: $0) }
@@ -155,11 +186,17 @@ private struct TransportBar: View {
             }
             .font(.caption.monospacedDigit())
 
-            HStack(spacing: 18) {
+            HStack(spacing: 14) {
                 Button("Stop", systemImage: "stop.fill") { model.player.stop() }
+                    .labelStyle(.iconOnly)
                     .buttonStyle(.borderless)
                     .disabled(!model.player.isPlayerReady)
                     .accessibilityIdentifier("stopPlayback")
+
+                Button("Jump back five seconds", systemImage: "gobackward.5") { model.jumpBackward() }
+                    .labelStyle(.iconOnly)
+                    .buttonStyle(.borderless)
+                    .disabled(!model.player.isPlayerReady)
 
                 Button(model.player.isPlaying ? "Pause" : "Play", systemImage: model.player.isPlaying ? "pause.fill" : "play.fill") {
                     model.player.playPause()
@@ -171,6 +208,13 @@ private struct TransportBar: View {
                 .disabled(!model.player.isPlayerReady)
                 .accessibilityIdentifier("playPause")
 
+                Button("Loop current measure", systemImage: model.player.isLooping ? "repeat.1.circle.fill" : "repeat.1") {
+                    model.loopCurrentMeasure()
+                }
+                .labelStyle(.iconOnly)
+                .buttonStyle(.borderless)
+                .disabled(model.currentMeasureIndex == nil)
+
                 Button(action: showPractice) {
                     HStack(spacing: 4) {
                         Image(systemName: model.player.isLooping ? "repeat.circle.fill" : "speedometer")
@@ -178,17 +222,14 @@ private struct TransportBar: View {
                     }
                 }
                 .buttonStyle(.borderless)
-
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(model.player.playbackStatus).font(.caption.weight(.medium)).lineLimit(1)
-                    Text(formatTime(model.player.cursorMilliseconds))
-                        .font(.caption2.monospacedDigit())
-                        .foregroundStyle(.secondary)
-                        .accessibilityIdentifier("playbackTime")
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .accessibilityIdentifier("playbackStatus")
             }
+            .frame(maxWidth: .infinity)
+
+            Text(model.player.playbackStatus)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .accessibilityIdentifier("playbackStatus")
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
@@ -207,11 +248,12 @@ private struct FretboardView: View {
     let maxFret: Int
     let active: GuitarPosition?
     let upcoming: GuitarPosition?
+    var leftHanded = false
 
     var body: some View {
         GeometryReader { geometry in
             let leftInset = 34.0
-            let rightInset = 8.0
+            let rightInset = 34.0
             let topInset = 14.0
             let bottomInset = 10.0
             let boardWidth = max(1, geometry.size.width - leftInset - rightInset)
@@ -229,9 +271,10 @@ private struct FretboardView: View {
                     }
                     for fret in 0...visibleFrets {
                         let x = leftInset + Double(fret) * boardWidth / Double(visibleFrets)
+                        let renderedX = leftHanded ? leftInset + boardWidth - (x - leftInset) : x
                         var path = Path()
-                        path.move(to: CGPoint(x: x, y: topInset))
-                        path.addLine(to: CGPoint(x: x, y: topInset + boardHeight))
+                        path.move(to: CGPoint(x: renderedX, y: topInset))
+                        path.addLine(to: CGPoint(x: renderedX, y: topInset + boardHeight))
                         context.stroke(path, with: .color(fret == 0 ? .primary : .secondary.opacity(0.4)), lineWidth: fret == 0 ? 2 : 0.7)
                     }
                 }
@@ -240,7 +283,17 @@ private struct FretboardView: View {
                     Text(tuning.pitchNames[index].replacingOccurrences(of: "#", with: "♯"))
                         .font(.caption2.monospaced())
                         .foregroundStyle(.secondary)
-                        .position(x: 15, y: topInset + Double(index) * boardHeight / 5)
+                        .position(x: leftHanded ? geometry.size.width - 15 : 15, y: topInset + Double(index) * boardHeight / 5)
+                }
+
+                ForEach([0, 3, 5, 7, 9, 12, 15, 17, 19, 21, 24].filter { $0 <= visibleFrets }, id: \.self) { fret in
+                    Text(String(fret + capo))
+                        .font(.system(size: 8, design: .rounded))
+                        .foregroundStyle(.tertiary)
+                        .position(
+                            x: fretX(fret, left: leftInset, width: boardWidth, frets: visibleFrets),
+                            y: topInset + boardHeight + 7
+                        )
                 }
 
                 if let upcoming, upcoming.fret <= visibleFrets {
@@ -253,7 +306,7 @@ private struct FretboardView: View {
                 Text(capo > 0 ? "Capo \(capo)" : "Open")
                     .font(.caption2.weight(.semibold))
                     .foregroundStyle(.secondary)
-                    .position(x: leftInset + 28, y: 5)
+                    .position(x: leftInset + boardWidth / 2, y: 5)
             }
         }
         .padding(.vertical, 3)
@@ -271,15 +324,21 @@ private struct FretboardView: View {
         top: Double,
         frets: Int
     ) -> some View {
-        let x = position.fret == 0
+        let naturalX = position.fret == 0
             ? left
             : left + (Double(position.fret) - 0.5) * boardWidth / Double(frets)
+        let x = leftHanded ? left + boardWidth - (naturalX - left) : naturalX
         let y = top + Double(position.string - 1) * boardHeight / 5
         return Circle()
             .fill(color)
             .overlay { Text(String(position.fret)).font(.caption2.bold()).foregroundStyle(.white) }
             .frame(width: 24, height: 24)
             .position(x: x, y: y)
+    }
+
+    private func fretX(_ fret: Int, left: Double, width: Double, frets: Int) -> Double {
+        let natural = left + Double(fret) * width / Double(frets)
+        return leftHanded ? left + width - (natural - left) : natural
     }
 }
 
@@ -303,6 +362,21 @@ private struct PracticeSettingsView: View {
                     if let tempo = model.pipelineResult?.score.tempo {
                         LabeledContent("Effective tempo", value: "\(Int((tempo * model.player.playbackSpeed).rounded())) BPM")
                     }
+                    Button("Reset to score tempo", systemImage: "arrow.counterclockwise") {
+                        model.setPlaybackSpeed(1)
+                    }
+                    .disabled(model.player.playbackSpeed == 1)
+                }
+
+                Section("Navigation") {
+                    ControlGroup {
+                        Button("Previous measure", systemImage: "backward.end") { model.previousMeasure() }
+                        Button("Jump back five seconds", systemImage: "gobackward.5") { model.jumpBackward() }
+                        Button("Next measure", systemImage: "forward.end") { model.nextMeasure() }
+                    }
+                    Button("Loop current measure", systemImage: "repeat.1") { model.loopCurrentMeasure() }
+                    Button("Restart loop", systemImage: "arrow.uturn.backward") { model.restartLoop() }
+                        .disabled(model.loopStartMeasure == nil)
                 }
 
                 Section("A/B loop") {
@@ -499,7 +573,7 @@ private struct ArrangementPickerView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach([FingeringProfile.beginner, .balanced, .minimumMovement], id: \.self) { profile in
+                ForEach(FingeringProfile.allCases, id: \.self) { profile in
                     if let result = model.arrangements[profile] {
                         Button { model.useArrangement(profile); dismiss() } label: {
                             VStack(alignment: .leading, spacing: 7) {
@@ -511,7 +585,7 @@ private struct ArrangementPickerView: View {
                                 let metrics = result.fingering.metrics
                                 Text("Difficulty \(Int(metrics.estimatedDifficulty.rounded())) · \(metrics.positionShifts) shifts · \(metrics.stringChanges) string changes")
                                     .font(.subheadline).foregroundStyle(.secondary)
-                                Text("Average fret \(metrics.averagePhysicalFret, format: .number.precision(.fractionLength(1))) · largest jump \(metrics.largestStretch)")
+                                Text("Movement \(metrics.totalFretMovement) · average fret \(metrics.averagePhysicalFret, format: .number.precision(.fractionLength(1))) · max \(metrics.maximumPhysicalFret)")
                                     .font(.caption).foregroundStyle(.secondary)
                             }
                             .padding(.vertical, 4)

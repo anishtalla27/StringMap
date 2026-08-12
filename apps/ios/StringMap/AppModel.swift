@@ -23,6 +23,7 @@ final class AppModel {
     var editingNoteID: String?
     var loopStartMeasure: Int?
     var loopEndMeasure: Int?
+    private(set) var lastOptimizationMilliseconds = 0.0
     var currentSongID: UUID?
     let player = AlphaTabController()
 
@@ -32,6 +33,14 @@ final class AppModel {
 
     init(loadSample: Bool = true) {
         guard loadSample else { return }
+        let defaults = UserDefaults.standard
+        profile = defaults.string(forKey: "defaultProfile")
+            .flatMap(FingeringProfile.init(rawValue:)) ?? .balanced
+        tuningPreset = defaults.string(forKey: "defaultTuning")
+            .flatMap(GuitarTuningPreset.init(rawValue:)) ?? .standard
+        capo = defaults.object(forKey: "defaultCapo") as? Int ?? 0
+        maxFret = defaults.object(forKey: "defaultFrets") as? Int ?? 20
+        player.setMetronome(enabled: defaults.bool(forKey: "defaultMetronome"))
         let testXML = ProcessInfo.processInfo.environment["STRINGMAP_UI_TEST_XML_BASE64"]
             .flatMap { Data(base64Encoded: $0) }
         let bundledXML = Bundle.main.url(
@@ -103,7 +112,12 @@ final class AppModel {
         maxFret: Int = 20,
         transposition: Int = 0,
         lastPositionMilliseconds: Double = 0,
-        lockedPositions: [String: GuitarPosition] = [:]
+        lockedPositions: [String: GuitarPosition] = [:],
+        playbackSpeed: Double = 1,
+        loopStartMeasure: Int? = nil,
+        loopEndMeasure: Int? = nil,
+        metronomeEnabled: Bool = false,
+        countInEnabled: Bool = false
     ) {
         sourceData = data
         self.sourceName = sourceName
@@ -115,6 +129,11 @@ final class AppModel {
         self.maxFret = maxFret
         self.transposition = transposition
         self.lockedPositions = lockedPositions
+        self.loopStartMeasure = loopStartMeasure
+        self.loopEndMeasure = loopEndMeasure
+        player.setPlaybackSpeed(playbackSpeed)
+        player.setMetronome(enabled: metronomeEnabled)
+        player.setCountIn(enabled: countInEnabled)
         player.seek(milliseconds: lastPositionMilliseconds)
         process(data)
     }
@@ -122,7 +141,11 @@ final class AppModel {
     func selectProfile(_ newProfile: FingeringProfile) {
         guard profile != newProfile else { return }
         profile = newProfile
-        reprocess()
+        if let cached = arrangements[newProfile] {
+            activate(cached)
+        } else {
+            reprocess()
+        }
     }
 
     func applyInstrument(
@@ -239,6 +262,48 @@ final class AppModel {
         player.seek(milliseconds: player.endMilliseconds * min(1, max(0, fraction)))
     }
 
+    var currentMeasureIndex: Int? {
+        guard let score = pipelineResult?.score, !score.measures.isEmpty else { return nil }
+        let quarterPosition = player.cursorMilliseconds * score.tempo / 60_000
+        var start = 0.0
+        for measure in score.measures {
+            let end = start + Self.duration(of: measure)
+            if quarterPosition < end { return measure.index }
+            start = end
+        }
+        return score.measures.indices.last
+    }
+
+    func seekToMeasure(_ index: Int) {
+        guard let score = pipelineResult?.score, score.measures.indices.contains(index) else { return }
+        let startQuarters = score.measures.prefix(index).reduce(0) { $0 + Self.duration(of: $1) }
+        player.seek(milliseconds: startQuarters * 60_000 / score.tempo)
+    }
+
+    func previousMeasure() {
+        guard let currentMeasureIndex else { return }
+        seekToMeasure(max(0, currentMeasureIndex - 1))
+    }
+
+    func nextMeasure() {
+        guard let score = pipelineResult?.score, let currentMeasureIndex else { return }
+        seekToMeasure(min(score.measures.count - 1, currentMeasureIndex + 1))
+    }
+
+    func loopCurrentMeasure() {
+        guard let currentMeasureIndex else { return }
+        setLoop(startMeasure: currentMeasureIndex, endMeasure: currentMeasureIndex)
+    }
+
+    func restartLoop() {
+        guard let start = loopStartMeasure else { return }
+        seekToMeasure(start)
+    }
+
+    func jumpBackward(seconds: Double = 5) {
+        player.seek(milliseconds: max(0, player.cursorMilliseconds - seconds * 1_000))
+    }
+
     private var options: OptimizationOptions {
         OptimizationOptions(
             tuning: tuning,
@@ -256,6 +321,8 @@ final class AppModel {
 
     private func process(_ data: Data) {
         processingTask?.cancel()
+        // Cached paths are valid only for the exact tuning/capo/transposition/lock set.
+        arrangements = [:]
         isProcessing = true
         status = "Optimizing full passage…"
         let resumePosition = player.cursorMilliseconds
@@ -266,10 +333,11 @@ final class AppModel {
         processingTask = Task {
             do {
                 let output = try await Task.detached(priority: .userInitiated) {
+                    let started = ContinuousClock.now
                     let pipeline = StructuredScorePipeline()
                     let primary = try pipeline.run(musicXML: data, options: selectedOptions)
                     var alternatives: [FingeringProfile: PipelineResult] = [selectedOptions.profile: primary]
-                    for alternativeProfile in [FingeringProfile.beginner, .balanced, .minimumMovement] {
+                    for alternativeProfile in FingeringProfile.allCases {
                         try Task.checkCancellation()
                         guard alternatives[alternativeProfile] == nil else { continue }
                         var alternativeOptions = selectedOptions
@@ -279,14 +347,19 @@ final class AppModel {
                             options: alternativeOptions
                         )
                     }
-                    return ProcessingOutput(primary: primary, alternatives: alternatives)
+                    let elapsed = started.duration(to: .now)
+                    let components = elapsed.components
+                    let milliseconds = Double(components.seconds) * 1_000
+                        + Double(components.attoseconds) / 1_000_000_000_000_000
+                    return ProcessingOutput(primary: primary, alternatives: alternatives, milliseconds: milliseconds)
                 }.value
                 guard !Task.isCancelled else { return }
                 pipelineResult = output.primary
                 arrangements = output.alternatives
+                lastOptimizationMilliseconds = output.milliseconds
                 isProcessing = false
-                status = output.primary.score.warnings.first
-                    ?? "Ready · \(output.primary.fingering.steps.count) notes optimized"
+                let warning = output.primary.score.warnings.first.map { " · \($0)" } ?? ""
+                status = "Ready · \(output.primary.fingering.steps.count) notes · \(Int(output.milliseconds.rounded())) ms\(warning)"
                 player.queue(alphaTex: output.primary.alphaTex)
                 setLoop(startMeasure: loopStartMeasure, endMeasure: loopEndMeasure)
             } catch is CancellationError {
@@ -299,6 +372,16 @@ final class AppModel {
                 status = error.localizedDescription
             }
         }
+    }
+
+    private func activate(_ result: PipelineResult) {
+        let resumePosition = player.cursorMilliseconds
+        pipelineResult = result
+        status = "Ready · cached \(profile.displayName) arrangement"
+        player.prepareForNewScore()
+        player.seek(milliseconds: resumePosition)
+        player.queue(alphaTex: result.alphaTex)
+        setLoop(startMeasure: loopStartMeasure, endMeasure: loopEndMeasure)
     }
 
     private static func duration(of measure: NormalizedMeasure) -> Double {
@@ -316,4 +399,5 @@ final class AppModel {
 private struct ProcessingOutput: Sendable {
     let primary: PipelineResult
     let alternatives: [FingeringProfile: PipelineResult]
+    let milliseconds: Double
 }

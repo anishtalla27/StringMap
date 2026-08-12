@@ -1,4 +1,6 @@
 import XCTest
+import FingeringEngine
+import ScorePipeline
 @testable import StringMap
 
 final class AlphaTabBridgeTests: XCTestCase {
@@ -50,6 +52,7 @@ final class AlphaTabBridgeTests: XCTestCase {
         XCTAssertNotNil(Bundle.main.url(forResource: "bridge", withExtension: "js", subdirectory: "AlphaTab"))
         XCTAssertNotNil(Bundle.main.url(forResource: "alphaTab.min", withExtension: "js", subdirectory: "AlphaTab"))
         XCTAssertNotNil(Bundle.main.url(forResource: "sonivox", withExtension: "sf2", subdirectory: "AlphaTab/soundfont"))
+        XCTAssertNotNil(Bundle.main.url(forResource: "PrivacyInfo", withExtension: "xcprivacy"))
     }
 
     func testBridgeImplementsRealPracticeCommands() throws {
@@ -60,6 +63,46 @@ final class AlphaTabBridgeTests: XCTestCase {
         XCTAssertTrue(bridge.contains("api.isLooping"))
         XCTAssertTrue(bridge.contains("api.metronomeVolume"))
         XCTAssertTrue(bridge.contains("api.countInVolume"))
+    }
+
+    func testNotationPageKeepsReadablePaperContrastInDarkMode() throws {
+        let url = try XCTUnwrap(Bundle.main.url(
+            forResource: "index",
+            withExtension: "html",
+            subdirectory: "AlphaTab"
+        ))
+        let page = try String(contentsOf: url, encoding: .utf8)
+        XCTAssertTrue(page.contains("color-scheme: light"))
+        XCTAssertTrue(page.contains("background: #fff"))
+    }
+
+    func testBundledDemoScoresCompleteTheStructuredPipelineWithCorrectPitchMath() throws {
+        let demos: [(String, GuitarTuning)] = [
+            ("known-melody", .standard),
+            ("beginner-scale", .standard),
+            ("profile-contrast", .standard),
+            ("drop-d-study", .dropD),
+            ("chromatic-position-study", .standard),
+        ]
+        for (resource, tuning) in demos {
+            let url = try XCTUnwrap(Bundle.main.url(
+                forResource: resource,
+                withExtension: "musicxml",
+                subdirectory: "Samples"
+            ))
+            let data = try Data(contentsOf: url)
+            let result = try StructuredScorePipeline().run(
+                musicXML: data,
+                options: .init(tuning: tuning, maxFret: 24)
+            )
+            XCTAssertFalse(result.fingering.steps.isEmpty, resource)
+            XCTAssertTrue(result.alphaTex.contains("\\staff{score tabs}"), resource)
+            for step in result.fingering.steps {
+                let soundingPitch = tuning.openMIDIPitches[step.position.string - 1]
+                    + result.fingering.capo + step.position.fret
+                XCTAssertEqual(soundingPitch, step.note.midi, resource)
+            }
+        }
     }
 
     @MainActor

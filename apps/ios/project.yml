@@ -40,12 +40,16 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMap
         PRODUCT_NAME: StringMap
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
         GENERATE_INFOPLIST_FILE: true
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         SUPPORTS_MACCATALYST: false
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: false
         INFOPLIST_KEY_CFBundleDisplayName: StringMap
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
         INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: true
         INFOPLIST_KEY_UILaunchScreen_Generation: true
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true

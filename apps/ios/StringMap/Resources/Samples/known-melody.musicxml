@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <score-partwise version="4.0">
   <work><work-title>Known melody</work-title></work>
+  <identification><creator type="composer">StringMap original study</creator></identification>
   <part-list><score-part id="P1"><part-name>Lead</part-name></score-part></part-list>
   <part id="P1">
     <measure number="1">

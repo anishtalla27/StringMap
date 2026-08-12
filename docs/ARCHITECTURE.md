@@ -33,7 +33,7 @@ The model preserves stable IDs, title/composer, measures, time/key metadata, eve
 
 ### Exact layered-graph optimization
 
-Greedy choices are locally attractive and globally poor when an upcoming run favors another string. With at most six candidates per note, exact dynamic programming is simpler and fast enough. Each table cell stores total cost and a predecessor; backtracking yields the minimum path and its explanation. Complexity is `O(notes × candidates²)`.
+Greedy choices are locally attractive and globally poor when an upcoming run favors another string. With at most six candidates per note, exact dynamic programming is simpler and fast enough. Each table cell stores total cost and a predecessor; backtracking yields the minimum path. A reverse dynamic-programming pass computes the cheapest suffix from each candidate. Prefix plus suffix therefore gives the best complete score route through every candidate—not merely a local heuristic—so the debug trace can quantify why an alternative lost. Complexity remains `O(notes × candidates²)`.
 
 ### Real tuning and capo geometry
 
@@ -53,7 +53,7 @@ Profiles are weight sets, not UI labels:
 
 ### Locked constraints and alternatives
 
-A locked note reduces its candidate layer to the exact valid `GuitarPosition` selected by the user. Invalid locks fail explicitly after a tuning/capo/range change. The surrounding passage is solved normally, so reoptimization cannot move the lock. The app currently compares three independently optimized, measurable alternatives—Beginner, Balanced, and Minimum Movement—rather than inventing opaque ratings.
+A locked note reduces its candidate layer to the exact valid `GuitarPosition` selected by the user. Invalid locks fail explicitly after a tuning/capo/range change. The surrounding passage is solved normally, so reoptimization cannot move the lock. The app caches and compares all five independently optimized, measurable alternatives rather than inventing opaque ratings. Different profiles may legitimately agree when one route is globally dominant; the UI exposes weights and physical metrics so that agreement can be inspected rather than hidden.
 
 ### alphaTex as the alphaTab handoff
 
@@ -61,7 +61,7 @@ The optimizer controls the chosen string and fret. Generated alphaTex expresses 
 
 ### Local product state
 
-SwiftData persists source MusicXML, source metadata, instrument/profile settings, locked positions, arrangement summary, and last practice time. `AppModel` owns transient pipeline and playback state. Dynamic work runs outside the main actor and is cancelled when a newer profile or instrument request supersedes it.
+SwiftData persists source MusicXML, source metadata, instrument/profile settings, locked positions, arrangement summary, speed, loop range, metronome/count-in choices, and last practice time. `AppModel` owns transient pipeline and playback state. Dynamic work runs outside the main actor and is cancelled when a newer profile or instrument request supersedes it. Profile changes reuse cached arrangements for the current instrument and lock configuration; instrument or lock changes invalidate and rebuild the cache.
 
 ## OMR and chord gate
 

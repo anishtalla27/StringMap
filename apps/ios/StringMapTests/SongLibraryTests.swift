@@ -16,6 +16,11 @@ final class SongLibraryTests: XCTestCase {
         )
         document.capo = 3
         document.lastPracticedPosition = 4_250
+        document.practiceSpeed = 0.75
+        document.loopStartMeasure = 1
+        document.loopEndMeasure = 2
+        document.metronomeEnabled = true
+        document.countInEnabled = true
         writeContext.insert(document)
         try writeContext.save()
 
@@ -26,5 +31,10 @@ final class SongLibraryTests: XCTestCase {
         XCTAssertEqual(fetched.composer, "Test Composer")
         XCTAssertEqual(fetched.capo, 3)
         XCTAssertEqual(fetched.lastPracticedPosition, 4_250)
+        XCTAssertEqual(fetched.practiceSpeed, 0.75)
+        XCTAssertEqual(fetched.loopStartMeasure, 1)
+        XCTAssertEqual(fetched.loopEndMeasure, 2)
+        XCTAssertEqual(fetched.metronomeEnabled, true)
+        XCTAssertEqual(fetched.countInEnabled, true)
     }
 }

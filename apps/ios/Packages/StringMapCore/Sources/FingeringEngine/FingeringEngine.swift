@@ -54,7 +54,12 @@ public enum FingeringEngine {
             )
         }
 
-        let layers = try notes.map { note in
+        var noteIDs = Set<String>()
+        for note in notes where !noteIDs.insert(note.id).inserted {
+            throw FingeringError.duplicateNoteID(note.id)
+        }
+
+        let allLayers = try notes.map { note in
             let allCandidates = try positions(
                 for: note.midi,
                 tuning: options.tuning,
@@ -64,6 +69,9 @@ public enum FingeringEngine {
             guard !allCandidates.isEmpty else {
                 throw FingeringError.unplayableNote(id: note.id, midi: note.midi)
             }
+            return allCandidates
+        }
+        let layers = try zip(notes, allLayers).map { note, allCandidates in
             guard let locked = options.lockedPositions[note.id] else { return allCandidates }
             let matches = allCandidates.filter { $0 == locked }
             guard !matches.isEmpty else { throw FingeringError.invalidLockedPosition(id: note.id) }
@@ -121,19 +129,23 @@ public enum FingeringEngine {
             throw FingeringError.noValidPath
         }
 
+        let suffixCosts = remainingCosts(
+            notes: notes,
+            layers: layers,
+            table: table,
+            weights: weights
+        )
+
         var selectedIndex = finalIndex
+        var selectedIndices = Array(repeating: 0, count: notes.count)
         var reversedSteps: [FingeringStep] = []
         for noteIndex in notes.indices.reversed() {
             let cell = table[noteIndex][selectedIndex]
+            selectedIndices[noteIndex] = selectedIndex
             reversedSteps.append(FingeringStep(
                 note: notes[noteIndex],
                 position: layers[noteIndex][selectedIndex],
-                candidateCount: try positions(
-                    for: notes[noteIndex].midi,
-                    tuning: options.tuning,
-                    capo: options.capo,
-                    maxFret: options.maxFret
-                ).count,
+                candidateCount: allLayers[noteIndex].count,
                 unary: cell.unary,
                 transition: cell.transition,
                 incrementalCost: cell.unary.total + (cell.transition?.total ?? 0),
@@ -143,12 +155,26 @@ public enum FingeringEngine {
             selectedIndex = cell.previousIndex ?? 0
         }
 
+        let debugLayers = makeDebugLayers(
+            notes: notes,
+            allLayers: allLayers,
+            constrainedLayers: layers,
+            table: table,
+            suffixCosts: suffixCosts,
+            selectedIndices: selectedIndices,
+            totalCost: table[table.count - 1][finalIndex].cost,
+            lockedPositions: options.lockedPositions,
+            weights: weights,
+            preferredHandPosition: options.preferredHandPosition
+        )
+
         return makeResult(
             profile: appliedProfile,
             weights: weights,
             options: options,
             totalCost: table[table.count - 1][finalIndex].cost,
-            steps: Array(reversedSteps.reversed())
+            steps: Array(reversedSteps.reversed()),
+            debugLayers: debugLayers
         )
     }
 
@@ -196,6 +222,108 @@ private func validateInstrument(capo: Int, maxFret: Int) throws {
 
 private func minimumFiniteIndex(in cells: [PathCell]) -> Int? {
     cells.indices.filter { cells[$0].cost.isFinite }.min { cells[$0].cost < cells[$1].cost }
+}
+
+private func remainingCosts(
+    notes: [FingeringNote],
+    layers: [[GuitarPosition]],
+    table: [[PathCell]],
+    weights: CostWeights
+) -> [[Double]] {
+    var suffix = layers.map { Array(repeating: Double.infinity, count: $0.count) }
+    guard let last = layers.indices.last else { return suffix }
+    suffix[last] = Array(repeating: 0, count: layers[last].count)
+    guard last > 0 else { return suffix }
+
+    for noteIndex in stride(from: last - 1, through: 0, by: -1) {
+        for candidateIndex in layers[noteIndex].indices where table[noteIndex][candidateIndex].cost.isFinite {
+            let current = layers[noteIndex][candidateIndex]
+            for nextIndex in layers[noteIndex + 1].indices {
+                let next = layers[noteIndex + 1][nextIndex]
+                if notes[noteIndex + 1].tieStop && current != next { continue }
+                guard suffix[noteIndex + 1][nextIndex].isFinite else { continue }
+                let unary = table[noteIndex + 1][nextIndex].unary
+                let transition = transitionCost(
+                    current,
+                    next,
+                    previousNote: notes[noteIndex],
+                    currentNote: notes[noteIndex + 1],
+                    weights: weights
+                )
+                suffix[noteIndex][candidateIndex] = min(
+                    suffix[noteIndex][candidateIndex],
+                    transition.total + unary.total + suffix[noteIndex + 1][nextIndex]
+                )
+            }
+        }
+    }
+    return suffix
+}
+
+private func makeDebugLayers(
+    notes: [FingeringNote],
+    allLayers: [[GuitarPosition]],
+    constrainedLayers: [[GuitarPosition]],
+    table: [[PathCell]],
+    suffixCosts: [[Double]],
+    selectedIndices: [Int],
+    totalCost: Double,
+    lockedPositions: [String: GuitarPosition],
+    weights: CostWeights,
+    preferredHandPosition: Int?
+) -> [FingeringDebugLayer] {
+    notes.indices.map { noteIndex in
+        let selectedPosition = constrainedLayers[noteIndex][selectedIndices[noteIndex]]
+        let evaluations = allLayers[noteIndex].map { position -> CandidateEvaluation in
+            let unary = unaryCost(
+                position,
+                weights: weights,
+                preferredHandPosition: noteIndex == 0 ? preferredHandPosition : nil
+            )
+            guard let constrainedIndex = constrainedLayers[noteIndex].firstIndex(of: position) else {
+                return CandidateEvaluation(
+                    position: position,
+                    unary: unary,
+                    incomingTransition: nil,
+                    bestPreviousPosition: nil,
+                    partialCost: nil,
+                    bestPathCost: nil,
+                    selected: false,
+                    rejectionReason: "Excluded by the locked fingering for this note."
+                )
+            }
+            let cell = table[noteIndex][constrainedIndex]
+            let pathCost = cell.cost.isFinite && suffixCosts[noteIndex][constrainedIndex].isFinite
+                ? cell.cost + suffixCosts[noteIndex][constrainedIndex]
+                : nil
+            let selected = position == selectedPosition
+            let previous = cell.previousIndex.map { constrainedLayers[noteIndex - 1][$0] }
+            let reason: String?
+            if selected {
+                reason = nil
+            } else if let pathCost {
+                reason = String(
+                    format: "Best complete path costs %.2f more than the selected path.",
+                    max(0, pathCost - totalCost)
+                )
+            } else {
+                reason = notes[noteIndex].tieStop
+                    ? "No compatible predecessor satisfies the tie constraint."
+                    : "No complete path can pass through this position."
+            }
+            return CandidateEvaluation(
+                position: position,
+                unary: cell.unary,
+                incomingTransition: cell.transition,
+                bestPreviousPosition: previous,
+                partialCost: cell.cost.isFinite ? cell.cost : nil,
+                bestPathCost: pathCost,
+                selected: selected,
+                rejectionReason: reason
+            )
+        }
+        return FingeringDebugLayer(note: notes[noteIndex], candidates: evaluations)
+    }
 }
 
 private func unaryCost(
@@ -253,9 +381,13 @@ private func makeResult(
     weights: CostWeights,
     options: OptimizationOptions,
     totalCost: Double,
-    steps: [FingeringStep]
+    steps: [FingeringStep],
+    debugLayers: [FingeringDebugLayer] = []
 ) -> FingeringResult {
     let transitions = zip(steps, steps.dropFirst())
+    let totalFretMovement = transitions.reduce(0) {
+        $0 + abs($1.0.position.physicalFret - $1.1.position.physicalFret)
+    }
     let positionShifts = transitions.filter {
         handPosition($0.0.position.physicalFret) != handPosition($0.1.position.physicalFret)
     }.count
@@ -271,11 +403,13 @@ private func makeResult(
     } / Double(steps.count)
     let normalizedCost = steps.isEmpty ? 0 : max(0, totalCost) / Double(steps.count)
     let metrics = FingeringMetrics(
+        totalFretMovement: totalFretMovement,
         positionShifts: positionShifts,
         stringChanges: stringChanges,
         stringSkips: stringSkips,
         openStrings: steps.filter { $0.position.fret == 0 }.count,
         averagePhysicalFret: averageFret,
+        maximumPhysicalFret: steps.map(\.position.physicalFret).max() ?? 0,
         largestStretch: largestStretch,
         estimatedDifficulty: min(100, normalizedCost * 4)
     )
@@ -287,6 +421,7 @@ private func makeResult(
         maxFret: options.maxFret,
         totalCost: totalCost,
         steps: steps,
-        metrics: metrics
+        metrics: metrics,
+        debugLayers: debugLayers
     )
 }

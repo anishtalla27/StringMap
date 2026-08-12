@@ -11,6 +11,7 @@
 		0924D957673A38DE54B5614C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585DC05464512DAC655F647 /* AppModel.swift */; };
 		1A0DCBA68F601F16762AF6CA /* ScorePipeline in Frameworks */ = {isa = PBXBuildFile; productRef = 6D76F86660565F34303137D0 /* ScorePipeline */; };
 		2BD73239D63F9E7C8BAB6F90 /* AlphaTab in Resources */ = {isa = PBXBuildFile; fileRef = 9EB40F5878806B93C8427614 /* AlphaTab */; };
+		311B1C6030B888A7E9FACDCB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D8311AB4DF5C67B6FBB2504A /* PrivacyInfo.xcprivacy */; };
 		3352A85E4BC89C9F4ECFC2C4 /* FingeringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 1F06780E31A9B208AE5D66C4 /* FingeringEngine */; };
 		341AF78290DAC3FDA3B18F28 /* AlphaTabBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67E18D94C8C23B787C2590 /* AlphaTabBridgeTests.swift */; };
 		46D2DA1217EC262982F51B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388C366687C873ECB4E75373 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		9EB40F5878806B93C8427614 /* AlphaTab */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AlphaTab; path = StringMap/Resources/AlphaTab; sourceTree = SOURCE_ROOT; };
 		AFE6DC4CDD79EE557EB6E28C /* StringMapCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StringMapCore; path = Packages/StringMapCore; sourceTree = SOURCE_ROOT; };
 		B2E50A59F580B850DB809BE7 /* SongLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLibrary.swift; sourceTree = "<group>"; };
+		D8311AB4DF5C67B6FBB2504A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DF67E18D94C8C23B787C2590 /* AlphaTabBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTabBridgeTests.swift; sourceTree = "<group>"; };
 		E139C4FF1BFCEF63875B3366 /* StringMapUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = StringMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD911554DC173EA754183B40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				FD911554DC173EA754183B40 /* ContentView.swift */,
 				6FA2E56B858E025070B9DEE4 /* FingeringTraceView.swift */,
 				676B2E0A673916ECD8966FC8 /* LoopbackResourceServer.swift */,
+				D8311AB4DF5C67B6FBB2504A /* PrivacyInfo.xcprivacy */,
 				B2E50A59F580B850DB809BE7 /* SongLibrary.swift */,
 				5B58B03C50940E4D99A36FF6 /* StringMapApp.swift */,
 				4412ACB05603CDBEB396EBB9 /* WorkspaceView.swift */,
@@ -252,6 +255,7 @@
 			files = (
 				2BD73239D63F9E7C8BAB6F90 /* AlphaTab in Resources */,
 				46D2DA1217EC262982F51B7F /* Assets.xcassets in Resources */,
+				311B1C6030B888A7E9FACDCB /* PrivacyInfo.xcprivacy in Resources */,
 				813DB260ABC02B0D51C080EB /* Samples in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,8 +334,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = StringMap;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +348,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anishtalla.StringMap;
 				PRODUCT_NAME = StringMap;
 				SDKROOT = iphoneos;
@@ -530,8 +538,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = StringMap;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anishtalla.StringMap;
 				PRODUCT_NAME = StringMap;
 				SDKROOT = iphoneos;

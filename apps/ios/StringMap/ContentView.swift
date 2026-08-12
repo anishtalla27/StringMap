@@ -15,6 +15,7 @@ private enum AppSection: Hashable {
 struct ContentView: View {
     @State private var model = AppModel()
     @State private var selection: AppSection
+    @State private var persistenceError: String?
     @Environment(\.modelContext) private var modelContext
     @Environment(\.scenePhase) private var scenePhase
 
@@ -66,6 +67,14 @@ struct ContentView: View {
         .onChange(of: scenePhase) { _, phase in
             if phase != .active { saveCurrentSong() }
         }
+        .alert("Couldn’t save your practice state", isPresented: Binding(
+            get: { persistenceError != nil },
+            set: { if !$0 { persistenceError = nil } }
+        )) {
+            Button("OK", role: .cancel) { persistenceError = nil }
+        } message: {
+            Text(persistenceError ?? "Unknown persistence error")
+        }
     }
 
     private func open(_ document: SongDocument) {
@@ -76,9 +85,13 @@ struct ContentView: View {
     private func saveCurrentSong() {
         guard let id = model.currentSongID else { return }
         let descriptor = FetchDescriptor<SongDocument>(predicate: #Predicate { $0.id == id })
-        guard let document = try? modelContext.fetch(descriptor).first else { return }
-        document.update(from: model)
-        try? modelContext.save()
+        do {
+            guard let document = try modelContext.fetch(descriptor).first else { return }
+            document.update(from: model)
+            try modelContext.save()
+        } catch {
+            persistenceError = error.localizedDescription
+        }
     }
 }
 
@@ -124,6 +137,7 @@ private struct HomeView: View {
 private struct LibraryView: View {
     @Query(sort: \SongDocument.updatedAt, order: .reverse) private var songs: [SongDocument]
     @Environment(\.modelContext) private var modelContext
+    @State private var deletionError: String?
     let openSong: (SongDocument) -> Void
 
     var body: some View {
@@ -143,11 +157,20 @@ private struct LibraryView: View {
             }
         }
         .navigationTitle("Library")
+        .alert("Couldn’t update the library", isPresented: Binding(
+            get: { deletionError != nil },
+            set: { if !$0 { deletionError = nil } }
+        )) {
+            Button("OK", role: .cancel) { deletionError = nil }
+        } message: {
+            Text(deletionError ?? "Unknown persistence error")
+        }
     }
 
     private func delete(at offsets: IndexSet) {
         for index in offsets { modelContext.delete(songs[index]) }
-        try? modelContext.save()
+        do { try modelContext.save() }
+        catch { deletionError = error.localizedDescription }
     }
 }
 
@@ -196,6 +219,22 @@ private struct ImportScoreView: View {
                 Text("Structured score")
             } footer: {
                 Text("StringMap currently accepts monophonic .musicxml and .xml files. Processing stays on this device.")
+            }
+
+            Section("Included studies") {
+                ForEach(DemoScore.all) { demo in
+                    Button {
+                        importDemo(demo)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 3) {
+                            Label(demo.title, systemImage: demo.symbol)
+                            Text(demo.detail)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .disabled(isImporting)
+                }
             }
 
             Section("Scan sheet music") {
@@ -262,11 +301,91 @@ private struct ImportScoreView: View {
         }
     }
 
+    private func importDemo(_ demo: DemoScore) {
+        guard let url = Bundle.main.url(
+            forResource: demo.resource,
+            withExtension: "musicxml",
+            subdirectory: "Samples"
+        ) else {
+            errorMessage = "The bundled \(demo.title) score is missing."
+            return
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            isImporting = true
+            errorMessage = nil
+            Task {
+                do {
+                    let options = OptimizationOptions(tuning: demo.tuning.tuning ?? .standard)
+                    let score = try await Task.detached(priority: .userInitiated) {
+                        try StructuredScorePipeline().run(musicXML: data, options: options).score
+                    }.value
+                    let document = SongDocument(
+                        title: score.title,
+                        composer: score.composer,
+                        sourceName: demo.resource,
+                        musicXML: data
+                    )
+                    document.tuningPresetRaw = demo.tuning.rawValue
+                    modelContext.insert(document)
+                    try modelContext.save()
+                    isImporting = false
+                    didImport(document)
+                } catch {
+                    isImporting = false
+                    errorMessage = error.localizedDescription
+                }
+            }
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
     private var allowedMusicXMLTypes: [UTType] {
         var types: [UTType] = [.xml]
         if let musicXML = UTType(filenameExtension: "musicxml") { types.append(musicXML) }
         return types
     }
+}
+
+private struct DemoScore: Identifiable {
+    let resource: String
+    let title: String
+    let detail: String
+    let symbol: String
+    let tuning: GuitarTuningPreset
+    var id: String { resource }
+
+    static let all = [
+        DemoScore(
+            resource: "beginner-scale",
+            title: "First Position Scale",
+            detail: "A slow C-major melody for the basic practice flow.",
+            symbol: "1.circle",
+            tuning: .standard
+        ),
+        DemoScore(
+            resource: "profile-contrast",
+            title: "Open or Shift?",
+            detail: "Highlights meaningful differences between fingering profiles.",
+            symbol: "arrow.left.and.right",
+            tuning: .standard
+        ),
+        DemoScore(
+            resource: "drop-d-study",
+            title: "Low D Resonance",
+            detail: "An alternate-tuning study that requires Drop D.",
+            symbol: "tuningfork",
+            tuning: .dropD
+        ),
+        DemoScore(
+            resource: "chromatic-position-study",
+            title: "Chromatic Position Study",
+            detail: "Fast choices, large intervals, and several valid positions.",
+            symbol: "metronome",
+            tuning: .standard
+        ),
+    ]
 }
 
 private struct SettingsView: View {

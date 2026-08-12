@@ -194,13 +194,36 @@ public struct FingeringStep: Equatable, Sendable {
 }
 
 public struct FingeringMetrics: Equatable, Sendable {
+    public let totalFretMovement: Int
     public let positionShifts: Int
     public let stringChanges: Int
     public let stringSkips: Int
     public let openStrings: Int
     public let averagePhysicalFret: Double
+    public let maximumPhysicalFret: Int
     public let largestStretch: Int
     public let estimatedDifficulty: Double
+}
+
+/// One candidate's best complete route through the score.
+///
+/// This is diagnostic data, not an optimizer input. `bestPathCost` includes the
+/// cheapest prefix and suffix that pass through this position, which makes a
+/// rejected candidate directly comparable with the selected minimum-cost path.
+public struct CandidateEvaluation: Equatable, Sendable {
+    public let position: GuitarPosition
+    public let unary: UnaryCostBreakdown
+    public let incomingTransition: TransitionCostBreakdown?
+    public let bestPreviousPosition: GuitarPosition?
+    public let partialCost: Double?
+    public let bestPathCost: Double?
+    public let selected: Bool
+    public let rejectionReason: String?
+}
+
+public struct FingeringDebugLayer: Equatable, Sendable {
+    public let note: FingeringNote
+    public let candidates: [CandidateEvaluation]
 }
 
 public struct FingeringResult: Equatable, Sendable {
@@ -212,6 +235,7 @@ public struct FingeringResult: Equatable, Sendable {
     public let totalCost: Double
     public let steps: [FingeringStep]
     public let metrics: FingeringMetrics
+    public let debugLayers: [FingeringDebugLayer]
 }
 
 public struct OptimizationOptions: Equatable, Sendable {
@@ -258,6 +282,7 @@ public enum FingeringError: Error, Equatable, LocalizedError, Sendable {
     case invalidMaxFret(Int)
     case invalidCapo(Int)
     case invalidTuning
+    case duplicateNoteID(String)
     case unplayableNote(id: String, midi: Int)
     case invalidLockedPosition(id: String)
     case noValidPath
@@ -272,6 +297,8 @@ public enum FingeringError: Error, Equatable, LocalizedError, Sendable {
             "Capo must be between zero and the instrument's last fret; received \(capo)."
         case .invalidTuning:
             "A guitar tuning must contain six valid MIDI pitches."
+        case let .duplicateNoteID(id):
+            "Note identifier \(id) is duplicated; every note must have a stable unique identifier."
         case let .unplayableNote(id, midi):
             "Note \(id) (MIDI \(midi)) is outside this guitar's playable range."
         case let .invalidLockedPosition(id):
