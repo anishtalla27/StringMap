@@ -1,0 +1,89 @@
+name: StringMap
+options:
+  bundleIdPrefix: com.anishtalla
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+  generateEmptyDirectories: true
+
+packages:
+  StringMapCore:
+    path: Packages/StringMapCore
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  StringMap:
+    type: application
+    platform: iOS
+    sources:
+      - path: StringMap
+        excludes:
+          - Resources
+      - path: StringMap/Resources/AlphaTab
+        type: folder
+        buildPhase: resources
+      - path: StringMap/Resources/Samples
+        type: folder
+        buildPhase: resources
+    dependencies:
+      - package: StringMapCore
+        product: FingeringEngine
+      - package: StringMapCore
+        product: ScorePipeline
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMap
+        PRODUCT_NAME: StringMap
+        GENERATE_INFOPLIST_FILE: true
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SUPPORTS_MACCATALYST: false
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: false
+        INFOPLIST_KEY_CFBundleDisplayName: StringMap
+        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: true
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+
+  StringMapTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [StringMapTests]
+    dependencies:
+      - target: StringMap
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMapTests
+        GENERATE_INFOPLIST_FILE: true
+
+  StringMapUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [StringMapUITests]
+    dependencies:
+      - target: StringMap
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMapUITests
+        GENERATE_INFOPLIST_FILE: true
+        TEST_TARGET_NAME: StringMap
+
+schemes:
+  StringMap:
+    build:
+      targets:
+        StringMap: all
+        StringMapTests: [test]
+        StringMapUITests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - name: StringMapTests
+        - name: StringMapUITests
