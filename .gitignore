@@ -3,5 +3,8 @@ dist/
 .DS_Store
 coverage/
 *.tsbuildinfo
+.build/
+DerivedData/
+*.xcresult
 apps/web/public/font/
 apps/web/public/soundfont/
