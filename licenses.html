@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Licenses · StringMap</title><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#content">Skip to content</a><nav aria-label="Main"><a href="./">StringMap</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="licenses.html">Licenses</a></nav><main id="content"><h1>Third-party notices and research references</h1>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Licenses · StringMap</title><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#content">Skip to content</a><nav aria-label="Main"><a href="./">StringMap</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="licenses.html">Licenses</a></nav><main id="content"><h1>StringMap licenses and acknowledgements</h1>
 <h2>Runtime dependencies</h2>
 <h3>alphaTab</h3>
 <ul>
@@ -34,53 +34,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
-<h2>Design references</h2>
-<h3>MoChord</h3>
-<ul>
-<li>Project: <a href="https://github.com/Mocha-Yuan/MoChord">https://github.com/Mocha-Yuan/MoChord</a></li>
-<li>Inspected revision: <code>ce9d524</code></li>
-<li>License: MIT</li>
-<li>Use: research reference only.</li>
-</ul>
-<p>MoChord's <code>practiceVoicingPath.ts</code> demonstrated a useful architectural idea: score individual guitar shapes separately from transitions and use dynamic programming to select a smooth sequence. StringMap applies that general idea to a different problem—single-note candidate layers—with an original data model, explicit cost function, five profiles, locks, capo/tuning support, metrics, tie constraints, explanation trace, and implementation. No MoChord source file was copied.</p>
-<h3>Partitura</h3>
-<ul>
-<li>Project: <a href="https://github.com/CPJKU/partitura">https://github.com/CPJKU/partitura</a></li>
-<li>Inspected revision: <code>427ff87</code></li>
-<li>License: Apache License 2.0</li>
-<li>Use: evaluated as a possible future server-side symbolic-music layer; not currently included as a dependency.</li>
-</ul>
-<h3>Tably</h3>
-<ul>
-<li>Project: <a href="https://github.com/e-erdag/Tably">https://github.com/e-erdag/Tably</a></li>
-<li>Inspected revision: <code>39ed68c</code></li>
-<li>License: none found in the inspected repository.</li>
-<li>Use: inspection only. No code, assets, or text were copied, and Tably is not a dependency.</li>
-</ul>
-<h2>OMR dependency and evaluations</h2>
-<h3>HOMR — hosted recognition</h3>
-<ul>
-<li>Project: <a href="https://github.com/liebharc/homr">https://github.com/liebharc/homr</a></li>
-<li>Pinned revision: <code>457e7c6518a10ba755db2e60883419e56c4d7369</code></li>
-<li>License: GNU Affero General Public License 3.0; complete notice in <code>services/omr/COPYING.homr</code>.</li>
-<li>Use: CPU inference in the separate Python recognition service. No engine code or model is embedded in the native iOS app.</li>
-</ul>
-<p>The original StringMap guitar adapter and timing audit are available under AGPL-3.0-or-later. Every container includes a downloadable <code>/recognizer-source.tar.gz</code> with the complete pinned HOMR source, adapter, service code, public verification certificates, dependency lock and model/build instructions. Production requires the bundle. The native Settings screen links to the deployed source offer. Model weights are SHA-256 pinned and installed at build time.</p>
-<h3>Earlier engines and research</h3>
-<ul>
-<li><a href="https://github.com/BreezeWhite/oemer">oemer</a>, MIT, revision <code>dbe2a933d630d0f74805d717960eb259473f5978</code>: previous unsuccessful benchmark only. Its adapter/patches remain to preserve evidence; production does not install or execute it.</li>
-<li><a href="https://github.com/Audiveris/audiveris">Audiveris</a>, AGPL-3.0, version 5.11.0: standalone evaluation only. Not included in the app or production container.</li>
-<li><a href="https://github.com/OmniOMR/zeus">Zeus</a>, MIT code, with the AYCE 2026-08-03 model under CC BY-SA 4.0: handwriting research only. Not included in the app or production container.</li>
-</ul>
-<p>Public MusiCorpus/OmniOMR handwriting samples were accessed solely for local research, under their CC BY-NC-SA 4.0 dataset terms. They are retained in ignored research artifacts, never shipped, redistributed with the app, or used to train a production model. A treble-staff piano manuscript pilot is not guitar/handwriting release qualification.</p>
 <h2>Bundled font and SoundFont notices</h2>
 <p>Bravura is copyright 2015 Steinberg Media Technologies GmbH, with Reserved Font Name Bravura, under SIL Open Font License 1.1. The exact license and font log shipped by alphaTab 1.8.4 are bundled with the app and reproduced in Settings.</p>
 <p>StringMap classical guitar SoundFont is based on FreePats <strong>Spanish classical guitar, 2019-06-18</strong>, recorded by Roberto <a href="mailto:roberto@zenvoid.org">roberto@zenvoid.org</a> and dedicated by its creator to the public domain under CC0 1.0. Source: https://freepats.zenvoid.org/Guitar/acoustic-guitar.html . The complete CC0 dedication, provenance and exact source/output checksums are bundled with the app.</p>
 <p>StringMap's original metronome click and bank mapping adaptation are also dedicated to CC0 1.0. Guitar samples remain unchanged. The source-pinned reproduction script is <code>scripts/build-guitar-soundfont.py</code>. The previous SONiVOX/Creative-derived bank is no longer bundled in iOS. The web development reference still uses alphaTab's upstream bank and is not the distributed iOS product.</p>
 <p>The unmodified alphaTab source is available at https://github.com/CoderLine/alphaTab/tree/v1.8.4. The app bundles the MPL-2.0 license. StringMap's separate bridge is original application code.</p>
-<h2>Recognition build and benchmark tools</h2>
-<p>HOMR uses NumPy (BSD-3-Clause), ONNX Runtime (MIT), OpenCV (Apache-2.0), Pillow (HPND), RapidOCR (Apache-2.0) and their pinned transitive packages. The recognition API uses FastAPI (MIT), Starlette (BSD-3-Clause), Uvicorn (BSD-3-Clause), cryptography (Apache-2.0 OR BSD-3-Clause), cbor2 (MIT), and asn1crypto (MIT). Transitive package metadata and exact versions are captured in the release evidence. Apple App Attest root certificates are distributed by Apple for signature verification.</p>
-<p>Verovio (LGPL-3.0), CairoSVG (LGPL-3.0), and their dependencies are development-only benchmark tools, not iOS or recognition-container dependencies. The generated studies are original StringMap test compositions. Their synthetic variants must never be reported as real camera photographs or genuine handwriting.</p>
+<h2>Original exercises</h2>
+<p>The 18 bundled single-note exercises were created for StringMap. No third-party song or arrangement is included in this catalog.</p>
 <h2>LICENSE-MPL-2.0.txt</h2>
 <p>alphaTab is licensed under MPL-2.0.
 Copyright © 2025, Daniel Kuschny and Contributors, All rights reserved.</p>
