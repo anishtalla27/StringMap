@@ -1,0 +1,7 @@
+{
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/ScoreEditing.swift": "e72156cf8e6c0d057a453303686bc0e72558b3669369a158604cb49faa332d2e",
+  "apps/ios/StringMap/ScoreReviewView.swift": "e131308cd96c84d5b4abb9e532b18772c76c5c8c2287ca96de03bbe673060bb2",
+  "apps/ios/StringMap/WorkspaceSheets.swift": "c70f92113f38655ca64f11f50b5fcd87983e0a9b8b91b676ab9e4069fa9734dc",
+  "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/CrossVoiceTieTests.swift": "1fcdc39be0be6b7b2a81bc377139c3fbbbc12f0571c28136cecf59833d141348",
+  "apps/ios/StringMapUITests/StringMapUITests.swift": "6669c6af829a2b7e1026bdaa75e819acfb8e60b1707b6e501f349b292f6cec14"
+}

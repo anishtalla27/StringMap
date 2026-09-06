@@ -286,6 +286,8 @@ public enum FingeringError: Error, Equatable, LocalizedError, Sendable {
     case unplayableNote(id: String, midi: Int)
     case invalidLockedPosition(id: String)
     case noValidPath
+    case unplayableChord(onset: Double)
+    case scoreTooComplex
 
     public var errorDescription: String? {
         switch self {
@@ -303,6 +305,10 @@ public enum FingeringError: Error, Equatable, LocalizedError, Sendable {
             "Note \(id) (MIDI \(midi)) is outside this guitar's playable range."
         case let .invalidLockedPosition(id):
             "The locked fingering for note \(id) is not playable with the current tuning, capo, or fret count."
+        case let .unplayableChord(onset):
+            "The notes sounding at beat \(onset + 1) cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument."
+        case .scoreTooComplex:
+            "This passage exceeds the exact chord search limit. Try a shorter passage. No notes have been removed."
         case .noValidPath:
             "No valid fingering path exists; a tie or locked fingering may be incompatible."
         }

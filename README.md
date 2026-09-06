@@ -1,20 +1,34 @@
+> **Tutorial Mode:** Learn now contains a 12-lesson original beginner course and the 18 existing Free Practice exercises. Tutorial microphone pitch checking is an internal Debug experiment, disabled by default. App Store finalization remains paused. See `docs/tutorial-mode.md`.
+
+> **First App Store release:** 18 original single-note guitar exercises, with offline notation, tab, playback and synchronized fretboard positions. Scanning and public file import are not shipped. Scanner UI/networking are compiled only in Debug and default off. See `RELEASE_CHECKLIST.md`; older recognition sections below describe retained development work, not public release features.
+
 # StringMap
 
-StringMap is a native iPhone/iPad app for turning structured scores into playable, explainable guitar tablature. The shipping implementation includes this complete local structured-score path:
+StringMap is a native iPhone/iPad app for turning structured scores into playable, explainable guitar tablature. The native implementation has this score pipeline. Photo recognition is under validation and is not release-ready:
 
 ```text
+Photo → HOMR service → reviewed MusicXML
+                           ↓
 MusicXML → normalized score → all string/fret candidates
          → explainable fingering optimization → alphaTex
          → alphaTab notation, tablature, and synchronized playback
 ```
 
-The current score contract is deliberately honest: direct MusicXML import supports monophonic melodies. The guitar layer supports Standard, Drop D, Half Step Down, D Standard, DADGAD, and custom six-string tunings; capo, 12–30 fret instruments, transposition, manual locks, and five optimization profiles are real inputs to candidate generation and search.
+The native MusicXML importer supports single-part guitar melodies, stacked-note chords, independent voices, rests, ties, simple repeats, and supported binary, dotted, and 3:2 triplet rhythms. Unsupported musical structures fail explicitly; unimplemented expression and text instructions are disclosed for review. The guitar layer supports Standard, Drop D, Half Step Down, D Standard, DADGAD, and custom six-string tunings; capo, 12–30 fret instruments, transposition, manual locks, and five optimization profiles are real inputs to candidate generation and search.
 
-![StringMap practice workspace on iPhone](./docs/screenshots/stringmap-practice.png)
+| Dark | Light |
+| --- | --- |
+| ![StringMap player in dark appearance](./docs/screenshots/stringmap-practice.png) | ![StringMap player in light appearance](./docs/screenshots/stringmap-practice-light.png) |
 
 ## Native iOS experience
 
-The SwiftUI app is not a wrapped website. Native tabs provide Home, Library, Play, Import, and Settings. SwiftData stores imported MusicXML, instrument/profile choices, locked positions, arrangement state, and the last practice position locally. The workspace includes:
+The SwiftUI app is not a wrapped website. Native tabs provide Home, Library, Play, Import, and Settings, with the transport docked in the iOS 26 tab-view bottom accessory so playback stays reachable from every tab. SwiftData stores imported MusicXML, instrument/profile choices, locked positions, arrangement state, and the last practice position locally.
+
+The interface is an aged-nitro cream chassis in light and a warm tobacco one in dark, both authored deliberately rather than one derived from the other. The instrument is the inversion that carries the design: wherever the app shows the guitar itself the surface goes dark — rosewood board, nickel fret wire, a bone nut, bronze strings — mounted into the chassis the way an amplifier is built. One accent runs the interface, fiesta red; lake blue and surf green never touch a control and carry meaning inside data only. The palette, spacing scale, nested surfaces, and motion live in [`DesignSystem.swift`](./apps/ios/StringMap/DesignSystem.swift). alphaTab is themed to match, so the score is engraved in the app's own ink instead of sitting in the layout as a white rectangle.
+
+The fretboard is the app's hero: a luminous route running across the neck from the note sounding now to the one coming next, over logarithmically spaced frets, graded string gauges, and inlay markers. Scores are told apart the way guitars are, by finish — sunburst, lake placid, surf green, cherry — rather than by rotating one gradient around the colour wheel.
+
+The workspace includes:
 
 - standard notation and tablature rendered by the isolated alphaTab view
 - synchronized local SoundFont playback and scrub/seek
@@ -26,9 +40,11 @@ The SwiftUI app is not a wrapped website. Native tabs provide Home, Library, Pla
 - previous/next measure, five-second jump-back, one-tap current-measure loop, loop restart, and tempo reset
 - note-by-note alternate position selection and locked-fingering reoptimization
 - per-song practice speed, loop, timing options, fingering locks, and resume position
-- a complete weighted cost trace plus best-route comparisons for every rejected candidate
+- a complete weighted cost trace plus best-route comparisons for every rejected candidate, presented as a per-note cost bar that names the force which actually decided the position
 
-Image/PDF recognition is not exposed as a fake conversion. Camera, Photos, PDF OMR, score correction, chords, and polyphony remain gated behind the limitations below.
+Photo import includes Camera/Photos, crop/rotation/perspective preparation, an explicit upload, resumable cancellation-aware recognition, source-image comparison, note/rest/chord correction, undo, audition, and local saving. Debug-only service configuration is compiled out of Release builds. Recognition accuracy and manual/device validation remain release blockers.
+
+New photos default to standard guitar notation: written pitches sound one octave lower. The preparation screen also offers concert pitch. This is an explicit input convention, independent of guitar range and optimization; existing MusicXML transposition wins, corrected saves reopen without another shift, and earlier drafts retain their previous interpretation. Review note names and octaves are labeled as sounding pitch.
 
 ## Workspace
 
@@ -37,7 +53,9 @@ Image/PDF recognition is not exposed as a fake conversion. Camera, Photos, PDF O
 - `packages/fingering-engine` and `packages/score-pipeline` — TypeScript behavioral references.
 - `apps/web` — the retained Vite reference application.
 
-The score model sits between ingestion and fingering. A later OMR adapter should produce the same `NormalizedScore`; it does not need to change the optimizer or renderer.
+The score model sits between ingestion and fingering. The OMR adapter returns MusicXML into that same boundary; it does not change the optimizer or renderer.
+
+- `services/omr` — the pinned `HOMR` guitar adapter, authenticated production service candidate, container configuration and actual-recognizer benchmark.
 
 ## Run the iOS app
 
@@ -87,17 +105,11 @@ The four library-ready studies appear under Import → Included Studies. Their c
 
 ## Current MusicXML contract
 
-The parser reads the first part of a `score-partwise` document and normalizes stable source IDs, title/composer, pitch, accidentals, measure-local onset, duration, rests, time signatures, key-fifths metadata, tempo, and ties. Multiple parts generate a visible warning.
+The Swift parser accepts plain MusicXML (`.musicxml`/`.xml`) and compressed MusicXML (`.mxl`), with one part on one staff, and preserves source event IDs, voices, title/composer, sounding pitch, measure-local onset, duration, rests, time signatures, key changes, constant tempo, ties, and simple repeats. Instrument transpose is applied once; clef octave notation does not apply a second transposition. Canonical corrected MusicXML preserves identities through editing and reimport. Compressed imports use the container's first declared score, bounded decompression and CRC validation; embedded images/audio and alternate renditions are ignored. The original extracted XML is saved locally.
 
-Unsupported constructs fail explicitly instead of being flattened incorrectly:
+Stacked notes are assigned jointly to distinct strings, including strings occupied by sustained voices. Locks, tuning, capo, a conservative fret-span/finger constraint, and deterministic complete-route costs govern the result. Unplayable tab leaves the recognized notation available for correction and playback; notes are never dropped or shifted an octave to fit the guitar.
 
-- chords and multiple voices (`backup`)
-- grace notes
-- tuplets
-- `score-timewise` documents
-- rhythmic values that cannot yet be represented as binary or dotted alphaTex durations
-
-This contract is intentionally honest for the first monophonic milestone. See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for the extension points and decisions.
+Multiple parts/staves, piano scores, chord names, grace notes, unsupported tuplets/articulations/techniques, complex repeat instructions and tempo changes are rejected. The actual bundled alphaTab parser and MIDI generator verify the supported rhythm boundary. The TypeScript reference retains its earlier monophonic contract. See [architecture](docs/ARCHITECTURE.md).
 
 ## Fingering optimization
 
@@ -128,18 +140,29 @@ Costs include physical fret movement, hand-position shifts, string changes and s
 
 ## Current limitations
 
-- Chords, multiple voices, grace notes, and tuplets fail explicitly instead of being flattened.
-- `.mxl`, MIDI, camera/photo/PDF input, and OMR are not accepted yet.
-- MusicXML articulations, repeats, chord symbols, and encoded guitar techniques are not yet preserved by the normalized model.
-- Practice resume is stored for library songs; the bundled example is intentionally ephemeral.
-- No accounts, networking, analytics, microphone recognition, tutoring, payments, or social features are included.
+- Recognition has failed the initial accuracy benchmark. Handwriting, real camera-image accuracy, and correction-to-reference have not been established.
+- The prepared 102-image corpus consists of 20 original synthetic studies with five variants each and two negative images. It does not satisfy the required genuine handwriting, camera, and independently reviewed reference coverage.
+- Single-page JPEG/PNG/HEIF photo selection is supported in the app; the upload is normalized JPEG. PDF and multi-page photo recognition, MIDI, piano scores and chord-name interpretation are excluded. Structured MusicXML imports can span multiple pages.
+- The hosted recognition service is prepared but has not been deployed. Debug builds can use a loopback service; Release builds require a configured HTTPS endpoint and Apple signing.
+- Native correction, image preparation and local persistence are implemented. Complete manual and physical-device verification remains open.
+- Saved music remains offline. Scanning requires internet. No customer accounts, analytics, payments, microphone recording or social features are included.
 
-OMR is intentionally next only after the score contract can preserve and review more source semantics. homr and Audiveris are AGPL-3.0 projects; any future service using them needs an explicit compliance and source-distribution plan rather than embedding their code in the iOS target.
+See [recognition service setup](services/omr/README.md) and [release evidence](docs/release/evidence.md).
 
-See [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) for the physical-device, signing, privacy, store-asset, and deferred-OMR work that remains before TestFlight or App Store submission.
+## Release status
+
+**Not ready for App Store submission.** Current test results, recognition comparisons, retained artifacts and external prerequisites are recorded in [release evidence](docs/release/evidence.md). A signed Release archive and seven-day TestFlight exercise have not been completed.
+
+- [Release checklist](RELEASE_CHECKLIST.md)
+- [Draft listing and review instructions](docs/store/metadata.md)
+- [Device and TestFlight protocol](docs/release/device-testflight.md)
+- [Measured hosting proposal](docs/release/hosting-costs.md)
+- [Published privacy](https://anishtalla27.github.io/StringMap/privacy.html), [support](https://anishtalla27.github.io/StringMap/support.html), and [licenses](https://anishtalla27.github.io/StringMap/licenses.html)
+
+Existing screenshots are historical design references; fresh verified shipping screenshots remain a release gate.
 
 ## References and licensing
 
-alphaTab is used as the notation/tab renderer and synchronized player. MoChord informed the high-level separation between per-shape and transition scoring; StringMap's monophonic graph, cost components, profiles, types, and implementation were written for this repository. Partitura was evaluated but is not included in the iOS runtime. Tably was inspected only; no Tably code was copied because its repository has no license.
+alphaTab is used as the notation/tab renderer and synchronized player. HOMR powers the separate AGPL-licensed recognition service with a downloadable corresponding-source offer. The native app bundles a CC0 FreePats guitar bank. MoChord informed the high-level separation between per-shape and transition scoring; StringMap's monophonic graph, cost components, profiles, types, and implementation were written for this repository. Partitura was evaluated but is not included in the iOS runtime. Tably was inspected only; no Tably code was copied because its repository has no license.
 
 See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for details.

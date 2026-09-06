@@ -1,0 +1,635 @@
+{
+  "date": "2026-09-06",
+  "status": "Musical cleanup and rest preservation fixed; recognition accuracy remains unqualified.",
+  "releaseQualified": false,
+  "sourceSHA256": {
+    "recognizer.py": "d901cffeed87aab4ddcfa708a06d9060e5b3c04e093399d6c4dd5f783bfd0a95",
+    "patch_homr.py": "735cb93ec72c072fe9a6a4963c5a7346013a9c7f80a129f7d98dc5a49604f018",
+    "production.py": "ef2ac2f82efa3f2f067883b6fc45c4dc3eef361359ba450108b138130993c7b5",
+    "test_recognizer.py": "cc95ce10c84ecc9c967c4c2fc5c8e2e83d3b4bc1ed278526878b5a79603aed57",
+    "test_homr_export.py": "184d3b83beff88d10520c032fe97c97a4d1c5f4bcf9191a17f689c1a326b9c1c",
+    "benchmark_external_pack.py": "b08bc008269fbfe0d74eb5ed416ec14d36a8d4b5f3cdddc323b430b13ccee364",
+    "README.md": "6da46ff0a39d74c1461e4e6dd6d003089135ab379ff064171a8b9d575cd3b660",
+    "build_source_offer.py": "9327b4f9696a5e5a068eaa4f999745448d150656ae3598cb8d6030e4e6ad1ed9",
+    "Dockerfile": "b3e3545e8b95e4b72513652e4239ce4a3caacf53274424a9195d817381029097",
+    "bootstrap.sh": "fff75b97588876fd146fe4ad67df46226ce850c1b09eed1b82de6277285d6283"
+  },
+  "writerSHA256": "6779fcdde4190ddd3508552f66ac28948740c2ff2464a63e4b6d5808df8089aa",
+  "macTests": {
+    "passed": 55,
+    "log": "artifacts/rest-preservation-service-tests-final.log"
+  },
+  "linuxTests": {
+    "passed": 49,
+    "log": "artifacts/rest-preservation-linux-tests.log",
+    "scope": "test_recognizer, test_page_image, test_staff_image, test_production, test_homr_export. HTTP test-client dependencies installed only in /tmp/stringmap-test-deps."
+  },
+  "beforeFailure": {
+    "log": "artifacts/rest-preservation-before.log",
+    "observed": "The actual writer exported one of two simultaneous rests. The new regression failed before patching."
+  },
+  "nativeRestFixture": {
+    "xml": "artifacts/rest-preservation-linux.musicxml",
+    "native": "artifacts/rest-preservation-linux-native.json",
+    "playback": {
+      "alphaTex": {
+        "parsed": true,
+        "notes": 2,
+        "sourceIdentitiesPreserved": true,
+        "exactPlayback": true
+      },
+      "notationAlphaTex": {
+        "parsed": true,
+        "notes": 2,
+        "sourceIdentitiesPreserved": true,
+        "exactPlayback": true
+      },
+      "tabPitchExact": true,
+      "allNotesAssigned": true,
+      "distinctStrings": true
+    },
+    "rests": [
+      {
+        "durationQuarters": 1,
+        "id": "event-1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "staff": 1,
+        "voice": "2"
+      },
+      {
+        "durationQuarters": 1,
+        "id": "event-2",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "staff": 1,
+        "voice": "3"
+      }
+    ],
+    "scope": "Actual Linux XML export through Swift and alphaTab/MIDI. Both quarter rests retain onset zero, separate voices and source identities in the native score; both pitched notes play exactly."
+  },
+  "cohortCounts": {
+    "printedImages": 15,
+    "recognizedPages": 12,
+    "strictNativeImports": 11,
+    "reviewOnlyImports": 1,
+    "standardTuningTabs": 7,
+    "handwritingImages": 7,
+    "handwritingRecognized": 0
+  },
+  "printedCohort": {
+    "scope": "15 actual printed photo-simulation uploads. Provisional first-page references have not been independently audited. Previous baseline is the crop-retry cohort, before tilt recovery and the two exporter fixes.",
+    "releaseQualified": false,
+    "notes": {
+      "truePositive": 702,
+      "missing": 5231,
+      "extra": 4056,
+      "f1": 0.13132541389954167
+    },
+    "cases": [
+      {
+        "id": "printed_guitar-01_fantasy_p5__flat",
+        "oldStatus": "failed",
+        "status": "failed",
+        "parsed": false,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "cleanupError": null
+      },
+      {
+        "id": "printed_guitar-02_fancy_p6__tilt_left",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 320,
+          "missing": 12,
+          "extra": 12,
+          "f1": 0.963855421686747
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 8,
+        "newRests": 8
+      },
+      {
+        "id": "printed_guitar-03_solus_cum_sola__soft_shadow",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 9,
+          "missing": 335,
+          "extra": 335,
+          "f1": 0.02616279069767442
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 2,
+        "newRests": 2
+      },
+      {
+        "id": "printed_guitar-04_solus_sine_sola__perspective",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 18,
+          "missing": 299,
+          "extra": 300,
+          "f1": 0.05669291338582677
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 6,
+        "newRests": 6
+      },
+      {
+        "id": "printed_guitar-05_dr_cases_pavan__tilt_right",
+        "oldStatus": "failed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 17,
+          "missing": 404,
+          "extra": 404,
+          "f1": 0.040380047505938245
+        },
+        "cleanupError": null
+      },
+      {
+        "id": "printed_guitar-06_lachrimae_pavan__hard_shadow",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 38,
+          "missing": 365,
+          "extra": 365,
+          "f1": 0.09429280397022333
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 15,
+        "newRests": 15
+      },
+      {
+        "id": "printed_guitar-07_digorie_pipers_galliard__flat",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 32,
+          "missing": 506,
+          "extra": 506,
+          "f1": 0.05947955390334572
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 15,
+        "newRests": 15
+      },
+      {
+        "id": "printed_guitar-08_dowlands_first_galliard__tilt_left",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 137,
+          "missing": 128,
+          "extra": 128,
+          "f1": 0.5169811320754717
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 1,
+        "newRests": 1
+      },
+      {
+        "id": "printed_guitar-09_frog_galliard__soft_shadow",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 23,
+          "missing": 448,
+          "extra": 448,
+          "f1": 0.04883227176220807
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 5,
+        "newRests": 5
+      },
+      {
+        "id": "printed_guitar-10_galliard_p24__perspective",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 14,
+          "missing": 166,
+          "extra": 166,
+          "f1": 0.07777777777777778
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 6,
+        "newRests": 6
+      },
+      {
+        "id": "printed_guitar-11_melancholy_galliard__tilt_right",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": false,
+        "tabPlayable": false,
+        "reviewParsed": true,
+        "noteEvent": {
+          "truePositive": 14,
+          "missing": 514,
+          "extra": 513,
+          "f1": 0.026540284360189573
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": false,
+        "oldRests": 14,
+        "newRests": 15
+      },
+      {
+        "id": "printed_guitar-12_galliard_p27__hard_shadow",
+        "oldStatus": "failed",
+        "status": "failed",
+        "parsed": false,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "cleanupError": null
+      },
+      {
+        "id": "printed_guitar-13_galliard_p28__flat",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 69,
+          "missing": 600,
+          "extra": 598,
+          "f1": 0.10329341317365269
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": true,
+        "oldRests": 30,
+        "newRests": 32
+      },
+      {
+        "id": "printed_guitar-14_giles_hobies_galliard__tilt_left",
+        "oldStatus": "failed",
+        "status": "failed",
+        "parsed": false,
+        "tabPlayable": false,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "cleanupError": null
+      },
+      {
+        "id": "printed_guitar-15_galliard_p30__soft_shadow",
+        "oldStatus": "completed",
+        "status": "completed",
+        "parsed": true,
+        "tabPlayable": true,
+        "reviewParsed": false,
+        "noteEvent": {
+          "truePositive": 11,
+          "missing": 281,
+          "extra": 281,
+          "f1": 0.03767123287671233
+        },
+        "cleanupError": null,
+        "pitchedEventTimingUnchanged": false,
+        "oldRests": 14,
+        "newRests": 15
+      }
+    ]
+  },
+  "handwriting": [
+    {
+      "id": "handwritten_general_notation-01_CVC-MUSCIMA_W-07_N-05_D-ideal__soft_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 4.087728791986592,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-02_CVC-MUSCIMA_W-29_N-10_D-ideal__perspective",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 6.097324333997676,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-03_CVC-MUSCIMA_W-37_N-17_D-ideal__tilt_right",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 6.091177916008746,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-04_CVC-MUSCIMA_W-27_N-16_D-ideal__hard_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 4.061476166971261,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-05_CVC-MUSCIMA_W-09_N-13_D-ideal__flat",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 6.043908124993322,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-06_CVC-MUSCIMA_W-50_N-08_D-ideal__tilt_left",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 4.057795790984528,
+      "cleanupError": null
+    },
+    {
+      "id": "handwritten_general_notation-07_CVC-MUSCIMA_W-16_N-17_D-ideal__soft_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 6.075974707986461,
+      "cleanupError": null
+    }
+  ],
+  "generatedControls": {
+    "mac": {
+      "recordedAt": "2026-09-06T11:59:26.045397+00:00",
+      "plannedImages": 3,
+      "completedCases": 3,
+      "pendingCases": 0,
+      "groups": {
+        "engraved": {
+          "images": 3,
+          "recognitionFailures": 0,
+          "importFailures": 0,
+          "tabFailures": 0,
+          "playbackFailures": 0,
+          "metrics": {
+            "pitch": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "onset": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "duration": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "noteEvent": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            }
+          },
+          "chords": {
+            "total": 8,
+            "complete": 8
+          },
+          "medianSeconds": 3.13,
+          "maxSeconds": 3.18
+        }
+      },
+      "realCameraImages": 0,
+      "genuineHandwritingImages": 0,
+      "independentlyReviewedReferences": 0,
+      "correctedInAppAndMatchedReference": 0,
+      "releaseTargetsMet": false,
+      "buildFingerprints": [
+        "8d8df29c0e4b30d9377b8a600cefa6e24bfb59b1445517f8cf9c6799e9d99da2"
+      ],
+      "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+      "engines": [
+        "homr-457e7c6-stringmap-guitar-v2-cpu"
+      ]
+    },
+    "linux": {
+      "recordedAt": "2026-09-06T11:56:34.312727+00:00",
+      "plannedImages": 3,
+      "completedCases": 3,
+      "pendingCases": 0,
+      "groups": {
+        "engraved": {
+          "images": 3,
+          "recognitionFailures": 0,
+          "importFailures": 0,
+          "tabFailures": 0,
+          "playbackFailures": 0,
+          "metrics": {
+            "pitch": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "onset": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "duration": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            },
+            "noteEvent": {
+              "truePositive": 112,
+              "missing": 0,
+              "extra": 0,
+              "f1": 1.0
+            }
+          },
+          "chords": {
+            "total": 8,
+            "complete": 8
+          },
+          "medianSeconds": 6.23,
+          "maxSeconds": 6.35
+        }
+      },
+      "realCameraImages": 0,
+      "genuineHandwritingImages": 0,
+      "independentlyReviewedReferences": 0,
+      "correctedInAppAndMatchedReference": 0,
+      "releaseTargetsMet": false,
+      "buildFingerprints": [
+        "8d8df29c0e4b30d9377b8a600cefa6e24bfb59b1445517f8cf9c6799e9d99da2"
+      ],
+      "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+      "engines": [
+        "homr-457e7c6-stringmap-guitar-v2-cpu"
+      ]
+    }
+  },
+  "sourceOffers": {
+    "archives": [
+      {
+        "platform": "mac",
+        "archive": "artifacts/rest-preservation-mac-source.tar.gz",
+        "sha256": "b4f1579f11be3a5a7b1126639f8840152498b05b57ff405d40f8999bfbc57149",
+        "pythonFilesVerified": [
+          "export_clarity_guitar_evaluation.py",
+          "score_quality.py",
+          "server.py",
+          "build_rhythm_corpus.py",
+          "report_benchmark.py",
+          "summarize_external_pack.py",
+          "staff_image.py",
+          "benchmark.py",
+          "models.py",
+          "recognizer.py",
+          "build_source_offer.py",
+          "patch_homr.py",
+          "build_corpus.py",
+          "recheck_results.py",
+          "check_external_references.py",
+          "attestation.py",
+          "receipt.py",
+          "evaluate_zeus_crops.py",
+          "compare_external_pack.py",
+          "page_image.py",
+          "build_unsupported_corpus.py",
+          "engine_benchmark.py",
+          "evaluate_jazzmus.py",
+          "benchmark_external_pack.py",
+          "production.py",
+          "compare_staff_crops.py"
+        ],
+        "buildAndReadmeVerified": true
+      },
+      {
+        "platform": "linux",
+        "archive": "artifacts/rest-preservation-linux-source.tar.gz",
+        "sha256": "44df92d91d620fc4318e4cdb9f221594dd141af6af881236be11ca50077b3d39",
+        "pythonFilesVerified": [
+          "export_clarity_guitar_evaluation.py",
+          "score_quality.py",
+          "server.py",
+          "build_rhythm_corpus.py",
+          "report_benchmark.py",
+          "summarize_external_pack.py",
+          "staff_image.py",
+          "benchmark.py",
+          "models.py",
+          "recognizer.py",
+          "build_source_offer.py",
+          "patch_homr.py",
+          "build_corpus.py",
+          "recheck_results.py",
+          "check_external_references.py",
+          "attestation.py",
+          "receipt.py",
+          "evaluate_zeus_crops.py",
+          "compare_external_pack.py",
+          "page_image.py",
+          "build_unsupported_corpus.py",
+          "engine_benchmark.py",
+          "evaluate_jazzmus.py",
+          "benchmark_external_pack.py",
+          "production.py",
+          "compare_staff_crops.py"
+        ],
+        "buildAndReadmeVerified": true
+      }
+    ],
+    "container": {
+      "imageID": "sha256:aeac501594b674fe3538621545dbe70ef9855514631d8d421f072e4f0044923a",
+      "memoryLimitBytes": 3221225472,
+      "nanoCPUs": 2000000000,
+      "processes": "PID                 USER                COMMAND\n1669                10001               uvicorn\n"
+    }
+  },
+  "diagnostic": {
+    "record": "artifacts/rest-preservation-fantasy-diagnostic/diagnostic.json",
+    "scope": "One normalized Fantasy image passed to the actual recognizer. A wrapper records export counts before the real guard. The forensic XML is not a successful recognition.",
+    "counts": {
+      "status": "failed",
+      "type": "ValueError",
+      "error": "The recognized notes could not all be exported. No partial score was saved.",
+      "counts": [
+        {
+          "expectedNotes": 344,
+          "actualNotes": 343,
+          "expectedRests": 4,
+          "actualRests": 5
+        }
+      ]
+    }
+  },
+  "limits": [
+    "The printed images are photo simulations, not actual camera captures. Their first-page MusicXML references remain provisional.",
+    "The former crop-retry cohort is the comparison baseline, preceding tilt recovery and exporter fixes. Pavan availability is attributable to the earlier tilt recovery.",
+    "Four rests are now retained across Melancholy Galliard, Galliard P28 and Galliard P30; two pages also change pitched-event timing. This does not establish more accurate recognition.",
+    "Aggregate provisional printed note-event F1 is 13.13%, far below release targets.",
+    "All seven handwriting pages are general notation rather than a guitar-specific benchmark, and none returned a usable full-page transcription.",
+    "No new app source or simulator UI run. Physical audio/camera, hosted App Attest, signing, TestFlight and release gates remain open.",
+    "No tasks requiring manual user input, external deployment, billing changes or public release were performed."
+  ],
+  "cleanup": {
+    "macImagesRemaining": 0,
+    "linuxImagesRemaining": 0,
+    "macServiceStopped": true,
+    "linuxProxyStopped": true,
+    "ownedContainerRemoved": true,
+    "colimaStopped": true,
+    "dockerContextRestored": "default",
+    "temporaryMacDataRemoved": true
+  }
+}

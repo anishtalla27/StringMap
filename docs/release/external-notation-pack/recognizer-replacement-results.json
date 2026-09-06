@@ -1,0 +1,212 @@
+{
+  "evaluatedAt": "2026-09-06",
+  "scope": "printed guitar notation photo recognition only",
+  "referencePolicy": {
+    "referencesWereProvidedToRecognizers": false,
+    "referencesAreAudited": false,
+    "imagesAreRealPhoneCameraCaptures": false,
+    "note": "Metrics are comparative engineering evidence from controlled photo simulations and provisional written-score references, not release qualification."
+  },
+  "shippingBaseline": {
+    "recognizer": "HOMR",
+    "cohortPages": 15,
+    "recognizedPages": 12,
+    "parsedPages": 10,
+    "tabPlayablePages": 5,
+    "reviewOnlyPages": 2,
+    "pitchF1": 0.8886,
+    "onsetF1": 0.6099,
+    "durationF1": 0.8574,
+    "exactNoteEventF1": 0.3599289122
+  },
+  "candidates": [
+    {
+      "name": "Starry",
+      "decision": "gated_integration_spike",
+      "tests": [
+        {
+          "input": "01_fantasy_p5__flat.jpg",
+          "homrOutcome": "failed",
+          "referenceNotes": 343,
+          "recognizedNotes": 343,
+          "recognizedMeasures": 20,
+          "pitchF1": 1.0,
+          "onsetF1": 0.9912536443,
+          "durationF1": 0.9854227405,
+          "exactNoteEventF1": 0.970845481,
+          "exactEvents": 333,
+          "missingEvents": 10,
+          "extraEvents": 10,
+          "completeChordOnsets": 87,
+          "referenceChordOnsets": 93,
+          "solver": {
+            "solved": 19,
+            "issue": 1,
+            "fatal": 0,
+            "qualityScore": 0.913356
+          }
+        },
+        {
+          "input": "12_galliard_p27__hard_shadow.jpg",
+          "homrOutcome": "failed",
+          "referenceNotes": 237,
+          "recognizedNotes": 240,
+          "referenceMeasures": 36,
+          "recognizedMeasures": 37,
+          "pitchF1": 0.9937106918,
+          "onsetF1": 0.9937106918,
+          "durationF1": 0.9517819706,
+          "exactNoteEventF1": 0.9056603774,
+          "exactEvents": 216,
+          "missingEvents": 21,
+          "extraEvents": 24,
+          "completeChordOnsets": 39,
+          "referenceChordOnsets": 56,
+          "solver": {
+            "solved": 36,
+            "issue": 0,
+            "fatal": 0,
+            "qualityScore": 0.9868889
+          }
+        },
+        {
+          "input": "02_fancy_p6__tilt_left.jpg",
+          "variant": "raw",
+          "outcome": "layout_failure",
+          "error": "Cannot set properties of null (setting 'areas')"
+        },
+        {
+          "input": "02_fancy_p6__tilt_left/normalized.jpg",
+          "variant": "StringMap normalized",
+          "outcome": "layout_failure",
+          "error": "Cannot set properties of null (setting 'areas')"
+        }
+      ],
+      "blockers": [
+        "no explicit license for the complete public repository/service/model combination",
+        "model files require deployment token and are not included in the public source tree",
+        "page-layout null failure on one of three tested pages"
+      ]
+    },
+    {
+      "name": "Polyphonic-TrOMR",
+      "license": "Apache-2.0",
+      "decision": "reject",
+      "reason": "The output representation omits voice information, so exact polyphonic timing is not reliable enough for tempo-correct playback.",
+      "staffCropTests": [
+        {
+          "input": "02 Fancy staff 1",
+          "pitchF1": 0.7368,
+          "durationF1": 0.9474,
+          "exactNoteEventF1": 0.0263
+        },
+        {
+          "input": "03 Solus staff 1",
+          "pitchF1": 0.675,
+          "durationF1": 0.925,
+          "exactNoteEventF1": 0.1
+        },
+        {
+          "input": "13 Galliard staff 1",
+          "pitchF1": 0.9636,
+          "durationF1": 0.9091,
+          "exactNoteEventF1": 0.03636
+        }
+      ]
+    },
+    {
+      "name": "Sheet Music Transformer",
+      "license": "MIT",
+      "decision": "reject_available_checkpoint",
+      "input": "02 Fancy staff 1",
+      "outcome": "invalid_runaway_bekern",
+      "reason": "The public camera-grandstaff checkpoint is trained for two-staff piano systems and did not generalize to a single guitar staff."
+    },
+    {
+      "name": "LEGATO",
+      "license": "MIT code; gated base model dependency",
+      "decision": "reject_for_now",
+      "tests": [
+        "API upload of Fantasy failed",
+        "API upload of Fancy failed",
+        "public demo built-in Bach example returned Error"
+      ]
+    },
+    {
+      "name": "Transcoda",
+      "license": "AGPL-3.0 code; public checkpoint",
+      "model": "btrkeks/transcoda-59M-zeroshot-v1",
+      "revision": "b529f8aa5d996d9224df3395b5b92d0867343c91",
+      "decision": "reject",
+      "referencePolicy": "References were kept out of inference.",
+      "tests": [
+        {
+          "input": "01_fantasy_p5__flat.jpg",
+          "seconds": 200.3561,
+          "pitchF1": 0.7994428969,
+          "onsetF1": 0.2339832869,
+          "durationF1": 0.9470752089,
+          "exactNoteEventF1": 0.0222841226,
+          "nativeImport": "rejected_multiple_parts"
+        },
+        {
+          "input": "02_fancy_p6__tilt_left.jpg",
+          "seconds": 69.6393,
+          "pitchF1": 0.7610062893,
+          "onsetF1": 0.7327044025,
+          "durationF1": 0.8993710692,
+          "exactNoteEventF1": 0.0566037736,
+          "nativeImport": "rejected_unsupported_grace_note"
+        },
+        {
+          "input": "12_galliard_p27__hard_shadow.jpg",
+          "seconds": 60.8898,
+          "outcome": "invalid_kern_spine_structure",
+          "conversionError": "Could not determine spineType for spine with id 9"
+        }
+      ]
+    },
+    {
+      "name": "ScoreFlip",
+      "decision": "reject_noncredible",
+      "evidence": [
+        "Advertised Apple App Store URL https://apps.apple.com/app/scoreflip/id6470000000 returned 404.",
+        "Public Image-to-MusicXML page JavaScript simulated staged progress and generated fixed canned MusicXML locally rather than submitting the selected image to a recognition service.",
+        "No public API documentation or verifiable iOS product was available."
+      ]
+    }
+  ],
+  "recommendedEvaluationOrder": [
+    {
+      "name": "Flat OMR API",
+      "kind": "commercial hosted API",
+      "reason": "Documented photo/PDF-to-MusicXML/MIDI Jobs API with commercial customer-upload use; account token and credits required."
+    },
+    {
+      "name": "ReadScoreLib",
+      "kind": "native commercial OMR SDK",
+      "reason": "On-device engine licensed to other developers; current iOS evaluation deliverables and commercial terms require confirmation from Organum."
+    }
+  ]
+  ,
+  "commercialCostEvidence": {
+    "flatOmr": {
+      "billingUnit": "one successful page per credit",
+      "packsUSD": [
+        {"pages": 30, "price": 9.99, "perPage": 0.333},
+        {"pages": 70, "price": 18.99, "perPage": 0.271},
+        {"pages": 300, "price": 49.99, "perPage": 0.167},
+        {"pages": 1000, "price": 149.0, "perPage": 0.149},
+        {"pages": 3000, "price": 300.0, "perPage": 0.1}
+      ],
+      "failedJobsUltimatelyCharged": false
+    },
+    "opuscanTrial": {
+      "installedVersion": "26.7.1",
+      "balance": 0,
+      "pageAcceptedForImport": "01_fantasy_p5__flat.jpg",
+      "recognitionPerformed": false,
+      "purchasePerformed": false
+    }
+  }
+}

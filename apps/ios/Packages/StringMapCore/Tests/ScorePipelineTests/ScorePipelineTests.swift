@@ -3,6 +3,37 @@ import FingeringEngine
 @testable import ScorePipeline
 
 final class ScorePipelineTests: XCTestCase {
+    func testCompositeDurationsPreserveExactTime() throws {
+        for duration in [2.5, 5.0, 7.0, 11.0 / 12] {
+            let parts = try AlphaTexGenerator.durationSegments(duration)
+            XCTAssertEqual(parts.reduce(0, +), duration, accuracy: 1e-8)
+            for part in parts { XCTAssertNoThrow(try AlphaTexGenerator.alphaTexDuration(part)) }
+        }
+        XCTAssertThrowsError(try AlphaTexGenerator.durationSegments(0.123456))
+    }
+
+    func testSixtyFourthTripletAndCompositeGapKeepExactTiming() throws {
+        let triplet = try AlphaTexGenerator.alphaTexDuration(1.0 / 24)
+        XCTAssertEqual(triplet.value, 64)
+        XCTAssertEqual(triplet.effect, "{tu 3}")
+        for duration in [5.0 / 24, 7.0 / 24, 11.0 / 24] {
+            let parts = try AlphaTexGenerator.durationSegments(duration)
+            XCTAssertEqual(parts.reduce(0, +), duration, accuracy: 1e-8)
+            for part in parts { XCTAssertNoThrow(try AlphaTexGenerator.alphaTexDuration(part)) }
+        }
+        XCTAssertThrowsError(try AlphaTexGenerator.durationSegments(1.0 / 25))
+    }
+
+    func testChordWithoutVoiceInheritsItsAnchorVoice() throws {
+        let xml = """
+        <score-partwise><part-list><score-part id="P1"><part-name>Guitar</part-name></score-part></part-list><part id="P1"><measure number="1"><attributes><divisions>1</divisions><time><beats>4</beats><beat-type>4</beat-type></time></attributes><note><pitch><step>D</step><octave>4</octave></pitch><duration>4</duration><voice>4</voice></note><note><chord/><pitch><step>F</step><alter>1</alter><octave>4</octave></pitch><duration>4</duration></note></measure></part></score-partwise>
+        """
+        let score = try MusicXMLImporter().importScore(from: Data(xml.utf8))
+        XCTAssertEqual(score.notes.map(\.voice), ["4", "4"])
+        XCTAssertEqual(score.notes.map(\.onsetQuarters), [0, 0])
+        XCTAssertEqual(score.notes.map(\.midi), [62, 66])
+    }
+
     private let importer = MusicXMLImporter()
 
     func testNormalizesMetadataPitchRhythmAndRest() throws {
@@ -31,25 +62,15 @@ final class ScorePipelineTests: XCTestCase {
         XCTAssertEqual(try importer.importScore(from: xmlData(flat)).notes.first?.pitch, "A#3")
     }
 
-    func testWarnsForMultiplePartsAndUsesFirst() throws {
+    func testRejectsMultiplePartsWithoutDroppingMusic() throws {
         let multiple = simpleMusicXML.replacingOccurrences(
             of: "</score-partwise>",
             with: "<part id=\"P2\"><measure number=\"1\"/></part></score-partwise>"
         )
-        let score = try importer.importScore(from: xmlData(multiple))
-        XCTAssertEqual(score.notes.count, 5)
-        XCTAssertEqual(score.warnings, ["Only the first MusicXML part was imported."])
+        XCTAssertThrowsError(try importer.importScore(from: xmlData(multiple)))
     }
 
     func testRejectsUnsupportedAndMalformedInput() {
-        assertError(simpleMusicXML.replacingOccurrences(
-            of: "<note><pitch><step>D</step>",
-            with: "<note><chord/><pitch><step>D</step>"
-        ), is: .unsupportedChord(measure: 1))
-        assertError(simpleMusicXML.replacingOccurrences(
-            of: "<note><pitch><step>D</step>",
-            with: "<backup><duration>1</duration></backup><note><pitch><step>D</step>"
-        ), is: .unsupportedMultipleVoices(measure: 1))
         assertError(simpleMusicXML.replacingOccurrences(
             of: "<note><pitch><step>D</step>",
             with: "<note><grace/><pitch><step>D</step>"
@@ -80,7 +101,7 @@ final class ScorePipelineTests: XCTestCase {
         \\track "Lead"
         \\staff{score tabs}
         \\tuning E4 B3 G3 D3 A2 E2
-        \\instrument acousticguitarsteel
+        \\instrument acousticguitarnylon
         \\tempo 88
         .
         \\ts 3 4 1.2.4 3.2.4 0.1.4 |

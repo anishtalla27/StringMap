@@ -1,0 +1,13 @@
+{
+  "apps/ios/Packages/StringMapCore/Package.swift": "8861a578557b32ac1acf3c89ee451f73f860a149f12d430eb33b831560612fb4",
+  "apps/ios/Packages/StringMapCore/Package.resolved": "69a7e7d174f4aa9e28330249b278b4ed3a8813a835dceb108acbcbd89185a303",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLContainer.swift": "bdd042665b904c0bf00609f8f52ec009aae6e545e00c9bba6476820dd551357b",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "268c943b1e5f750c1c2a26f2382aec9336dfaf1ba6f2ad3e6b24de0614d06f70",
+  "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/MusicXMLContainerTests.swift": "28c60c02fb8f2c18ca48b309e25f6d9d17d217b0856f539c89281eb4839d1a51",
+  "apps/ios/StringMap/ImportScoreView.swift": "9cb72d7634ae4b1223d5ed9faadf0a9916be79ad7e86878271f6d2311ed9aa76",
+  "apps/ios/StringMap/LibraryView.swift": "cc9d397b9a776c91987f69e50466f5941ca62504277329b75af58f2799153ede",
+  "apps/ios/StringMapUITests/StringMapUITests.swift": "d261d4b90e5bc7e78a5975ba5bb3e3485d8997f47fb7f1ee11ff1fea2dae1212",
+  "apps/ios/StringMap/Info.plist": "2a3abaff449f36468221bba65aa1c49dc22631e8ce43d4d26bdff45ab28d0226",
+  "apps/ios/project.yml": "784cdea5123cbf72409b062f9f2f34a2dc5a0eaef8fcb9555da1630c7f1afb9d",
+  "services/omr/check_external_references.py": "f720290ad14335e9f0cdb75772849c98263bcdda32199d38a7fe64e7373a0aac"
+}

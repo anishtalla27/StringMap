@@ -76,8 +76,8 @@ final class LoopbackResourceServer: @unchecked Sendable {
     private func send(path: String, over connection: NWConnection) {
         let relativePath = path == "/" ? "index.html" : String(path.dropFirst())
         let allowed = [
-            "index.html", "bridge.js", "alphaTab.min.js",
-            "font/Bravura.woff2", "soundfont/sonivox.sf2",
+            "index.html", "bridge.js", "source-note-map.js", "alphaTab.min.js",
+            "font/Bravura.woff2", "soundfont/stringmap-guitar.sf2",
             "LICENSE-MPL-2.0.txt",
         ]
         guard allowed.contains(relativePath),

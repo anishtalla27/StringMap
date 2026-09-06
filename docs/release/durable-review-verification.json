@@ -1,0 +1,88 @@
+{
+  "releaseQualified": false,
+  "newRecognitionRun": false,
+  "change": "Persist unfinished score corrections and up to 30 undo states transactionally; recover local recognized pages without service configuration or upload consent; allow explicit discard without changing the saved song.",
+  "iosUnitTests": {
+    "passed": 31,
+    "failed": 0,
+    "evidence": "artifacts/durable-review-final-units.xcresult"
+  },
+  "coveredPersistenceCases": [
+    "legacy scan draft decoding",
+    "legacy library migration",
+    "atomic correction save and reload",
+    "failed writes retain previous on-disk and in-memory score",
+    "undo save and reload",
+    "unresolved ties remain editable but cannot export",
+    "seven-day inactivity expiry",
+    "library reopen preserves corrections, source photo and capo without replacing saved MusicXML",
+    "explicit final save clears pending library review"
+  ],
+  "simulatorReviewFlows": {
+    "status": "passed",
+    "test": "testRecoveredScanCanBeCorrectedUndoneAuditionedAndSaved",
+    "iPhone": {
+      "passed": 1,
+      "failed": 0,
+      "model": "iPhone 17",
+      "os": "iOS 26.5 Simulator",
+      "evidence": "artifacts/durable-review-offline-final-iphone.xcresult"
+    },
+    "iPad": {
+      "passed": 1,
+      "failed": 0,
+      "model": "iPad Pro 13-inch (M5)",
+      "os": "iOS 26.5 Simulator",
+      "evidence": "artifacts/durable-review-offline-final-ipad.xcresult"
+    },
+    "checks": [
+      "measure length edit/reset/undo",
+      "source image preview",
+      "pitch edit survives termination without fixture reinjection",
+      "review opens with invalid configured service address and no upload-consent toggle",
+      "undo restores prior pitch",
+      "preview reaches playback state",
+      "review confirmation required before save",
+      "saved library correction survives termination",
+      "discard restores saved pitch and empties undo history"
+    ]
+  },
+  "largeDraft": {
+    "notes": 512,
+    "undoStates": 30,
+    "imageBytes": 8388608,
+    "storedBytes": 9597860,
+    "atomicWriteSeconds": 0.10630810260772705,
+    "evidence": "artifacts/durable-review-unit-attachments/3E921A4E-8037-4155-89D4-4D025C180282.txt",
+    "limits": "One simulator measurement with an opaque image blob; not a physical-device performance or memory qualification."
+  },
+  "retainedFailedAttempts": [
+    "artifacts/durable-review-discard-iphone.xcresult",
+    "artifacts/durable-review-discard-ipad.xcresult"
+  ],
+  "failedAttemptCause": "XCTest found nested duplicate Discard edits confirmation buttons. The test now selects the first matching identified confirmation button.",
+  "limits": [
+    "Known recognized XML is injected only at initial test setup; recovery after termination reads normal persisted app data. This does not establish new recognition accuracy.",
+    "Simulator playback indicators do not verify physical audible playback.",
+    "Real camera accuracy, handwriting, hosting, signing, physical-device checks and TestFlight remain unresolved."
+  ],
+  "sourceSHA256": {
+    "apps/ios/StringMap/ScanDraft.swift": "ce173e9a4c1da781153f6bc6172bbb757ce097fe33d719f3dd59099a65d60c6c",
+    "apps/ios/StringMap/ScoreReviewView.swift": "071d022536031fa4d8a5116ad0d6d7d68fb7134cf1f928fee07d1955c7175430",
+    "apps/ios/StringMap/SheetMusicScanView.swift": "f2e474a6e8d15fac06c869608ed69d5a93e74d30a974d1bc61fac6aff717d50d",
+    "apps/ios/StringMap/SongLibrary.swift": "abb2f3eee9c81c88330023dd147295c20a2943e2725a871c91b094c5f21cb4b7",
+    "apps/ios/StringMap/LibraryView.swift": "9d3f2c3cf2c7f3bc2884c4b94f0dbc180f5f833798d0d07b05f212d5d5b2ed00",
+    "apps/ios/StringMapTests/OMRRecoveryTests.swift": "af0cee3900949ffe75ddd83aa5c728012143f7ed1e2982aacce85b62be5eee6d",
+    "apps/ios/StringMapTests/SongLibraryTests.swift": "a491070300debd4e5a2270d31f9f8f1d22749a9d968263cb3b895a69aa84f225",
+    "apps/ios/StringMapUITests/StringMapUITests.swift": "4287c7a2bb1ecbdf2b164e061606390510c75594514fec3fa117eb029768d28a"
+  },
+  "visuallyInspectedScreenshots": [
+    "docs/release/screenshots/durable-review-iphone-recovered.png",
+    "docs/release/screenshots/durable-review-ipad-library-recovered.png"
+  ],
+  "policyDeployment": {
+    "commit": "59216d0c87bbf3578d33075976c00db10aa64051",
+    "evidence": "docs/release/policy-deployment.json",
+    "allFiveHostedFilesMatchLocal": true
+  }
+}

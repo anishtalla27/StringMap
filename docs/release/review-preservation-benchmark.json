@@ -1,0 +1,510 @@
+{
+  "releaseQualified": false,
+  "musicalImages": 148,
+  "exactNoteEvents": 5120,
+  "completeChordOnsets": 800,
+  "negativeInputsRejected": 5,
+  "realCameraImages": 0,
+  "independentlyCheckedReferences": 0,
+  "guitarHandwritingQualified": false,
+  "source": "Fresh actual local HTTP -> Swift importer/fingering -> bundled alphaTab/MIDI, JPEG preparation and final preservation safeguards",
+  "sourceChecksums": "external-notation-pack/review-preservation-final-code-checksums.json",
+  "reports": [
+    {
+      "artifactDirectory": "artifacts/review-preservation-full-studies",
+      "summary": {
+        "recordedAt": "2026-09-06T06:58:36.812607+00:00",
+        "plannedImages": 102,
+        "completedCases": 102,
+        "pendingCases": 0,
+        "groups": {
+          "synthetic": {
+            "images": 2,
+            "recognitionFailures": 2,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "onset": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "duration": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "noteEvent": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              }
+            },
+            "chords": {
+              "total": 0,
+              "complete": 0
+            },
+            "medianSeconds": 4.53,
+            "maxSeconds": 6.03
+          },
+          "synthetic-blur": {
+            "images": 20,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 128,
+              "complete": 128
+            },
+            "medianSeconds": 3.14,
+            "maxSeconds": 3.17
+          },
+          "engraved": {
+            "images": 20,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 128,
+              "complete": 128
+            },
+            "medianSeconds": 3.145,
+            "maxSeconds": 3.21
+          },
+          "synthetic-dim": {
+            "images": 20,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 128,
+              "complete": 128
+            },
+            "medianSeconds": 3.14,
+            "maxSeconds": 3.17
+          },
+          "synthetic-perspective": {
+            "images": 20,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 128,
+              "complete": 128
+            },
+            "medianSeconds": 3.14,
+            "maxSeconds": 3.17
+          },
+          "synthetic-rotate": {
+            "images": 20,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 576,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 128,
+              "complete": 128
+            },
+            "medianSeconds": 3.145,
+            "maxSeconds": 3.17
+          }
+        },
+        "realCameraImages": 0,
+        "genuineHandwritingImages": 0,
+        "independentlyReviewedReferences": 0,
+        "correctedInAppAndMatchedReference": 0,
+        "releaseTargetsMet": false,
+        "buildFingerprints": [
+          "52cfb71402b75301252119045d814163c3bef626597f2b224f4b12816614bc53"
+        ],
+        "scope": "102 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+        "engines": [
+          "homr-457e7c6-stringmap-guitar-v2-cpu"
+        ]
+      }
+    },
+    {
+      "artifactDirectory": "artifacts/review-preservation-full-rhythms",
+      "summary": {
+        "recordedAt": "2026-09-06T07:02:39.299081+00:00",
+        "plannedImages": 48,
+        "completedCases": 48,
+        "pendingCases": 0,
+        "groups": {
+          "synthetic-blur": {
+            "images": 12,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 40,
+              "complete": 40
+            },
+            "medianSeconds": 3.16,
+            "maxSeconds": 9.21
+          },
+          "engraved": {
+            "images": 12,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 40,
+              "complete": 40
+            },
+            "medianSeconds": 3.16,
+            "maxSeconds": 9.31
+          },
+          "synthetic-dim": {
+            "images": 12,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 40,
+              "complete": 40
+            },
+            "medianSeconds": 3.1550000000000002,
+            "maxSeconds": 9.19
+          },
+          "synthetic-rotate": {
+            "images": 12,
+            "recognitionFailures": 0,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "onset": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "duration": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              },
+              "noteEvent": {
+                "truePositive": 560,
+                "missing": 0,
+                "extra": 0,
+                "f1": 1.0
+              }
+            },
+            "chords": {
+              "total": 40,
+              "complete": 40
+            },
+            "medianSeconds": 6.16,
+            "maxSeconds": 9.21
+          }
+        },
+        "realCameraImages": 0,
+        "genuineHandwritingImages": 0,
+        "independentlyReviewedReferences": 0,
+        "correctedInAppAndMatchedReference": 0,
+        "releaseTargetsMet": false,
+        "buildFingerprints": [
+          "52cfb71402b75301252119045d814163c3bef626597f2b224f4b12816614bc53"
+        ],
+        "scope": "48 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+        "engines": [
+          "homr-457e7c6-stringmap-guitar-v2-cpu"
+        ]
+      }
+    },
+    {
+      "artifactDirectory": "artifacts/review-preservation-full-negative",
+      "summary": {
+        "recordedAt": "2026-09-06T07:02:48.453234+00:00",
+        "plannedImages": 3,
+        "completedCases": 3,
+        "pendingCases": 0,
+        "groups": {
+          "generated-unsupported": {
+            "images": 3,
+            "recognitionFailures": 3,
+            "importFailures": 0,
+            "tabFailures": 0,
+            "playbackFailures": 0,
+            "metrics": {
+              "pitch": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "onset": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "duration": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              },
+              "noteEvent": {
+                "truePositive": 0,
+                "missing": 0,
+                "extra": 0,
+                "f1": null
+              }
+            },
+            "chords": {
+              "total": 0,
+              "complete": 0
+            },
+            "medianSeconds": 3.03,
+            "maxSeconds": 3.03
+          }
+        },
+        "realCameraImages": 0,
+        "genuineHandwritingImages": 0,
+        "independentlyReviewedReferences": 0,
+        "correctedInAppAndMatchedReference": 0,
+        "releaseTargetsMet": false,
+        "buildFingerprints": [],
+        "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+        "engines": [
+          "homr-457e7c6-stringmap-guitar-v2-cpu"
+        ]
+      }
+    }
+  ]
+}

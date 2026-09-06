@@ -1,0 +1,401 @@
+[
+  {
+    "name": "annotated-doc",
+    "version": "0.0.5",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "asn1crypto",
+    "version": "1.5.1",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "cbor2",
+    "version": "6.1.4",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "certifi",
+    "version": "2026.7.22",
+    "licenseExpression": null,
+    "license": "MPL-2.0",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+    ]
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1",
+    "licenseExpression": "MIT-0",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.0",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "coloredlogs",
+    "version": "15.0.1",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "contourpy",
+    "version": "1.3.3",
+    "licenseExpression": null,
+    "license": "BSD 3-Clause License\n\n Copyright (c) 2021-2025, ContourPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are met:\n\n 1. Redistributions of source code must retain the above copyright notice, this\n    list of conditions and the following disclaimer.\n\n 2. Redistributions in binary form must reproduce the above copyright notice,\n    this list of conditions and the following dis",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.1",
+    "licenseExpression": "Apache-2.0 OR BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "licenseExpression": null,
+    "license": "Copyright (c) 2015, matplotlib project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or othe",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "fastapi",
+    "version": "0.141.1",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "flatbuffers",
+    "version": "25.12.19",
+    "licenseExpression": null,
+    "license": "Apache 2.0",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ]
+  },
+  {
+    "name": "fonttools",
+    "version": "4.63.0",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "humanfriendly",
+    "version": "10.0",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "idna",
+    "version": "3.18",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "joblib",
+    "version": "1.5.3",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.0",
+    "licenseExpression": null,
+    "license": "=========================\n The Kiwi licensing terms\n=========================\nKiwi is licensed under the terms of the Modified BSD License (also known as\nNew or Revised BSD), as follows:\n\nCopyright (c) 2013-2026, Nucleic Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this\nlist of conditions ",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.8.4",
+    "licenseExpression": null,
+    "license": "PSF",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Python Software Foundation License"
+    ]
+  },
+  {
+    "name": "mpmath",
+    "version": "1.3.0",
+    "licenseExpression": null,
+    "license": "BSD",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "1.26.4",
+    "licenseExpression": null,
+    "license": "Copyright (c) 2005-2023, NumPy Developers.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n    * Redistributions of source code must retain the above copyright\n       notice, this list of conditions and the following disclaimer.\n\n    * Redistributions in binary form must reproduce the above\n       copyright notice, this list of conditions and the following\n       disclaimer in th",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "oemer",
+    "version": "0.1.8",
+    "licenseExpression": null,
+    "license": "License :: OSI Approved :: MIT License",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "onnxruntime",
+    "version": "1.17.3",
+    "licenseExpression": null,
+    "license": "MIT License",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "opencv-python-headless",
+    "version": "4.9.0.80",
+    "licenseExpression": null,
+    "license": "Apache 2.0",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "licenseExpression": "Apache-2.0 OR BSD-2-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "pillow",
+    "version": "12.3.0",
+    "licenseExpression": "MIT-CMU",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "protobuf",
+    "version": "7.35.1",
+    "licenseExpression": null,
+    "license": "3-Clause BSD License",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "pycparser",
+    "version": "3.0",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "pydantic",
+    "version": "2.13.5",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "pydantic-core",
+    "version": "2.46.5",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.2",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "python-dateutil",
+    "version": "2.9.0.post0",
+    "licenseExpression": null,
+    "license": "Dual License",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License",
+      "License :: OSI Approved :: Apache Software License"
+    ]
+  },
+  {
+    "name": "requests",
+    "version": "2.34.2",
+    "licenseExpression": null,
+    "license": "Apache-2.0",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ]
+  },
+  {
+    "name": "scikit-learn",
+    "version": "1.5.2",
+    "licenseExpression": null,
+    "license": "BSD 3-Clause License\n\nCopyright (c) 2007-2024 The scikit-learn developers.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaime",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "scipy",
+    "version": "1.11.4",
+    "licenseExpression": null,
+    "license": "Copyright (c) 2001-2002 Enthought, Inc. 2003-2023, SciPy Developers.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions\nare met:\n\n1. Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following\n   disclaim",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "setuptools",
+    "version": "83.0.0",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "licenseExpression": null,
+    "license": "MIT",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "starlette",
+    "version": "1.6.0",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "sympy",
+    "version": "1.14.0",
+    "licenseExpression": null,
+    "license": "BSD",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "threadpoolctl",
+    "version": "3.6.0",
+    "licenseExpression": null,
+    "license": "BSD-3-Clause",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "types-pillow",
+    "version": "10.2.0.20240822",
+    "licenseExpression": null,
+    "license": "Apache-2.0",
+    "licenseClassifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ]
+  },
+  {
+    "name": "types-protobuf",
+    "version": "7.34.1.20260518",
+    "licenseExpression": "Apache-2.0",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "types-tensorflow",
+    "version": "2.18.0.20260730",
+    "licenseExpression": "Apache-2.0",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "typing-extensions",
+    "version": "4.16.0",
+    "licenseExpression": "PSF-2.0",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "urllib3",
+    "version": "2.7.0",
+    "licenseExpression": "MIT",
+    "license": "",
+    "licenseClassifiers": []
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.52.4",
+    "licenseExpression": "BSD-3-Clause",
+    "license": "",
+    "licenseClassifiers": []
+  }
+]

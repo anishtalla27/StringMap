@@ -1,0 +1,2945 @@
+{
+  "releaseQualified": false,
+  "deployed": false,
+  "change": "Recover prematurely short staff crops with geometry-only column resampling; guarded fourth image reading must preserve every predicted note and have no measure-length warnings.",
+  "geometryGate": "At least three staffs; 60 percent of spans within 5 percent of median; at least one span below 90 percent of median.",
+  "serviceBenchmarkTests": 40,
+  "imageGeometryTests": 4,
+  "testLogs": [
+    "artifacts/crop-retry-final-tests.log",
+    "artifacts/crop-retry-geometry-tests.log"
+  ],
+  "rawRecognizerChecks": {
+    "releaseQualified": false,
+    "realCameraImages": 0,
+    "referenceBoundaryStatus": "Provisional first MusicXML page; independent visual audit required",
+    "referencesUsedByInference": false,
+    "sourceSHA256": {
+      "recognizer.py": "1cd6b9c3d1159a030624fef0bb550cedcf86056316c4c4c996d3d847d799bb7f",
+      "staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+      "score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+      "production.py": "7095ecf60a3fce2fc2737f6731f36f3f29d6390ef8f4121cefba2c0c43218ade"
+    },
+    "cases": [
+      {
+        "id": "rhythm-06-clean",
+        "category": "generated",
+        "imageSHA256": "cbba9164e237ab5b8f20833eecf4c8805d3fc7cb6c81b2a843c0b244ad54bd0a",
+        "recognitionSeconds": 2.105944000009913,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 20,
+              "recognized": 20
+            },
+            {
+              "detected": 20,
+              "recognized": 20
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 8,
+            "complete": 8
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "rhythm-12-clean",
+        "category": "generated",
+        "imageSHA256": "ccf291be9689abc0da43465dc58bd5438222f4f3c5671eb6091d76b200daccd2",
+        "recognitionSeconds": 1.8096473330224399,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 28,
+              "recognized": 28
+            },
+            {
+              "detected": 28,
+              "recognized": 28
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "study-01-clean",
+        "category": "generated",
+        "imageSHA256": "5c6be8bf6db5d0d963887cac9f0b8cdb5a3062cf95507079030ac8847ecbbe44",
+        "recognitionSeconds": 1.3599565000040457,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 1,
+          "noteCounts": [
+            {
+              "detected": 16,
+              "recognized": 16
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "02_fancy_p6__tilt_left",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "ca598dc81fa3d1d2660ffb57f8ca7361db02f1ca12882d6ff081973ee077a60f",
+        "recognitionSeconds": 27.410453082993627,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 7,
+          "noteCounts": [
+            {
+              "detected": 36,
+              "recognized": 38
+            },
+            {
+              "detected": 54,
+              "recognized": 54
+            },
+            {
+              "detected": 53,
+              "recognized": 60
+            },
+            {
+              "detected": 42,
+              "recognized": 42
+            },
+            {
+              "detected": 65,
+              "recognized": 65
+            },
+            {
+              "detected": 30,
+              "recognized": 41
+            },
+            {
+              "detected": 29,
+              "recognized": 32
+            }
+          ],
+          "preparation": "column",
+          "attempts": 4,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 329,
+            "missing": 3,
+            "extra": 3,
+            "f1": 0.9909638554216867
+          },
+          "onset": {
+            "truePositive": 327,
+            "missing": 5,
+            "extra": 5,
+            "f1": 0.9849397590361446
+          },
+          "duration": {
+            "truePositive": 327,
+            "missing": 5,
+            "extra": 5,
+            "f1": 0.9849397590361446
+          },
+          "noteEvent": {
+            "truePositive": 320,
+            "missing": 12,
+            "extra": 12,
+            "f1": 0.963855421686747
+          },
+          "chords": {
+            "total": 74,
+            "complete": 69
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 328,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 328,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "01_fantasy_p5__flat",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "0f87d278994a2b63aeb5e6bc30201d9cc0e7fb5cf7af2a8a465a9f3d22951475",
+        "recognitionSeconds": 26.557589125004597,
+        "recognition": {
+          "status": "failed",
+          "type": "ValueError"
+        },
+        "exported": false,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 343,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 343,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 343,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 343,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "chords": {
+            "total": 93,
+            "complete": 0
+          }
+        }
+      },
+      {
+        "id": "03_solus_cum_sola__soft_shadow",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "8af891ab3e7d3b114ee7e846b689f31b20c92a51017d53fcb43966764b3aba29",
+        "recognitionSeconds": 26.96233833298902,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 7,
+          "noteCounts": [
+            {
+              "detected": 38,
+              "recognized": 42
+            },
+            {
+              "detected": 73,
+              "recognized": 73
+            },
+            {
+              "detected": 40,
+              "recognized": 40
+            },
+            {
+              "detected": 45,
+              "recognized": 45
+            },
+            {
+              "detected": 56,
+              "recognized": 56
+            },
+            {
+              "detected": 27,
+              "recognized": 26
+            },
+            {
+              "detected": 62,
+              "recognized": 62
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 8
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 344,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 166,
+            "missing": 178,
+            "extra": 178,
+            "f1": 0.48255813953488375
+          },
+          "duration": {
+            "truePositive": 338,
+            "missing": 6,
+            "extra": 6,
+            "f1": 0.9825581395348837
+          },
+          "noteEvent": {
+            "truePositive": 7,
+            "missing": 337,
+            "extra": 337,
+            "f1": 0.020348837209302327
+          },
+          "chords": {
+            "total": 61,
+            "complete": 1
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 342,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        },
+        "tabPlayable": false
+      },
+      {
+        "id": "04_solus_sine_sola__perspective",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "198d8188902402c5403c9d767cdafae05da08d222c9bcba3343734c8d8a38ca4",
+        "recognitionSeconds": 39.88641608299804,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 6,
+          "noteCounts": [
+            {
+              "detected": 56,
+              "recognized": 56
+            },
+            {
+              "detected": 65,
+              "recognized": 66
+            },
+            {
+              "detected": 46,
+              "recognized": 46
+            },
+            {
+              "detected": 42,
+              "recognized": 42
+            },
+            {
+              "detected": 43,
+              "recognized": 43
+            },
+            {
+              "detected": 65,
+              "recognized": 65
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 6
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 317,
+            "missing": 0,
+            "extra": 1,
+            "f1": 0.9984251968503937
+          },
+          "onset": {
+            "truePositive": 152,
+            "missing": 165,
+            "extra": 166,
+            "f1": 0.47874015748031495
+          },
+          "duration": {
+            "truePositive": 310,
+            "missing": 7,
+            "extra": 8,
+            "f1": 0.9763779527559056
+          },
+          "noteEvent": {
+            "truePositive": 18,
+            "missing": 299,
+            "extra": 300,
+            "f1": 0.05669291338582677
+          },
+          "chords": {
+            "total": 66,
+            "complete": 2
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 311,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 311,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "05_dr_cases_pavan__tilt_right",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+        "recognitionSeconds": 45.89532845799113,
+        "recognition": {
+          "status": "failed",
+          "type": "ValueError"
+        },
+        "exported": false,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 421,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 421,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 421,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 421,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "chords": {
+            "total": 107,
+            "complete": 0
+          }
+        }
+      },
+      {
+        "id": "06_lachrimae_pavan__hard_shadow",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "058d76dd986da89bf836fe1c5adadc13f8cb391d247e7b5915da1ec54f071bce",
+        "recognitionSeconds": 48.24673449998954,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 9,
+          "noteCounts": [
+            {
+              "detected": 44,
+              "recognized": 46
+            },
+            {
+              "detected": 48,
+              "recognized": 49
+            },
+            {
+              "detected": 44,
+              "recognized": 44
+            },
+            {
+              "detected": 44,
+              "recognized": 45
+            },
+            {
+              "detected": 49,
+              "recognized": 51
+            },
+            {
+              "detected": 56,
+              "recognized": 57
+            },
+            {
+              "detected": 49,
+              "recognized": 50
+            },
+            {
+              "detected": 31,
+              "recognized": 31
+            },
+            {
+              "detected": 30,
+              "recognized": 30
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 17
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 403,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 189,
+            "missing": 214,
+            "extra": 214,
+            "f1": 0.46898263027295284
+          },
+          "duration": {
+            "truePositive": 389,
+            "missing": 14,
+            "extra": 14,
+            "f1": 0.9652605459057072
+          },
+          "noteEvent": {
+            "truePositive": 38,
+            "missing": 365,
+            "extra": 365,
+            "f1": 0.09429280397022333
+          },
+          "chords": {
+            "total": 85,
+            "complete": 7
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 398,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 398,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "07_digorie_pipers_galliard__flat",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "1ea02839d0a67591d4f382dec23899395f88e686cb92fddfaa9ad37909f470b1",
+        "recognitionSeconds": 56.98131016700063,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 8,
+          "noteCounts": [
+            {
+              "detected": 65,
+              "recognized": 65
+            },
+            {
+              "detected": 67,
+              "recognized": 67
+            },
+            {
+              "detected": 73,
+              "recognized": 74
+            },
+            {
+              "detected": 67,
+              "recognized": 68
+            },
+            {
+              "detected": 70,
+              "recognized": 70
+            },
+            {
+              "detected": 57,
+              "recognized": 57
+            },
+            {
+              "detected": 66,
+              "recognized": 66
+            },
+            {
+              "detected": 71,
+              "recognized": 72
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 23
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 538,
+            "missing": 0,
+            "extra": 1,
+            "f1": 0.9990714948932219
+          },
+          "onset": {
+            "truePositive": 284,
+            "missing": 254,
+            "extra": 255,
+            "f1": 0.5273909006499535
+          },
+          "duration": {
+            "truePositive": 527,
+            "missing": 11,
+            "extra": 12,
+            "f1": 0.978644382544104
+          },
+          "noteEvent": {
+            "truePositive": 22,
+            "missing": 516,
+            "extra": 517,
+            "f1": 0.04085422469823584
+          },
+          "chords": {
+            "total": 112,
+            "complete": 3
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 536,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        },
+        "tabPlayable": false
+      },
+      {
+        "id": "08_dowlands_first_galliard__tilt_left",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "8b0382089cc3231284143191c4358487be0783987d29b1c21e5ec01650251e0f",
+        "recognitionSeconds": 40.07107287499821,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 5,
+          "noteCounts": [
+            {
+              "detected": 61,
+              "recognized": 63
+            },
+            {
+              "detected": 51,
+              "recognized": 51
+            },
+            {
+              "detected": 53,
+              "recognized": 53
+            },
+            {
+              "detected": 56,
+              "recognized": 56
+            },
+            {
+              "detected": 42,
+              "recognized": 42
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 3
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 265,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 153,
+            "missing": 112,
+            "extra": 112,
+            "f1": 0.5773584905660377
+          },
+          "duration": {
+            "truePositive": 259,
+            "missing": 6,
+            "extra": 6,
+            "f1": 0.9773584905660377
+          },
+          "noteEvent": {
+            "truePositive": 137,
+            "missing": 128,
+            "extra": 128,
+            "f1": 0.5169811320754717
+          },
+          "chords": {
+            "total": 57,
+            "complete": 24
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 265,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 265,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "09_frog_galliard__soft_shadow",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "75d3a064a93c1215f6b2fc3982e956569d1b80848625afaef5c97cc0ca2ea44b",
+        "recognitionSeconds": 57.65731354098534,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 9,
+          "noteCounts": [
+            {
+              "detected": 53,
+              "recognized": 52
+            },
+            {
+              "detected": 60,
+              "recognized": 61
+            },
+            {
+              "detected": 55,
+              "recognized": 54
+            },
+            {
+              "detected": 56,
+              "recognized": 53
+            },
+            {
+              "detected": 58,
+              "recognized": 57
+            },
+            {
+              "detected": 53,
+              "recognized": 51
+            },
+            {
+              "detected": 47,
+              "recognized": 47
+            },
+            {
+              "detected": 43,
+              "recognized": 44
+            },
+            {
+              "detected": 52,
+              "recognized": 52
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 11
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 469,
+            "missing": 2,
+            "extra": 2,
+            "f1": 0.9957537154989384
+          },
+          "onset": {
+            "truePositive": 201,
+            "missing": 270,
+            "extra": 270,
+            "f1": 0.4267515923566879
+          },
+          "duration": {
+            "truePositive": 428,
+            "missing": 43,
+            "extra": 43,
+            "f1": 0.9087048832271762
+          },
+          "noteEvent": {
+            "truePositive": 23,
+            "missing": 448,
+            "extra": 448,
+            "f1": 0.04883227176220807
+          },
+          "chords": {
+            "total": 106,
+            "complete": 5
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 463,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 463,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "10_galliard_p24__perspective",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "6b791b9f0d14850d97fd0d4bc9a713d26b5a292cead0914cd7abd12ac3c642d7",
+        "recognitionSeconds": 38.15674974999274,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 4,
+          "noteCounts": [
+            {
+              "detected": 38,
+              "recognized": 38
+            },
+            {
+              "detected": 47,
+              "recognized": 47
+            },
+            {
+              "detected": 51,
+              "recognized": 51
+            },
+            {
+              "detected": 42,
+              "recognized": 44
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 6
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 180,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 75,
+            "missing": 105,
+            "extra": 105,
+            "f1": 0.4166666666666667
+          },
+          "duration": {
+            "truePositive": 169,
+            "missing": 11,
+            "extra": 11,
+            "f1": 0.9388888888888889
+          },
+          "noteEvent": {
+            "truePositive": 14,
+            "missing": 166,
+            "extra": 166,
+            "f1": 0.07777777777777778
+          },
+          "chords": {
+            "total": 41,
+            "complete": 2
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 360,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 360,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      },
+      {
+        "id": "11_melancholy_galliard__tilt_right",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "7a0067aa2fcaf43148f898f70171a21c22bb0b58b7da44c34646615917a24052",
+        "recognitionSeconds": 61.854898208985105,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 9,
+          "noteCounts": [
+            {
+              "detected": 57,
+              "recognized": 57
+            },
+            {
+              "detected": 55,
+              "recognized": 56
+            },
+            {
+              "detected": 58,
+              "recognized": 58
+            },
+            {
+              "detected": 59,
+              "recognized": 60
+            },
+            {
+              "detected": 64,
+              "recognized": 63
+            },
+            {
+              "detected": 57,
+              "recognized": 57
+            },
+            {
+              "detected": 71,
+              "recognized": 71
+            },
+            {
+              "detected": 61,
+              "recognized": 61
+            },
+            {
+              "detected": 44,
+              "recognized": 44
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 13
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 527,
+            "missing": 1,
+            "extra": 0,
+            "f1": 0.9990521327014218
+          },
+          "onset": {
+            "truePositive": 38,
+            "missing": 490,
+            "extra": 489,
+            "f1": 0.07203791469194312
+          },
+          "duration": {
+            "truePositive": 507,
+            "missing": 21,
+            "extra": 20,
+            "f1": 0.9611374407582939
+          },
+          "noteEvent": {
+            "truePositive": 14,
+            "missing": 514,
+            "extra": 513,
+            "f1": 0.026540284360189573
+          },
+          "chords": {
+            "total": 104,
+            "complete": 2
+          }
+        },
+        "nativeAccepted": false,
+        "playbackPassed": false,
+        "playback": {
+          "unrenderable": {
+            "parsed": false,
+            "error": "Invalid MusicXML: Measure 50: <fermata> is not supported yet."
+          }
+        },
+        "tabPlayable": false
+      },
+      {
+        "id": "12_galliard_p27__hard_shadow",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "ec524544e114de314096cd8adaf0a57e2f2251ce2bff35c45d6070a175b394cd",
+        "recognitionSeconds": 47.05788658300298,
+        "recognition": {
+          "status": "failed",
+          "type": "ValueError"
+        },
+        "exported": false,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 237,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 237,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 237,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 237,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "chords": {
+            "total": 56,
+            "complete": 0
+          }
+        }
+      },
+      {
+        "id": "13_galliard_p28__flat",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "fba6966a915dbdb92407f9bc38ca084b0fd8c72615f2326ea0a42001fea6ab46",
+        "recognitionSeconds": 84.62146241700975,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 11,
+          "noteCounts": [
+            {
+              "detected": 55,
+              "recognized": 54
+            },
+            {
+              "detected": 53,
+              "recognized": 52
+            },
+            {
+              "detected": 56,
+              "recognized": 55
+            },
+            {
+              "detected": 71,
+              "recognized": 71
+            },
+            {
+              "detected": 56,
+              "recognized": 56
+            },
+            {
+              "detected": 63,
+              "recognized": 64
+            },
+            {
+              "detected": 56,
+              "recognized": 57
+            },
+            {
+              "detected": 67,
+              "recognized": 66
+            },
+            {
+              "detected": 78,
+              "recognized": 79
+            },
+            {
+              "detected": 50,
+              "recognized": 50
+            },
+            {
+              "detected": 61,
+              "recognized": 63
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 21
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 666,
+            "missing": 3,
+            "extra": 1,
+            "f1": 0.9970059880239521
+          },
+          "onset": {
+            "truePositive": 360,
+            "missing": 309,
+            "extra": 307,
+            "f1": 0.5389221556886228
+          },
+          "duration": {
+            "truePositive": 648,
+            "missing": 21,
+            "extra": 19,
+            "f1": 0.9700598802395209
+          },
+          "noteEvent": {
+            "truePositive": 64,
+            "missing": 605,
+            "extra": 603,
+            "f1": 0.09580838323353294
+          },
+          "chords": {
+            "total": 145,
+            "complete": 9
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 652,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        },
+        "tabPlayable": false
+      },
+      {
+        "id": "14_giles_hobies_galliard__tilt_left",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+        "recognitionSeconds": 116.52832899999339,
+        "recognition": {
+          "status": "failed",
+          "type": "ValueError"
+        },
+        "exported": false,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "chords": {
+            "total": 111,
+            "complete": 0
+          }
+        }
+      },
+      {
+        "id": "15_galliard_p30__soft_shadow",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "ae15faf24b74edbee19f8fca831ff7dfd354a3570425057f016329d6fd0bbef0",
+        "recognitionSeconds": 83.24702787498245,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 6,
+          "noteCounts": [
+            {
+              "detected": 63,
+              "recognized": 63
+            },
+            {
+              "detected": 48,
+              "recognized": 48
+            },
+            {
+              "detected": 46,
+              "recognized": 46
+            },
+            {
+              "detected": 50,
+              "recognized": 50
+            },
+            {
+              "detected": 44,
+              "recognized": 44
+            },
+            {
+              "detected": 42,
+              "recognized": 41
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 4,
+          "timingWarnings": 12
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 291,
+            "missing": 1,
+            "extra": 1,
+            "f1": 0.9965753424657534
+          },
+          "onset": {
+            "truePositive": 146,
+            "missing": 146,
+            "extra": 146,
+            "f1": 0.5
+          },
+          "duration": {
+            "truePositive": 274,
+            "missing": 18,
+            "extra": 18,
+            "f1": 0.9383561643835616
+          },
+          "noteEvent": {
+            "truePositive": 10,
+            "missing": 282,
+            "extra": 282,
+            "f1": 0.03424657534246575
+          },
+          "chords": {
+            "total": 68,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "playbackPassed": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 287,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 287,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "tabPlayable": true
+      }
+    ],
+    "resultValidation": "Native parsed and all actual playback/identity/pitch flags checked; exit code alone is not success."
+  },
+  "httpChecks": [
+    {
+      "id": "printed_guitar-01_fantasy_p5__flat",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 42.38450625000405,
+      "tabPlayable": null,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 93,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 343,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 93,
+          "complete": 0
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": false,
+      "playback": null,
+      "previousStatus": "failed"
+    },
+    {
+      "id": "printed_guitar-02_fancy_p6__tilt_left",
+      "status": "completed",
+      "error": null,
+      "seconds": 46.709459999983665,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 99,
+          "missing": 233,
+          "extra": 233,
+          "f1": 0.29819277108433734
+        },
+        "onset": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "duration": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 327,
+          "extra": 327,
+          "f1": 0.015060240963855422
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 329,
+          "missing": 3,
+          "extra": 3,
+          "f1": 0.9909638554216867
+        },
+        "onset": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "duration": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "noteEvent": {
+          "truePositive": 320,
+          "missing": 12,
+          "extra": 12,
+          "f1": 0.963855421686747
+        },
+        "chords": {
+          "total": 74,
+          "complete": 69
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 328,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 328,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-03_solus_cum_sola__soft_shadow",
+      "status": "completed",
+      "error": null,
+      "seconds": 42.68161825000425,
+      "tabPlayable": false,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 105,
+          "missing": 239,
+          "extra": 239,
+          "f1": 0.30523255813953487
+        },
+        "onset": {
+          "truePositive": 172,
+          "missing": 172,
+          "extra": 172,
+          "f1": 0.5
+        },
+        "duration": {
+          "truePositive": 339,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9854651162790697
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 343,
+          "extra": 343,
+          "f1": 0.0029069767441860465
+        },
+        "chords": {
+          "total": 61,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 344,
+          "missing": 0,
+          "extra": 0,
+          "f1": 1.0
+        },
+        "onset": {
+          "truePositive": 172,
+          "missing": 172,
+          "extra": 172,
+          "f1": 0.5
+        },
+        "duration": {
+          "truePositive": 339,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9854651162790697
+        },
+        "noteEvent": {
+          "truePositive": 9,
+          "missing": 335,
+          "extra": 335,
+          "f1": 0.02616279069767442
+        },
+        "chords": {
+          "total": 61,
+          "complete": 1
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 342,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-04_solus_sine_sola__perspective",
+      "status": "completed",
+      "error": null,
+      "seconds": 42.83271020799293,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 119,
+          "missing": 198,
+          "extra": 199,
+          "f1": 0.37480314960629924
+        },
+        "onset": {
+          "truePositive": 152,
+          "missing": 165,
+          "extra": 166,
+          "f1": 0.47874015748031495
+        },
+        "duration": {
+          "truePositive": 310,
+          "missing": 7,
+          "extra": 8,
+          "f1": 0.9763779527559056
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 312,
+          "extra": 313,
+          "f1": 0.015748031496062992
+        },
+        "chords": {
+          "total": 66,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 317,
+          "missing": 0,
+          "extra": 1,
+          "f1": 0.9984251968503937
+        },
+        "onset": {
+          "truePositive": 152,
+          "missing": 165,
+          "extra": 166,
+          "f1": 0.47874015748031495
+        },
+        "duration": {
+          "truePositive": 310,
+          "missing": 7,
+          "extra": 8,
+          "f1": 0.9763779527559056
+        },
+        "noteEvent": {
+          "truePositive": 18,
+          "missing": 299,
+          "extra": 300,
+          "f1": 0.05669291338582677
+        },
+        "chords": {
+          "total": 66,
+          "complete": 2
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 311,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 311,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-05_dr_cases_pavan__tilt_right",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 50.5032017500198,
+      "tabPlayable": null,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 107,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 107,
+          "complete": 0
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": false,
+      "playback": null,
+      "previousStatus": "failed"
+    },
+    {
+      "id": "printed_guitar-06_lachrimae_pavan__hard_shadow",
+      "status": "completed",
+      "error": null,
+      "seconds": 52.87944662501104,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 151,
+          "missing": 252,
+          "extra": 252,
+          "f1": 0.3746898263027295
+        },
+        "onset": {
+          "truePositive": 189,
+          "missing": 214,
+          "extra": 214,
+          "f1": 0.46898263027295284
+        },
+        "duration": {
+          "truePositive": 389,
+          "missing": 14,
+          "extra": 14,
+          "f1": 0.9652605459057072
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 398,
+          "extra": 398,
+          "f1": 0.01240694789081886
+        },
+        "chords": {
+          "total": 85,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 403,
+          "missing": 0,
+          "extra": 0,
+          "f1": 1.0
+        },
+        "onset": {
+          "truePositive": 189,
+          "missing": 214,
+          "extra": 214,
+          "f1": 0.46898263027295284
+        },
+        "duration": {
+          "truePositive": 389,
+          "missing": 14,
+          "extra": 14,
+          "f1": 0.9652605459057072
+        },
+        "noteEvent": {
+          "truePositive": 38,
+          "missing": 365,
+          "extra": 365,
+          "f1": 0.09429280397022333
+        },
+        "chords": {
+          "total": 85,
+          "complete": 7
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-07_digorie_pipers_galliard__flat",
+      "status": "completed",
+      "error": null,
+      "seconds": 60.715614999993704,
+      "tabPlayable": false,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 212,
+          "missing": 326,
+          "extra": 326,
+          "f1": 0.3940520446096654
+        },
+        "onset": {
+          "truePositive": 283,
+          "missing": 255,
+          "extra": 255,
+          "f1": 0.5260223048327137
+        },
+        "duration": {
+          "truePositive": 525,
+          "missing": 13,
+          "extra": 13,
+          "f1": 0.9758364312267658
+        },
+        "noteEvent": {
+          "truePositive": 10,
+          "missing": 528,
+          "extra": 528,
+          "f1": 0.01858736059479554
+        },
+        "chords": {
+          "total": 112,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 537,
+          "missing": 1,
+          "extra": 1,
+          "f1": 0.9981412639405205
+        },
+        "onset": {
+          "truePositive": 283,
+          "missing": 255,
+          "extra": 255,
+          "f1": 0.5260223048327137
+        },
+        "duration": {
+          "truePositive": 525,
+          "missing": 13,
+          "extra": 13,
+          "f1": 0.9758364312267658
+        },
+        "noteEvent": {
+          "truePositive": 32,
+          "missing": 506,
+          "extra": 506,
+          "f1": 0.05947955390334572
+        },
+        "chords": {
+          "total": 112,
+          "complete": 3
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 535,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-08_dowlands_first_galliard__tilt_left",
+      "status": "completed",
+      "error": null,
+      "seconds": 46.78773120799451,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 98,
+          "missing": 167,
+          "extra": 167,
+          "f1": 0.36981132075471695
+        },
+        "onset": {
+          "truePositive": 153,
+          "missing": 112,
+          "extra": 112,
+          "f1": 0.5773584905660377
+        },
+        "duration": {
+          "truePositive": 258,
+          "missing": 7,
+          "extra": 7,
+          "f1": 0.9735849056603774
+        },
+        "noteEvent": {
+          "truePositive": 8,
+          "missing": 257,
+          "extra": 257,
+          "f1": 0.03018867924528302
+        },
+        "chords": {
+          "total": 57,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 265,
+          "missing": 0,
+          "extra": 0,
+          "f1": 1.0
+        },
+        "onset": {
+          "truePositive": 153,
+          "missing": 112,
+          "extra": 112,
+          "f1": 0.5773584905660377
+        },
+        "duration": {
+          "truePositive": 258,
+          "missing": 7,
+          "extra": 7,
+          "f1": 0.9735849056603774
+        },
+        "noteEvent": {
+          "truePositive": 137,
+          "missing": 128,
+          "extra": 128,
+          "f1": 0.5169811320754717
+        },
+        "chords": {
+          "total": 57,
+          "complete": 24
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-09_frog_galliard__soft_shadow",
+      "status": "completed",
+      "error": null,
+      "seconds": 64.8870769579953,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 176,
+          "missing": 295,
+          "extra": 295,
+          "f1": 0.37367303609341823
+        },
+        "onset": {
+          "truePositive": 201,
+          "missing": 270,
+          "extra": 270,
+          "f1": 0.4267515923566879
+        },
+        "duration": {
+          "truePositive": 428,
+          "missing": 43,
+          "extra": 43,
+          "f1": 0.9087048832271762
+        },
+        "noteEvent": {
+          "truePositive": 7,
+          "missing": 464,
+          "extra": 464,
+          "f1": 0.014861995753715499
+        },
+        "chords": {
+          "total": 106,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 470,
+          "missing": 1,
+          "extra": 1,
+          "f1": 0.9978768577494692
+        },
+        "onset": {
+          "truePositive": 201,
+          "missing": 270,
+          "extra": 270,
+          "f1": 0.4267515923566879
+        },
+        "duration": {
+          "truePositive": 428,
+          "missing": 43,
+          "extra": 43,
+          "f1": 0.9087048832271762
+        },
+        "noteEvent": {
+          "truePositive": 23,
+          "missing": 448,
+          "extra": 448,
+          "f1": 0.04883227176220807
+        },
+        "chords": {
+          "total": 106,
+          "complete": 5
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-10_galliard_p24__perspective",
+      "status": "completed",
+      "error": null,
+      "seconds": 48.576457624993054,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 79,
+          "missing": 101,
+          "extra": 101,
+          "f1": 0.4388888888888889
+        },
+        "onset": {
+          "truePositive": 75,
+          "missing": 105,
+          "extra": 105,
+          "f1": 0.4166666666666667
+        },
+        "duration": {
+          "truePositive": 169,
+          "missing": 11,
+          "extra": 11,
+          "f1": 0.9388888888888889
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 180,
+          "extra": 180,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 41,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 180,
+          "missing": 0,
+          "extra": 0,
+          "f1": 1.0
+        },
+        "onset": {
+          "truePositive": 75,
+          "missing": 105,
+          "extra": 105,
+          "f1": 0.4166666666666667
+        },
+        "duration": {
+          "truePositive": 169,
+          "missing": 11,
+          "extra": 11,
+          "f1": 0.9388888888888889
+        },
+        "noteEvent": {
+          "truePositive": 14,
+          "missing": 166,
+          "extra": 166,
+          "f1": 0.07777777777777778
+        },
+        "chords": {
+          "total": 41,
+          "complete": 2
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-11_melancholy_galliard__tilt_right",
+      "status": "completed",
+      "error": null,
+      "seconds": 98.75521754199872,
+      "tabPlayable": null,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 172,
+          "missing": 356,
+          "extra": 355,
+          "f1": 0.32606635071090045
+        },
+        "onset": {
+          "truePositive": 38,
+          "missing": 490,
+          "extra": 489,
+          "f1": 0.07203791469194312
+        },
+        "duration": {
+          "truePositive": 507,
+          "missing": 21,
+          "extra": 20,
+          "f1": 0.9611374407582939
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 526,
+          "extra": 525,
+          "f1": 0.0037914691943127963
+        },
+        "chords": {
+          "total": 104,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 527,
+          "missing": 1,
+          "extra": 0,
+          "f1": 0.9990521327014218
+        },
+        "onset": {
+          "truePositive": 38,
+          "missing": 490,
+          "extra": 489,
+          "f1": 0.07203791469194312
+        },
+        "duration": {
+          "truePositive": 507,
+          "missing": 21,
+          "extra": 20,
+          "f1": 0.9611374407582939
+        },
+        "noteEvent": {
+          "truePositive": 14,
+          "missing": 514,
+          "extra": 513,
+          "f1": 0.026540284360189573
+        },
+        "chords": {
+          "total": 104,
+          "complete": 2
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": false,
+      "playback": null,
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-12_galliard_p27__hard_shadow",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 88.44381062500179,
+      "tabPlayable": null,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 56,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 237,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 56,
+          "complete": 0
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": false,
+      "playback": null,
+      "previousStatus": "failed"
+    },
+    {
+      "id": "printed_guitar-13_galliard_p28__flat",
+      "status": "completed",
+      "error": null,
+      "seconds": 92.86192599998321,
+      "tabPlayable": false,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 258,
+          "missing": 411,
+          "extra": 409,
+          "f1": 0.38622754491017963
+        },
+        "onset": {
+          "truePositive": 346,
+          "missing": 323,
+          "extra": 321,
+          "f1": 0.5179640718562875
+        },
+        "duration": {
+          "truePositive": 648,
+          "missing": 21,
+          "extra": 19,
+          "f1": 0.9700598802395209
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 663,
+          "extra": 661,
+          "f1": 0.008982035928143712
+        },
+        "chords": {
+          "total": 145,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 667,
+          "missing": 2,
+          "extra": 0,
+          "f1": 0.9985029940119761
+        },
+        "onset": {
+          "truePositive": 346,
+          "missing": 323,
+          "extra": 321,
+          "f1": 0.5179640718562875
+        },
+        "duration": {
+          "truePositive": 648,
+          "missing": 21,
+          "extra": 19,
+          "f1": 0.9700598802395209
+        },
+        "noteEvent": {
+          "truePositive": 69,
+          "missing": 600,
+          "extra": 598,
+          "f1": 0.10329341317365269
+        },
+        "chords": {
+          "total": 145,
+          "complete": 9
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 652,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "printed_guitar-14_giles_hobies_galliard__tilt_left",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 52.25807670800714,
+      "tabPlayable": null,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 111,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 111,
+          "complete": 0
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": false,
+      "playback": null,
+      "previousStatus": "failed"
+    },
+    {
+      "id": "printed_guitar-15_galliard_p30__soft_shadow",
+      "status": "completed",
+      "error": null,
+      "seconds": 46.85211550001986,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 111,
+          "missing": 181,
+          "extra": 181,
+          "f1": 0.3801369863013699
+        },
+        "onset": {
+          "truePositive": 146,
+          "missing": 146,
+          "extra": 146,
+          "f1": 0.5
+        },
+        "duration": {
+          "truePositive": 274,
+          "missing": 18,
+          "extra": 18,
+          "f1": 0.9383561643835616
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 290,
+          "extra": 290,
+          "f1": 0.00684931506849315
+        },
+        "chords": {
+          "total": 68,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 291,
+          "missing": 1,
+          "extra": 1,
+          "f1": 0.9965753424657534
+        },
+        "onset": {
+          "truePositive": 146,
+          "missing": 146,
+          "extra": 146,
+          "f1": 0.5
+        },
+        "duration": {
+          "truePositive": 274,
+          "missing": 18,
+          "extra": 18,
+          "f1": 0.9383561643835616
+        },
+        "noteEvent": {
+          "truePositive": 10,
+          "missing": 282,
+          "extra": 282,
+          "f1": 0.03424657534246575
+        },
+        "chords": {
+          "total": 68,
+          "complete": 0
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking",
+      "platform": "macOS HTTP",
+      "nativeParsed": true,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "previousStatus": "completed"
+    },
+    {
+      "id": "handwritten_general_notation-01_CVC-MUSCIMA_W-07_N-05_D-ideal__soft_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 12.243767584004672,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-02_CVC-MUSCIMA_W-29_N-10_D-ideal__perspective",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 12.15326875000028,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-03_CVC-MUSCIMA_W-37_N-17_D-ideal__tilt_right",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 14.201280833018245,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-04_CVC-MUSCIMA_W-27_N-16_D-ideal__hard_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 12.316530915995827,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-05_CVC-MUSCIMA_W-09_N-13_D-ideal__flat",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "seconds": 18.30064758399385,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-06_CVC-MUSCIMA_W-50_N-08_D-ideal__tilt_left",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 4.086119499988854,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    },
+    {
+      "id": "handwritten_general_notation-07_CVC-MUSCIMA_W-16_N-17_D-ideal__soft_shadow",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "seconds": 6.079394665983273,
+      "tabPlayable": null,
+      "referenceStatus": "No symbolic ground truth; accuracy unmeasured",
+      "platform": "Linux ARM64 HTTP",
+      "nativeParsed": false
+    }
+  ],
+  "httpSummary": {
+    "cases": 22,
+    "completed": 11,
+    "nativeParsed": 10,
+    "tabPlayable": 7
+  },
+  "fancyWrittenNoteEventF1": 0.963855421686747,
+  "researchComparison": "artifacts/column-staff-external-pages/summary.json",
+  "sourceSHA256": {
+    "services/omr/recognizer.py": "1cd6b9c3d1159a030624fef0bb550cedcf86056316c4c4c996d3d847d799bb7f",
+    "services/omr/staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+    "services/omr/score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+    "services/omr/test_recognizer.py": "a30635c0f574106e6b03d0184fa78fbc3083eff7da326dd0c51c6d9bdf1ea727",
+    "services/omr/test_staff_image.py": "41ce843cca96db5dacaabf308b904d256acc2906c9cb40fca00f555a2a6e3513",
+    "services/omr/benchmark.py": "0305b098110927b77c46d1e84495d4b62ab9d906c8d3f9f4dc28318eb9b98c40",
+    "services/omr/benchmark_external_pack.py": "c06d1c9442d69faf4d97b67db89ef9d8ee0d8fc67a152969eadd6272ab1c5fcf",
+    "services/omr/research/extract_guitar_staffs.py": "bb85df38f9a3f9c052018515c3ac72be42d44f9d727045165365bd78fa6aff91",
+    "services/omr/research/evaluate_homr_beam.py": "f6639ab559434038dfa7b3fb1538662d6a6ef193b2f7012894ab4661b54ecd3f"
+  },
+  "sourceOffer": {
+    "file": "artifacts/crop-retry-recognizer-source.tar.gz",
+    "sha256": "0dfd448bb1604a0400c836401dff33befa6a3edffbc980a5c7a509a0d56e181f",
+    "runtimeBytesVerified": true
+  },
+  "limits": [
+    "The 15 supplied printed pages are simulated photo conditions, not actual camera photographs.",
+    "References use provisional first-page MusicXML boundaries, pending independent visual audit.",
+    "Rhythmic consistency and successful symbolic playback do not certify recognition accuracy.",
+    "Most supplied scores remain substantially incorrect; handwriting remains unqualified.",
+    "Local macOS and Linux ARM64 inference are verified. A hosted endpoint remains unvalidated.",
+    "The broad macOS run reached its default per-device hourly limit on its last two handwriting submissions. All seven handwriting pages were separately sent to the fresh Linux service; original capacity-error records remain retained.",
+    "No physical audio, signing, archive, App Attest or TestFlight qualification is claimed."
+  ],
+  "printedAggregateWrittenNoteEvent": {
+    "truePositive": 684,
+    "missing": 5249,
+    "extra": 3653,
+    "f1": 0.1332035053554041
+  },
+  "retainedBaselineComparison": {
+    "unchangedSuccessfulNoteEvents": [
+      "printed_guitar-03_solus_cum_sola__soft_shadow",
+      "printed_guitar-04_solus_sine_sola__perspective",
+      "printed_guitar-06_lachrimae_pavan__hard_shadow",
+      "printed_guitar-07_digorie_pipers_galliard__flat",
+      "printed_guitar-08_dowlands_first_galliard__tilt_left",
+      "printed_guitar-09_frog_galliard__soft_shadow",
+      "printed_guitar-10_galliard_p24__perspective",
+      "printed_guitar-11_melancholy_galliard__tilt_right",
+      "printed_guitar-13_galliard_p28__flat",
+      "printed_guitar-15_galliard_p30__soft_shadow"
+    ],
+    "changedSuccessfulNoteEvents": [
+      "printed_guitar-02_fancy_p6__tilt_left"
+    ]
+  },
+  "fancyPriorWrittenNoteEvent": {
+    "truePositive": 78,
+    "missing": 254,
+    "extra": 254,
+    "f1": 0.23493975903614459
+  },
+  "simulatorUI": {
+    "iphone": {
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "086490C4-72D8-4F86-B65B-C5D927D7CA6B",
+              "deviceName": "StringMap Photo QA iPhone",
+              "modelName": "iPhone 17",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1788686496.583,
+        "passedTests": 1,
+        "result": "Passed",
+        "skippedTests": 0,
+        "startTime": 1788686243.225,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - StringMap",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "xcresult": "artifacts/crop-retry-iphone.xcresult",
+      "recognizedNotes": 332,
+      "recognizedMeasures": 21,
+      "screenshot": "docs/release/screenshots/crop-retry-iphone-tab.png"
+    },
+    "ipad": {
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "266A6C6E-947F-4BC9-BD40-0FE6C4FFF2E0",
+              "deviceName": "iPad Pro 13-inch (M5)",
+              "modelName": "iPad Pro 13-inch (M5)",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1788686703.056,
+        "passedTests": 1,
+        "result": "Passed",
+        "skippedTests": 0,
+        "startTime": 1788686534.422,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - StringMap",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "xcresult": "artifacts/crop-retry-ipad.xcresult",
+      "recognizedNotes": 332,
+      "recognizedMeasures": 21,
+      "screenshot": "docs/release/screenshots/crop-retry-ipad-tab.png"
+    }
+  },
+  "linux": {
+    "imageID": "sha256:5e817f1e57d96bbd3d19a8eaba8310294848274d6185cfbab7832f0270263563",
+    "architecture": "linux/arm64",
+    "cpuLimit": 2,
+    "memoryLimitGiB": 3,
+    "workerUID": 10001,
+    "controlEvents": 112,
+    "controlsExact": true,
+    "fancy": {
+      "id": "printed_guitar-02_fancy_p6__tilt_left",
+      "status": "completed",
+      "error": null,
+      "seconds": 109.62943183400785,
+      "tabPlayable": true,
+      "provisionalMetrics": {
+        "pitch": {
+          "truePositive": 99,
+          "missing": 233,
+          "extra": 233,
+          "f1": 0.29819277108433734
+        },
+        "onset": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "duration": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 327,
+          "extra": 327,
+          "f1": 0.015060240963855422
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "provisionalWrittenNotationMetrics": {
+        "pitch": {
+          "truePositive": 329,
+          "missing": 3,
+          "extra": 3,
+          "f1": 0.9909638554216867
+        },
+        "onset": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "duration": {
+          "truePositive": 327,
+          "missing": 5,
+          "extra": 5,
+          "f1": 0.9849397590361446
+        },
+        "noteEvent": {
+          "truePositive": 320,
+          "missing": 12,
+          "extra": 12,
+          "f1": 0.963855421686747
+        },
+        "chords": {
+          "total": 74,
+          "complete": 69
+        }
+      },
+      "referenceStatus": "XML first-page boundary; PDF boundary and reference pitches need independent checking"
+    },
+    "sourceArchive": "artifacts/crop-retry-linux-source.tar.gz",
+    "sourceSHA256": "2ae63acf37b69b27ee672abbc6d2a56494c6413311098f0939ea52da22253b63",
+    "runtimeSourceBytesVerified": true,
+    "allImageIntermediatesRemoved": true,
+    "logs": "artifacts/crop-retry-linux-server.log",
+    "fancyProcessingSeconds": 107.17,
+    "fancyCPUSeconds": 200.87,
+    "lifetimeChildPeakRSSBytes": 1776025600,
+    "containerStoppedAndRemoved": true
+  },
+  "temporaryMacHTTPService": {
+    "port": 8871,
+    "allImageIntermediatesRemoved": true,
+    "stopped": true
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "date": "2026-09-06",
+  "status": "Linux and simulator flow verified; recognition accuracy and release qualification remain open.",
+  "releaseQualified": false,
+  "uiTestSHA256": "527cddd89634a5cb013bd28b4033c94dc2c3491d3560146fab88cb17174a2f2d",
+  "serviceSourceSHA256": {
+    "recognizer.py": "f08507b711b2281ac5f7508769b270ee1ab196870b99fdba8897508e22b57903",
+    "page_image.py": "ffcf135317e6873027c8353bf852620bb8971e6f79bc4b75a7d5a1cfc2635343",
+    "staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+    "production.py": "7095ecf60a3fce2fc2737f6731f36f3f29d6390ef8f4121cefba2c0c43218ade",
+    "score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+    "README.md": "fd1d1e7bb2d30a0463768b24b6bc4c3aea438735d8cca1877b6027ccadfaf5ea"
+  },
+  "linux": {
+    "imageID": "sha256:b19ceb8585ad4e59c64a0e9e5c2b7953ca5ba52230d3806703c29c338937ca5e",
+    "os": "linux",
+    "architecture": "arm64",
+    "containerName": "/stringmap-page-deskew-check",
+    "memoryLimitBytes": 3221225472,
+    "nanoCPUs": 2000000000,
+    "portBindings": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8872"
+        }
+      ]
+    },
+    "workerUID": 10001,
+    "workerUIDEvidence": "PID                 USER                COMMAND\n2046                10001               uvicorn\n",
+    "sourceOffer": {
+      "archiveSHA256": "27f5fba38be8332c03c339e17c82a01ca514d69673c1afd7bc99b114a1ecb98f",
+      "pythonFilesMatch": [
+        "export_clarity_guitar_evaluation.py",
+        "score_quality.py",
+        "server.py",
+        "build_rhythm_corpus.py",
+        "report_benchmark.py",
+        "summarize_external_pack.py",
+        "staff_image.py",
+        "benchmark.py",
+        "models.py",
+        "recognizer.py",
+        "build_source_offer.py",
+        "build_corpus.py",
+        "recheck_results.py",
+        "check_external_references.py",
+        "attestation.py",
+        "receipt.py",
+        "evaluate_zeus_crops.py",
+        "compare_external_pack.py",
+        "page_image.py",
+        "build_unsupported_corpus.py",
+        "engine_benchmark.py",
+        "evaluate_jazzmus.py",
+        "benchmark_external_pack.py",
+        "production.py",
+        "compare_staff_crops.py"
+      ],
+      "readmeMatches": true
+    },
+    "scope": "Local development-mode Linux container through loopback proxy; no hosted HTTPS or App Attest qualification."
+  },
+  "linuxTests": {
+    "passed": 41,
+    "log": "artifacts/page-deskew-linux-unit-final.log",
+    "initialSetupFailure": "Runtime image excludes optional HTTP test-client dependencies. The initial test_production import failed. httpx 0.28.1, httpcore 1.0.9 and sniffio 1.3.1 were installed only into /tmp/stringmap-test-deps; the service environment and image were unchanged.",
+    "initialLog": "artifacts/page-deskew-linux-unit.log",
+    "runtimeOnlyPassed": 29,
+    "runtimeOnlyLog": "artifacts/page-deskew-linux-runtime-unit.log"
+  },
+  "controls": {
+    "recordedAt": "2026-09-06T11:01:38.335286+00:00",
+    "plannedImages": 3,
+    "completedCases": 3,
+    "pendingCases": 0,
+    "groups": {
+      "engraved": {
+        "images": 3,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 8,
+          "complete": 8
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 3.3
+      }
+    },
+    "realCameraImages": 0,
+    "genuineHandwritingImages": 0,
+    "independentlyReviewedReferences": 0,
+    "correctedInAppAndMatchedReference": 0,
+    "releaseTargetsMet": false,
+    "buildFingerprints": [
+      "8d8df29c0e4b30d9377b8a600cefa6e24bfb59b1445517f8cf9c6799e9d99da2"
+    ],
+    "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+    "engines": [
+      "homr-457e7c6-stringmap-guitar-v2-cpu"
+    ]
+  },
+  "httpPage": {
+    "result": "artifacts/page-deskew-linux-results/printed_guitar-05_dr_cases_pavan__tilt_right.json",
+    "clientSeconds": 52.51527474998147,
+    "dropDPlayback": {
+      "alphaTex": {
+        "parsed": true,
+        "notes": 413,
+        "sourceIdentitiesPreserved": true,
+        "exactPlayback": true
+      },
+      "notationAlphaTex": {
+        "parsed": true,
+        "notes": 413,
+        "sourceIdentitiesPreserved": true,
+        "exactPlayback": true
+      },
+      "tabPitchExact": true,
+      "allNotesAssigned": true,
+      "distinctStrings": true
+    }
+  },
+  "simulatorTests": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "C4C1E6A3-F695-4427-8F6D-BDC05DBBAE64",
+        "deviceName": "StringMap Deskew Photo QA iPhone",
+        "modelName": "iPhone 17",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      },
+      "testBundle": "artifacts/page-deskew-photo-ready-iphone.xcresult",
+      "summary": "artifacts/page-deskew-photo-ready-iphone-summary.json",
+      "passed": 1,
+      "failed": 0,
+      "capturedInput": "artifacts/page-deskew-photo-ready-iphone-input",
+      "capture": {
+        "requestID": "0257D517-2788-4964-86A4-3863CD39183A",
+        "serviceURL": "http://127.0.0.1:8871",
+        "sourceName": "Guitar page Sep 6, 2026 at 7:17\u202fAM",
+        "imageSHA256": "b9ff2710b18e422523b9685c031e9e7ae5b91c710b05cb3ab739c26718da9156",
+        "xmlSHA256": "cc34c3e1f4ef5f39645f5efd96256336b5f02375db9eac3e4caf3cf68a95d22b",
+        "pitchConvention": "guitarWritten"
+      },
+      "recognizedNotes": 421,
+      "measures": 24,
+      "standardTuning": "Tab rejected for low D; notation playback available and exercised in UI.",
+      "dropDPlayback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 413,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 413,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "comparison": {
+        "scope": "Provisional first-page written pitch, onset and duration comparison; no octave search or reference input to inference. Image is a photo simulation; reference notes have not been independently audited.",
+        "releaseQualified": false,
+        "metrics": {
+          "pitch": {
+            "truePositive": 420,
+            "missing": 1,
+            "extra": 1,
+            "f1": 0.997624703087886
+          },
+          "onset": {
+            "truePositive": 147,
+            "missing": 274,
+            "extra": 274,
+            "f1": 0.3491686460807601
+          },
+          "duration": {
+            "truePositive": 409,
+            "missing": 12,
+            "extra": 12,
+            "f1": 0.9714964370546318
+          },
+          "noteEvent": {
+            "truePositive": 17,
+            "missing": 404,
+            "extra": 404,
+            "f1": 0.040380047505938245
+          },
+          "chords": {
+            "total": 107,
+            "complete": 1
+          }
+        }
+      },
+      "screenshots": [
+        "docs/release/screenshots/page-deskew-iphone-tab.png",
+        "docs/release/screenshots/page-deskew-iphone-notation.png"
+      ]
+    },
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "B60B5DFD-3830-4A37-937C-3D37FA68EB3E",
+        "deviceName": "StringMap Deskew Photo QA iPad",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      },
+      "testBundle": "artifacts/page-deskew-photo-ready-ipad.xcresult",
+      "summary": "artifacts/page-deskew-photo-ready-ipad-summary.json",
+      "passed": 1,
+      "failed": 0,
+      "capturedInput": "artifacts/page-deskew-photo-ready-ipad-input",
+      "capture": {
+        "requestID": "24E2C285-76EB-44B6-8BD4-83A6E8C0C283",
+        "serviceURL": "http://127.0.0.1:8871",
+        "sourceName": "Guitar page Sep 6, 2026 at 7:21\u202fAM",
+        "pitchConvention": "guitarWritten",
+        "imageSHA256": "b9ff2710b18e422523b9685c031e9e7ae5b91c710b05cb3ab739c26718da9156",
+        "xmlSHA256": "cc34c3e1f4ef5f39645f5efd96256336b5f02375db9eac3e4caf3cf68a95d22b"
+      },
+      "recognizedNotes": 421,
+      "measures": 24,
+      "standardTuning": "Tab rejected for low D; notation playback available and exercised in UI.",
+      "dropDPlayback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 413,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 413,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "comparison": {
+        "scope": "Provisional first-page written pitch, onset and duration comparison; no octave search or reference input to inference. Image is a photo simulation; reference notes have not been independently audited.",
+        "releaseQualified": false,
+        "metrics": {
+          "pitch": {
+            "truePositive": 420,
+            "missing": 1,
+            "extra": 1,
+            "f1": 0.997624703087886
+          },
+          "onset": {
+            "truePositive": 147,
+            "missing": 274,
+            "extra": 274,
+            "f1": 0.3491686460807601
+          },
+          "duration": {
+            "truePositive": 409,
+            "missing": 12,
+            "extra": 12,
+            "f1": 0.9714964370546318
+          },
+          "noteEvent": {
+            "truePositive": 17,
+            "missing": 404,
+            "extra": 404,
+            "f1": 0.040380047505938245
+          },
+          "chords": {
+            "total": 107,
+            "complete": 1
+          }
+        }
+      },
+      "screenshots": [
+        "docs/release/screenshots/page-deskew-ipad-tab.png",
+        "docs/release/screenshots/page-deskew-ipad-notation.png"
+      ]
+    }
+  ],
+  "sameAppUploadAndReturnedXML": true,
+  "uiFlow": [
+    "System Photos picker with only the intended notation page plus simulator stock photos",
+    "Four 90-degree rotations and full-image crop",
+    "Guitar written-pitch convention and explicit upload consent",
+    "Real Linux recognition through development loopback proxy",
+    "Review note pitch edit, undo and audition",
+    "Explicit confirmation and save",
+    "Standard-tuning warning with retained notation playback",
+    "Explicit Drop D selection and playable tab",
+    "App termination, relaunch, saved-song lookup and removal of this test song"
+  ],
+  "retainedFailedAttempts": [
+    {
+      "bundle": "artifacts/page-deskew-photos-iphone.xcresult",
+      "cause": "Existing Photos library selected Fancy rather than the intended Pavan; note-count assertion rejected it."
+    },
+    {
+      "bundle": "artifacts/page-deskew-isolated-iphone.xcresult",
+      "cause": "Automation tried to scroll before asynchronous photo selection and picker dismissal completed."
+    },
+    {
+      "bundle": "artifacts/page-deskew-picker-iphone.xcresult",
+      "cause": "Diagnostic assertion waited for an offscreen virtualized crop row. The final test waits for picker dismissal and the selected image before scrolling."
+    }
+  ],
+  "resources": [
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 2.32,
+      "cpuSeconds": 4.05,
+      "lifetimeChildPeakRSSBytes": 916230144
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 2.81,
+      "cpuSeconds": 5.16,
+      "lifetimeChildPeakRSSBytes": 1036730368
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 2.72,
+      "cpuSeconds": 4.91,
+      "lifetimeChildPeakRSSBytes": 1036730368
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 50.55,
+      "cpuSeconds": 94.74,
+      "lifetimeChildPeakRSSBytes": 1783234560
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 41.54,
+      "cpuSeconds": 79.19,
+      "lifetimeChildPeakRSSBytes": 1783234560
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 60.89,
+      "cpuSeconds": 112.35,
+      "lifetimeChildPeakRSSBytes": 1783234560
+    },
+    {
+      "event": "recognition_finished",
+      "status": "completed",
+      "seconds": 54.84,
+      "cpuSeconds": 103.38,
+      "lifetimeChildPeakRSSBytes": 1784315904
+    }
+  ],
+  "resourceLog": "artifacts/page-deskew-linux-server-final.log",
+  "resourceLimits": "CPU seconds are per job; child peak RSS is a lifetime high-water mark. Local concurrent Xcode work means these are not Railway throughput promises.",
+  "limits": [
+    "Same supplied photo simulation used on both devices; no new physical camera evidence.",
+    "The full external corpus was not rerun on this revision.",
+    "Actual app output has 4.04% provisional whole-page note-event F1, so this is a correction-flow check, not accurate transcription.",
+    "An octave edit and undo do not establish that all recognition errors were corrected against an independently audited reference.",
+    "Physical audible playback, hosted HTTPS/App Attest, signing, archive and TestFlight remain unverified.",
+    "Tasks requiring user input were skipped. No external deployment, billing change, App Store submission or public release occurred."
+  ],
+  "localRuntimeCleanup": {
+    "remainingImageDirectories": 0,
+    "ownedContainerRemoved": true,
+    "ownedProxyStopped": true,
+    "loopbackPortsClosed": [
+      8871,
+      8872
+    ],
+    "colimaStopped": true,
+    "dockerContextRestored": "default",
+    "ownedFreshSimulatorsRemoved": true,
+    "existingSimulatorsRetained": true
+  }
+}

@@ -13,6 +13,12 @@ final class SongDocument {
     var importedAt: Date
     var updatedAt: Date
     var musicXML: Data
+    @Attribute(.externalStorage) var sourceImageData: Data? = nil
+    var recognitionReviewedAt: Date? = nil
+    var reviewDraftData: Data? = nil
+    // Stored with the song so a surviving scan draft cannot create a second
+    // library record after termination between database save and file cleanup.
+    var originScanID: String? = nil
     var tuningPresetRaw: String
     var customTuningData: Data
     var capo: Int
@@ -74,6 +80,29 @@ final class SongDocument {
 
     var lockedPositions: [String: GuitarPosition] {
         Self.decode([String: GuitarPosition].self, from: lockedPositionsData) ?? [:]
+    }
+
+    @MainActor
+    static func savedScan(requestID: String, in context: ModelContext) throws -> SongDocument? {
+        var descriptor = FetchDescriptor<SongDocument>(predicate: #Predicate { $0.originScanID == requestID })
+        descriptor.fetchLimit = 1
+        return try context.fetch(descriptor).first
+    }
+
+    @MainActor
+    static func saveReviewedScan(_ draft: ScanDraft, score: NormalizedScore, musicXML: Data,
+                                 in context: ModelContext) throws -> SongDocument {
+        if let saved = try savedScan(requestID: draft.requestID, in: context) { return saved }
+        let song = SongDocument(title: score.title, composer: score.composer,
+                                sourceName: draft.sourceName, musicXML: musicXML)
+        song.sourceType = "Photo OMR"
+        song.sourceImageData = draft.imageData
+        song.recognitionReviewedAt = .now
+        song.originScanID = draft.requestID
+        context.insert(song)
+        do { try context.save() }
+        catch { context.delete(song); throw error }
+        return song
     }
 
     @MainActor

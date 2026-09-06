@@ -1,0 +1,217 @@
+[
+  {
+    "name": "pip",
+    "version": "25.0.1",
+    "license": "MIT"
+  },
+  {
+    "name": "omegaconf",
+    "version": "2.3.1",
+    "license": ""
+  },
+  {
+    "name": "urllib3",
+    "version": "2.7.0",
+    "license": "MIT"
+  },
+  {
+    "name": "cbor2",
+    "version": "6.1.4",
+    "license": "MIT"
+  },
+  {
+    "name": "requests",
+    "version": "2.34.2",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1",
+    "license": "MIT-0"
+  },
+  {
+    "name": "pydantic",
+    "version": "2.13.5",
+    "license": "MIT"
+  },
+  {
+    "name": "colorlog",
+    "version": "6.12.0",
+    "license": "MIT License"
+  },
+  {
+    "name": "fastapi",
+    "version": "0.141.1",
+    "license": "MIT"
+  },
+  {
+    "name": "pypdfium2",
+    "version": "5.13.0",
+    "license": "BSD-3-Clause, Apache-2.0, dependency licenses"
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license": "Apache-2.0 OR BSD-2-Clause"
+  },
+  {
+    "name": "annotated-doc",
+    "version": "0.0.5",
+    "license": "MIT"
+  },
+  {
+    "name": "pyclipper",
+    "version": "1.4.0",
+    "license": "MIT"
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "license": "MIT"
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "license": "MIT"
+  },
+  {
+    "name": "types-Pillow",
+    "version": "10.2.0.20240822",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "certifi",
+    "version": "2026.7.22",
+    "license": "MPL-2.0"
+  },
+  {
+    "name": "pillow",
+    "version": "12.3.0",
+    "license": "MIT-CMU"
+  },
+  {
+    "name": "shapely",
+    "version": "2.1.2",
+    "license": "BSD 3-Clause"
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.52.4",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "onnxruntime",
+    "version": "1.29.0",
+    "license": "MIT License"
+  },
+  {
+    "name": "opencv-python-headless",
+    "version": "4.14.0.94",
+    "license": "Apache 2.0"
+  },
+  {
+    "name": "starlette",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "tqdm",
+    "version": "4.70.0",
+    "license": "MPL-2.0 AND MIT"
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.46.5",
+    "license": "MIT"
+  },
+  {
+    "name": "flatbuffers",
+    "version": "25.12.19",
+    "license": "Apache 2.0"
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license": "PSF-2.0"
+  },
+  {
+    "name": "idna",
+    "version": "3.18",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "protobuf",
+    "version": "7.35.1",
+    "license": "3-Clause BSD License"
+  },
+  {
+    "name": "pycparser",
+    "version": "3.0",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "rapidocr",
+    "version": "3.9.2",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "license": "MIT"
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "license": "MIT"
+  },
+  {
+    "name": "PyYAML",
+    "version": "6.0.3",
+    "license": "MIT"
+  },
+  {
+    "name": "numpy",
+    "version": "2.5.2",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "homr",
+    "version": "0.7.0.post38+457e7c6",
+    "license": "AGPL-3.0"
+  },
+  {
+    "name": "asn1crypto",
+    "version": "1.5.1",
+    "license": "MIT"
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "license": "MIT"
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.0",
+    "license": "MIT"
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.1",
+    "license": "Apache-2.0 OR BSD-3-Clause"
+  },
+  {
+    "name": "opencv-python",
+    "version": "4.14.0.94",
+    "license": "Apache 2.0"
+  },
+  {
+    "name": "antlr4-python3-runtime",
+    "version": "4.9.3",
+    "license": "BSD"
+  }
+]

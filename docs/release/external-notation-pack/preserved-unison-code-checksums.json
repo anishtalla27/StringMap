@@ -1,0 +1,10 @@
+{
+  "services/omr/recognizer.py": "22edfe73dad2935a6bb73ba18d5236daef3b9b8a70ca55993762adf23a6d4c77",
+  "services/omr/score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+  "services/omr/test_recognizer.py": "9935df172e82b21c1fa3d8cbf32f0317ef1edbedda9fe0221aeeba7732b269f0",
+  "services/omr/README.md": "798395fbb78611ec622124dbc15bb3075aa6401f028357bdbcfb079a0e3b4312",
+  "apps/ios/StringMapUITests/StringMapUITests.swift": "f68f639a0fa67a70a3d4646a36a89564981ac972db799104a6fde2ed10ec9fa2",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "fd050365722e950fc960d7de4c393fd4f0c9051282380100d71e28829672f0b8",
+  "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/ScorePipelineTests.swift": "cd2cddcda9ba2c07e83d26c9ebfc0c356fff598e31b52d96f445187587d839a1",
+  "scripts/test-score-playback.py": "62c7f7a8e6796288d60a0b2d4b2aaba87a55ee483dcbd7381e7f504e6324d5b7"
+}

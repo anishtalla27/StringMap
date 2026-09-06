@@ -1,0 +1,122 @@
+{
+  "releaseQualified": false,
+  "referencesUsedByInference": false,
+  "homrRevision": "457e7c6518a10ba755db2e60883419e56c4d7369",
+  "modelSHA256": {
+    "segmentation/segnet_308-3296ccd40960f90ca6ab9c035cca945675d30a0f.onnx": "6ed36640db4ef5d223098b6d5efe4eda97c66b24a2c72faab8a018c749003a8d",
+    "transformer/encoder_pytorch_model_426-b6fd20809a8dcaf10dfd39a4ca4f64c6f056e644.onnx": "1513e83ae281ef06cdb8f08451b59f06c56536f13bd3418b4fd13227543dc4ff",
+    "transformer/decoder_pytorch_model_426-b6fd20809a8dcaf10dfd39a4ca4f64c6f056e644.onnx": "8652b5c2e3129775ca9109eb180c16c3615413ce38005adc8ce5966c3c76737c"
+  },
+  "beamWidth": 4,
+  "lengthPenalty": 0.6,
+  "researchOnly": true,
+  "staffCases": [
+    {
+      "page": "Fantasy",
+      "artifactDirectory": "artifacts/homr-beam4-fantasy",
+      "staffs": 7,
+      "widthOneReproducedAll": true,
+      "selectedExports": 7,
+      "greedyVerificationPlusBeamSeconds": 14.662522749044001,
+      "greedyStaffAligned": {
+        "truePositive": 99,
+        "missing": 244,
+        "extra": 206,
+        "f1": 0.3055555555555556
+      },
+      "beamStaffAligned": {
+        "truePositive": 63,
+        "missing": 280,
+        "extra": 271,
+        "f1": 0.1861152141802068
+      }
+    },
+    {
+      "page": "02_fancy_p6__tilt_left",
+      "artifactDirectory": "artifacts/homr-beam-cross-scores/02_fancy_p6__tilt_left/beam4",
+      "staffs": 7,
+      "widthOneReproducedAll": true,
+      "selectedExports": 7,
+      "greedyVerificationPlusBeamSeconds": 12.12406316504348,
+      "greedyStaffAligned": {
+        "truePositive": 247,
+        "missing": 85,
+        "extra": 67,
+        "f1": 0.7647058823529411
+      },
+      "beamStaffAligned": {
+        "truePositive": 177,
+        "missing": 155,
+        "extra": 112,
+        "f1": 0.5700483091787439
+      }
+    },
+    {
+      "page": "04_solus_sine_sola__perspective",
+      "artifactDirectory": "artifacts/homr-beam-cross-scores/04_solus_sine_sola__perspective/beam4",
+      "staffs": 6,
+      "widthOneReproducedAll": true,
+      "selectedExports": 6,
+      "greedyVerificationPlusBeamSeconds": 14.319487376051256,
+      "greedyStaffAligned": {
+        "truePositive": 207,
+        "missing": 110,
+        "extra": 111,
+        "f1": 0.6519685039370079
+      },
+      "beamStaffAligned": {
+        "truePositive": 137,
+        "missing": 180,
+        "extra": 170,
+        "f1": 0.4391025641025641
+      }
+    },
+    {
+      "page": "13_galliard_p28__flat",
+      "artifactDirectory": "artifacts/homr-beam-cross-scores/13_galliard_p28__flat/beam4",
+      "staffs": 11,
+      "widthOneReproducedAll": true,
+      "selectedExports": 9,
+      "greedyVerificationPlusBeamSeconds": 30.29169075092068,
+      "greedyStaffAligned": {
+        "truePositive": 238,
+        "missing": 431,
+        "extra": 429,
+        "f1": 0.3562874251497006
+      },
+      "beamStaffAligned": {
+        "truePositive": 184,
+        "missing": 485,
+        "extra": 330,
+        "f1": 0.31107354184277264
+      }
+    }
+  ],
+  "wholePageComparison": "artifacts/homr-beam-page-comparisons.json",
+  "decision": "Do not adopt this joint-head width-four search: all four staff-aligned scores regress; complete-page output also remains far below targets and one new arpeggiate prediction is unsupported by the native importer.",
+  "limits": [
+    "Fixed canonical HOMR crops; no production rotation retries in the beam-versus-greedy comparison.",
+    "Staff-aligned metrics reset onset at each staff; full-page XML assembles original tokens with inherited notation state and no skipped staffs.",
+    "References use provisional MusicXML first-page/system boundaries, not independently verified camera ground truth.",
+    "All raw candidates, failed exports and native rejection/playback results are retained. No new handwriting or camera qualification."
+  ],
+  "verification": {
+    "jointSearchTests": 3,
+    "serviceBenchmarkTests": 34,
+    "greedyReproducedStaffs": 31,
+    "testLogs": [
+      "artifacts/homr-beam-search-tests.log",
+      "artifacts/recognition-sequence-guard-final-tests.log"
+    ]
+  },
+  "sourceSHA256": {
+    "services/omr/research/evaluate_homr_beam.py": "8bffeccc285a72aaf4f62bbac6db6a73ab73ef32bae016d0de4b51d0a01b4caf",
+    "services/omr/research/assemble_homr_beam.py": "9a2a431216ded9e7db76d725104565c3bdd6e81af39efd94a559c7a44d71179f",
+    "services/omr/research/check_homr_beam.py": "9d3caf0ac8f29d7bee734cd4f856c94f8cd1f2f41d5b39d095a18c48d2c3aff9",
+    "services/omr/research/extract_guitar_staffs.py": "6a4acb73dea85b9c49903a2e31793464b52fa2044fedec2ee63ad50b3c0cb832",
+    "services/omr/recognizer.py": "afce7dd7cdf4c5afd55f9e6e63dfa140744bdeb47a3634b96ca51c77f3de5e45",
+    "services/omr/production.py": "7095ecf60a3fce2fc2737f6731f36f3f29d6390ef8f4121cefba2c0c43218ade",
+    "services/omr/test_recognizer.py": "4d4da2c278f55492b4c0d5005c7ecf34753f5b7ee337cb64c23d69753f3019b6",
+    "services/omr/test_production.py": "81838890229857d6bcb80865014a0734eeb1e9934b287f53dbbc06800e2a94b4"
+  }
+}

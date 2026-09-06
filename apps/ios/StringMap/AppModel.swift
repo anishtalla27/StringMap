@@ -13,13 +13,16 @@ final class AppModel {
     var maxFret = 20
     var transposition = 0
     var pipelineResult: PipelineResult?
+    var notationScore: NormalizedScore?
     var arrangements: [FingeringProfile: PipelineResult] = [:]
-    var status = "Loading sample…"
-    var sourceName = "Known melody"
+    var status = "Loading exercise…"
+    var sourceName = "Open String Walk"
     var isProcessing = false
     var isTracePresented = false
     var isInstrumentPresented = false
     var isArrangementsPresented = false
+    var isPracticePresented = false
+    var isFretboardExpanded = false
     var editingNoteID: String?
     var loopStartMeasure: Int?
     var loopEndMeasure: Int?
@@ -41,18 +44,22 @@ final class AppModel {
         capo = defaults.object(forKey: "defaultCapo") as? Int ?? 0
         maxFret = defaults.object(forKey: "defaultFrets") as? Int ?? 20
         player.setMetronome(enabled: defaults.bool(forKey: "defaultMetronome"))
+        #if DEBUG
         let testXML = ProcessInfo.processInfo.environment["STRINGMAP_UI_TEST_XML_BASE64"]
             .flatMap { Data(base64Encoded: $0) }
+        #else
+        let testXML: Data? = nil
+        #endif
         let bundledXML = Bundle.main.url(
-            forResource: "known-melody",
+            forResource: "exercise-01",
             withExtension: "musicxml",
-            subdirectory: "Samples"
+            subdirectory: "Exercises"
         ).flatMap { try? Data(contentsOf: $0) }
         if let data = testXML ?? bundledXML {
             sourceData = data
             process(data)
         } else {
-            status = "Bundled sample is missing."
+            status = "Bundled exercise is missing."
         }
     }
 
@@ -66,21 +73,38 @@ final class AppModel {
         return pipelineResult?.fingering.steps.first { $0.note.id == editingNoteID }
     }
 
-    var activeStep: FingeringStep? {
+    var activeSteps: [FingeringStep] {
+        guard let result = pipelineResult else { return [] }
+        let q = player.cursorMilliseconds * result.score.tempo / 60_000
+        var start = 0.0; var ids = Set<String>()
+        for m in result.score.measures {
+            for event in m.events {
+                if case let .note(n) = event, q >= start + n.onsetQuarters, q < start + n.onsetQuarters + n.durationQuarters { ids.insert(n.id) }
+            }
+            start += m.durationQuarters
+        }
+        return result.fingering.steps.filter { ids.contains($0.note.id) }
+    }
+
+    var activeStep: FingeringStep? { activeSteps.first }
+
+    var upcomingStep: FingeringStep? {
         guard let result = pipelineResult else { return nil }
-        let quarterPosition = player.cursorMilliseconds * result.score.tempo / 60_000
+        let q = player.cursorMilliseconds * result.score.tempo / 60_000
         var measureStart = 0.0
+        var next: (onset: Double, id: String)?
         for measure in result.score.measures {
             for event in measure.events {
-                guard case let .note(note) = event else { continue }
-                let start = measureStart + note.onsetQuarters
-                if quarterPosition >= start && quarterPosition < start + note.durationQuarters {
-                    return result.fingering.steps.first { $0.note.id == note.id }
+                guard case let .note(note) = event, note.tieFromID == nil else { continue }
+                let onset = measureStart + note.onsetQuarters
+                if onset > q + 1e-8, next == nil || onset < next!.onset {
+                    next = (onset, note.id)
                 }
             }
             measureStart += Self.duration(of: measure)
         }
-        return result.fingering.steps.first
+        guard let next else { return nil }
+        return result.fingering.steps.first { $0.note.id == next.id }
     }
 
     var lockedNoteIDs: Set<String> { Set(lockedPositions.keys) }
@@ -122,6 +146,7 @@ final class AppModel {
         sourceData = data
         self.sourceName = sourceName
         currentSongID = songID
+        editingNoteID = nil
         self.profile = profile
         self.tuningPreset = tuningPreset
         self.customTuningMIDIs = customTuningMIDIs
@@ -189,7 +214,7 @@ final class AppModel {
     }
 
     func suggestCapo() -> Int? {
-        guard let score = pipelineResult?.score else { return nil }
+        guard let score = pipelineResult?.score, !score.needsPolyphonicFingering else { return nil }
         let notes = score.notes.map {
             FingeringNote(id: $0.id, midi: $0.midi, tieStop: $0.tieStop, durationQuarters: $0.durationQuarters)
         }
@@ -231,21 +256,21 @@ final class AppModel {
     func setLoop(startMeasure: Int?, endMeasure: Int?) {
         loopStartMeasure = startMeasure
         loopEndMeasure = endMeasure
-        guard let result = pipelineResult,
+        guard let score = pipelineResult?.score ?? notationScore,
               let startMeasure,
               let endMeasure,
               startMeasure >= 0,
               endMeasure >= startMeasure,
-              endMeasure < result.score.measures.count else {
+              endMeasure < score.measures.count else {
             player.clearLoop()
             return
         }
         var startQuarters = 0.0
-        for measure in result.score.measures.prefix(startMeasure) {
+        for measure in score.measures.prefix(startMeasure) {
             startQuarters += Self.duration(of: measure)
         }
         var endQuarters = startQuarters
-        for measure in result.score.measures[startMeasure...endMeasure] {
+        for measure in score.measures[startMeasure...endMeasure] {
             endQuarters += Self.duration(of: measure)
         }
         player.setLoop(
@@ -263,7 +288,7 @@ final class AppModel {
     }
 
     var currentMeasureIndex: Int? {
-        guard let score = pipelineResult?.score, !score.measures.isEmpty else { return nil }
+        guard let score = (pipelineResult?.score ?? notationScore), !score.measures.isEmpty else { return nil }
         let quarterPosition = player.cursorMilliseconds * score.tempo / 60_000
         var start = 0.0
         for measure in score.measures {
@@ -275,7 +300,7 @@ final class AppModel {
     }
 
     func seekToMeasure(_ index: Int) {
-        guard let score = pipelineResult?.score, score.measures.indices.contains(index) else { return }
+        guard let score = (pipelineResult?.score ?? notationScore), score.measures.indices.contains(index) else { return }
         let startQuarters = score.measures.prefix(index).reduce(0) { $0 + Self.duration(of: $1) }
         player.seek(milliseconds: startQuarters * 60_000 / score.tempo)
     }
@@ -286,13 +311,20 @@ final class AppModel {
     }
 
     func nextMeasure() {
-        guard let score = pipelineResult?.score, let currentMeasureIndex else { return }
+        guard let score = pipelineResult?.score ?? notationScore, let currentMeasureIndex else { return }
         seekToMeasure(min(score.measures.count - 1, currentMeasureIndex + 1))
     }
 
     func loopCurrentMeasure() {
         guard let currentMeasureIndex else { return }
         setLoop(startMeasure: currentMeasureIndex, endMeasure: currentMeasureIndex)
+    }
+
+    /// Restart the whole piece even when a later measure was looped.
+    func restartPiece() {
+        clearLoop()
+        player.stop()
+        player.seek(milliseconds: 0)
     }
 
     func restartLoop() {
@@ -323,7 +355,12 @@ final class AppModel {
         processingTask?.cancel()
         // Cached paths are valid only for the exact tuning/capo/transposition/lock set.
         arrangements = [:]
+        // The source and song ID already refer to the new request. Keeping an
+        // old result here lets a background library save copy its metadata to
+        // the new song, and exposes obsolete fingering while processing.
+        pipelineResult = nil
         isProcessing = true
+        notationScore = nil
         status = "Optimizing full passage…"
         let resumePosition = player.cursorMilliseconds
         player.prepareForNewScore()
@@ -332,7 +369,8 @@ final class AppModel {
 
         processingTask = Task {
             do {
-                let output = try await Task.detached(priority: .userInitiated) {
+                try Task.checkCancellation()
+                let worker = Task.detached(priority: .userInitiated) {
                     let started = ContinuousClock.now
                     let pipeline = StructuredScorePipeline()
                     let primary = try pipeline.run(musicXML: data, options: selectedOptions)
@@ -352,15 +390,17 @@ final class AppModel {
                     let milliseconds = Double(components.seconds) * 1_000
                         + Double(components.attoseconds) / 1_000_000_000_000_000
                     return ProcessingOutput(primary: primary, alternatives: alternatives, milliseconds: milliseconds)
-                }.value
+                }
+                let output = try await withTaskCancellationHandler { try await worker.value } onCancel: { worker.cancel() }
                 guard !Task.isCancelled else { return }
                 pipelineResult = output.primary
+                notationScore = output.primary.score
                 arrangements = output.alternatives
                 lastOptimizationMilliseconds = output.milliseconds
                 isProcessing = false
                 let warning = output.primary.score.warnings.first.map { " · \($0)" } ?? ""
                 status = "Ready · \(output.primary.fingering.steps.count) notes · \(Int(output.milliseconds.rounded())) ms\(warning)"
-                player.queue(alphaTex: output.primary.alphaTex)
+                player.queue(alphaTex: output.primary.alphaTex, score: output.primary.score)
                 setLoop(startMeasure: loopStartMeasure, endMeasure: loopEndMeasure)
             } catch is CancellationError {
                 // A newer document or instrument request superseded this run.
@@ -370,6 +410,15 @@ final class AppModel {
                 arrangements = [:]
                 isProcessing = false
                 status = error.localizedDescription
+                // The previously engraved score is no longer the arrangement
+                // this instrument produces, so it must not stay on screen.
+                if let recognized = try? MusicXMLImporter().importScore(from: data).expandingRepeats().transposed(by: selectedOptions.transposeSemitones),
+                   let tex = try? AlphaTexGenerator.notation(score: recognized) {
+                    notationScore = recognized
+                    player.queue(alphaTex: tex, score: recognized)
+                    setLoop(startMeasure: loopStartMeasure, endMeasure: loopEndMeasure)
+                    status = "Tab needs attention: " + error.localizedDescription + " Notation and playback are available."
+                } else { notationScore = nil; player.clearScore() }
             }
         }
     }
@@ -377,22 +426,16 @@ final class AppModel {
     private func activate(_ result: PipelineResult) {
         let resumePosition = player.cursorMilliseconds
         pipelineResult = result
+        notationScore = result.score
         status = "Ready · cached \(profile.displayName) arrangement"
         player.prepareForNewScore()
         player.seek(milliseconds: resumePosition)
-        player.queue(alphaTex: result.alphaTex)
+        player.queue(alphaTex: result.alphaTex, score: result.score)
         setLoop(startMeasure: loopStartMeasure, endMeasure: loopEndMeasure)
     }
 
     private static func duration(of measure: NormalizedMeasure) -> Double {
-        let encoded = measure.events.map { event -> Double in
-            switch event {
-            case let .note(note): note.onsetQuarters + note.durationQuarters
-            case let .rest(rest): rest.onsetQuarters + rest.durationQuarters
-            }
-        }.max() ?? 0
-        if encoded > 0 { return encoded }
-        return Double(measure.timeSignature.beats) * 4 / Double(measure.timeSignature.beatType)
+        measure.durationQuarters
     }
 }
 

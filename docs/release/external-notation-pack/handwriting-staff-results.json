@@ -1,0 +1,204 @@
+{
+  "shippingQualified": false,
+  "excludedSource05": "Visible alto clef; not a treble guitar part",
+  "cases": [
+    {
+      "id": 1,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/01_CVC-MUSCIMA_W-07_N-05_D-ideal__clean.png",
+      "sourceSHA256": "0eb43f77a4b9b79194a3fbdc2d6ee04322efd03554ba553e3419b017a0d7142f",
+      "cropBounds": [
+        209,
+        147,
+        3374,
+        466
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 3.9045510410214774,
+      "result": {
+        "status": "failed",
+        "type": "ValueError"
+      }
+    },
+    {
+      "id": 2,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/02_CVC-MUSCIMA_W-29_N-10_D-ideal__clean.png",
+      "sourceSHA256": "77361d9bc8260c305f149cde7e35fcef04c7837699e5c59dbb3a289226010ca6",
+      "cropBounds": [
+        227,
+        132,
+        3371,
+        475
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 4.254632208001567,
+      "result": {
+        "status": "completed",
+        "staffCount": 1,
+        "noteCounts": [
+          {
+            "detected": 32,
+            "recognized": 44
+          }
+        ],
+        "preparation": "standard",
+        "attempts": 4,
+        "timingWarnings": 2
+      },
+      "nativeParsed": false,
+      "nativeError": "Invalid MusicXML: Measure 3: <staccato> is not supported yet."
+    },
+    {
+      "id": 3,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/03_CVC-MUSCIMA_W-37_N-17_D-ideal__clean.png",
+      "sourceSHA256": "f2771b645a0e2958b96e00c3ec0253cc213cba94653c65645f63a84a91a4ca69",
+      "cropBounds": [
+        190,
+        173,
+        3349,
+        469
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 3.2194322920113336,
+      "result": {
+        "status": "failed",
+        "type": "ValueError"
+      }
+    },
+    {
+      "id": 4,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/04_CVC-MUSCIMA_W-27_N-16_D-ideal__clean.png",
+      "sourceSHA256": "9eafeb8e8be1f2c654c6e66e69cb9d3975aa9650f70234be561b6f5ad9e0be5a",
+      "cropBounds": [
+        207,
+        134,
+        3354,
+        468
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 3.5825146670104004,
+      "result": {
+        "status": "completed",
+        "staffCount": 1,
+        "noteCounts": [
+          {
+            "detected": 14,
+            "recognized": 20
+          }
+        ],
+        "preparation": "standard",
+        "attempts": 4,
+        "timingWarnings": 1
+      },
+      "nativeParsed": false,
+      "nativeError": "Invalid MusicXML: Measure 4: <arpeggiate> is not supported yet."
+    },
+    {
+      "id": 6,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/06_CVC-MUSCIMA_W-50_N-08_D-ideal__clean.png",
+      "sourceSHA256": "0248852f0c41a81c9fd44fa25d0ee979ab48b6843f7a96a1c6e4eafd66e917a0",
+      "cropBounds": [
+        214,
+        69,
+        3354,
+        445
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 4.302482333005173,
+      "result": {
+        "status": "completed",
+        "staffCount": 1,
+        "noteCounts": [
+          {
+            "detected": 26,
+            "recognized": 30
+          }
+        ],
+        "preparation": "standard",
+        "attempts": 4,
+        "timingWarnings": 3
+      },
+      "nativeParsed": false,
+      "nativeError": "Invalid MusicXML: Measure 1: <staccato> is not supported yet."
+    },
+    {
+      "id": 7,
+      "source": "artifacts/external-notation-pack/StringMap_notation_test_pack/handwritten_sources/07_CVC-MUSCIMA_W-16_N-17_D-ideal__clean.png",
+      "sourceSHA256": "b4cb6b9f5fb199a0e7d1e673edbb1b3e9da9820cd80dba7ca44e38152731e952",
+      "cropBounds": [
+        209,
+        200,
+        3379,
+        485
+      ],
+      "referenceUsed": false,
+      "sourceKind": "genuine handwriting scan, general notation treble-part excerpt, not guitar-specific or camera photograph",
+      "seconds": 3.012824667006498,
+      "result": {
+        "status": "completed",
+        "staffCount": 1,
+        "noteCounts": [
+          {
+            "detected": 15,
+            "recognized": 18
+          }
+        ],
+        "preparation": "standard",
+        "attempts": 3,
+        "timingWarnings": 0
+      },
+      "nativeParsed": false,
+      "nativeError": "Invalid MusicXML: Measure 1: <trill-mark> is not supported yet."
+    }
+  ],
+  "firstBarSpotCheck": {
+    "id": 4,
+    "reference": "artifacts/handwriting-staff-probe/writer-04-first-bar-reference.musicxml",
+    "independentVisualCheck": "Three written pitches E5, F#5, G5 after a quarter rest; the model instead predicts G5, A5, B5. No references entered recognition.",
+    "metrics": {
+      "pitch": {
+        "truePositive": 1,
+        "missing": 2,
+        "extra": 2,
+        "f1": 0.3333333333333333
+      },
+      "onset": {
+        "truePositive": 3,
+        "missing": 0,
+        "extra": 0,
+        "f1": 1.0
+      },
+      "duration": {
+        "truePositive": 3,
+        "missing": 0,
+        "extra": 0,
+        "f1": 1.0
+      },
+      "noteEvent": {
+        "truePositive": 0,
+        "missing": 3,
+        "extra": 3,
+        "f1": 0.0
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      }
+    },
+    "qualification": "Only this one bar was visually transcribed; the full staff and other handwriting images have no independently checked symbolic references.",
+    "meterLimit": "The crop has no printed meter. The reference uses 4/4 to encode the observed four quarter-note durations; this is not a visually verified time signature.",
+    "referenceSHA256": "4242204aa49a2b7356f9d07e086504a7f9995852070e6eaebf90feefc8a24604"
+  },
+  "successfulCrops": 4,
+  "limits": [
+    "Six manually isolated top treble staffs from the supplied clean handwriting scans; not a full-page pass or actual camera test.",
+    "Source 05 uses alto clef and is excluded from the treble-part probe.",
+    "Four XML exports do not demonstrate accurate or practically correctable handwriting.",
+    "The detector, decoder and importer remain separate checks; no handwriting support is advertised."
+  ],
+  "nativeParsedCount": 0
+}

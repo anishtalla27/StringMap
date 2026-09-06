@@ -1,0 +1,194 @@
+{
+  "releaseQualified": false,
+  "shippingRecognizerChanged": false,
+  "realCameraImages": 0,
+  "handwrittenGuitarQualification": false,
+  "referencesUsedByInference": false,
+  "metricLimits": "Provisional reference page/system boundaries. Staff comparisons reset onset for each staff; measure comparisons reset each measure. These are not whole-page accuracy or physical-camera qualifications.",
+  "fantasyStaffVariants": [
+    {
+      "artifactDirectory": "artifacts/zeus-external-fantasy-tight/tight",
+      "writtenStaffAlignedNoteEvent": {
+        "truePositive": 163,
+        "missing": 180,
+        "extra": 178,
+        "f1": 0.4766081871345029
+      }
+    },
+    {
+      "artifactDirectory": "artifacts/zeus-beam4-fantasy",
+      "writtenStaffAlignedNoteEvent": {
+        "truePositive": 200,
+        "missing": 143,
+        "extra": 131,
+        "f1": 0.5934718100890207
+      },
+      "beamWidth": 4,
+      "timingGuard": false,
+      "staffs": 7,
+      "exportedStaffs": 7,
+      "allGreedyReproduced": true,
+      "searchSeconds": 1.2950577510346193
+    },
+    {
+      "artifactDirectory": "artifacts/zeus-beam8-fantasy",
+      "writtenStaffAlignedNoteEvent": {
+        "truePositive": 173,
+        "missing": 170,
+        "extra": 116,
+        "f1": 0.5474683544303798
+      },
+      "beamWidth": 8,
+      "timingGuard": false,
+      "staffs": 7,
+      "exportedStaffs": 6,
+      "allGreedyReproduced": true,
+      "searchSeconds": 1.4529434579599183
+    },
+    {
+      "artifactDirectory": "artifacts/zeus-beam4-timing-fantasy",
+      "writtenStaffAlignedNoteEvent": {
+        "truePositive": 200,
+        "missing": 143,
+        "extra": 131,
+        "f1": 0.5934718100890207
+      },
+      "beamWidth": 4,
+      "timingGuard": true,
+      "staffs": 7,
+      "exportedStaffs": 7,
+      "allGreedyReproduced": true,
+      "searchSeconds": 3.9593472059932537
+    },
+    {
+      "artifactDirectory": "artifacts/zeus-beam8-timing-fantasy",
+      "writtenStaffAlignedNoteEvent": {
+        "truePositive": 202,
+        "missing": 141,
+        "extra": 134,
+        "f1": 0.5949926362297496
+      },
+      "beamWidth": 8,
+      "timingGuard": true,
+      "staffs": 7,
+      "exportedStaffs": 7,
+      "allGreedyReproduced": true,
+      "searchSeconds": 6.601423540036194
+    }
+  ],
+  "fantasyMeasureVariants": [
+    {
+      "artifactDirectory": "artifacts/zeus-consensus-bar-crops",
+      "writtenMeasureAlignedNoteEvent": {
+        "truePositive": 141,
+        "missing": 202,
+        "extra": 177,
+        "f1": 0.4266263237518911
+      },
+      "exportedMeasures": 19,
+      "totalMeasures": 20
+    },
+    {
+      "artifactDirectory": "artifacts/zeus-context-bar-crops",
+      "writtenMeasureAlignedNoteEvent": {
+        "truePositive": 166,
+        "missing": 177,
+        "extra": 159,
+        "f1": 0.49700598802395207
+      },
+      "exportedMeasures": 19,
+      "totalMeasures": 20
+    }
+  ],
+  "additionalPrintedScores": [
+    {
+      "image": "02_fancy_p6__tilt_left",
+      "mode": "greedy-beam4",
+      "metrics": {
+        "truePositive": 97,
+        "missing": 235,
+        "extra": 93,
+        "f1": 0.3716475095785441
+      }
+    },
+    {
+      "image": "02_fancy_p6__tilt_left",
+      "mode": "timing-beam8",
+      "metrics": {
+        "truePositive": 130,
+        "missing": 202,
+        "extra": 197,
+        "f1": 0.3945371775417299
+      }
+    },
+    {
+      "image": "04_solus_sine_sola__perspective",
+      "mode": "greedy-beam4",
+      "metrics": {
+        "truePositive": 33,
+        "missing": 284,
+        "extra": 129,
+        "f1": 0.13778705636743216
+      }
+    },
+    {
+      "image": "04_solus_sine_sola__perspective",
+      "mode": "timing-beam8",
+      "metrics": {
+        "truePositive": 34,
+        "missing": 283,
+        "extra": 292,
+        "f1": 0.1057542768273717
+      }
+    },
+    {
+      "image": "13_galliard_p28__flat",
+      "mode": "greedy-beam4",
+      "metrics": {
+        "truePositive": 172,
+        "missing": 497,
+        "extra": 230,
+        "f1": 0.3211951447245565
+      }
+    },
+    {
+      "image": "13_galliard_p28__flat",
+      "mode": "timing-beam8",
+      "metrics": {
+        "truePositive": 218,
+        "missing": 451,
+        "extra": 461,
+        "f1": 0.32344213649851633
+      }
+    }
+  ],
+  "validation": {
+    "serviceAndBenchmarkTests": 32,
+    "timingPrefixTests": 5,
+    "logs": [
+      "artifacts/recognition-search-service-tests.log",
+      "artifacts/zeus-timing-search-tests-final.log"
+    ]
+  },
+  "modelFileSHA256": {
+    "LICENSE": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "model_options.yaml": "9ddc8147f494f241d9d09bec150e95a7bbb84d49a3d3cec4d81bb4085587c3b8",
+    "architecture_options.yaml": "ab087e7661d8c76669761eb0088735f65f3dee525718004a6bc4e0670c5c6187",
+    "token_map.txt": "c0a548142e205f8b66b3cc97d2a49112dd8b62727cbeed67efa4d12719ffcb10",
+    "weights.h5": "186f363a54b8bf264f01c649532ce6a8a8822552f3d658538d77998e98df326e"
+  },
+  "researchCodeSHA256": {
+    "services/omr/research/evaluate_zeus_beam.py": "55f18482577f0b93b97f318c009da978c1a5bb8bc5c623896c1e6e704019734d",
+    "services/omr/research/zeus_timing_search.py": "aef1c426f892c36dbb6bfe64f3e270e54e06b438dbbba15e74df4d24c4f47e3d",
+    "services/omr/research/check_zeus_timing_search.py": "0938bf986819414470600108653bfa9f23beb662148ebbba2c99e3477af25ab9",
+    "services/omr/research/extract_guitar_staffs.py": "ab9dda92b92c3b6777e310c9576fe6c9a9c81c4097b45f930a4e5e07ccb020ea",
+    "services/omr/compare_staff_crops.py": "a4240e904d6f0bb2d0c659107f020af7c5f66383164c8828ccab9e1f9b9fda80",
+    "services/omr/test_benchmark_comparison.py": "4de8eba8a2ed5c4fb5b8336e8d0d977e01a0c53d2ccb58bbbdb6262744b3f607"
+  },
+  "decision": "Do not adopt. Wider model search improves the trial Fantasy page but is still below targets and fails to generalize across the additional scores. Keep current HOMR service until an alternative passes the complete image/native pipeline benchmark.",
+  "retainedFailedAttempts": [
+    "Simple pixel segmentation confused a stem with a barline; trained detector alone also included stems. Agreement found the 20 visible trial measures.",
+    "An initial triplet-check fixture used an invalid token; corrected to the pinned LMX 3in2 token, with valid and invalid cursor cases both tested.",
+    "The first cross-score orchestrator also matched a handwriting filename with the same numeric prefix after completing all three printed cases. Its unsupported-layout failure is retained; the runner now filters the printed category."
+  ]
+}

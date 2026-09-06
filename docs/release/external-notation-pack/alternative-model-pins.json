@@ -1,0 +1,38 @@
+{
+  "jazzmus": {
+    "repository": "https://github.com/JuanCarlosMartinezSevilla/ISMIR-Jazzmus",
+    "commit": "643b49cf4772a58027e8f2cf924f2be637b31fc4",
+    "model": "https://huggingface.co/JuanCarlosMartinezSevilla/jazzmus-model",
+    "revision": "b38466e738548cf4d3826a0426d709a711533618",
+    "files": {
+      "model.safetensors": "34588e1c6459517fdda3df24d06b3d9915fdd432d97e6ae4a01aac66097d8f3c",
+      "config.json": "935aee22d3326bd84dfc67d3f76d13d4ef34d04755e04d6efdd7d531f416d320",
+      "yolo_staff_detector.pt": "1412dc2fa9507e4b36e3dd99b8c33bc61662cbab3f1ce2eb63430c284a672201",
+      "README.md": "0e58631b628409730d7363890c739d05f90c7322f3c12cc259dfe62634c3f1dc"
+    }
+  },
+  "clarity": {
+    "repository": "https://github.com/clquwu/Clarity-OMR",
+    "commit": "c6bb8a4d2a5b52842a9c41bd0f761f58d02f6f82",
+    "model": "https://huggingface.co/clquwu/Clarity-OMR",
+    "revision": "ee14c1e41ab371fe27bf8a2707ea588560077e73",
+    "files": {
+      "model.safetensors": "5138f11acd1b89d780e65fbb363dae992e8c6d3e514f0e2a01062b0ea99edb43",
+      "yolo.pt": "94610a2749022edd6938146505812544fece2983740fe8523907d2c855e4da73",
+      "config.json": "0e9f98d571711509b4db84f1c1f1d05c2efe8b3a13c99de126440489290a1d40",
+      "README.md": "5c4e7ad812aac6b05a1a1cf815024e3f85800c3da7fc1ccd840395e7947ab6a7"
+    }
+  },
+  "zeus": {
+    "repository": "https://github.com/OmniOMR/zeus",
+    "commit": "3cbcb56fbb4c24de3f63557be14a66f6c578125a",
+    "model": "ayce-2026-08-03",
+    "files": {
+      "LICENSE": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "model_options.yaml": "9ddc8147f494f241d9d09bec150e95a7bbb84d49a3d3cec4d81bb4085587c3b8",
+      "architecture_options.yaml": "ab087e7661d8c76669761eb0088735f65f3dee525718004a6bc4e0670c5c6187",
+      "token_map.txt": "c0a548142e205f8b66b3cc97d2a49112dd8b62727cbeed67efa4d12719ffcb10",
+      "weights.h5": "186f363a54b8bf264f01c649532ce6a8a8822552f3d658538d77998e98df326e"
+    }
+  }
+}

@@ -1,3 +1,5 @@
+> **Current release scope:** bundled original single-note exercises. `Resources/Exercises/catalog.json` records the authored sounding pitches and rhythms, and `DemoScore.all` loads its 18 entries. MusicXML carries explicit guitar octave transposition into the existing NormalizedScore pipeline. The release excludes camera/Photos permissions, a recognition URL, and App Attest entitlements. Scanner UI and networking compile only under DEBUG. The playback bridge normalizes alphaTab's speed-adjusted clock before Swift maps the current note to the fretboard.
+
 # Structured-score architecture
 
 ## Boundaries
@@ -6,7 +8,7 @@
 Input adapter               Stable local core             Output adapter
 ─────────────               ─────────────────             ──────────────
 MusicXML parser ───────▶ NormalizedScore ───────▶ alphaTex generator
-future OMR API adapter      │        ▲                    │
+photo + OMR API adapter     │        ▲                    │
 future MIDI adapter         ▼        │                    ▼
                      FingeringNote[] │                 alphaTab
                             │        │            render + synth + cursor
@@ -17,7 +19,7 @@ future MIDI adapter         ▼        │                    ▼
                       DP optimizer ──┘
 ```
 
-`NormalizedScore` is the seam for future image/PDF OMR. An OMR client must return stable measure/note IDs plus confidence and provenance metadata; it must not reach into candidate generation or alphaTab. The deterministic optimizer remains local so tuning, capo, profile, transposition, and manual overrides update immediately offline.
+`NormalizedScore` is the stable ingestion seam. Current photo OMR returns MusicXML through the existing importer; future direct/PDF adapters must return stable measure/note IDs plus confidence and provenance metadata. No importer reaches into candidate generation or alphaTab. The deterministic optimizer remains local so tuning, capo, profile, transposition, and manual overrides update immediately offline.
 
 ## Major decisions
 
@@ -29,7 +31,7 @@ alphaTab assets are bundled in the application. A static server bound only to `1
 
 ### A deliberately bounded normalized score
 
-The model preserves stable IDs, title/composer, measures, time/key metadata, events, quarter-note durations, MIDI/display pitch, rests, and ties. It still does not mirror all of MusicXML. Unsupported polyphony and rhythm are rejected at the adapter boundary, preventing plausible-looking but incorrect tablature. This model must expand before OMR or chord support is declared reliable.
+The model preserves stable IDs, title/composer, measures, time/key metadata, events, quarter-note durations, MIDI/display pitch, rests, and ties. It still does not mirror all of MusicXML. It additionally preserves simultaneous notes, independent voices, stable tie predecessors, and simple repeats. Supported rhythms are binary/dotted values and 3:2 triplets. Other notation is rejected explicitly before a successful conversion. The writer emits precise canonical MusicXML for correction and round trips.
 
 ### Exact layered-graph optimization
 
@@ -63,18 +65,18 @@ The optimizer controls the chosen string and fret. Generated alphaTex expresses 
 
 SwiftData persists source MusicXML, source metadata, instrument/profile settings, locked positions, arrangement summary, speed, loop range, metronome/count-in choices, and last practice time. `AppModel` owns transient pipeline and playback state. Dynamic work runs outside the main actor and is cancelled when a newer profile or instrument request supersedes it. Profile changes reuse cached arrangements for the current instrument and lock configuration; instrument or lock changes invalidate and rebuild the cache.
 
-## OMR and chord gate
+## OMR service and correction
 
-Camera/Photos/PDF capture is not yet a primary journey because there is no compliant recognition service or correction model. If homr or Audiveris is used, it belongs behind a versioned upload/status/result API in a separately licensed deployment; both inspected engines are AGPL-3.0. The iOS app should retain page order, upload only with explicit user action, show recognition confidence, and require review before arrangement. No AGPL implementation is copied into the app.
+The app prepares one page with cropping, 90-degree rotation and perspective correction, strips image metadata, and uploads only after consent. `OMRClient` uses owned idempotent jobs, retries transient failures, resumes polling and deletes accepted results. A protected atomic local draft preserves the image, job identity and accepted XML across process death. The user compares the source with editable note/rest events, auditions corrections and explicitly confirms review. SwiftData saves corrected XML, source image and practice settings. A real SQLite migration test covers older library records.
 
-Chord support similarly waits for a simultaneous-note candidate layer with unique string assignment, fret-span/finger-count constraints, and transition search. MoChord's MIT-licensed shape/transition distinction is a useful reference, but the app will not silently flatten chords into melodies.
+`services/omr/production.py` is the production candidate. It has App Attest-backed anonymous sessions, bounded queues/uploads/concurrency, ownership checks, rate limits, process-group cancellation, one-hour result expiry and cleanup on terminal states and restart. The Docker/Railway configuration requires one process and a private volume. The development bypass is restricted to loopback clients; public hosting and real Apple attestation remain unverified. The engine is pinned separately from the Swift pipeline. No Python or recognition model ships in the app.
 
-## Next structured-score steps
+Chord optimization uses a layer for every new onset and includes all still-sounding notes. Each complete shape assigns notes to distinct strings with conservative reach and finger-count constraints. Edges retain held strings and tied identities. A bounded forward and reverse search gives deterministic best complete routes and alternate-position explanations. Monophonic input retains the prior optimizer. Chord movement metrics use voice transitions between onsets; simultaneous notes do not count as sequential movement.
 
-1. Tuplet and arbitrary-duration representation.
-2. Tempo changes, articulations, repeats, chord symbols, techniques, and more tie cases.
-3. Multi-voice normalization with a clear melody-selection policy.
-4. Chord candidate generation and multi-note hand-state optimization.
-5. `.mxl` and reliable MIDI adapters.
-6. Corpus tests against exported MusicXML from MuseScore, Finale, and Dorico.
-7. Versioned OMR API, confidence-bearing normalization, and minimal correction UI.
+When tab is unplayable, the app retains the normalized score and a notation-only alphaTex path. The same actual alphaTab parser and MIDI generator are tested for exact sounding pitch, onset and sustain duration. Source-note IDs are mapped back onto rendered notes, including split tied durations and independent voices.
+
+## Remaining gates
+
+Recognition is currently failing clean-page accuracy. A synthetic 102-image batch is underway; it is not a substitute for real camera photographs, genuine handwriting, independently checked references and in-app correction comparisons. Handwriting remains a release blocker, consistent with the pinned engine's own caution.
+
+Piano/multipart scores, chord-name interpretation, complex repeats, unsupported articulations/techniques, tempo changes, PDF/multiple pages, `.mxl` and MIDI are excluded. Complete manual/device testing, Linux resource measurements, real App Attest validation, signing, a signed Release archive and seven days of TestFlight remain outstanding. See [release evidence](release/evidence.md).

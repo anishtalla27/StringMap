@@ -1,0 +1,6 @@
+{
+  "services/omr/recognizer.py": "86eca4aed065a9b584fd4f40c78de63d7b74009435eeb610f6176ca7b82e4866",
+  "apps/ios/Packages/StringMapCore/.build/debug/stringmap-check": "9b26b4e602d41dbc41d0d1ec99dd871a557b13f2887893dea82f56a20e0e5a75",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "14d6f705a077928f9661f72b636968b8b3c692fce20233f3100446a6c436e961",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "0b01ffd93a4365fb047f6289a250a3ad91b85221812009d975845a5965adf9f6"
+}

@@ -1,0 +1,14 @@
+# Production recognition: pinned CPU HOMR; no legacy SVC pickle loading.
+homr[cpu] @ git+https://github.com/liebharc/homr.git@457e7c6518a10ba755db2e60883419e56c4d7369
+numpy==2.5.2
+onnxruntime==1.29.0
+opencv-python-headless==4.14.0.94
+opencv-python==4.14.0.94
+pillow==12.3.0
+
+# Owned API and Apple App Attest validation.
+fastapi==0.141.1
+uvicorn==0.52.4
+cryptography==50.0.1
+cbor2==6.1.4
+asn1crypto==1.5.1

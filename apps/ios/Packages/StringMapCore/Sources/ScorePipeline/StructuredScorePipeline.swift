@@ -12,8 +12,11 @@ public struct StructuredScorePipeline: Sendable {
         musicXML data: Data,
         options: OptimizationOptions = .init()
     ) throws -> PipelineResult {
-        let importedScore = try importer.importScore(from: data)
-        let score = try importedScore.transposed(by: options.transposeSemitones)
+        try run(score: importer.importScore(from: data), options: options)
+    }
+
+    public func run(score input: NormalizedScore, options: OptimizationOptions = .init()) throws -> PipelineResult {
+        let score = try ScoreValidator.validate(input).expandingRepeats().transposed(by: options.transposeSemitones)
         let fingeringNotes = score.notes.map {
             FingeringNote(
                 id: $0.id,
@@ -31,8 +34,38 @@ public struct StructuredScorePipeline: Sendable {
                 maxFret: options.maxFret
             )
         }
-        let fingering = try FingeringEngine.optimize(fingeringNotes, options: options)
+        let fingering: FingeringResult
+        if score.needsPolyphonicFingering {
+            var offset = 0.0
+            var timed: [TimedFingeringNote] = []
+            for measure in score.measures {
+                for event in measure.events {
+                    if case let .note(n) = event {
+                        timed.append(TimedFingeringNote(note: FingeringNote(id: n.id, midi: n.midi,
+                            tieStop: n.tieStop, durationQuarters: n.durationQuarters),
+                            onset: offset + n.onsetQuarters, voice: n.voice, tieFromID: n.tieFromID))
+                    }
+                }
+                offset += measure.durationQuarters
+            }
+            fingering = try FingeringEngine.optimizePolyphonic(timed, options: options)
+        } else { fingering = try FingeringEngine.optimize(fingeringNotes, options: options) }
         let alphaTex = try AlphaTexGenerator.generate(score: score, fingering: fingering)
         return PipelineResult(score: score, candidates: candidates, fingering: fingering, alphaTex: alphaTex)
+    }
+}
+
+public extension NormalizedScore {
+    var needsPolyphonicFingering: Bool {
+        if Set(notes.map(\.voice)).count > 1 { return true }
+        for measure in measures {
+            let notes = measure.events.compactMap { if case let .note(n) = $0 { return n }; return nil }
+            var end = 0.0
+            for n in notes.sorted(by: { $0.onsetQuarters < $1.onsetQuarters }) {
+                if n.onsetQuarters < end - 1e-8 { return true }
+                end = max(end, n.onsetQuarters + n.durationQuarters)
+            }
+        }
+        return false
     }
 }

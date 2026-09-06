@@ -1,0 +1,219 @@
+{
+  "releaseQualified": false,
+  "deployed": false,
+  "feature": "Correct time and key signatures for one measure or independently through their next existing changes; preserve note data, undo and persisted drafts.",
+  "coreTests": 71,
+  "iOSUnitTests": 33,
+  "serviceBenchmarkTests": 42,
+  "chromaticPlaybackCases": 15,
+  "chromaticPlaybackNoteEvents": 180,
+  "chromaticPlaybackResults": "artifacts/signature-playback/results.json",
+  "initialSimulatorChecks": {
+    "iphone": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "086490C4-72D8-4F86-B65B-C5D927D7CA6B",
+            "deviceName": "StringMap Photo QA iPhone",
+            "modelName": "iPhone 17",
+            "osBuildNumber": "23F77",
+            "osVersion": "26.5",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 34,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1788687753.664,
+      "passedTests": 34,
+      "result": "Passed",
+      "skippedTests": 0,
+      "startTime": 1788687598.673,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - StringMap",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "56% of duration",
+          "text": "1 longest test run with outlier durations exceeding 1.20s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 34
+    },
+    "ipad": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "266A6C6E-947F-4BC9-BD40-0FE6C4FFF2E0",
+            "deviceName": "iPad Pro 13-inch (M5)",
+            "modelName": "iPad Pro 13-inch (M5)",
+            "osBuildNumber": "23F77",
+            "osVersion": "26.5",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 1,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1788688022.346,
+      "passedTests": 1,
+      "result": "Passed",
+      "skippedTests": 0,
+      "startTime": 1788687860.945,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - StringMap",
+      "topInsights": [],
+      "totalTestCount": 1
+    }
+  },
+  "sourceSHA256": {
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/ScoreEditing.swift": "7c6d24e9d5b7ec413319020b81d88ebeb4c38d61a2e660105416e4d83d4bbc93",
+    "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/SignatureCorrectionTests.swift": "e2fb52ecd9d7553e424fc95b9b7dc2ab26a453579ace7112c65201f97ffb4666",
+    "apps/ios/StringMap/ScoreReviewView.swift": "3300137dbf609495ec593824ac33745cb01bbc56e52fa19a49ce56cda1b084d6",
+    "apps/ios/StringMapUITests/StringMapUITests.swift": "274cecec641d143ec86f5dcadd17dcebe5557318d624362e611b7084098d975c",
+    "services/omr/recognizer.py": "2d34f3b33b81b3c00e879dd55eb8f455be667f94687a8b9c6e4bac1226b9ba42",
+    "services/omr/test_recognizer.py": "dbd05728e593bddf8a8d88b278ea55589eeea41cb6e3af67e9bc5389f6d257e2"
+  },
+  "sourceArchive": {
+    "file": "artifacts/opening-context-final-source.tar.gz",
+    "sha256": "7b7ec72047c0a456e133be32747c18f89936f94265021ea14405941aed8af8f4",
+    "runtimeBytesVerified": true
+  },
+  "openingContextGuard": {
+    "cases": [
+      {
+        "id": "handwriting",
+        "notesPreserved": true,
+        "baseline": "artifacts/handwriting-staff-probe/writer-04/recognized.musicxml",
+        "openingWarnings": []
+      },
+      {
+        "id": "study",
+        "notesPreserved": true,
+        "baseline": "artifacts/crop-retry-live-check/study-01-clean/recognized.musicxml",
+        "openingWarnings": []
+      }
+    ],
+    "sourceArchiveRuntimeBytesVerified": true,
+    "guardLimit": "Both actual checks predicted opening context; the new missing-context warning itself is verified by boundary unit tests, not by a live missing-context example."
+  },
+  "textOCRProbe": {
+    "script": "services/omr/research/inspect_music_text.swift",
+    "staffObservations": 0,
+    "pageObservations": 10,
+    "result": "Page headings and mixed text were detected, but inline fingering digits were not reliably localized. No text masking was adopted."
+  },
+  "handwritingProbe": "docs/release/external-notation-pack/handwriting-staff-results.json",
+  "limits": [
+    "The initial iPad test-without-building command failed because that test command did not produce an xctestrun bundle. The subsequent ordinary Xcode test run passed; the failed setup artifact is retained.",
+    "The new missing-opening-context guard is unit-tested; both live regression examples predicted opening context and did not trigger it.",
+    "Missing-context warnings do not detect hallucinated context. Signatures and notes still need comparison with the page.",
+    "This service revision has not been newly hosted or rebuilt in Linux; the previous crop-recovery Linux checkpoint remains separately recorded.",
+    "Handwriting exports are not qualified recognition; all four exported crops fail native import on unsupported marks.",
+    "No physical-device, signed archive, App Attest or TestFlight qualification is claimed."
+  ],
+  "finalSimulatorChecks": {
+    "iphone": {
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "086490C4-72D8-4F86-B65B-C5D927D7CA6B",
+              "deviceName": "StringMap Photo QA iPhone",
+              "modelName": "iPhone 17",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1788688357.944,
+        "passedTests": 1,
+        "result": "Passed",
+        "skippedTests": 0,
+        "startTime": 1788688216.748,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - StringMap",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "xcresult": "artifacts/signature-units-iphone.xcresult",
+      "screenshot": "docs/release/screenshots/signature-review-iphone.png"
+    },
+    "ipad": {
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "266A6C6E-947F-4BC9-BD40-0FE6C4FFF2E0",
+              "deviceName": "iPad Pro 13-inch (M5)",
+              "modelName": "iPad Pro 13-inch (M5)",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "StringMap \u00b7 Built with macOS 26.6.2",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1788688612.925,
+        "passedTests": 1,
+        "result": "Passed",
+        "skippedTests": 0,
+        "startTime": 1788688451.287,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - StringMap",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "xcresult": "artifacts/signature-units-ipad.xcresult",
+      "screenshot": "docs/release/screenshots/signature-review-ipad.png"
+    }
+  }
+}

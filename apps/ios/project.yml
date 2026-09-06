@@ -25,36 +25,97 @@ targets:
       - path: StringMap
         excludes:
           - Resources
+          - Info-Debug.plist
       - path: StringMap/Resources/AlphaTab
+        type: folder
+        buildPhase: resources
+      - path: StringMap/Resources/Legal
         type: folder
         buildPhase: resources
       - path: StringMap/Resources/Samples
         type: folder
         buildPhase: resources
+      - path: StringMap/Resources/Tutorial
+        type: folder
+        buildPhase: resources
+      - path: StringMap/Resources/Exercises
+        type: folder
+        buildPhase: resources
+    preBuildScripts:
+      - name: Validate Release configuration
+        script: python3 "$SRCROOT/scripts/validate-release-config.py"
+        basedOnDependencyAnalysis: false
     dependencies:
       - package: StringMapCore
         product: FingeringEngine
       - package: StringMapCore
         product: ScorePipeline
+    # Every Info.plist key is declared here rather than through
+    # INFOPLIST_KEY_* build settings: those only apply when Xcode generates the
+    # plist, and App Transport Security needs a nested dictionary that has no
+    # INFOPLIST_KEY_ equivalent.
+    info:
+      path: StringMap/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDisplayName: StringMap
+        PrivacyPolicyURL: $(PRIVACY_POLICY_URL)
+        SupportURL: $(SUPPORT_URL)
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.music
+        LSSupportsOpeningDocumentsInPlace: true
+        UTImportedTypeDeclarations:
+          - UTTypeIdentifier: com.recordare.musicxml
+            UTTypeDescription: Compressed MusicXML score
+            UTTypeConformsTo: [public.zip-archive]
+            UTTypeTagSpecification:
+              public.filename-extension: [mxl]
+              public.mime-type: application/vnd.recordare.musicxml
+          - UTTypeIdentifier: com.recordare.musicxml.uncompressed
+            UTTypeDescription: MusicXML score
+            UTTypeConformsTo: [public.xml]
+            UTTypeTagSpecification:
+              public.filename-extension: [musicxml]
+              public.mime-type: application/vnd.recordare.musicxml+xml
+        NSHumanReadableCopyright: "Copyright © 2026 Anish Talla. All rights reserved."
+        UIApplicationSupportsIndirectInputEvents: true
+        UILaunchScreen: {}
+        NSLocalNetworkUsageDescription: "StringMap loads its bundled notation and audio through a private connection on this device."
+        NSAppTransportSecurity:
+          # Only local networking is relaxed, so a recognition service running
+          # on the user's own Mac stays reachable from a physical device.
+          # Arbitrary cleartext loads remain blocked.
+          NSAllowsLocalNetworking: true
+          NSAllowsArbitraryLoads: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
     settings:
+      configs:
+        Debug:
+          APP_ATTEST_ENVIRONMENT: development
+          INFOPLIST_FILE: StringMap/Info-Debug.plist
+          CODE_SIGN_ENTITLEMENTS: StringMap/StringMap.entitlements
+        Release:
+          CODE_SIGN_ENTITLEMENTS: ""
       base:
+        PRIVACY_POLICY_URL: https://anishtalla27.github.io/StringMap/privacy.html
+        SUPPORT_URL: https://anishtalla27.github.io/StringMap/support.html
         PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMap
         PRODUCT_NAME: StringMap
-        MARKETING_VERSION: 0.1.0
+        MARKETING_VERSION: 1.0.0
         CURRENT_PROJECT_VERSION: 1
-        GENERATE_INFOPLIST_FILE: true
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         SUPPORTS_MACCATALYST: false
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: false
-        INFOPLIST_KEY_CFBundleDisplayName: StringMap
-        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
-        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
-        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: true
-        INFOPLIST_KEY_UILaunchScreen_Generation: true
-        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
 
   StringMapTests:
     type: bundle.unit-test

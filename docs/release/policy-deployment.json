@@ -1,0 +1,34 @@
+{
+  "commit": "59216d0c87bbf3578d33075976c00db10aa64051",
+  "branch": "codex/policy-pages",
+  "url": "https://anishtalla27.github.io/StringMap/",
+  "status": "built",
+  "verifiedAt": "2026-09-06T08:23:02.545232+00:00",
+  "verifiedFiles": [
+    {
+      "url": "https://anishtalla27.github.io/StringMap/index.html",
+      "status": 200,
+      "sha256": "162c9c93dd578f445000f422bdcb27f2018dd76983e70ec33bce8d3fabfc27da"
+    },
+    {
+      "url": "https://anishtalla27.github.io/StringMap/privacy.html",
+      "status": 200,
+      "sha256": "b98c419674f5dea2a5d1d23a6fbe806a847ca1f1910d15834a650c31132a780f"
+    },
+    {
+      "url": "https://anishtalla27.github.io/StringMap/support.html",
+      "status": 200,
+      "sha256": "42233b937912730e09f14652f4b7027635bc66462de57c69292e0cdbb645288c"
+    },
+    {
+      "url": "https://anishtalla27.github.io/StringMap/licenses.html",
+      "status": 200,
+      "sha256": "f9a9cf888c1782a835cc8f133c72698d905aa6cbe6ae615ca6b37f56f016ef4d"
+    },
+    {
+      "url": "https://anishtalla27.github.io/StringMap/style.css",
+      "status": 200,
+      "sha256": "00ee3c84b7c00363cb84dc05ddd85f367db25ffe1765e4e85a287efaf41ab5cc"
+    }
+  ]
+}

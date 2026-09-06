@@ -215,7 +215,7 @@ private struct PathCell {
     }
 }
 
-private func validateInstrument(capo: Int, maxFret: Int) throws {
+func validateInstrument(capo: Int, maxFret: Int) throws {
     guard maxFret >= 0 else { throw FingeringError.invalidMaxFret(maxFret) }
     guard capo >= 0, capo <= maxFret else { throw FingeringError.invalidCapo(capo) }
 }
@@ -326,7 +326,7 @@ private func makeDebugLayers(
     }
 }
 
-private func unaryCost(
+func unaryCost(
     _ position: GuitarPosition,
     weights: CostWeights,
     preferredHandPosition: Int?
@@ -341,7 +341,7 @@ private func unaryCost(
     )
 }
 
-private func transitionCost(
+func transitionCost(
     _ previous: GuitarPosition,
     _ current: GuitarPosition,
     previousNote: FingeringNote,
@@ -372,32 +372,34 @@ private func transitionCost(
     )
 }
 
-private func handPosition(_ physicalFret: Int) -> Int {
+func handPosition(_ physicalFret: Int) -> Int {
     physicalFret == 0 ? 1 : max(1, physicalFret - 1)
 }
 
-private func makeResult(
+func makeResult(
     profile: AppliedFingeringProfile,
     weights: CostWeights,
     options: OptimizationOptions,
     totalCost: Double,
     steps: [FingeringStep],
-    debugLayers: [FingeringDebugLayer] = []
+    debugLayers: [FingeringDebugLayer] = [],
+    motionTransitions: [(GuitarPosition, GuitarPosition)]? = nil,
+    simultaneousSpan: Int = 0
 ) -> FingeringResult {
-    let transitions = zip(steps, steps.dropFirst())
+    let transitions = motionTransitions ?? zip(steps, steps.dropFirst()).map { ($0.position, $1.position) }
     let totalFretMovement = transitions.reduce(0) {
-        $0 + abs($1.0.position.physicalFret - $1.1.position.physicalFret)
+        $0 + abs($1.0.physicalFret - $1.1.physicalFret)
     }
     let positionShifts = transitions.filter {
-        handPosition($0.0.position.physicalFret) != handPosition($0.1.position.physicalFret)
+        handPosition($0.0.physicalFret) != handPosition($0.1.physicalFret)
     }.count
-    let stringChanges = transitions.filter { $0.0.position.string != $0.1.position.string }.count
+    let stringChanges = transitions.filter { $0.0.string != $0.1.string }.count
     let stringSkips = transitions.reduce(0) {
-        $0 + max(0, abs($1.0.position.string - $1.1.position.string) - 1)
+        $0 + max(0, abs($1.0.string - $1.1.string) - 1)
     }
-    let largestStretch = transitions.map {
-        abs($0.0.position.physicalFret - $0.1.position.physicalFret)
-    }.max() ?? 0
+    let largestStretch = max(simultaneousSpan, transitions.map {
+        abs($0.0.physicalFret - $0.1.physicalFret)
+    }.max() ?? 0)
     let averageFret = steps.isEmpty ? 0 : steps.reduce(0) {
         $0 + Double($1.position.physicalFret)
     } / Double(steps.count)

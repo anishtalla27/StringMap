@@ -1,0 +1,346 @@
+{
+  "releaseQualified": false,
+  "images": 15,
+  "recognized": 11,
+  "notationPlayable": 9,
+  "standardTabPlayable": 7,
+  "source": "Actual local HTTP recognition, then shipping Swift guitar-photo import and alphaTab MIDI",
+  "cases": [
+    {
+      "image": "printed_photos/01_fantasy_p5__flat.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "0f87d278994a2b63aeb5e6bc30201d9cc0e7fb5cf7af2a8a465a9f3d22951475",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 341,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 341,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 24.426335374999326
+    },
+    {
+      "image": "printed_photos/02_fancy_p6__tilt_left.jpg",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "ca598dc81fa3d1d2660ffb57f8ca7361db02f1ca12882d6ff081973ee077a60f",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 10.08594845898915
+    },
+    {
+      "image": "printed_photos/03_solus_cum_sola__soft_shadow.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "8af891ab3e7d3b114ee7e846b689f31b20c92a51017d53fcb43966764b3aba29",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": false,
+      "tabError": "The notes sounding at beat 32.75 cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 342,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "seconds": 28.447951042006025
+    },
+    {
+      "image": "printed_photos/04_solus_sine_sola__perspective.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "198d8188902402c5403c9d767cdafae05da08d222c9bcba3343734c8d8a38ca4",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 310,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 310,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 28.51619262501481
+    },
+    {
+      "image": "printed_photos/05_dr_cases_pavan__tilt_right.jpg",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 12.083926999999676
+    },
+    {
+      "image": "printed_photos/06_lachrimae_pavan__hard_shadow.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "058d76dd986da89bf836fe1c5adadc13f8cb391d247e7b5915da1ec54f071bce",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 36.57382329099346
+    },
+    {
+      "image": "printed_photos/07_digorie_pipers_galliard__flat.jpg",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "1ea02839d0a67591d4f382dec23899395f88e686cb92fddfaa9ad37909f470b1",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 16.137184749997687
+    },
+    {
+      "image": "printed_photos/08_dowlands_first_galliard__tilt_left.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "8b0382089cc3231284143191c4358487be0783987d29b1c21e5ec01650251e0f",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 32.65338766700006
+    },
+    {
+      "image": "printed_photos/09_frog_galliard__soft_shadow.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "75d3a064a93c1215f6b2fc3982e956569d1b80848625afaef5c97cc0ca2ea44b",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 42.67436412497773
+    },
+    {
+      "image": "printed_photos/10_galliard_p24__perspective.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "6b791b9f0d14850d97fd0d4bc9a713d26b5a292cead0914cd7abd12ac3c642d7",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 20.45463304198347
+    },
+    {
+      "image": "printed_photos/11_melancholy_galliard__tilt_right.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "7a0067aa2fcaf43148f898f70171a21c22bb0b58b7da44c34646615917a24052",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": false,
+      "importError": "Invalid MusicXML: Measure 10: <fermata> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 34.212336791009875
+    },
+    {
+      "image": "printed_photos/12_galliard_p27__hard_shadow.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "ec524544e114de314096cd8adaf0a57e2f2251ce2bff35c45d6070a175b394cd",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": false,
+      "importError": "Invalid MusicXML: Measure 13: <ending> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 34.369303250015946
+    },
+    {
+      "image": "printed_photos/13_galliard_p28__flat.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "fba6966a915dbdb92407f9bc38ca084b0fd8c72615f2326ea0a42001fea6ab46",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": false,
+      "tabError": "The notes sounding at beat 25.5 cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 652,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "seconds": 40.47450475001824
+    },
+    {
+      "image": "printed_photos/14_giles_hobies_galliard__tilt_left.jpg",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 12.08442924998235
+    },
+    {
+      "image": "printed_photos/15_galliard_p30__soft_shadow.jpg",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "ae15faf24b74edbee19f8fca831ff7dfd354a3570425057f016329d6fd0bbef0",
+      "recognizerSHA256": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 24.4386134170054
+    }
+  ]
+}
