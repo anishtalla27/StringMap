@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-09-06T18:47:39.563251+00:00",
+  "archive": "artifacts/StringMap-1.0.0-ready-unsigned.xcarchive",
+  "signed": false,
+  "version": "1.0.0",
+  "build": "1",
+  "minimumOS": "26.0",
+  "bundleID": "com.anishtalla.StringMap",
+  "deviceFamilies": [
+    1,
+    2
+  ],
+  "executableSHA256": "19146a8144ad8d83e182bbee9b456cd4b00c604c7f33c79ab37219837b2ab87f",
+  "bridgeSHA256": "80dcb6cdeced55a1b70d82a9ce448badc6c7a713f06c23de3506edbb34e4e85c",
+  "courseSHA256": "3759f18237e8f2006a38d16c5c251fc8aef52888ce44670d43b267f3543c2fd8",
+  "releaseAudit": {
+    "tutorialLessons": 12,
+    "tutorialExamples": 16,
+    "microphonePermissionAbsent": true,
+    "listeningSymbolsAbsent": true,
+    "scannerSymbolsAbsent": true,
+    "photoPermissionsAbsent": true,
+    "recognitionURLAbsent": true,
+    "collectedDataTypes": [],
+    "bundledExercises": 18
+  },
+  "automaticSigning": "Failed: No Accounts; no matching provisioning profile",
+  "distributionExport": "Failed: No Accounts; no matching provisioning profile"
+}

@@ -1,19 +1,19 @@
 # Physical-device and seven-day TestFlight exercise
 
-Status: NOT STARTED. Simulator indicators and MIDI events are not evidence of audible playback. No signed upload or invitation has been sent.
+Status: NOT STARTED. No signed upload or invitations have been verified. Simulator tests and MIDI/PCM checks do not establish physical audible playback.
 
-Use a physical iPhone and physical iPad on supported iOS 26 versions. Record model, OS, app build, tester, date, evidence location, and pass/fail for every entry. Never mark a day complete in advance.
+Run on a physical iPhone and iPad with iOS/iPadOS 26+. Record model, OS, build, tester, date, evidence, and pass/fail. Do not mark a day complete in advance. This seven-day exercise is our release gate, not an Apple-mandated minimum.
 
-| Day | Exercise | Required evidence |
+| Day | Exercise | Evidence |
 | --- | --- | --- |
-| 1 | Clean install, no-account onboarding, MusicXML import, first photo/permission denial, App Attest on distributed build | Recording/screenshots, hosted challenge/session/job correlation without image contents in logs |
-| 2 | Real printed guitar photos, crop/rotate/perspective, stacked chords, independently checked references | Original provenance, recognition metrics, corrected XML and exact playback comparison |
-| 3 | Genuine handwriting; pitch/accidental/octave/duration/rest/chord edits, insertion/deletion/undo | Useful automatic output, measured correction time and zero remaining reference differences |
-| 4 | Speaker, wired headphones, Bluetooth, phone/Siri interruption, disconnected route, background/foreground | Human audible checks, expected pause/restart behavior; no unintended loud resume |
-| 5 | Tuning/capo/transposition, every profile, locks, alternates, all practice controls, offline library | Audible pitch checks, persistence after relaunch, loops and seeking |
-| 6 | VoiceOver, largest text, light/dark, portrait/landscape, iPad split view, long session and memory pressure | Reachable controls and readable errors, measured memory/crashes, accessibility recording |
-| 7 | Upgrade from previous build, interrupted saves, cancellation, offline/timeout/server restart, reinstall | No lost library/practice state; cancellation stops work; image cleanup verified |
+| 1 | Clean install; Home, Learn, all 12 lessons; standard notation, optional tab, finger labels and tutorial progress | Reachable controls, clear notation, no scanner/listener placeholders or permission prompts |
+| 2 | Hear all 16 lesson examples; six open-string pitches; Em, Am and D voicings; pause/resume/restart/seek/BPM/loop | Human audible comparison, synchronized note/fretboard highlighting, no stuck notes |
+| 3 | Try it stepping, individual audition, correct/wrong quiz hints; completion; next lesson; relaunch and Home resume | No grading claims, saved progress, left-handed and tab preferences |
+| 4 | Speaker, wired headphones, Bluetooth, phone/Siri interruptions, route disconnection, background/foreground | Correct pitch, volume and rhythm; expected pause; no unintended loud resume |
+| 5 | All 18 Free Practice exercises; tuning/capo/transposition, profiles/locks/alternates, BPM/metronome/count-in/loop/seeking | Audible pitch comparison, offline persistence; tutorial entry/exit preserves free practice |
+| 6 | VoiceOver, largest text, Reduce Motion, light/dark, rotation, iPad multitasking; extended practice and memory pressure | Readable/reachable controls, useful spoken labels, crash/memory evidence |
+| 7 | Upgrade from previous TestFlight build; interrupted saves; force quit/relaunch; offline use; local deletion; policy/support links | No lost songs/preferences, no unexpected network dependency, working public links |
 
-Additional gates: one-hour result expiry, cancel while queued and while processing, duplicate submission, wrong-owner status/deletion, fresh and expired App Attest sessions, denial/re-enable camera permission, malformed server responses, and policy/support links.
+Scanner, handwriting, server, camera, App Attest, and microphone-accuracy tests are excluded from this release. Internal listening stays disabled in distribution builds.
 
-Require zero unresolved release-blocking defects and signed archive validation before App Store submission. Reset affected checks after a code/service change. App Store submission and public release are separate authorized actions.
+Require no unresolved release-blocking defects, a signed archive that passes distribution validation, and completed device evidence before submission. Repeat affected checks after code changes. App Store submission and public release remain separate final actions.

@@ -152,3 +152,12 @@ schemes:
       targets:
         - name: StringMapTests
         - name: StringMapUITests
+  ReleaseValidation:
+    build:
+      targets:
+        StringMap: all
+        StringMapUITests: [test]
+    test:
+      config: Release
+      targets:
+        - name: StringMapUITests

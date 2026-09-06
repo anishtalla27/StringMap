@@ -353,7 +353,9 @@ private struct TransportAccessory: View {
     }
 
     private var subtitle: String {
-        hasNoPlayableScore ? "No playable score" : model.player.playbackStatus
+        if hasNoPlayableScore { return "No playable score" }
+        if !model.player.isBridgeReady && model.player.webView == nil { return "Tap to open player" }
+        return model.player.playbackStatus
     }
 
     private func formatTime(_ milliseconds: Double) -> String {

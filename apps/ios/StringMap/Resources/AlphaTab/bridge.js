@@ -15,6 +15,9 @@
     display: {
       staveProfile: alphaTab.StaveProfile.ScoreTab,
     },
+    // Native navigation already shows the score/lesson title. Suppress its
+    // unwrapped duplicate, which can overflow narrow panels after tab toggles.
+    notation: { elements: { scoreTitle: false, scoreSubTitle: false } },
     player: {
       // Avoid the automatic mode's score-dependent initialization. Creating the
       // synthesizer immediately lets WKWebView load the SoundFont before Swift

@@ -33,7 +33,7 @@ struct SettingsView: View {
             } header: {
                 Text("Instrument defaults").eyebrow()
             } footer: {
-                Text("Applied to scores you import from now on. Scores already in your library keep their own settings.")
+                Text("Applied to new Free Practice exercises. Saved exercises keep their own settings. Tutorial Mode uses standard tuning with no capo.")
             }
             .listRowBackground(Palette.surfaceRaised)
 

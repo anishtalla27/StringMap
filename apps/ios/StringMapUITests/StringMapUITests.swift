@@ -983,3 +983,131 @@ final class TutorialUITests: XCTestCase {
         XCTAssertTrue(element.isHittable, "Unreachable tutorial control: \(element)")
     }
 }
+
+/// Exercises the public navigation in the actual Release configuration. No
+/// debug score routing, seeded library, or scanner flags are needed.
+final class ReleaseTutorialUITests: XCTestCase {
+    @MainActor
+    func testPublicCourseAndStoreScreenshots() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.buttons["homeTutorial"].waitForExistence(timeout: 20))
+        capture("01-home")
+        selectTab("Learn", app)
+        app.segmentedControls["learnMode"].buttons["Tutorial Mode"].tap()
+        let first = app.buttons["lesson-01"]
+        reveal(first, app)
+        capture("02-learn")
+        first.tap()
+        let quizFrets = [0, 0, 1, 1, 2, 2, 0, 3, 2, 1, 2, 3]
+        for number in 1...12 {
+            let status = app.staticTexts["tutorialStatus"]
+            XCTAssertTrue(status.waitForExistence(timeout: 40))
+            expectation(for: NSPredicate(format: "label == 'Playback ready'"), evaluatedWith: status)
+            waitForExpectations(timeout: 40)
+            app.buttons["tutorial-stage-hear"].tap()
+            let board = app.otherElements["guitarFretboard"]
+            XCTAssertTrue(board.exists)
+            let tab = app.switches["tutorialShowTab"]
+            reveal(tab, app)
+            if (tab.value as? String) == "1" { tab.tap() }
+            if number == 3 { reveal(board, app); capture("03-first-notes") }
+            if number >= 9 {
+                let examples = app.segmentedControls["tutorialPhrase"]
+                reveal(examples, app); examples.buttons.element(boundBy: 1).tap()
+                expectation(for: NSPredicate(format: "label == 'Playback ready'"), evaluatedWith: status)
+                waitForExpectations(timeout: 30)
+                if number == 9 { reveal(board, app); capture("04-chord-shape") }
+            }
+            let play = app.buttons["tutorialPlay"]
+            reveal(play, app)
+            let loop = app.switches["tutorialLoop"]
+            reveal(loop, app)
+            if (loop.value as? String) != "1" { loop.tap() }
+            reveal(play, app); play.tap()
+            expectation(for: NSPredicate(format: "label == 'Playing synchronized score'"), evaluatedWith: status)
+            waitForExpectations(timeout: 10)
+            play.tap()
+            expectation(for: NSPredicate(format: "label == 'Playback paused'"), evaluatedWith: status)
+            waitForExpectations(timeout: 10)
+            app.sliders["Lesson position"].adjust(toNormalizedSliderPosition: 0.45)
+            app.buttons["tutorialNext"].tap()
+            app.buttons["tutorialPrevious"].tap()
+            app.buttons["tutorialRestart"].tap()
+            let bpm = app.steppers["tutorialBPM"]
+            reveal(bpm, app)
+            let oldBPM = bpm.label
+            bpm.buttons.element(boundBy: 1).tap()
+            XCTAssertNotEqual(bpm.label, oldBPM)
+            reveal(tab, app); tab.tap()
+            if number == 3 { reveal(board, app); capture("05-optional-tab") }
+            app.buttons["tutorial-stage-practice"].tap()
+            let wrong = app.buttons["tutorial-answer-\((quizFrets[number - 1] + 1) % 4)"]
+            reveal(wrong, app); wrong.tap()
+            XCTAssertFalse(app.staticTexts["tutorialFeedback"].label.contains("Found it"))
+            app.buttons["tutorial-answer-\(quizFrets[number - 1])"].tap()
+            XCTAssertTrue(app.staticTexts["tutorialFeedback"].label.contains("Found it"))
+            XCTAssertFalse(app.buttons["Listen to me · Internal"].exists)
+            app.buttons["tutorial-stage-recap"].tap()
+            let complete = app.buttons["tutorialComplete"]
+            reveal(complete, app); complete.tap()
+            XCTAssertEqual(complete.label, "Completed")
+            if number < 12 {
+                let next = app.buttons["Next lesson"]
+                reveal(next, app); next.tap()
+            }
+        }
+        app.buttons["closeTutorial"].tap()
+        app.segmentedControls["learnMode"].buttons["Free Practice"].tap()
+        let exercise = app.buttons["exercise-exercise-01"]
+        reveal(exercise, app); capture("06-free-practice"); exercise.tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        XCTAssertTrue(app.otherElements["guitarFretboard"].exists)
+        capture("07-play")
+        selectTab("Settings", app)
+        XCTAssertFalse(app.staticTexts["Developer preview"].exists)
+        XCTAssertFalse(app.switches["Sheet music scanning"].exists)
+        let privacy = app.buttons["Privacy policy"]
+        reveal(privacy, app); privacy.tap()
+        XCTAssertTrue(app.navigationBars["Privacy Policy"].waitForExistence(timeout: 10))
+    }
+
+    @MainActor private func selectTab(_ title: String, _ app: XCUIApplication) {
+        let tab = app.tabBars.buttons[title]
+        if tab.exists { tab.tap() } else { app.buttons[title].firstMatch.tap() }
+    }
+    @MainActor private func reveal(_ element: XCUIElement, _ app: XCUIApplication) {
+        for _ in 0..<18 {
+            let top = app.navigationBars.firstMatch.frame.maxY + 70
+            if element.exists && element.isHittable && element.frame.midY > top && element.frame.midY < app.frame.maxY - 50 { return }
+            let above = element.exists && element.frame.midY < top
+            app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.35 : 0.8))
+                .press(forDuration: 0.05, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.8 : 0.35)))
+        }
+        XCTAssertTrue(element.isHittable, "Unreachable public control: \(element)")
+    }
+    @MainActor private func capture(_ name: String) {
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "store-\(name)"; shot.lifetime = .keepAlways; add(shot)
+    }
+}
+
+final class ReleaseHomeUITests: XCTestCase {
+    @MainActor
+    func testHomeTransportLoadsPlayerAndUpdatesStatus() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication(); app.launch()
+        let status = app.descendants(matching: .any).matching(identifier: "playbackStatus").firstMatch
+        XCTAssertTrue(status.waitForExistence(timeout: 20))
+        XCTAssertTrue(status.label.contains("Tap to open player"), status.label)
+        app.buttons["playPause"].tap()
+        XCTAssertTrue(app.staticTexts["Playing synchronized score"].waitForExistence(timeout: 40))
+        app.buttons["playPause"].tap()
+        XCTAssertTrue(app.staticTexts["Playback paused"].waitForExistence(timeout: 10))
+        let home = app.tabBars.buttons["Home"]
+        if home.exists { home.tap() } else { app.buttons["Home"].firstMatch.tap() }
+        XCTAssertFalse(status.label.contains("Tap to open player"), status.label)
+        XCTAssertTrue(status.label.contains("Playback paused"), status.label)
+    }
+}

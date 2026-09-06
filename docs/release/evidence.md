@@ -1,3 +1,5 @@
+> Historical recognition development evidence. Scanning and handwriting are excluded from the first App Store release. For the current offline tutorial/exercise candidate, see [finalization.md](finalization.md).
+
 # Release evidence — updated September 6, 2026
 
 **Not ready for App Store submission.** Printed recognition now works on the controlled benchmark, including chords and harder rhythms. Real camera/handwritten guitar qualification, complete manual/device QA, hosting, signing and TestFlight remain open. This report separates executed checks from release requirements.

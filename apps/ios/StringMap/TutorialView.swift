@@ -60,6 +60,7 @@ struct TutorialView: View {
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.colorScheme) private var colorScheme
     let nextLesson: (() -> Void)?
     let close: () -> Void
 
@@ -88,6 +89,9 @@ struct TutorialView: View {
             }
             .background(AmbientBackground())
             .navigationTitle(session.lesson.title).navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Palette.surfaceBase, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(colorScheme, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Close") { session.leave(); close() }.accessibilityIdentifier("closeTutorial") }
             }

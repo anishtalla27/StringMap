@@ -1,6 +1,6 @@
 # Tutorial Mode
 
-Learn contains Tutorial Mode and Free Practice. The course has 12 original lessons and 16 score examples; the existing 18 exercises and libraries are retained. App Store signing, submission, website publication, and release finalization were not resumed for this feature.
+Learn contains Tutorial Mode and Free Practice. The course has 12 original lessons and 16 score examples; the existing 18 exercises and libraries are retained. Release finalization has since resumed at the user’s request; its current signing, policy, simulator and physical-device status is in [finalization.md](release/finalization.md).
 
 ## Course and session
 
@@ -25,4 +25,4 @@ Synthetic harmonic fixtures cover E2–G4, stronger upper harmonics, wrong octav
 - `node scripts/test-tutorial-bridge.mjs` checks display-switch transport invariants; `node scripts/test-playback-clock.mjs` retains the 3,108 checks for the original 18 exercises.
 - TutorialUITests runs the complete course on iPhone/iPad, retaining screenshots and exercising playback, loops, seeking, tab, note stepping, quizzes, completion, and return navigation. Evidence and any remaining device-only checks are recorded in artifacts/tutorial-evidence.json.
 
-The 16 full notation/tab previews were visually reviewed against the original pitch/rhythm references. Speaker/headphone/Bluetooth audibility, microphone accuracy, and physical accessibility qualification remain device work. Updated legal/support copy is local; it has not been republished while release work is paused.
+The 16 full notation/tab previews were visually reviewed against the original pitch/rhythm references. Speaker/headphone/Bluetooth audibility, microphone accuracy, and physical accessibility qualification remain device work. Updated legal/support pages were published and verified during release finalization; see [policy-deployment.json](release/policy-deployment.json).

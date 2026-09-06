@@ -1,0 +1,143 @@
+{
+  "ipad-13": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/finalization-release-ipad-final.xcresult",
+    "screenshots": [
+      {
+        "file": "ipad-13/01-home.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "104bcb592ae221f51626a56eb552218fff0447a277df721a9f60f41c3b2305d7",
+        "sourceSHA256": "104bcb592ae221f51626a56eb552218fff0447a277df721a9f60f41c3b2305d7",
+        "sourceAttachment": "store-01-home_0_12CCA928-D97A-49FE-8D93-391531378F8E.png"
+      },
+      {
+        "file": "ipad-13/02-learn.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "f6f476a406f322c189f795b5d8823ab99ae47dc9343c60715f8eede5780d709c",
+        "sourceSHA256": "f6f476a406f322c189f795b5d8823ab99ae47dc9343c60715f8eede5780d709c",
+        "sourceAttachment": "store-02-learn_0_2D417CFE-B8D7-434D-A045-CDBE34209244.png"
+      },
+      {
+        "file": "ipad-13/03-first-notes.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "503939ffded819215ba79ee2299af641d731ab80ef0b2a1e85a8202bb3b04ef3",
+        "sourceSHA256": "503939ffded819215ba79ee2299af641d731ab80ef0b2a1e85a8202bb3b04ef3",
+        "sourceAttachment": "store-03-first-notes_0_7C3D5E05-5EB7-427A-A09D-A09D36A76855.png"
+      },
+      {
+        "file": "ipad-13/04-chord-shape.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "9888e7e969c362decd3adf0f13a0f048c51143990c2ef0793cf6684f0201ab4a",
+        "sourceSHA256": "9888e7e969c362decd3adf0f13a0f048c51143990c2ef0793cf6684f0201ab4a",
+        "sourceAttachment": "store-04-chord-shape_0_1EF2177F-E743-4354-BA31-D5293942AD0A.png"
+      },
+      {
+        "file": "ipad-13/05-optional-tab.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "03e8f19afcb9a8f59eef30472d9a5730f51c28f47aec94abc3e99d2f93bbd39a",
+        "sourceSHA256": "03e8f19afcb9a8f59eef30472d9a5730f51c28f47aec94abc3e99d2f93bbd39a",
+        "sourceAttachment": "store-05-optional-tab_0_16F9BB07-2163-4471-9CC3-B11B74F6C648.png"
+      },
+      {
+        "file": "ipad-13/06-free-practice.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "1cd353f30f4f3025cebfe0cec4abcf73a368b829fd1f1411047b3ed93fe325c1",
+        "sourceSHA256": "1cd353f30f4f3025cebfe0cec4abcf73a368b829fd1f1411047b3ed93fe325c1",
+        "sourceAttachment": "store-06-free-practice_0_2BE70BED-CA01-4A3D-839E-523A48D28CDB.png"
+      },
+      {
+        "file": "ipad-13/07-play.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "76922f76593b40af46bd5c630c1437bf86863308a46dc25e685edc33c3e3a5db",
+        "sourceSHA256": "76922f76593b40af46bd5c630c1437bf86863308a46dc25e685edc33c3e3a5db",
+        "sourceAttachment": "store-07-play_0_A1ADA6D1-919A-4ACF-9325-5EB906988F6D.png"
+      }
+    ],
+    "recommendedUploadOrder": [
+      "03-first-notes.png",
+      "05-optional-tab.png",
+      "02-learn.png",
+      "04-chord-shape.png",
+      "07-play.png",
+      "06-free-practice.png",
+      "01-home.png"
+    ]
+  },
+  "iphone-6.9": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/finalization-release-max-final.xcresult",
+    "screenshots": [
+      {
+        "file": "iphone-6.9/01-home.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "11b8f256fe6800498f0c47c6b8ca58877c3b6d19e9a087a6a679737f1e4ca0a1",
+        "sourceSHA256": "11b8f256fe6800498f0c47c6b8ca58877c3b6d19e9a087a6a679737f1e4ca0a1",
+        "sourceAttachment": "store-01-home_0_AC1959A9-881E-49BC-90C7-E8EE78CB7610.png"
+      },
+      {
+        "file": "iphone-6.9/02-learn.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "774b2f744191d8262451e4640811faf7c136120b12ba4aceca78a568673f3f5d",
+        "sourceSHA256": "774b2f744191d8262451e4640811faf7c136120b12ba4aceca78a568673f3f5d",
+        "sourceAttachment": "store-02-learn_0_F9A9605E-347F-493B-807B-5AEC0B20ACFC.png"
+      },
+      {
+        "file": "iphone-6.9/03-first-notes.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "02b6ffce7fcf2729557e2e3e0051621781ac3f304d56d759ee22df0d43221d93",
+        "sourceSHA256": "02b6ffce7fcf2729557e2e3e0051621781ac3f304d56d759ee22df0d43221d93",
+        "sourceAttachment": "store-03-first-notes_0_F0B969C3-4852-4283-AA2A-9E246D7757D5.png"
+      },
+      {
+        "file": "iphone-6.9/04-chord-shape.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "d7b38e2861a3869f3c929902eb5dcd4bee2d105ef583d25169b8f16aa26e573c",
+        "sourceSHA256": "d7b38e2861a3869f3c929902eb5dcd4bee2d105ef583d25169b8f16aa26e573c",
+        "sourceAttachment": "store-04-chord-shape_0_E9ED08D2-54C7-4E1F-AFB8-C244FF9C165A.png"
+      },
+      {
+        "file": "iphone-6.9/05-optional-tab.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "d7f9a1a601fc0e16098f9495e3c50e6aa296d147e83a146eca303e623247f444",
+        "sourceSHA256": "d7f9a1a601fc0e16098f9495e3c50e6aa296d147e83a146eca303e623247f444",
+        "sourceAttachment": "store-05-optional-tab_0_F5547697-0FCC-4F77-A106-69073879BF3C.png"
+      },
+      {
+        "file": "iphone-6.9/06-free-practice.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "f2b66f62a2789a8ad5bf24757999abb243b13db77938c40223c15f41a8464c7c",
+        "sourceSHA256": "f2b66f62a2789a8ad5bf24757999abb243b13db77938c40223c15f41a8464c7c",
+        "sourceAttachment": "store-06-free-practice_0_CFB615E5-3AD6-485D-8E55-930533BADA9E.png"
+      },
+      {
+        "file": "iphone-6.9/07-play.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "e51bd876ab1ad6dcf838fca461afc89976c60c85398349a57c22cd87f1a6f1e4",
+        "sourceSHA256": "e51bd876ab1ad6dcf838fca461afc89976c60c85398349a57c22cd87f1a6f1e4",
+        "sourceAttachment": "store-07-play_0_BF4C3C79-331B-4A9B-8131-01A5C990298C.png"
+      }
+    ],
+    "recommendedUploadOrder": [
+      "03-first-notes.png",
+      "07-play.png",
+      "02-learn.png",
+      "04-chord-shape.png",
+      "06-free-practice.png",
+      "01-home.png"
+    ]
+  }
+}

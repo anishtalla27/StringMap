@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
-import {importer,midi,synth,rendering,Settings,StaveProfile} from '@coderline/alphatab';
+import {importer,midi,synth,rendering,Settings,StaveProfile,NotationElement} from '@coderline/alphatab';
 const folder='artifacts/tutorial-verification';
 const course=JSON.parse(fs.readFileSync('apps/ios/StringMap/Resources/Tutorial/course.json'));
 const bank=new Uint8Array(fs.readFileSync('apps/ios/StringMap/Resources/AlphaTab/soundfont/stringmap-guitar.sf2'));
@@ -26,7 +26,7 @@ for(const lesson of course.lessons) for(const phrase of lesson.phrases) {
  assert.ok(peak>.001&&peak<=1&&energy>0,`${phrase.id} PCM`);
  assert.ok(count/88200>=expectedSeconds-.1&&count/88200<=expectedSeconds+5);
  for(const [mode,profile] of [['notation',StaveProfile.Score],['tab',StaveProfile.ScoreTab]]) {
-  const settings=new Settings();settings.core.engine='svg';settings.core.enableLazyLoading=false;settings.display.staveProfile=profile;
+  const settings=new Settings();settings.core.engine='svg';settings.core.enableLazyLoading=false;settings.display.staveProfile=profile;settings.notation.elements.set(NotationElement.ScoreTitle,false);settings.notation.elements.set(NotationElement.ScoreSubTitle,false);
   const renderer=new rendering.ScoreRenderer(settings);renderer.width=900;const parts=[];
   renderer.partialRenderFinished.on(e=>{if(e.renderResult)parts.push({svg:e.renderResult,height:e.height})});
   renderer.error.on(e=>{throw e});renderer.renderScore(score,[0]);assert.ok(parts.length);

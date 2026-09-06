@@ -1,6 +1,6 @@
-> **Tutorial Mode:** Learn now contains a 12-lesson original beginner course and the 18 existing Free Practice exercises. Tutorial microphone pitch checking is an internal Debug experiment, disabled by default. App Store finalization remains paused. See `docs/tutorial-mode.md`.
+> **Tutorial Mode:** Learn now contains a 12-lesson original beginner course and the 18 existing Free Practice exercises. Tutorial microphone pitch checking is an internal Debug experiment, disabled by default. App Store finalization has resumed; signing and physical-device gates are tracked in `docs/release/finalization.md`. See `docs/tutorial-mode.md` for course architecture.
 
-> **First App Store release:** 18 original single-note guitar exercises, with offline notation, tab, playback and synchronized fretboard positions. Scanning and public file import are not shipped. Scanner UI/networking are compiled only in Debug and default off. See `RELEASE_CHECKLIST.md`; older recognition sections below describe retained development work, not public release features.
+> **First App Store release:** 12 original beginner lessons and 18 original single-note guitar exercises, with offline notation, tab, playback and synchronized fretboard positions. Scanning and public file import are not shipped. Scanner UI/networking are compiled only in Debug and default off. See `RELEASE_CHECKLIST.md`; older recognition sections below describe retained development work, not public release features.
 
 # StringMap
 
