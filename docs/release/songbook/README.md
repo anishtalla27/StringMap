@@ -1,6 +1,6 @@
 # Songbook candidate evidence
 
-Implementation and automated music/playback verification are complete. Release remains blocked on completing distribution signing and TestFlight/App Store completion. The user confirmed physical playback, output-route, interruption and VoiceOver testing passed on September 7. No new binary has been uploaded or submitted.
+Implementation and automated music/playback verification are complete. Distribution signing, Apple validation and export passed on September 7. TestFlight/App Store completion remains. The user confirmed physical playback, output-route, interruption and VoiceOver testing passed on September 7. No new binary has been uploaded or submitted.
 
 ## Implemented
 
@@ -29,7 +29,7 @@ Two shortlist entries were replaced in the requested order: The Water Is Wide �
 - The bundled SoundFont passed three fundamental-frequency estimates for each of the 23 distinct Songbook pitches (E2–B4), within ±35 cents. This is separate from physical listening.
 - All 40 existing tutorial phrases and 18 exercises passed their renderer/MIDI/audio regression checks. The shipping bridge passed 3,108 position/seek checks and Reduce Motion/display-state tests.
 - Large text, landscape geometry, and unplayable-configuration restoration passed on both simulators. Two iPad rotation failures in the final regression suite passed unchanged after restarting the simulator; they were simulator state failures, retained in test-runs.json. All 40 arrangements passed pause/resume, restart, seeking, tempo, loops, metronome, count-in, tab switching, arrangement switching and saved-position restoration after relaunch on both simulators.
-- A signed development Release archive was produced. App Store distribution export currently fails with Xcode reporting No Accounts / no distribution certificate; a fresh export on September 7 reports the same account/certificate failure. No new binary has been uploaded.
+- A development Release archive was produced, then Xcode Organizer refreshed signing and passed Apple validation for build 5. App Store distribution export subsequently succeeded; the IPA passes signature/content checks with get-task-allow=false. The earlier No Accounts/certificate failures are resolved. No new binary has been uploaded.
 - Physical audible playback, Bluetooth/headphones, interruptions and VoiceOver passed according to the user’s September 7 confirmation. These are user-reported checks; no device-by-device trial log was supplied. TestFlight evidence remains pending. Simulator indicators and finite PCM do not establish physical-device audio correctness.
 
 All 40 arrangements were visually compared on each simulator, including every changed chord. Post-fix ending/restart captures for all 40 arrangements on both devices confirm the scrolling and unobstructed left-handed markers; the final strict regression captures are retained as well. The 24 tutorials and all 18 exercises passed UI playback regressions on both simulators. App-scoped landscape captures can use stale portrait crop coordinates, so the capture helper now uses the full display. See `visual-review.json` for capture-specific scope.
@@ -51,7 +51,7 @@ Run `SongbookUITests` on both iPhone and iPad using the `StringMap` scheme, exce
 
 ## Remaining release gates — September 7
 
-1. Xcode GUI account access and team are verified and the Apple Distribution certificate is now created. Organizer build-5 validation is waiting for macOS keychain authorization of the new signing key. Computer control cannot interact with SecurityAgent; the user must authorize it. Then complete validation and export. The retained archive is development signed; build-1 validation does not qualify build 5.
+1. Distribution signing is complete: Apple Distribution certificate created, Organizer validation passed for build 5, and App Store export succeeded. The exported IPA passes strict signature verification, has get-task-allow=false and passes the offline release audit. No build-5 upload or submission has occurred.
 2. Physical audible playback, Bluetooth/headphones, interruptions and VoiceOver are accepted as passed per the user’s September 7 confirmation. Device models, OS versions and detailed trials were not supplied, so retain the distinction from instrumented simulator evidence.
 3. Upload the qualified candidate separately, update the App Store draft with current metadata/screenshots, verify country availability and account-holder content-rights/trader declarations, and complete the planned seven-day TestFlight exercise. Earlier build-1 draft/contact/privacy work remains historical evidence; it does not establish the new candidate is ready. Submission and public release remain separate actions.
 

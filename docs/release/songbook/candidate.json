@@ -4,7 +4,7 @@
   "archive": "artifacts/StringMap-1.0.0-build5-candidate.xcarchive",
   "signing": "Apple Development; signature verified with codesign --verify --deep --strict",
   "team": "S8DY583234",
-  "distributionExport": "In progress: Xcode GUI account and S8DY583234 team verified; Apple Distribution certificate created September 7. Organizer validation of build 5 is waiting for user authorization of the new private key in macOS SecurityAgent. CLI reports No Accounts despite authenticated GUI; use Organizer.",
+  "distributionExport": "Passed 2026-09-07 after Xcode GUI validation refreshed provisioning. CLI export succeeded; signature verification and offline release audit passed.",
   "uploaded": false,
   "submitted": false,
   "physicalListening": "Passed per user confirmation on 2026-09-07: audible playback, Bluetooth/headphones and interruptions worked well.",
@@ -26,5 +26,13 @@
   "physicalLaunch": "pending: installed candidate could not launch because the iPhone is locked",
   "physicalDeviceStatus": "Rechecked 2026-09-07: paired iPhone 14 Pro unavailable.",
   "physicalQualificationSource": "User-reported testing; device models, OS versions and detailed trial records not supplied.",
-  "appleValidation": "Pending macOS signing-key access prompt; not yet passed."
+  "appleValidation": "Passed 2026-09-07 at 13:11 EDT: Organizer shows Validation succeeded for version 1.0.0 (5).",
+  "distributionPackage": "artifacts/songbook-distribution-validated/StringMap.ipa",
+  "distributionSHA256": "b6ef008938d73ed1cf6c54ca7716681c527adaa27fbeac81cf29d0b9f642862c",
+  "distributionEntitlements": {
+    "application-identifier": "S8DY583234.com.anishtalla.StringMap",
+    "com.apple.developer.team-identifier": "S8DY583234",
+    "get-task-allow": false,
+    "beta-reports-active": true
+  }
 }
