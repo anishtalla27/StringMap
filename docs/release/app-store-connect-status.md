@@ -2,7 +2,9 @@
 
 Historical status: verified September 6, 2026 in the signed-in account.
 
-**September 7 candidate update:** the 20-song build 5 has not been uploaded. Its distribution export currently reports No Accounts / no distribution certificate, and the paired phone is unavailable. See [current candidate evidence](songbook/README.md). The build-1 validation and draft facts below do not qualify build 5.
+**September 7 live update:** Build 5 uploaded at 2:57 PM EDT, processed, and saved in the 1.0.0 draft. Internal TestFlight group StringMap Release Testing contains build 5 and one invited account-holder tester; What to Test instructions saved. Description, promotional text and review notes now cover 20 songs/40 arrangements, 24 tutorials and 18 exercises. Replaced both screenshot sets with seven current images each. Country availability saved for all 175 countries/regions on release. Manual release remains selected. Apple Add for Review check reports missing Content Rights Information as the sole blocking item. Awaiting user confirmation of that declaration and EU trader status. No App Review submission or public release has occurred; elapsed TestFlight exercise is not complete.
+
+Current screenshot order: iPhone melody, chords, chord-shape tutorial, Learn, first notes, Free Practice player, Songbook library. iPad Learn, first notes, Songbook chords, melody, library, chord-shape tutorial, Free Practice player. Uploads are unaltered Release captures from docs/store/screenshots/songbook plus tutorial-expansion (iPhone and iPad Learn) and final (remaining iPad tutorial/exercise screens).
 
 - Created StringMap, Apple ID `6809277270`, bundle ID `com.anishtalla.StringMap`, SKU `stringmap-ios-001`, iOS, English (U.S.).
 - Version `1.0.0` is **Prepare for Submission**. Build 1 uploaded, processed in TestFlight (Ready to Submit), and saved in the release draft; no App Review submission or public release.
