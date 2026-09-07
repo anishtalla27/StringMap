@@ -4,7 +4,7 @@
   // WKWebView's Web Audio session is separate from the host's AVAudioSession.
   // Music must use the media volume even when the Ring/Silent switch is silent.
   const preparePlaybackSession = () => {
-    if (globalThis.navigator?.audioSession) {
+    if (globalThis.navigator?.audioSession && navigator.audioSession.type !== "playback") {
       navigator.audioSession.type = "playback";
     }
   };

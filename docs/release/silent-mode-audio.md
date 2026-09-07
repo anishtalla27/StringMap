@@ -1,11 +1,15 @@
-# Silent-switch audio correction — build 2
+# Playback audio correction — build 3
 
-The account holder reported that build 1 was audible only with the ringer enabled. Native AVAudioSession already used playback, but the alphaTab WKWebView did not set its Web Audio session type.
+Build 1 was audible only with the ringer enabled. Build 2 configured WebKit's audio session for playback, but left an exclusive native AVAudioSession activation before every Play. The user then reported a stationary cursor with no note highlighting.
 
-Build 2 sets navigator.audioSession.type to playback before constructing the synthesizer and again on play/resume. This shared bridge covers Tutorial Mode and Free Practice. Existing interruption, background and route-disconnection pause behavior is unchanged. Device media volume remains under user control.
+The physical iPhone regression test reproduced build 2's frozen playback: the Lesson position did not change within 12 seconds. Build 3 removes the competing native session activation. WebKit owns the synthesizer session, configured for playback before synthesis and restored only when its type changes. Existing interruption, background and headphone-disconnection pause handling remains.
 
-Reference: https://bugs.webkit.org/show_bug.cgi?id=237322#c6
+Evidence on iPhone 14 Pro / iOS 26.6.1:
+- artifacts/build2-clock-reproduction.xcresult: FAIL, playback clock did not advance.
+- artifacts/build3-clock-regression.xcresult: PASS, tutorial clock advances and resumes after pause.
+- artifacts/build3-playback-and-highlights.xcresult: PASS, tutorial and Free Practice playback positions advance and active fretboard-note values change; tutorial pause/resume also passes.
+- JavaScript bridge checks and signed Release content audit pass.
 
-Verification: tutorial bridge checks pass, including configuration before synthesizer construction, restoring the session on resume, and compatibility without the API. Signed device Release build succeeds. Physical silent-switch audible confirmation remains pending; automated checks do not prove speaker output.
+Physical audible output with the silent switch on still requires human confirmation. Media volume remains under user control. Build 1 remains selected in App Store Connect; build 3 must replace it after qualification. Neither build 1 nor build 2 should be submitted.
 
-Build 1 is still selected in App Store Connect. Build 2 needs physical confirmation, archive validation, and replacement upload before submission.
+WebKit audio-session reference: https://bugs.webkit.org/show_bug.cgi?id=237322#c6

@@ -988,6 +988,61 @@ final class TutorialUITests: XCTestCase {
 /// debug score routing, seeded library, or scanner flags are needed.
 final class ReleaseTutorialUITests: XCTestCase {
     @MainActor
+    func testPlaybackClockAdvancesAndResumes() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.buttons["homeTutorial"].waitForExistence(timeout: 20))
+        selectTab("Learn", app)
+        app.segmentedControls["learnMode"].buttons["Tutorial Mode"].tap()
+        let lesson = app.buttons["lesson-02"]
+        reveal(lesson, app); lesson.tap()
+        let status = app.staticTexts["tutorialStatus"]
+        expectation(for: NSPredicate(format: "label == 'Playback ready'"), evaluatedWith: status)
+        waitForExpectations(timeout: 40)
+        app.buttons["tutorial-stage-hear"].tap()
+        let play = app.buttons["tutorialPlay"]
+        reveal(play, app)
+        app.buttons["tutorialRestart"].tap()
+        let cursor = app.sliders["Lesson position"]
+        let initial = cursor.value as? String
+        let board = app.otherElements["guitarFretboard"]
+        let firstNote = board.value as? String
+        play.tap()
+        expectation(for: NSPredicate { _, _ in cursor.value as? String != initial }, evaluatedWith: cursor)
+        waitForExpectations(timeout: 12)
+        expectation(for: NSPredicate { _, _ in board.value as? String != firstNote }, evaluatedWith: board)
+        waitForExpectations(timeout: 12)
+        play.tap()
+        expectation(for: NSPredicate(format: "label == 'Playback paused'"), evaluatedWith: status)
+        waitForExpectations(timeout: 10)
+        let paused = cursor.value as? String
+        play.tap()
+        expectation(for: NSPredicate { _, _ in cursor.value as? String != paused }, evaluatedWith: cursor)
+        waitForExpectations(timeout: 12)
+        play.tap()
+        capture("playback-clock-regression")
+        app.buttons["closeTutorial"].tap()
+        app.segmentedControls["learnMode"].buttons["Free Practice"].tap()
+        let exercise = app.buttons["exercise-exercise-01"]
+        reveal(exercise, app); exercise.tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        let practiceCursor = app.sliders["Playback position"]
+        reveal(practiceCursor, app)
+        practiceCursor.adjust(toNormalizedSliderPosition: 0)
+        let practiceStart = practiceCursor.value as? String
+        let practiceFirstNote = board.value as? String
+        app.buttons["playPause"].tap()
+        expectation(for: NSPredicate { _, _ in practiceCursor.value as? String != practiceStart }, evaluatedWith: practiceCursor)
+        waitForExpectations(timeout: 12)
+        expectation(for: NSPredicate { _, _ in board.value as? String != practiceFirstNote }, evaluatedWith: board)
+        waitForExpectations(timeout: 12)
+        app.buttons["playPause"].tap()
+        XCTAssertTrue(app.staticTexts["Playback paused"].waitForExistence(timeout: 10))
+        capture("free-practice-clock-regression")
+    }
+
+    @MainActor
     func testPublicCourseAndStoreScreenshots() throws {
         continueAfterFailure = false
         let app = XCUIApplication()

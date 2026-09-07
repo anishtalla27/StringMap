@@ -1,6 +1,6 @@
 # StringMap 1.0 release finalization
 
-**Current status: not ready to submit.** Build 1 has a user-reported silent-switch audio defect. Source build 2 adds WebKit playback-session configuration; device audible confirmation is pending. Build 1 must be replaced before submission.
+**Current status: not ready to submit.** Build 1 has a user-reported silent-switch audio defect. Build 2 introduced a reproduced playback freeze. Source build 3 removes competing native audio activation and passes the physical tutorial clock/resume regression. Device silent-mode audible confirmation is pending. Build 1 must be replaced before submission.
 
 **Build 1 evidence:** Version 1.0.0 (1) is signed, passed Apple validation, uploaded and processed in TestFlight, and saved in the App Store draft. The full-course automated UI test passed on the connected physical iPhone. See [current App Store status](app-store-connect-status.md) and [signed build evidence](signed-build.json). Apple validation is not App Review approval.
 

@@ -183,19 +183,8 @@ final class AlphaTabController {
     }
 
     func playPause() {
-        if !isPlaying {
-            do {
-                let session = AVAudioSession.sharedInstance()
-                try session.setCategory(.playback, mode: .default)
-                try session.setActive(true)
-            } catch {
-                // Audio-route activation can fail transiently. Keep the loaded
-                // score ready so the listener can retry without reimporting it.
-                playbackStatus = "Could not start audio: \(error.localizedDescription)"
-                isPlaying = false
-                return
-            }
-        }
+        // WebKit owns the synthesizer's media session. Activating a second,
+        // exclusive native session here interrupts Web Audio before it starts.
         call("window.stringMap.playPause();")
     }
 
