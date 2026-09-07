@@ -4,11 +4,11 @@
   "archive": "artifacts/StringMap-1.0.0-build5-candidate.xcarchive",
   "signing": "Apple Development; signature verified with codesign --verify --deep --strict",
   "team": "S8DY583234",
-  "distributionExport": "Blocked: rechecked 2026-09-07, Xcode export reports No Accounts and no iOS Distribution certificate. See artifacts/songbook-export-current.log.",
+  "distributionExport": "In progress: Xcode GUI account and S8DY583234 team verified; Apple Distribution certificate created September 7. Organizer validation of build 5 is waiting for user authorization of the new private key in macOS SecurityAgent. CLI reports No Accounts despite authenticated GUI; use Organizer.",
   "uploaded": false,
   "submitted": false,
-  "physicalListening": "pending",
-  "spokenVoiceOver": "pending",
+  "physicalListening": "Passed per user confirmation on 2026-09-07: audible playback, Bluetooth/headphones and interruptions worked well.",
+  "spokenVoiceOver": "Passed per user confirmation on 2026-09-07.",
   "testFlight": "pending",
   "entitlements": {
     "application-identifier": "S8DY583234.com.anishtalla.StringMap",
@@ -24,5 +24,7 @@
   },
   "physicalInstall": "Prior build 5 installed successfully. Refresh with the source-link-only update is pending: CoreDeviceService can no longer locate the paired device.",
   "physicalLaunch": "pending: installed candidate could not launch because the iPhone is locked",
-  "physicalDeviceStatus": "Rechecked 2026-09-07: paired iPhone 14 Pro unavailable."
+  "physicalDeviceStatus": "Rechecked 2026-09-07: paired iPhone 14 Pro unavailable.",
+  "physicalQualificationSource": "User-reported testing; device models, OS versions and detailed trial records not supplied.",
+  "appleValidation": "Pending macOS signing-key access prompt; not yet passed."
 }
