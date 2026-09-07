@@ -2,6 +2,8 @@
 """Fail a distribution build when required release configuration is missing."""
 import os
 import sys
+import subprocess
+from pathlib import Path
 from urllib.parse import urlparse
 
 
@@ -21,4 +23,7 @@ if __name__=='__main__':
     if errors:
         for error in errors:print('error: '+error,file=sys.stderr)
         sys.exit(1)
+    root=Path(__file__).resolve().parents[3]
+    for name in ['verify-songbook-sources.py', 'verify-songbook-harmony.py']:
+        subprocess.run([sys.executable,str(root/'scripts'/name)],check=True)
     print('Release configuration is present. URL contents, signing, archive validation, device QA and TestFlight remain separate gates.')

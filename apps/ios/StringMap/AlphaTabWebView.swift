@@ -277,6 +277,9 @@ final class AlphaTabController {
             isPlaying = state == 1
             playbackStatus = isPlaying ? "Playing synchronized score" : (isPlayerReady ? (stopped ? "Playback ready" : "Playback paused") : "Preparing notation…")
         case let .position(milliseconds, endMilliseconds):
+            // Stopping/replacing a score emits a transient zero before the new
+            // player is ready. Do not persist that over a restored practice seek.
+            guard isPlayerReady || pendingSeekMilliseconds == nil else { return }
             cursorMilliseconds = milliseconds
             self.endMilliseconds = endMilliseconds
         case let .error(message):

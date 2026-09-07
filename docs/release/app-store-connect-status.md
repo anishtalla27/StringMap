@@ -1,6 +1,8 @@
 # App Store Connect preparation
 
-Verified September 6, 2026 in the signed-in account.
+Historical status: verified September 6, 2026 in the signed-in account.
+
+**September 7 candidate update:** the 20-song build 5 has not been uploaded. Its distribution export currently reports No Accounts / no distribution certificate, and the paired phone is unavailable. See [current candidate evidence](songbook/README.md). The build-1 validation and draft facts below do not qualify build 5.
 
 - Created StringMap, Apple ID `6809277270`, bundle ID `com.anishtalla.StringMap`, SKU `stringmap-ios-001`, iOS, English (U.S.).
 - Version `1.0.0` is **Prepare for Submission**. Build 1 uploaded, processed in TestFlight (Ready to Submit), and saved in the release draft; no App Review submission or public release.

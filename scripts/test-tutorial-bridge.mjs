@@ -41,3 +41,21 @@ assert.equal(api.settings.player.scrollSpeed,0);
 motion.matches=false;motion.changed();
 assert.equal(api.settings.player.enableAnimatedBeatCursor,true);
 console.log('PASS: Reduce Motion uses a static cursor and immediate scrolling');
+
+// alphaTab's position event schedules its bound update in two animation frames.
+// The bridge must scroll behind that update, not a zero-delay timer using stale bounds.
+const frames = [];
+const scrollContext = {...context, window: {...context.window, requestAnimationFrame: fn => frames.push(fn)}};
+vm.runInNewContext(fs.readFileSync('apps/ios/StringMap/Resources/AlphaTab/bridge.js','utf8'), scrollContext);
+scrollContext.window.stringMap.setTutorialPresentation(true);
+let beatBounds = 'ending';
+let scrolledTo;
+api.scrollToCursor = () => { scrolledTo = beatBounds; };
+frames.push(() => frames.push(() => { beatBounds = 'beginning'; }));
+api.playerPositionChanged.fn({currentTime:0,endTime:30000,originalTempo:84,modifiedTempo:84,isSeek:true});
+assert.equal(scrolledTo,undefined);
+for (const callback of frames.splice(0)) callback();
+assert.equal(scrolledTo,undefined);
+for (const callback of frames.splice(0)) callback();
+assert.equal(scrolledTo,'beginning');
+console.log('PASS: horizontal restart/seek scroll follows the updated beat bounds');

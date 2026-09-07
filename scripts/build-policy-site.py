@@ -15,6 +15,6 @@ for name in ['privacy','support']:
     page(name+'.html',name.title(),markdown.render((root/'docs'/f'{name}.md').read_text()))
 licenses=(root/'apps/ios/StringMap/Resources/Legal/licenses.md').read_text()
 page('licenses.html','Licenses',markdown.render(licenses))
-page('index.html','Guitar notation and practice','<h1>StringMap</h1><p>Guitar notation, tablature, and practice for iPhone and iPad.</p><p>Learn with 12 original beginner lessons, an interactive teaching fretboard, and optional tablature. Practice with 18 original single-note guitar exercises, synchronized notation, playback, and fretboard positions. All music works offline.</p><p>Read the privacy policy, get support, or review the bundled licenses using the links above.</p>')
+page('index.html','Guitar notation and practice','<h1>StringMap</h1><p>Guitar notation, tablature, and practice for iPhone and iPad.</p><p>Play 20 familiar traditional tunes and classical themes in 40 original Melody and Chords arrangements. Learn with 24 guided guitar lessons, an interactive teaching fretboard, and optional tablature. Practice with 18 original single-note exercises, synchronized notation, playback, and fretboard positions. All music works offline.</p><p>Read the privacy policy, get support, or review the bundled licenses using the links above.</p>')
 (out/'.nojekyll').write_text('')
 print('Built accessible static policy pages with no scripts or remote assets.')

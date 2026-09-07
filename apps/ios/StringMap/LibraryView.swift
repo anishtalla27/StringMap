@@ -9,6 +9,8 @@ struct LibraryView: View {
     @State private var search = ""
     @State private var review: LibraryReview?
     @State private var savedReview: SongDocument?
+    @Binding var showSongbook: Bool
+    let openClassic: (ClassicSong, ClassicArrangement) -> Void
     let openSong: (SongDocument) -> Void
     let willReview: () -> Void
 
@@ -23,11 +25,17 @@ struct LibraryView: View {
 
     var body: some View {
         ScrollView {
-            if songs.isEmpty {
+            Picker("Library collection", selection: $showSongbook) {
+                Text("Songbook").tag(true)
+                Text("My Library").tag(false)
+            }.pickerStyle(.segmented).padding(.horizontal, Space.l)
+            if showSongbook {
+                SongbookView(search: search, open: openClassic)
+            } else if songs.isEmpty {
                 ContentUnavailableView {
                     Label("Nothing saved yet", systemImage: "music.note.list")
                 } description: {
-                    Text("Exercises you open are saved here with your practice settings and stay available offline.")
+                    Text("Songs and exercises you open are saved here with your practice settings and stay available offline.")
                 }
                 .padding(.top, Space.xxl)
             } else if filtered.isEmpty {

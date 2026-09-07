@@ -46,6 +46,7 @@ struct ContentView: View {
     @State private var tutorialProgress = TutorialProgress()
     @State private var tutorialLesson: TutorialLesson?
     @State private var freePractice = false
+    @State private var showSongbook = true
     #if DEBUG
     @State private var didApplyLaunchRoute = false
     #endif
@@ -113,6 +114,7 @@ struct ContentView: View {
                                 openTutorial(lesson)
                             } else { selection = .importScore }
                         },
+                        openSongbook: { showSongbook = true; selection = .library },
                         openWorkspace: { selection = .workspace },
                         openPractice: { open(.workspace) { model.isPracticePresented = true } },
                         openInstrument: { open(.workspace) { model.isInstrumentPresented = true } },
@@ -126,13 +128,13 @@ struct ContentView: View {
 
             Tab("Library", systemImage: "music.note.list", value: AppSection.library) {
                 NavigationStack {
-                    LibraryView(openSong: openSong, willReview: { model.player.pause() })
+                    LibraryView(showSongbook: $showSongbook, openClassic: openClassic, openSong: openSong, willReview: { model.player.pause() })
                 }
             }
 
             Tab("Play", systemImage: "guitars", value: AppSection.workspace) {
                 NavigationStack {
-                    WorkspaceView(model: model, save: saveCurrentSong)
+                    WorkspaceView(model: model, save: saveCurrentSong, openClassic: openClassic)
                 }
             }
 
@@ -194,6 +196,15 @@ struct ContentView: View {
         if LaunchRoute.screen == "import" { freePractice = true }
 
         if LaunchRoute.seedsLibrary { seedLibrary() }
+        if let id = ProcessInfo.processInfo.environment["STRINGMAP_SONGBOOK_ID"],
+           let book = try? Songbook.load() {
+            for song in book.songs {
+                if let arrangement = song.arrangements.first(where: { $0.id == id }) {
+                    openClassic(song, arrangement)
+                    break
+                }
+            }
+        }
         if let resource = LaunchRoute.demoResource { loadDemo(resource) }
         guard let screen = LaunchRoute.screen else { return }
         Task {
@@ -257,22 +268,38 @@ struct ContentView: View {
         action()
     }
 
+    private func openClassic(_ song: ClassicSong, _ arrangement: ClassicArrangement) {
+        model.player.pause()
+        do {
+            try persistCurrentSong()
+            let document = try arrangement.document(song: song, context: modelContext)
+            document.open(in: model)
+            selection = .workspace
+        } catch { persistenceError = error.localizedDescription }
+    }
+
     private func openSong(_ document: SongDocument) {
-        document.open(in: model)
-        selection = .workspace
+        model.player.pause()
+        do {
+            try persistCurrentSong()
+            document.open(in: model)
+            selection = .workspace
+        } catch { persistenceError = error.localizedDescription }
+    }
+
+    private func persistCurrentSong() throws {
+        guard let id = model.currentSongID else { return }
+        let descriptor = FetchDescriptor<SongDocument>(predicate: #Predicate { $0.id == id })
+        guard let document = try modelContext.fetch(descriptor).first else { return }
+        document.update(from: model)
+        try modelContext.save()
     }
 
     private func saveCurrentSong() {
-        guard let id = model.currentSongID else { return }
-        let descriptor = FetchDescriptor<SongDocument>(predicate: #Predicate { $0.id == id })
-        do {
-            guard let document = try modelContext.fetch(descriptor).first else { return }
-            document.update(from: model)
-            try modelContext.save()
-        } catch {
-            persistenceError = error.localizedDescription
-        }
+        do { try persistCurrentSong() }
+        catch { persistenceError = error.localizedDescription }
     }
+
 }
 
 // MARK: - Docked transport

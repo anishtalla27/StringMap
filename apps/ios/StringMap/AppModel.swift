@@ -73,9 +73,17 @@ final class AppModel {
         return pipelineResult?.fingering.steps.first { $0.note.id == editingNoteID }
     }
 
+    /// Millisecond round trips can put an exact measure seek infinitesimally
+    /// before its boundary (for example 30.999999999999996 quarters at 84 BPM).
+    /// Normalize below MIDI timing resolution so navigation and highlights agree.
+    var scoreQuarterPosition: Double {
+        guard let score = pipelineResult?.score ?? notationScore else { return 0 }
+        return (player.cursorMilliseconds * score.tempo / 60_000 * 10_000_000).rounded() / 10_000_000
+    }
+
     var activeSteps: [FingeringStep] {
         guard let result = pipelineResult else { return [] }
-        let q = player.cursorMilliseconds * result.score.tempo / 60_000
+        let q = scoreQuarterPosition
         var start = 0.0; var ids = Set<String>()
         for m in result.score.measures {
             for event in m.events {
@@ -90,7 +98,7 @@ final class AppModel {
 
     var upcomingStep: FingeringStep? {
         guard let result = pipelineResult else { return nil }
-        let q = player.cursorMilliseconds * result.score.tempo / 60_000
+        let q = scoreQuarterPosition
         var measureStart = 0.0
         var next: (onset: Double, id: String)?
         for measure in result.score.measures {
@@ -141,10 +149,14 @@ final class AppModel {
         loopStartMeasure: Int? = nil,
         loopEndMeasure: Int? = nil,
         metronomeEnabled: Bool = false,
-        countInEnabled: Bool = false
+        countInEnabled: Bool = false,
+        showTab: Bool = true
     ) {
         sourceData = data
         self.sourceName = sourceName
+        // Songbook shares the compact horizontal staff used by guided lessons.
+        // Free Practice keeps its existing page layout.
+        player.setTutorialPresentation(classicSelection != nil)
         currentSongID = songID
         editingNoteID = nil
         self.profile = profile
@@ -159,6 +171,7 @@ final class AppModel {
         player.setPlaybackSpeed(playbackSpeed)
         player.setMetronome(enabled: metronomeEnabled)
         player.setCountIn(enabled: countInEnabled)
+        player.setShowTab(showTab)
         player.seek(milliseconds: lastPositionMilliseconds)
         process(data)
     }
@@ -289,7 +302,7 @@ final class AppModel {
 
     var currentMeasureIndex: Int? {
         guard let score = (pipelineResult?.score ?? notationScore), !score.measures.isEmpty else { return nil }
-        let quarterPosition = player.cursorMilliseconds * score.tempo / 60_000
+        let quarterPosition = scoreQuarterPosition
         var start = 0.0
         for measure in score.measures {
             let end = start + Self.duration(of: measure)

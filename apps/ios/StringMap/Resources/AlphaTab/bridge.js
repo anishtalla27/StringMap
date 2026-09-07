@@ -64,7 +64,13 @@
   api.playerPositionChanged.on(({ currentTime, endTime, originalTempo, modifiedTempo, isSeek }) => {
     const speed = originalTempo > 0 ? modifiedTempo / originalTempo : api.playbackSpeed;
     post("position", { currentTime: currentTime * speed, endTime: endTime * speed });
-    if (tutorialPresentation && isSeek) setTimeout(() => api.scrollToCursor(), 0);
+    // alphaTab updates its beat bounds through two requestAnimationFrame
+    // callbacks. A zero-delay timer can scroll to the OLD beat after Restart.
+    // Wait behind both cursor updates before following the new position.
+    if (tutorialPresentation && isSeek) {
+      const frame = window.requestAnimationFrame?.bind(window) ?? (fn => setTimeout(fn, 16));
+      frame(() => frame(() => api.scrollToCursor()));
+    }
   });
   api.error.on((error) => post("error", { message: String(error) }));
   window.addEventListener("error", ({ message }) => post("error", { message }));

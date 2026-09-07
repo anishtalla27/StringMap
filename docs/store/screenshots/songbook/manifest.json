@@ -1,0 +1,80 @@
+{
+  "iphone-6.9": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/songbook-store-phone-24.xcresult",
+    "selectedTest": "SongbookUITests/testSongbookPublicStoreScreenshots()",
+    "screenshots": [
+      {
+        "file": "iphone-6.9/07-songbook-home.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "99636cfa7fbe0e300a87c93f143b037de85fac08c24be77e96a44226d7238c37",
+        "sourceSHA256": "99636cfa7fbe0e300a87c93f143b037de85fac08c24be77e96a44226d7238c37",
+        "sourceAttachment": "store-07-songbook-home_0_3E94BF0A-4251-48F1-BDFB-06E1A9C54D52.png"
+      },
+      {
+        "file": "iphone-6.9/08-songbook-library.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "eb988a5a695ab19696263835e1d48db21fabd402d57fdac6292a9d8958de3c42",
+        "sourceSHA256": "eb988a5a695ab19696263835e1d48db21fabd402d57fdac6292a9d8958de3c42",
+        "sourceAttachment": "store-08-songbook-library_0_AF9019EF-5A0D-4646-82AC-B9E84DC29FB1.png"
+      },
+      {
+        "file": "iphone-6.9/09-songbook-melody.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "09b610dde0ce86199a5bbfdefa083212b4dcf4a809fa2328652491e147e94826",
+        "sourceSHA256": "09b610dde0ce86199a5bbfdefa083212b4dcf4a809fa2328652491e147e94826",
+        "sourceAttachment": "store-09-songbook-melody_0_6A20407C-A054-4750-9C81-8EC5079E9573.png"
+      },
+      {
+        "file": "iphone-6.9/10-songbook-chords.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "fc35275adb05efc0303d169fe365e37ad19ea59bc1869e76b56eee4d6e25a276",
+        "sourceSHA256": "fc35275adb05efc0303d169fe365e37ad19ea59bc1869e76b56eee4d6e25a276",
+        "sourceAttachment": "store-10-songbook-chords_0_7B053211-D2AD-464C-BA34-87D314DF7B88.png"
+      }
+    ]
+  },
+  "ipad-13": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/songbook-store-ipad-24.xcresult",
+    "selectedTest": "SongbookUITests/testSongbookPublicStoreScreenshots()",
+    "screenshots": [
+      {
+        "file": "ipad-13/07-songbook-home.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "558f12f81843ce5cb7d1bb544b7457ce5d08a31542e5f302c2eb381021689d84",
+        "sourceSHA256": "558f12f81843ce5cb7d1bb544b7457ce5d08a31542e5f302c2eb381021689d84",
+        "sourceAttachment": "store-07-songbook-home_0_8D8FC13E-B380-40D0-9930-F10B08554B74.png"
+      },
+      {
+        "file": "ipad-13/08-songbook-library.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "bb9a4e1b4673f91c9affde34e4b6e73a4f9a40e30e906a9c9533bf80b5c782ec",
+        "sourceSHA256": "bb9a4e1b4673f91c9affde34e4b6e73a4f9a40e30e906a9c9533bf80b5c782ec",
+        "sourceAttachment": "store-08-songbook-library_0_DE7CE574-9455-450C-9D81-3B5FADEFE481.png"
+      },
+      {
+        "file": "ipad-13/09-songbook-melody.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "376e8eb5fd4e7063e4d3b5d12b71e9cf5a5158032f29a85005cc168632feb0a5",
+        "sourceSHA256": "376e8eb5fd4e7063e4d3b5d12b71e9cf5a5158032f29a85005cc168632feb0a5",
+        "sourceAttachment": "store-09-songbook-melody_0_8031B048-2CB0-451D-8E46-7852C3B34308.png"
+      },
+      {
+        "file": "ipad-13/10-songbook-chords.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "9582a4bf6bc858c19ec0581cdcd65b700c0896757ca0d6ae6833aea9137f27f3",
+        "sourceSHA256": "9582a4bf6bc858c19ec0581cdcd65b700c0896757ca0d6ae6833aea9137f27f3",
+        "sourceAttachment": "store-10-songbook-chords_0_B95136AE-C2D3-4320-AB21-318FC41453B7.png"
+      }
+    ]
+  }
+}

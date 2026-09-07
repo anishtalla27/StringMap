@@ -6,6 +6,20 @@ import WebKit
 
 final class AlphaTabBridgeTests: XCTestCase {
     @MainActor
+    func testRestoredSeekSurvivesOldScoreStopBeforeReadiness() {
+        let player = AlphaTabController()
+        player.prepareForNewScore()
+        player.seek(milliseconds: 17000)
+        player.receive(.position(milliseconds: 0, endMilliseconds: 30000))
+        XCTAssertEqual(player.cursorMilliseconds, 17000)
+        player.receive(.playerReady)
+        player.receive(.position(milliseconds: 17000, endMilliseconds: 30000))
+        XCTAssertEqual(player.cursorMilliseconds, 17000)
+        player.receive(.position(milliseconds: 18000, endMilliseconds: 30000))
+        XCTAssertEqual(player.cursorMilliseconds, 18000)
+    }
+
+    @MainActor
     func testRestartClearsLaterLoopAndReturnsToBeginning() {
         let model = AppModel()
         model.setLoop(startMeasure: 2, endMeasure: 3)

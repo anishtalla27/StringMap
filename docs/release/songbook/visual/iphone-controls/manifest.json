@@ -1,0 +1,406 @@
+{
+  "resultBundle": "artifacts/songbook-controls-phone-17.xcresult",
+  "captures": [
+    {
+      "name": "amazing-grace-melody-final-ending",
+      "sha256": "a95d17a534bedd02262fa36fb4f6a7775dddf65e613c9eb83ea9a7d4f3b46453",
+      "sourceAttachment": "65E6A72B-E89F-4E1A-99AD-24D063EA3CC2.png"
+    },
+    {
+      "name": "amazing-grace-melody-final-restart",
+      "sha256": "0ef9b47edcae356bf6b91deca80ab217d5ac6bd756c9e54abdc340df68e4137d",
+      "sourceAttachment": "6FBD35D2-485F-405E-AEBE-D5F73E8BFBA3.png"
+    },
+    {
+      "name": "amazing-grace-chords-final-ending",
+      "sha256": "7565e0355b914ef1455e9c8df4c95b819a2443503484dc4970f91268e1e3435a",
+      "sourceAttachment": "46CA8F7C-CA83-4FDD-BE58-8AD3AA52B645.png"
+    },
+    {
+      "name": "amazing-grace-chords-final-restart",
+      "sha256": "15b0cb722425fc33d0128c7fa8adde33c31059d5d5255004c283587ee939ffed",
+      "sourceAttachment": "85A66FF8-B9D9-4160-A899-1149C8203015.png"
+    },
+    {
+      "name": "auld-lang-syne-melody-final-ending",
+      "sha256": "3ae1c87ac187d029b1c72d6bbf47da071333998ddef44281f6f7b0602b1563ae",
+      "sourceAttachment": "70EBB9F9-CD49-4932-9ED4-D20EFF26C133.png"
+    },
+    {
+      "name": "auld-lang-syne-melody-final-restart",
+      "sha256": "fef2fa5b3fa58996f695152ea68cfcfec483731f62892cddae1c70703f8f4964",
+      "sourceAttachment": "4D02521A-A437-4986-BD3B-FAABB9093B28.png"
+    },
+    {
+      "name": "auld-lang-syne-chords-final-ending",
+      "sha256": "f95c929d021fe01e05c810cb8ab5d59a1e274d02a58905c934e59e479b36bade",
+      "sourceAttachment": "90B2E057-7DB0-4AD4-B17E-B518B5F9573E.png"
+    },
+    {
+      "name": "auld-lang-syne-chords-final-restart",
+      "sha256": "cd6807b12e439cde6c1e1fcda5eb781a83545513f51e7614cb5c7ece1166f418",
+      "sourceAttachment": "8DBE654E-C499-46BF-8C70-0698DB00FE43.png"
+    },
+    {
+      "name": "greensleeves-melody-final-ending",
+      "sha256": "71c6ef5458823615ef38bc97a6fe82de8f122b08afa136e69ef236d8b152b28a",
+      "sourceAttachment": "FAF32673-A7FF-45F1-89BE-7398B9AC4A2D.png"
+    },
+    {
+      "name": "greensleeves-melody-final-restart",
+      "sha256": "6a077cf3d40e6290cd89572665dfad232e31e9e6a708afabcd20fbf04ed3ba49",
+      "sourceAttachment": "63352F63-D114-4EAB-BC0F-90BD19BFCB57.png"
+    },
+    {
+      "name": "greensleeves-chords-final-ending",
+      "sha256": "32fa0cf5c34c0c6f6ca3dad66152905d8ea5e2a63d7c6ad88b665f91eabb95de",
+      "sourceAttachment": "0379D8F8-4A15-4640-B0C2-1BBFFC67C006.png"
+    },
+    {
+      "name": "greensleeves-chords-final-restart",
+      "sha256": "119ff1d6d6739fe360451631866fd499df65d5d826e37486365d9f1b12e15cd7",
+      "sourceAttachment": "1508C9A7-1CB3-4214-9B06-EC392469B321.png"
+    },
+    {
+      "name": "sweet-afton-melody-final-ending",
+      "sha256": "3628f07d8ca90d3a113f887417d2fd8d9ad19a342fbd2d5ad8241b12d26173d2",
+      "sourceAttachment": "BF9C1508-4FEC-4CA6-B05A-49F44F4BF7F7.png"
+    },
+    {
+      "name": "sweet-afton-melody-final-restart",
+      "sha256": "122f952c98aed4145de1b7cf8b6d6f2187b0071c8f372ae26b39a744c2dca94e",
+      "sourceAttachment": "F588F695-FA40-4FFC-8F90-9EEA93CD99DC.png"
+    },
+    {
+      "name": "sweet-afton-chords-final-ending",
+      "sha256": "b04ad37835bf71d05f93d8e69467b76b10060953ea0b077ae11f87fed264ba0b",
+      "sourceAttachment": "14A4C5C2-8ACD-4EF1-A8AF-4C0BE2B053BC.png"
+    },
+    {
+      "name": "sweet-afton-chords-final-restart",
+      "sha256": "8459688f3d1598327d1624a524580e6be69bb3ab66865d507acc4f0b1f33735f",
+      "sourceAttachment": "F5DBA4EF-44BA-4427-ACDB-2D97FDAD816F.png"
+    },
+    {
+      "name": "ash-grove-melody-final-ending",
+      "sha256": "8a373c42f71546b55659b146e43df7629faef9a1e54bb295d5432db4a08c8b27",
+      "sourceAttachment": "BCD57E31-44BC-48AC-8C98-F4CD27CCCEF6.png"
+    },
+    {
+      "name": "ash-grove-melody-final-restart",
+      "sha256": "b8e15274eaca22bc664be5508bcdc9901320ea405f1803d926077971560df8c0",
+      "sourceAttachment": "ACBC35F8-AA37-4F3F-8D69-C2285A025E34.png"
+    },
+    {
+      "name": "ash-grove-chords-final-ending",
+      "sha256": "3574c049c79e289699c3bf5617c24a4d0aca86feb07adad79f7453e576e3a21f",
+      "sourceAttachment": "C46C955B-650F-457C-BCC3-47B6C245745F.png"
+    },
+    {
+      "name": "ash-grove-chords-final-restart",
+      "sha256": "9f5bf4e02dae2ce9f5c856b7bdae96722a4e1c208b1cec5fb93e994516acc466",
+      "sourceAttachment": "7A6CE357-DE07-462A-B089-67E657B0B01D.png"
+    },
+    {
+      "name": "blue-bells-melody-final-ending",
+      "sha256": "8a1cc19fcc3ce76535bb808ad7f2eafccec3c2594b21b37e9efa5f9c42d023f7",
+      "sourceAttachment": "249DEDF2-5B19-4B13-B973-0058E00FC544.png"
+    },
+    {
+      "name": "blue-bells-melody-final-restart",
+      "sha256": "97f7072ca3d573a6b1c7175fad3e9786ea5c0af23857b21e2d8e792e0178cc71",
+      "sourceAttachment": "641E3C90-481D-4CC5-9591-96E23176E37E.png"
+    },
+    {
+      "name": "blue-bells-chords-final-ending",
+      "sha256": "d3d3ac844965445590636925f58c93a2fe4f70b7accaa4923ba17ad100288d81",
+      "sourceAttachment": "81711CB4-2FF4-4C2B-8B1B-62AB67075FA2.png"
+    },
+    {
+      "name": "blue-bells-chords-final-restart",
+      "sha256": "5334bf9b5eb1080ce069b7d5b1b5a2e5ffe8db53cf1baf7081a8b3e7246cdf8f",
+      "sourceAttachment": "7DD6C2D8-05D9-4C07-87CC-4E1746C376F9.png"
+    },
+    {
+      "name": "home-sweet-home-melody-final-ending",
+      "sha256": "2f0ab5bcf7b625645ea35fa10dcb43ad105440431f3902e866bbd216205deb7f",
+      "sourceAttachment": "B437993F-003A-4C26-88C0-73F5D25079C8.png"
+    },
+    {
+      "name": "home-sweet-home-melody-final-restart",
+      "sha256": "3917355c61f4925d8660e754470ce0738238152df9d9b372b680b4e50c08030e",
+      "sourceAttachment": "E69087BA-4F48-472E-90A3-C23628E53E12.png"
+    },
+    {
+      "name": "home-sweet-home-chords-final-ending",
+      "sha256": "d670d02075679dce1db7fd0754cbf6088a29b3b927672a7a406267ea42840a36",
+      "sourceAttachment": "2F092023-2262-43C7-BBB8-81F4D67435FF.png"
+    },
+    {
+      "name": "home-sweet-home-chords-final-restart",
+      "sha256": "fe9d1bd2d51e1dc751b254ee38d252002ed8ac3f6c719f6a41d26953625ca45b",
+      "sourceAttachment": "FFCC5081-8BD3-437A-A63D-D6BEC722EFCB.png"
+    },
+    {
+      "name": "long-long-ago-melody-final-ending",
+      "sha256": "c67e006490a9a3b4160070b07825ab1e5b87fcdc26363208cc2892bb2a49e576",
+      "sourceAttachment": "1C8093D4-9E1C-42F5-8997-E4A18BCF64A5.png"
+    },
+    {
+      "name": "long-long-ago-melody-final-restart",
+      "sha256": "f682fe2b22a41458e5258ce7f8dcb6987bd5affec3d422b7c7b7a7b14328e3c9",
+      "sourceAttachment": "7B396873-F182-429D-A602-CCE211D0C755.png"
+    },
+    {
+      "name": "long-long-ago-chords-final-ending",
+      "sha256": "d44d3458659abda52dbea3f9d11f239d41f716211296c592d5876579c3f70ee6",
+      "sourceAttachment": "B1699322-B34B-4DC4-A7F3-EB69C528F6E3.png"
+    },
+    {
+      "name": "long-long-ago-chords-final-restart",
+      "sha256": "ba5ba6f9fc46d8c1a624c12182d4f60bd65c28f9327ed9ac30b1c73f965e4da3",
+      "sourceAttachment": "AC41C510-3CBB-4730-9D28-E64399AAF167.png"
+    },
+    {
+      "name": "oh-susanna-melody-final-ending",
+      "sha256": "3eede4ccdad641607882f099794363a1e4bcecf8e62cae58c8a1193766dddaa3",
+      "sourceAttachment": "B7E1EAEF-4F9A-4AAE-BDFC-9AD6C9F98238.png"
+    },
+    {
+      "name": "oh-susanna-melody-final-restart",
+      "sha256": "b0b42c1f617658c8d565250b19ea40f01cdf8a5e145ae66daa88d2a31a636bcb",
+      "sourceAttachment": "829AB364-67E1-46FC-9C1B-A1B10DC4E5F6.png"
+    },
+    {
+      "name": "oh-susanna-chords-final-ending",
+      "sha256": "d7412f67367eb24632b6fcff3ca2f4fd455310cefe52d4555f400bebf7ee8988",
+      "sourceAttachment": "75C8B200-1100-480A-8D55-19E096D90F93.png"
+    },
+    {
+      "name": "oh-susanna-chords-final-restart",
+      "sha256": "4a211700737b06c5f9a489704435267e014848cf0968b8541d4e1347683d22aa",
+      "sourceAttachment": "CFE0B235-7D4A-4400-B68F-FE652BDFE9D2.png"
+    },
+    {
+      "name": "home-on-range-melody-final-ending",
+      "sha256": "34a37113539d5542a08f9e2b4c12cd0e6ac2b9ad0d622adee400b32352ad544b",
+      "sourceAttachment": "4133A77C-9E9F-4351-BFBF-57FE31CC84B4.png"
+    },
+    {
+      "name": "home-on-range-melody-final-restart",
+      "sha256": "818599ada69340b132fa67633fd3092f85917448d4f24b235d407db60e30e056",
+      "sourceAttachment": "AB5E3E02-77FB-4673-8300-CA1935D5F741.png"
+    },
+    {
+      "name": "home-on-range-chords-final-ending",
+      "sha256": "320463879adfce18f57972bf0a994feb13f145893aafe78c5ba2372e82cc5d18",
+      "sourceAttachment": "FB7D68B2-CDDF-4F19-B363-CB433AB35D3F.png"
+    },
+    {
+      "name": "home-on-range-chords-final-restart",
+      "sha256": "644e3d3d740cf31294e8a3ec2a949975bf1282fe11dfa48033b241ec6b2da211",
+      "sourceAttachment": "81ECDA2B-DAEA-450D-A245-68CC2867AE06.png"
+    },
+    {
+      "name": "ode-to-joy-melody-final-ending",
+      "sha256": "9fd6878b06194a6b8c12b10472cfc36f1d60102a51f97d9a17610ee667c6fa16",
+      "sourceAttachment": "A2110612-2CF8-4C17-8E72-D0C9D240638C.png"
+    },
+    {
+      "name": "ode-to-joy-melody-final-restart",
+      "sha256": "523813282571bc4d44f625e516b6acbd59acb9b59e840cf1b1710e8a133f9ebe",
+      "sourceAttachment": "DCC59F64-D180-464A-90D4-1A04923772F1.png"
+    },
+    {
+      "name": "ode-to-joy-chords-final-ending",
+      "sha256": "d9d999d925b5290214fb3f934501a393c0f5c5bc643d29dfc753796a5dc12551",
+      "sourceAttachment": "C0949CE6-A0D3-4860-B589-8AB53C3D02CD.png"
+    },
+    {
+      "name": "ode-to-joy-chords-final-restart",
+      "sha256": "36a6bbac8414a60b5e4e256ed31866fc9105591705eb58cae13f04562f344bf5",
+      "sourceAttachment": "3EA60630-8825-463F-A214-698B97913624.png"
+    },
+    {
+      "name": "fur-elise-melody-final-ending",
+      "sha256": "0b327452036ff0af56eb29c4d170e62b5ad23e1a62abc4a711d18cb4235b77a5",
+      "sourceAttachment": "E374C7A7-2BC4-43C4-B783-FC0FB5F3129B.png"
+    },
+    {
+      "name": "fur-elise-melody-final-restart",
+      "sha256": "1be9fb1562120722b4ed355d43e0fda559da0f32845daed9d5462192939c715e",
+      "sourceAttachment": "2E4E4F73-716A-4516-B267-015A2430850C.png"
+    },
+    {
+      "name": "fur-elise-chords-final-ending",
+      "sha256": "fb346d6e2367e76fed10a242a6322526a13aa34830f43da3c5a962e875c1b169",
+      "sourceAttachment": "706532D3-3E5F-440A-8115-B7039D64EEA6.png"
+    },
+    {
+      "name": "fur-elise-chords-final-restart",
+      "sha256": "388302f7f254abe0ee3e8c604cb72dc06349d51baeea1853713073ebe99a52c1",
+      "sourceAttachment": "A373300E-B626-4DDE-B15D-E7003F78359F.png"
+    },
+    {
+      "name": "minuet-g-melody-final-ending",
+      "sha256": "2f20853e90028ed714340b1a947115f3da62c10442774a843dc59ed4f60fa376",
+      "sourceAttachment": "05CCBFE2-A98E-41B8-8C77-B0236213B46A.png"
+    },
+    {
+      "name": "minuet-g-melody-final-restart",
+      "sha256": "8b34078bf239f73c779537a1c7466af8ff77b1fd79a2828f0c8b33d3b6f4e549",
+      "sourceAttachment": "088A7155-E91F-401F-A005-B4FDAC8B8453.png"
+    },
+    {
+      "name": "minuet-g-chords-final-ending",
+      "sha256": "2ad1cdd5fb924a5f5943a99ecfe76568c06fb9f1fe09dbe7ca72fbdd1a7e4783",
+      "sourceAttachment": "8EBAD115-5D43-42B2-AE41-F60FBFD3879C.png"
+    },
+    {
+      "name": "minuet-g-chords-final-restart",
+      "sha256": "c3598a2b85bc12781b585ed3747099b694ccbd086c8760c61210a4863aacb6ac",
+      "sourceAttachment": "25AE7254-FB8B-4403-9DA3-012CD15BF006.png"
+    },
+    {
+      "name": "brahms-lullaby-melody-final-ending",
+      "sha256": "d03c5d86cd4afd7c4b87e0d624992ad140b30c5e09f44b7592ee0626eee4fcd7",
+      "sourceAttachment": "E8BD2ED8-EEE6-4FE6-9E14-A0C4A2C6A804.png"
+    },
+    {
+      "name": "brahms-lullaby-melody-final-restart",
+      "sha256": "75b7830d3c07250edd58c5f6f55e419167c0260cc16b754d34bfba19d416542a",
+      "sourceAttachment": "2FDAA766-0D5B-41A0-80AF-0D0C2A5BD1E0.png"
+    },
+    {
+      "name": "brahms-lullaby-chords-final-ending",
+      "sha256": "f621d37c84f148706a930012aa12db2d9ba5f8a6b864de3cf97ae82eb714833f",
+      "sourceAttachment": "910BC26E-1905-42B4-BCF2-480B105F1342.png"
+    },
+    {
+      "name": "brahms-lullaby-chords-final-restart",
+      "sha256": "335bb40123b04662c4906f772d1094fb84b3fb3adb2de30ae68a991ffbd8a41e",
+      "sourceAttachment": "1572E13F-DF7B-4554-B2DA-E9CF3ECC33EA.png"
+    },
+    {
+      "name": "twinkle-melody-final-ending",
+      "sha256": "f6a6fbe7f704c9274ebed32e466c9a0869748c58f38f0b2f31610232e0531a61",
+      "sourceAttachment": "0AA2BC72-C0F1-4A32-B444-471023F34112.png"
+    },
+    {
+      "name": "twinkle-melody-final-restart",
+      "sha256": "a5db8b546a8843d57f8222e7249efce656cab149cbdeed30975f24a3cd55e97a",
+      "sourceAttachment": "A5D5D8E5-7C62-4CBA-8010-F10754DA429D.png"
+    },
+    {
+      "name": "twinkle-chords-final-ending",
+      "sha256": "dde513b6d578837c12743818b1e81d167913b287871890b1b0025abf10c7bef7",
+      "sourceAttachment": "B6F20CB3-B410-4692-BB60-B7B0E0386A18.png"
+    },
+    {
+      "name": "twinkle-chords-final-restart",
+      "sha256": "14ecbebf6757fbd775035a23fdf67c45921a330635d2b741080f1eb505ec9bf9",
+      "sourceAttachment": "33A111DA-5AF9-4EAF-8EAF-F9370750EB99.png"
+    },
+    {
+      "name": "frere-jacques-melody-final-ending",
+      "sha256": "62ee993b672fae4b9daf06f91cbc64c8c5219bd571a84760eec5c5079944de47",
+      "sourceAttachment": "1729127B-1221-4781-92FC-D3D62EF7D141.png"
+    },
+    {
+      "name": "frere-jacques-melody-final-restart",
+      "sha256": "397d261c2780f14f26fba8cb3be7e237eba8d1a39560b400d9a06bace167c2d9",
+      "sourceAttachment": "B61ACB5A-627D-4A8A-AEF1-5D8307844E0B.png"
+    },
+    {
+      "name": "frere-jacques-chords-final-ending",
+      "sha256": "e1e8726f0e024d0579648a16644621325aa69a691eae49948b42a1c39704f98f",
+      "sourceAttachment": "A67AEB33-EECE-400C-821A-27C06CE887DC.png"
+    },
+    {
+      "name": "frere-jacques-chords-final-restart",
+      "sha256": "0dfa2f01910aa647dfbbea31a8aa6737f0a6faa1a6bf66fd2ffaeb3b83eebea2",
+      "sourceAttachment": "5B73E8DB-DD47-4B2E-A109-4B43B753FDB3.png"
+    },
+    {
+      "name": "mary-lamb-melody-final-ending",
+      "sha256": "537e175243182dae83110b485c0f5599118e3280319e61bddf888b031c728d4d",
+      "sourceAttachment": "7B1DA9B5-3F65-4175-981C-A16275489C73.png"
+    },
+    {
+      "name": "mary-lamb-melody-final-restart",
+      "sha256": "bb1f0cbf699b2be7feea1f5ee8a7153a319968aae53e2480dff47eb33e026e36",
+      "sourceAttachment": "7FCAFF9E-EACB-4F72-958D-521AC5950037.png"
+    },
+    {
+      "name": "mary-lamb-chords-final-ending",
+      "sha256": "890e23a790116ee9dee7373b350449d94ff10f6ff9cfe3a225a853c16a9d2727",
+      "sourceAttachment": "90650583-AC9A-4AD0-B84A-605174C0B021.png"
+    },
+    {
+      "name": "mary-lamb-chords-final-restart",
+      "sha256": "29848ca26e79c77087acee2002afd8061b0027e01b7579285a252eb7103a4355",
+      "sourceAttachment": "7026D2BE-B2A6-4802-AE81-569C988328FA.png"
+    },
+    {
+      "name": "london-bridge-melody-final-ending",
+      "sha256": "b74c1590f47f7052307fe7cf10fafdbb7ead6ae4e8ec6b2e8908d83e97dd6e1c",
+      "sourceAttachment": "2B01C29E-89B4-41D4-A8E5-D4D5E3CA0475.png"
+    },
+    {
+      "name": "london-bridge-melody-final-restart",
+      "sha256": "7477b032a8aa802dd1252779f19002567d5eba19a2f38e757ee120902c929ba1",
+      "sourceAttachment": "9B9E4F15-86C3-4719-9807-3BBF6E44992B.png"
+    },
+    {
+      "name": "london-bridge-chords-final-ending",
+      "sha256": "8947c053b98e739ee09785305a8ebfab8efeb763ae5951a279eafae714392992",
+      "sourceAttachment": "AC056CEB-C9F1-422D-A36A-4E230C295B8C.png"
+    },
+    {
+      "name": "london-bridge-chords-final-restart",
+      "sha256": "8e14a87fde9d7a4a902fe54c799c98c4c39f829aaa3e785462f02dec19493e6a",
+      "sourceAttachment": "6EF52C2D-0BDD-402B-B9DF-A572C26834B4.png"
+    },
+    {
+      "name": "row-your-boat-melody-final-ending",
+      "sha256": "bd1ccd8c5f5e561f3393683049ecf06e96fe8dccaafc4be9aac473d53d08b88b",
+      "sourceAttachment": "6BE6B3A5-9FD3-4568-8DB8-B204F7B8D4FD.png"
+    },
+    {
+      "name": "row-your-boat-melody-final-restart",
+      "sha256": "56ce67d91d273154e188419d6e60dbd3f722ca5290d51e0dc67dc7c55363893d",
+      "sourceAttachment": "E100E1E4-51F3-4C1C-827D-32D863FC0B00.png"
+    },
+    {
+      "name": "row-your-boat-chords-final-ending",
+      "sha256": "50a38325653ec657e71d33bf87f5e5fa5eaa900467b63dce79a47fda24de463b",
+      "sourceAttachment": "5C83885D-A5A2-484A-8B60-720CB00E313E.png"
+    },
+    {
+      "name": "row-your-boat-chords-final-restart",
+      "sha256": "2b8a068baadab1fc33b18869f63b8662446c2cf47ff83b5d44e91d6cb957044d",
+      "sourceAttachment": "476A4983-5183-463C-A8DE-FF315F16EDC8.png"
+    },
+    {
+      "name": "drink-to-me-melody-final-ending",
+      "sha256": "90692568f31ce42b237823d1ef51f244ccad73837552530b252ea64f109399ca",
+      "sourceAttachment": "E7969D31-2B58-45A3-899E-B07AFDDC5CD3.png"
+    },
+    {
+      "name": "drink-to-me-melody-final-restart",
+      "sha256": "23330e00acfa3f403312a899457650ea729ba3a1b45fded44b4f5ee8a785303d",
+      "sourceAttachment": "BB86C569-6FEB-44FA-BA10-E1E14023180E.png"
+    },
+    {
+      "name": "drink-to-me-chords-final-ending",
+      "sha256": "11fd7847f70e9c995a56dd2ab2f27419977d6d287ccecc4448fd2740bc4d6255",
+      "sourceAttachment": "9CD10234-E0CF-4B32-8AB4-32C31940967B.png"
+    },
+    {
+      "name": "drink-to-me-chords-final-restart",
+      "sha256": "15e1f701ba2ad87e1a4031f6e75e10be50d42c324e15d372f84e3b6874d82146",
+      "sourceAttachment": "B2241BD8-988E-41E9-9D9A-DDB9521160E5.png"
+    }
+  ],
+  "purpose": "Review-only crops; originals retained in result bundle"
+}

@@ -5,6 +5,7 @@ import ScorePipeline
 struct WorkspaceView: View {
     @Bindable var model: AppModel
     let save: () -> Void
+    var openClassic: ((ClassicSong, ClassicArrangement) -> Void)? = nil
     @AppStorage("leftHanded") private var leftHanded = false
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.verticalSizeClass) private var verticalSizeClass
@@ -125,10 +126,71 @@ struct WorkspaceView: View {
 
     @ViewBuilder
     private var header: some View {
-        if isSideBySide {
-            // Landscape gives the navigation bar the title, the picker, and the
-            // actions. The chips would sit under that bar and are available on
-            // the Instrument sheet anyway, so only the live status remains.
+        if let (song, selected) = model.classicSelection {
+            VStack(alignment: .leading, spacing: Space.s) {
+                HStack(alignment: .top) {
+                    Text(scoreTitle).font(.title3.weight(.semibold)).lineLimit(2)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    profilePicker
+                }
+                HStack {
+                    ForEach(song.arrangements) { arrangement in
+                        Button(arrangement.label) { openClassic?(song, arrangement) }
+                            .buttonStyle(.bordered)
+                            .tint(arrangement.id == selected.id ? Palette.brand : .secondary)
+                            .accessibilityIdentifier("switch-\(arrangement.kind)")
+                    }
+                    Spacer(minLength: Space.s)
+                    Toggle("Tab", isOn: Binding(get: { model.player.showTab }, set: { model.player.setShowTab($0) }))
+                        .toggleStyle(.button).accessibilityIdentifier("songbookShowTab")
+                }.font(.caption)
+                if selected.kind == "chords" {
+                    HStack {
+                        Text("Accompaniment · \(model.classicChordLabel ?? "Rest")")
+                            .font(.subheadline.weight(.semibold)).accessibilityIdentifier("activeChord")
+                        Spacer()
+                        Button("Previous measure", systemImage: "chevron.left") { model.player.pause(); model.previousMeasure() }
+                            .labelStyle(.iconOnly).accessibilityIdentifier("songbookPreviousMeasure")
+                        Button("Next measure", systemImage: "chevron.right") { model.player.pause(); model.nextMeasure() }
+                            .labelStyle(.iconOnly).accessibilityIdentifier("songbookNextMeasure")
+                    }
+                    if let guidance = model.classicFingerGuidanceCompact {
+                        Text(guidance).font(.caption).foregroundStyle(.secondary)
+                            .accessibilityLabel(model.classicFingerGuidance ?? guidance)
+                    }
+                }
+                HStack {
+                    metaRow
+                    Spacer(minLength: Space.xs)
+                    if model.pipelineResult != nil {
+                        Button("Expand fretboard", systemImage: "arrow.up.left.and.arrow.down.right") {
+                            model.isFretboardExpanded = true
+                        }.labelStyle(.iconOnly).buttonStyle(.plain).foregroundStyle(Palette.brand)
+                        Button { model.isTracePresented = true } label: {
+                            Image(systemName: "list.bullet.rectangle")
+                        }
+                        .buttonStyle(.plain).foregroundStyle(Palette.brand)
+                        .accessibilityLabel("Why this fingering?")
+                        .accessibilityIdentifier("showTrace")
+                    }
+                }
+                if model.pipelineResult == nil || !(model.pipelineResult?.score.warnings.isEmpty ?? true) {
+                    statusLine
+                }
+                if model.pipelineResult == nil && !model.isProcessing {
+                    Button("Restore original guitar settings") {
+                        model.load(data: model.sourceData ?? Data(), sourceName: selected.resource,
+                                   songID: model.currentSongID, profile: model.profile,
+                                   lastPositionMilliseconds: model.player.cursorMilliseconds,
+                                   lockedPositions: selected.positions,
+                                   playbackSpeed: model.player.playbackSpeed,
+                                   loopStartMeasure: model.loopStartMeasure, loopEndMeasure: model.loopEndMeasure,
+                                   metronomeEnabled: model.player.isMetronomeEnabled,
+                                   countInEnabled: model.player.isCountInEnabled, showTab: model.player.showTab)
+                    }
+                }
+            }
+        } else if isSideBySide {
             statusLine
         } else {
             fullHeader
@@ -251,6 +313,7 @@ struct WorkspaceView: View {
     /// than it does in portrait where the whole screen is its to fill.
     private var fretboardHeight: CGFloat {
         if isAccessibilitySize { return 132 }
+        if model.classicSelection != nil { return isSideBySide ? 120 : 132 }
         return isSideBySide ? 138 : 168
     }
 
@@ -275,6 +338,7 @@ struct WorkspaceView: View {
         }
         .accessibilityHint("Tap to choose another valid fingering for the current note")
         .overlay(alignment: .topTrailing) {
+            if model.classicSelection == nil {
             Button("Expand fretboard", systemImage: "arrow.up.left.and.arrow.down.right") {
                 model.isFretboardExpanded = true
             }
@@ -282,6 +346,7 @@ struct WorkspaceView: View {
             .font(.caption)
             .buttonStyle(.glass)
             .padding(Space.s)
+            }
         }
     }
 
@@ -326,6 +391,7 @@ struct WorkspaceView: View {
                 .labelStyle(.iconOnly)
                 .buttonStyle(.plain)
                 .foregroundStyle(model.player.isLooping ? Palette.brand : Color.secondary)
+                .accessibilityValue(model.player.isLooping ? "Loop on" : "Loop off")
                 .disabled(model.currentMeasureIndex == nil)
                 .sensoryFeedback(.selection, trigger: model.player.isLooping)
             }

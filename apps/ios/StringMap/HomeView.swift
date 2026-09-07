@@ -10,6 +10,7 @@ struct HomeView: View {
     let openScan: () -> Void
     let openImport: () -> Void
     let openTutorial: () -> Void
+    let openSongbook: () -> Void
     let openWorkspace: () -> Void
     let openPractice: () -> Void
     let openInstrument: () -> Void
@@ -35,6 +36,19 @@ struct HomeView: View {
                         }.padding(Space.l)
                     }
                 }.buttonStyle(PressableCard()).accessibilityIdentifier("homeTutorial")
+                Button(action: openSongbook) {
+                    Bezel {
+                        HStack(spacing: Space.m) {
+                            Image(systemName: "music.note.list").font(.title2).foregroundStyle(Palette.brand)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Play a classic").font(.headline)
+                                Text("Familiar tunes · Melody and chords").font(.subheadline).foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            Image(systemName: "chevron.right").foregroundStyle(Palette.brand)
+                        }.padding(Space.l)
+                    }
+                }.buttonStyle(PressableCard()).accessibilityIdentifier("homeSongbook")
                 if !songs.isEmpty { recents }
                 addMusic
                 practiceTools

@@ -1,0 +1,1702 @@
+{
+  "scope": "Structural checks; not historical-source, listening, or UI qualification",
+  "arrangements": [
+    {
+      "id": "amazing-grace-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 86.00090702947846,
+          "expectedSeconds": 86,
+          "notes": 36,
+          "peak": 0.14853918552398682
+        },
+        {
+          "bpm": 60,
+          "seconds": 43.00045351473923,
+          "expectedSeconds": 43,
+          "notes": 36,
+          "peak": 0.16234897077083588
+        },
+        {
+          "bpm": 90,
+          "seconds": 28.667936507936506,
+          "expectedSeconds": 28.666666666666668,
+          "notes": 36,
+          "peak": 0.18584808707237244
+        },
+        {
+          "bpm": 120,
+          "seconds": 21.500226757369614,
+          "expectedSeconds": 21.5,
+          "notes": 36,
+          "peak": 0.18120242655277252
+        },
+        {
+          "bpm": 84,
+          "seconds": 30.7156462585034,
+          "expectedSeconds": 30.714285714285715,
+          "notes": 36,
+          "peak": 0.17963813245296478
+        }
+      ]
+    },
+    {
+      "id": "amazing-grace-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 86.00090702947846,
+          "expectedSeconds": 86,
+          "notes": 83,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 60,
+          "seconds": 43.00045351473923,
+          "expectedSeconds": 43,
+          "notes": 83,
+          "peak": 0.35690927505493164
+        },
+        {
+          "bpm": 90,
+          "seconds": 28.667936507936506,
+          "expectedSeconds": 28.666666666666668,
+          "notes": 83,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 120,
+          "seconds": 21.500226757369614,
+          "expectedSeconds": 21.5,
+          "notes": 83,
+          "peak": 0.35582107305526733
+        },
+        {
+          "bpm": 84,
+          "seconds": 30.7156462585034,
+          "expectedSeconds": 30.714285714285715,
+          "notes": 83,
+          "peak": 0.3575848639011383
+        }
+      ]
+    },
+    {
+      "id": "auld-lang-syne-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 56,
+          "peak": 0.15253028273582458
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 56,
+          "peak": 0.163829043507576
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 56,
+          "peak": 0.16604329645633698
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 56,
+          "peak": 0.17487257719039917
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 56,
+          "peak": 0.17321991920471191
+        }
+      ]
+    },
+    {
+      "id": "auld-lang-syne-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 90,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 90,
+          "peak": 0.35690927505493164
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 90,
+          "peak": 0.35096511244773865
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 90,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 90,
+          "peak": 0.3535105586051941
+        }
+      ]
+    },
+    {
+      "id": "greensleeves-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 73,
+          "peak": 0.18344035744667053
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 73,
+          "peak": 0.20443856716156006
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 73,
+          "peak": 0.21260537207126617
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 73,
+          "peak": 0.22944192588329315
+        }
+      ]
+    },
+    {
+      "id": "greensleeves-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 93,
+          "peak": 0.35394445061683655
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 93,
+          "peak": 0.35162192583084106
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 93,
+          "peak": 0.3986702859401703
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 93,
+          "peak": 0.36739084124565125
+        }
+      ]
+    },
+    {
+      "id": "sweet-afton-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 192.00145124716553,
+          "expectedSeconds": 192,
+          "notes": 97,
+          "peak": 0.15255963802337646
+        },
+        {
+          "bpm": 60,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 97,
+          "peak": 0.1685011237859726
+        },
+        {
+          "bpm": 90,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 97,
+          "peak": 0.1810438483953476
+        },
+        {
+          "bpm": 120,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 97,
+          "peak": 0.19461753964424133
+        },
+        {
+          "bpm": 84,
+          "seconds": 68.5728798185941,
+          "expectedSeconds": 68.57142857142857,
+          "notes": 97,
+          "peak": 0.1818508505821228
+        }
+      ]
+    },
+    {
+      "id": "sweet-afton-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 192.00145124716553,
+          "expectedSeconds": 192,
+          "notes": 176,
+          "peak": 0.3633817732334137
+        },
+        {
+          "bpm": 60,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 176,
+          "peak": 0.36064499616622925
+        },
+        {
+          "bpm": 90,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 176,
+          "peak": 0.36543819308280945
+        },
+        {
+          "bpm": 120,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 176,
+          "peak": 0.3661113381385803
+        },
+        {
+          "bpm": 84,
+          "seconds": 68.5728798185941,
+          "expectedSeconds": 68.57142857142857,
+          "notes": 176,
+          "peak": 0.36088842153549194
+        }
+      ]
+    },
+    {
+      "id": "ash-grove-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 144.00145124716553,
+          "expectedSeconds": 144,
+          "notes": 83,
+          "peak": 0.1499088555574417
+        },
+        {
+          "bpm": 60,
+          "seconds": 72.00072562358277,
+          "expectedSeconds": 72,
+          "notes": 83,
+          "peak": 0.18586476147174835
+        },
+        {
+          "bpm": 90,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 83,
+          "peak": 0.18839669227600098
+        },
+        {
+          "bpm": 120,
+          "seconds": 36.00108843537415,
+          "expectedSeconds": 36,
+          "notes": 83,
+          "peak": 0.20801523327827454
+        },
+        {
+          "bpm": 84,
+          "seconds": 51.4292970521542,
+          "expectedSeconds": 51.42857142857143,
+          "notes": 83,
+          "peak": 0.18203771114349365
+        }
+      ]
+    },
+    {
+      "id": "ash-grove-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 144.00145124716553,
+          "expectedSeconds": 144,
+          "notes": 123,
+          "peak": 0.3633817732334137
+        },
+        {
+          "bpm": 60,
+          "seconds": 72.00072562358277,
+          "expectedSeconds": 72,
+          "notes": 123,
+          "peak": 0.36064499616622925
+        },
+        {
+          "bpm": 90,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 123,
+          "peak": 0.36543819308280945
+        },
+        {
+          "bpm": 120,
+          "seconds": 36.00108843537415,
+          "expectedSeconds": 36,
+          "notes": 123,
+          "peak": 0.3660260736942291
+        },
+        {
+          "bpm": 84,
+          "seconds": 51.4292970521542,
+          "expectedSeconds": 51.42857142857143,
+          "notes": 123,
+          "peak": 0.36088845133781433
+        }
+      ]
+    },
+    {
+      "id": "blue-bells-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 50,
+          "peak": 0.14663831889629364
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 50,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 50,
+          "peak": 0.16725598275661469
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 50,
+          "peak": 0.1681385189294815
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 50,
+          "peak": 0.16283586621284485
+        }
+      ]
+    },
+    {
+      "id": "blue-bells-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 87,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 87,
+          "peak": 0.3501422703266144
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 87,
+          "peak": 0.34859398007392883
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 87,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 87,
+          "peak": 0.3518984317779541
+        }
+      ]
+    },
+    {
+      "id": "home-sweet-home-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 72,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 72,
+          "peak": 0.19065967202186584
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 72,
+          "peak": 0.19413776695728302
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 72,
+          "peak": 0.20646359026432037
+        },
+        {
+          "bpm": 84,
+          "seconds": 34.644172335600906,
+          "expectedSeconds": 34.642857142857146,
+          "notes": 72,
+          "peak": 0.2180732935667038
+        }
+      ]
+    },
+    {
+      "id": "home-sweet-home-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 129,
+          "peak": 0.3493841290473938
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 129,
+          "peak": 0.35699525475502014
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 129,
+          "peak": 0.4151029884815216
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 129,
+          "peak": 0.3628971576690674
+        },
+        {
+          "bpm": 84,
+          "seconds": 34.644172335600906,
+          "expectedSeconds": 34.642857142857146,
+          "notes": 129,
+          "peak": 0.3849792182445526
+        }
+      ]
+    },
+    {
+      "id": "long-long-ago-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 76,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 76,
+          "peak": 0.17084670066833496
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 76,
+          "peak": 0.1811067909002304
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 76,
+          "peak": 0.17780214548110962
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 76,
+          "peak": 0.17603377997875214
+        }
+      ]
+    },
+    {
+      "id": "long-long-ago-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 85,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 85,
+          "peak": 0.3504694700241089
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 85,
+          "peak": 0.35096514225006104
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 85,
+          "peak": 0.3536006212234497
+        },
+        {
+          "bpm": 88,
+          "seconds": 43.63755102040816,
+          "expectedSeconds": 43.63636363636363,
+          "notes": 85,
+          "peak": 0.3518984317779541
+        }
+      ]
+    },
+    {
+      "id": "oh-susanna-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 85,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 85,
+          "peak": 0.17012321949005127
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 85,
+          "peak": 0.16993597149848938
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 85,
+          "peak": 0.19969147443771362
+        },
+        {
+          "bpm": 100,
+          "seconds": 29.100408163265307,
+          "expectedSeconds": 29.1,
+          "notes": 85,
+          "peak": 0.18041659891605377
+        }
+      ]
+    },
+    {
+      "id": "oh-susanna-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 129,
+          "peak": 0.3493841290473938
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 129,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 129,
+          "peak": 0.4151029884815216
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 129,
+          "peak": 0.3628971576690674
+        },
+        {
+          "bpm": 100,
+          "seconds": 29.100408163265307,
+          "expectedSeconds": 29.1,
+          "notes": 129,
+          "peak": 0.35940518975257874
+        }
+      ]
+    },
+    {
+      "id": "home-on-range-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 74,
+          "peak": 0.17534089088439941
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 74,
+          "peak": 0.19695621728897095
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 74,
+          "peak": 0.20275650918483734
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 74,
+          "peak": 0.20258043706417084
+        }
+      ]
+    },
+    {
+      "id": "home-on-range-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 97.00136054421769,
+          "expectedSeconds": 97,
+          "notes": 91,
+          "peak": 0.35690927505493164
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.500680272108845,
+          "expectedSeconds": 48.5,
+          "notes": 91,
+          "peak": 0.35179680585861206
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.33378684807256,
+          "expectedSeconds": 32.333333333333336,
+          "notes": 91,
+          "peak": 0.4115228056907654
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.250340136054422,
+          "expectedSeconds": 24.25,
+          "notes": 91,
+          "peak": 0.3704748749732971
+        }
+      ]
+    },
+    {
+      "id": "ode-to-joy-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 63,
+          "peak": 0.1558363437652588
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 63,
+          "peak": 0.17090126872062683
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 63,
+          "peak": 0.1697293519973755
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 63,
+          "peak": 0.17931723594665527
+        },
+        {
+          "bpm": 96,
+          "seconds": 40.00072562358277,
+          "expectedSeconds": 40,
+          "notes": 63,
+          "peak": 0.18611164391040802
+        }
+      ]
+    },
+    {
+      "id": "ode-to-joy-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 128.00145124716553,
+          "expectedSeconds": 128,
+          "notes": 88,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 88,
+          "peak": 0.3504694700241089
+        },
+        {
+          "bpm": 90,
+          "seconds": 42.6681179138322,
+          "expectedSeconds": 42.666666666666664,
+          "notes": 88,
+          "peak": 0.3552016019821167
+        },
+        {
+          "bpm": 120,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 88,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 96,
+          "seconds": 40.00072562358277,
+          "expectedSeconds": 40,
+          "notes": 88,
+          "peak": 0.35262441635131836
+        }
+      ]
+    },
+    {
+      "id": "fur-elise-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 35,
+          "peak": 0.16618868708610535
+        },
+        {
+          "bpm": 60,
+          "seconds": 12.000362811791383,
+          "expectedSeconds": 12,
+          "notes": 35,
+          "peak": 0.18947573006153107
+        },
+        {
+          "bpm": 90,
+          "seconds": 8.000725623582767,
+          "expectedSeconds": 8,
+          "notes": 35,
+          "peak": 0.22867733240127563
+        },
+        {
+          "bpm": 120,
+          "seconds": 6.000907029478458,
+          "expectedSeconds": 6,
+          "notes": 35,
+          "peak": 0.23209810256958008
+        },
+        {
+          "bpm": 72,
+          "seconds": 10.000544217687075,
+          "expectedSeconds": 10,
+          "notes": 35,
+          "peak": 0.2073216438293457
+        }
+      ]
+    },
+    {
+      "id": "fur-elise-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 50,
+          "peak": 0.35060828924179077
+        },
+        {
+          "bpm": 60,
+          "seconds": 12.000362811791383,
+          "expectedSeconds": 12,
+          "notes": 50,
+          "peak": 0.35562649369239807
+        },
+        {
+          "bpm": 90,
+          "seconds": 8.000725623582767,
+          "expectedSeconds": 8,
+          "notes": 50,
+          "peak": 0.44898173213005066
+        },
+        {
+          "bpm": 120,
+          "seconds": 6.000907029478458,
+          "expectedSeconds": 6,
+          "notes": 50,
+          "peak": 0.38750573992729187
+        },
+        {
+          "bpm": 72,
+          "seconds": 10.000544217687075,
+          "expectedSeconds": 10,
+          "notes": 50,
+          "peak": 0.37165817618370056
+        }
+      ]
+    },
+    {
+      "id": "minuet-g-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 192.00145124716553,
+          "expectedSeconds": 192,
+          "notes": 126,
+          "peak": 0.15255963802337646
+        },
+        {
+          "bpm": 60,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 126,
+          "peak": 0.16910071671009064
+        },
+        {
+          "bpm": 90,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 126,
+          "peak": 0.18300777673721313
+        },
+        {
+          "bpm": 120,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 126,
+          "peak": 0.22129714488983154
+        },
+        {
+          "bpm": 96,
+          "seconds": 60.00036281179138,
+          "expectedSeconds": 60,
+          "notes": 126,
+          "peak": 0.19157452881336212
+        }
+      ]
+    },
+    {
+      "id": "minuet-g-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 192.00145124716553,
+          "expectedSeconds": 192,
+          "notes": 166,
+          "peak": 0.38627931475639343
+        },
+        {
+          "bpm": 60,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 166,
+          "peak": 0.3867235481739044
+        },
+        {
+          "bpm": 90,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 166,
+          "peak": 0.39009416103363037
+        },
+        {
+          "bpm": 120,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 166,
+          "peak": 0.3895885646343231
+        },
+        {
+          "bpm": 96,
+          "seconds": 60.00036281179138,
+          "expectedSeconds": 60,
+          "notes": 166,
+          "peak": 0.38718461990356445
+        }
+      ]
+    },
+    {
+      "id": "brahms-lullaby-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 51,
+          "peak": 0.15627500414848328
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 51,
+          "peak": 0.16278067231178284
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 51,
+          "peak": 0.17947478592395782
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 51,
+          "peak": 0.1803807020187378
+        },
+        {
+          "bpm": 78,
+          "seconds": 36.92408163265306,
+          "expectedSeconds": 36.92307692307692,
+          "notes": 51,
+          "peak": 0.17142783105373383
+        }
+      ]
+    },
+    {
+      "id": "brahms-lullaby-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 82,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 82,
+          "peak": 0.3511258363723755
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 82,
+          "peak": 0.35702067613601685
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 82,
+          "peak": 0.36602604389190674
+        },
+        {
+          "bpm": 78,
+          "seconds": 36.92408163265306,
+          "expectedSeconds": 36.92307692307692,
+          "notes": 82,
+          "peak": 0.3662150204181671
+        }
+      ]
+    },
+    {
+      "id": "twinkle-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 44,
+          "peak": 0.14663833379745483
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 44,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 44,
+          "peak": 0.16746602952480316
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 44,
+          "peak": 0.17084671556949615
+        },
+        {
+          "bpm": 96,
+          "seconds": 30.00018140589569,
+          "expectedSeconds": 30,
+          "notes": 44,
+          "peak": 0.1626410037279129
+        }
+      ]
+    },
+    {
+      "id": "twinkle-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 60,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 60,
+          "peak": 0.3493841290473938
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 60,
+          "peak": 0.3452194333076477
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 60,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 96,
+          "seconds": 30.00018140589569,
+          "expectedSeconds": 30,
+          "notes": 60,
+          "peak": 0.3514716625213623
+        }
+      ]
+    },
+    {
+      "id": "frere-jacques-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 32,
+          "peak": 0.15273746848106384
+        },
+        {
+          "bpm": 60,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 32,
+          "peak": 0.17068363726139069
+        },
+        {
+          "bpm": 90,
+          "seconds": 21.334784580498866,
+          "expectedSeconds": 21.333333333333332,
+          "notes": 32,
+          "peak": 0.1697293519973755
+        },
+        {
+          "bpm": 120,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 32,
+          "peak": 0.1828674077987671
+        },
+        {
+          "bpm": 100,
+          "seconds": 19.201451247165533,
+          "expectedSeconds": 19.2,
+          "notes": 32,
+          "peak": 0.18526852130889893
+        }
+      ]
+    },
+    {
+      "id": "frere-jacques-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 41,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 41,
+          "peak": 0.3493840992450714
+        },
+        {
+          "bpm": 90,
+          "seconds": 21.334784580498866,
+          "expectedSeconds": 21.333333333333332,
+          "notes": 41,
+          "peak": 0.35096514225006104
+        },
+        {
+          "bpm": 120,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 41,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 100,
+          "seconds": 19.201451247165533,
+          "expectedSeconds": 19.2,
+          "notes": 41,
+          "peak": 0.3536549508571625
+        }
+      ]
+    },
+    {
+      "id": "mary-lamb-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 26,
+          "peak": 0.16338729858398438
+        },
+        {
+          "bpm": 60,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 26,
+          "peak": 0.17016752064228058
+        },
+        {
+          "bpm": 90,
+          "seconds": 10.6681179138322,
+          "expectedSeconds": 10.666666666666666,
+          "notes": 26,
+          "peak": 0.17476551234722137
+        },
+        {
+          "bpm": 120,
+          "seconds": 8.000725623582767,
+          "expectedSeconds": 8,
+          "notes": 26,
+          "peak": 0.17411017417907715
+        },
+        {
+          "bpm": 72,
+          "seconds": 13.334058956916099,
+          "expectedSeconds": 13.333333333333334,
+          "notes": 26,
+          "peak": 0.17464838922023773
+        }
+      ]
+    },
+    {
+      "id": "mary-lamb-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 42,
+          "peak": 0.3493841290473938
+        },
+        {
+          "bpm": 60,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 42,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 90,
+          "seconds": 10.6681179138322,
+          "expectedSeconds": 10.666666666666666,
+          "notes": 42,
+          "peak": 0.3492855131626129
+        },
+        {
+          "bpm": 120,
+          "seconds": 8.000725623582767,
+          "expectedSeconds": 8,
+          "notes": 42,
+          "peak": 0.3628971576690674
+        },
+        {
+          "bpm": 72,
+          "seconds": 13.334058956916099,
+          "expectedSeconds": 13.333333333333334,
+          "notes": 42,
+          "peak": 0.34851089119911194
+        }
+      ]
+    },
+    {
+      "id": "london-bridge-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 25,
+          "peak": 0.1466575413942337
+        },
+        {
+          "bpm": 60,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 25,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 90,
+          "seconds": 21.334784580498866,
+          "expectedSeconds": 21.333333333333332,
+          "notes": 25,
+          "peak": 0.15732425451278687
+        },
+        {
+          "bpm": 120,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 25,
+          "peak": 0.17068363726139069
+        },
+        {
+          "bpm": 100,
+          "seconds": 19.201451247165533,
+          "expectedSeconds": 19.2,
+          "notes": 25,
+          "peak": 0.1704719215631485
+        }
+      ]
+    },
+    {
+      "id": "london-bridge-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 64.00145124716553,
+          "expectedSeconds": 64,
+          "notes": 42,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 42,
+          "peak": 0.3493841290473938
+        },
+        {
+          "bpm": 90,
+          "seconds": 21.334784580498866,
+          "expectedSeconds": 21.333333333333332,
+          "notes": 42,
+          "peak": 0.35096514225006104
+        },
+        {
+          "bpm": 120,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 42,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 100,
+          "seconds": 19.201451247165533,
+          "expectedSeconds": 19.2,
+          "notes": 42,
+          "peak": 0.3536549508571625
+        }
+      ]
+    },
+    {
+      "id": "row-your-boat-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 27,
+          "peak": 0.16124066710472107
+        },
+        {
+          "bpm": 60,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 27,
+          "peak": 0.16324640810489655
+        },
+        {
+          "bpm": 90,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 27,
+          "peak": 0.17825090885162354
+        },
+        {
+          "bpm": 120,
+          "seconds": 12.000362811791383,
+          "expectedSeconds": 12,
+          "notes": 27,
+          "peak": 0.1761319935321808
+        },
+        {
+          "bpm": 96,
+          "seconds": 15.000090702947846,
+          "expectedSeconds": 15,
+          "notes": 27,
+          "peak": 0.18532605469226837
+        }
+      ]
+    },
+    {
+      "id": "row-your-boat-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 41,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 41,
+          "peak": 0.3528173863887787
+        },
+        {
+          "bpm": 90,
+          "seconds": 16.001451247165534,
+          "expectedSeconds": 16,
+          "notes": 41,
+          "peak": 0.352125883102417
+        },
+        {
+          "bpm": 120,
+          "seconds": 12.000362811791383,
+          "expectedSeconds": 12,
+          "notes": 41,
+          "peak": 0.3338560461997986
+        },
+        {
+          "bpm": 96,
+          "seconds": 15.000090702947846,
+          "expectedSeconds": 15,
+          "notes": 41,
+          "peak": 0.34958335757255554
+        }
+      ]
+    },
+    {
+      "id": "drink-to-me-melody",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 68,
+          "peak": 0.151357963681221
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 68,
+          "peak": 0.16608025133609772
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 68,
+          "peak": 0.18470196425914764
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 68,
+          "peak": 0.18468345701694489
+        },
+        {
+          "bpm": 84,
+          "seconds": 34.28716553287982,
+          "expectedSeconds": 34.285714285714285,
+          "notes": 68,
+          "peak": 0.17924664914608002
+        }
+      ]
+    },
+    {
+      "id": "drink-to-me-chords",
+      "exactMIDI": true,
+      "sourceIdentities": true,
+      "speeds": [
+        {
+          "bpm": 30,
+          "seconds": 96.00145124716553,
+          "expectedSeconds": 96,
+          "notes": 84,
+          "peak": 0.35016822814941406
+        },
+        {
+          "bpm": 60,
+          "seconds": 48.001451247165534,
+          "expectedSeconds": 48,
+          "notes": 84,
+          "peak": 0.3511374890804291
+        },
+        {
+          "bpm": 90,
+          "seconds": 32.001451247165534,
+          "expectedSeconds": 32,
+          "notes": 84,
+          "peak": 0.35699528455734253
+        },
+        {
+          "bpm": 120,
+          "seconds": 24.000725623582767,
+          "expectedSeconds": 24,
+          "notes": 84,
+          "peak": 0.35582107305526733
+        },
+        {
+          "bpm": 84,
+          "seconds": 34.28716553287982,
+          "expectedSeconds": 34.285714285714285,
+          "notes": 84,
+          "peak": 0.3575848639011383
+        }
+      ]
+    }
+  ],
+  "catalogSHA256": "750cf7d08043a3ec8c1b78a8a5ebbe50fae659b9e5860395f26cc825c7800733",
+  "resourceSHA256": {
+    "amazing-grace-chords.musicxml": "f7122cb693b9569ea0ee4203bcd94f290be27cbb30ba1749ebbb8af85fa236fe",
+    "amazing-grace-melody.musicxml": "f91636fb16ecc6222a4c05655d45b3e68ae291c5a6107f7d88352eafddccf431",
+    "ash-grove-chords.musicxml": "401390c8123c34d03f93c84cee10baa561760cb312f395c4d081c7e9cd29f333",
+    "ash-grove-melody.musicxml": "64d5631680da5a7fd2b9101b05e36ca15f3224e75b1e96264c1b241e41c4e932",
+    "auld-lang-syne-chords.musicxml": "3231236f03b3b8aed6d44746c56879b69f28db68af50fd8acf91a10e18b94f80",
+    "auld-lang-syne-melody.musicxml": "63b33c01225e82811f3132eb580561d122440574013324277059fba1ee86aba2",
+    "blue-bells-chords.musicxml": "6bc564d8f0d3e0dd67cf41a214e063cbf5d48caee8b55e214c08b43f028c4fa0",
+    "blue-bells-melody.musicxml": "386e3594473be51106b70bac3f1b34eb62c1017410447069818109bc6ca4893b",
+    "brahms-lullaby-chords.musicxml": "55aa7faf3e7c02009e34460c7d28f050aa5ff46fe77acf9aae7c929e572039f1",
+    "brahms-lullaby-melody.musicxml": "ce398ea9381206a94d2048aa2f44cdcb0dcff516ff321bc51c44d3f0722458d7",
+    "drink-to-me-chords.musicxml": "6bb0a945453f0368ca075d46581ae70e3680170419b2e2cd1889e6eaa9453d6a",
+    "drink-to-me-melody.musicxml": "fe88059522ead50c6ca5925e567cb303ded2b1441fabfe252d0d67c87c7131d6",
+    "frere-jacques-chords.musicxml": "18f33f07ebd839f368e2ea590fe0d4121e49a1f55cc0c6f969dae07b090edaf8",
+    "frere-jacques-melody.musicxml": "652bfb0c9657ca73e4839908441b067dfa96392776f4b7a41ee70bde5440a65a",
+    "fur-elise-chords.musicxml": "2188da710935bc9955be4399422910331f7f1aa71097417d0b3030d9da8676d0",
+    "fur-elise-melody.musicxml": "f50cd3a9c673e70aa26af4d106f903fe6cab6b5738ef974f038c1178d5f25fb2",
+    "greensleeves-chords.musicxml": "9a244536c8ea0afac60d2580a1c314829b4104b6e696356333e6add892b37c68",
+    "greensleeves-melody.musicxml": "20cd5bb6678ab8fbccae4121541d41252df189428cf33a62da30f26226462827",
+    "home-on-range-chords.musicxml": "41fc24a0999edf8e69f9703544dc1856d3fe1e2ec7abb33f4cf312758cfb34a3",
+    "home-on-range-melody.musicxml": "8d743b37f77beb55e2a233f6dcc7387b804f7835777ad53d011bad29ea91122e",
+    "home-sweet-home-chords.musicxml": "553acd6081fb47e85a89adafc3f009c69bf9f63bdf526f7c4609303a3b477614",
+    "home-sweet-home-melody.musicxml": "1fcaf207ce6b0fac73a8f52bd6dc8cff803cac83440d11977c005a55dc4d1077",
+    "london-bridge-chords.musicxml": "4900e8a1ccab1c37ea9e5f982e64e7662e393d968a1aa61efc7bdbcdba671308",
+    "london-bridge-melody.musicxml": "4c3ab0c31a0927f6995cb0a58910774ebecc22ba006d5f2b58c4158e4dfbfd06",
+    "long-long-ago-chords.musicxml": "c90c33d39405d12c1f2f2770eb6c17518a89a8f1bdb63b9db9952c88ad28f3b1",
+    "long-long-ago-melody.musicxml": "96abb966ba0455b2b271ad0b397ecee6bd4b332a005c913ab65d637141ba74c1",
+    "mary-lamb-chords.musicxml": "f3d7688cd6022df1779e34e4448c2d2dcd58e1e8b0791d1c9d5a3663dd99ee2b",
+    "mary-lamb-melody.musicxml": "581e793360f5b5e23e3460d1505f8d50c479873b0d68b86a2de65288f2ded119",
+    "minuet-g-chords.musicxml": "e0ce31f2261055d85e656682da4b5ef38636a8991e1c49499e70d1abaa1b998d",
+    "minuet-g-melody.musicxml": "8dee282936000a4f2fb7c0800f28692f892dba46c31e14d8dbb695a7bb9e3f4b",
+    "ode-to-joy-chords.musicxml": "8e9ce63ed5ba3519d001befa3b5498b4044ec355f3eaace7f7d383e04e9f4a77",
+    "ode-to-joy-melody.musicxml": "8c53b940032012125664ef4b6ba51a1a122d5d77b67db8bb1c30eeb5827fd63b",
+    "oh-susanna-chords.musicxml": "9521a41196a2b1a0d3947cd413d0b59a85b3dfcc09116299c44ca24c7fd8cdee",
+    "oh-susanna-melody.musicxml": "c21b9f24d3afce8c2af7b609f9abc38ebb01cedc28ac7d1f4490a27b51d1203a",
+    "row-your-boat-chords.musicxml": "57b59b5f461870395298d222023ba63cb113b53cd1d1171278ce108581a79e0f",
+    "row-your-boat-melody.musicxml": "67e03cbbe11bab7f346a66749aa253120fbc10ba7ad652fbbdff1075d133efe7",
+    "sweet-afton-chords.musicxml": "d3543b0c5ef6ad7af764986532e67af05b2740b280c6d8e5c30277112ae41bac",
+    "sweet-afton-melody.musicxml": "8e263064c7570f1a2002383502a346c1579050f13910bdcd52bfd82f2fdc2787",
+    "twinkle-chords.musicxml": "19122ece480b00463802998437b90395d28a53abc961ae5ea94a7a83ee0bf205",
+    "twinkle-melody.musicxml": "6f1cce3e7feb9b4bf3c2d893bc3bdd8f24be667310444acada61cf22fd39d7cc"
+  },
+  "date": "2026-09-07",
+  "metadataOnlyUpdate": "Source links now open the inspected Auld Lang Syne 1887 edition and Row Your Boat 1881 scan. All 40 MusicXML hashes unchanged; arrangement events, positions and tempos unchanged."
+}

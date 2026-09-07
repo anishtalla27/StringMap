@@ -101,3 +101,7 @@ The unmodified alphaTab source is available at https://github.com/CoderLine/alph
 HOMR uses NumPy (BSD-3-Clause), ONNX Runtime (MIT), OpenCV (Apache-2.0), Pillow (HPND), RapidOCR (Apache-2.0) and their pinned transitive packages. The recognition API uses FastAPI (MIT), Starlette (BSD-3-Clause), Uvicorn (BSD-3-Clause), cryptography (Apache-2.0 OR BSD-3-Clause), cbor2 (MIT), and asn1crypto (MIT). Transitive package metadata and exact versions are captured in the release evidence. Apple App Attest root certificates are distributed by Apple for signature verification.
 
 Verovio (LGPL-3.0), CairoSVG (LGPL-3.0), and their dependencies are development-only benchmark tools, not iOS or recognition-container dependencies. The generated studies are original StringMap test compositions. Their synthetic variants must never be reported as real camera photographs or genuine handwriting.
+
+## Songbook · Familiar Classics
+
+The offline Songbook adds 20 historical traditional/classical melodies in 40 original StringMap guitar arrangements. It bundles no source scans, lyrics, historical accompaniment parts, commercial tabs, or external recordings. The exact editions, chosen variants, composition-rights assessment, and independent melodic/harmonic references are documented in `docs/release/songbook/`. Individual historical-source links and version descriptions are available inside each song card. The existing CC0 FreePats guitar SoundFont produces playback.

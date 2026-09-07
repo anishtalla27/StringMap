@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "build": "5",
+  "archive": "artifacts/StringMap-1.0.0-build5-candidate.xcarchive",
+  "signing": "Apple Development; signature verified with codesign --verify --deep --strict",
+  "team": "S8DY583234",
+  "distributionExport": "Blocked: rechecked 2026-09-07, Xcode export reports No Accounts and no iOS Distribution certificate. See artifacts/songbook-export-current.log.",
+  "uploaded": false,
+  "submitted": false,
+  "physicalListening": "pending",
+  "spokenVoiceOver": "pending",
+  "testFlight": "pending",
+  "entitlements": {
+    "application-identifier": "S8DY583234.com.anishtalla.StringMap",
+    "com.apple.developer.team-identifier": "S8DY583234",
+    "get-task-allow": true
+  },
+  "hashes": {
+    "StringMap": "ec64bb290199314c25b30ec5e0eda34c99331710fafd9ae64e1564a206d1426e",
+    "AlphaTab/bridge.js": "60976d84d16f3bdf9d01a7c1cb8428c189070bf11d460e65c5ca9f4dc2e784b4",
+    "Songbook/catalog.json": "750cf7d08043a3ec8c1b78a8a5ebbe50fae659b9e5860395f26cc825c7800733",
+    "Tutorial/course.json": "1d63d9c3cba03b946aca36e97d7d3d01c7e6aff3f9e0649c990d5da86d70d875",
+    "Exercises/catalog.json": "1c980e881a7051f449d72b99aea8a32287d3a5d7e217d91e12605bd53af5caa3"
+  },
+  "physicalInstall": "Prior build 5 installed successfully. Refresh with the source-link-only update is pending: CoreDeviceService can no longer locate the paired device.",
+  "physicalLaunch": "pending: installed candidate could not launch because the iPhone is locked",
+  "physicalDeviceStatus": "Rechecked 2026-09-07: paired iPhone 14 Pro unavailable."
+}

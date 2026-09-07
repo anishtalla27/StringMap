@@ -20,4 +20,10 @@ assert course['version']==1 and len(course['lessons'])==24
 phrases=[p['id'] for lesson in course['lessons'] for p in lesson['phrases']]
 assert len(set(phrases))==40
 assert set(phrases)=={p.stem for p in (app/'Tutorial').glob('*.musicxml')}
-print(json.dumps({'tutorialLessons':len(course['lessons']),'tutorialExamples':len(phrases),'microphonePermissionAbsent':True,'listeningSymbolsAbsent':True,'scannerSymbolsAbsent' :True,'photoPermissionsAbsent':True,'recognitionURLAbsent':True,'collectedDataTypes':[],'bundledExercises':18}))
+book=json.loads((app/'Songbook/catalog.json').read_text())
+assert len(book['songs'])==20
+arrangements=[a for song in book['songs'] for a in song['arrangements']]
+assert len(arrangements)==40 and len({a['id'] for a in arrangements})==40
+assert {a['resource'] for a in arrangements}=={p.stem for p in (app/'Songbook').glob('*.musicxml')}
+assert {p.suffix for p in (app/'Songbook').iterdir()}=={'.json','.musicxml'}
+print(json.dumps({'songbookSongs':20,'songbookArrangements':40,'tutorialLessons':len(course['lessons']),'tutorialExamples':len(phrases),'microphonePermissionAbsent':True,'listeningSymbolsAbsent':True,'scannerSymbolsAbsent' :True,'photoPermissionsAbsent':True,'recognitionURLAbsent':True,'collectedDataTypes':[],'bundledExercises':18}))

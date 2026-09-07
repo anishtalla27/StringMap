@@ -28,11 +28,13 @@ final class SongDocument {
     var lastPracticedPosition: Double
     var lockedPositionsData: Data
     var generatedArrangementState: String
+    var bundledArrangementID: String? = nil
     var practiceSpeed: Double?
     var loopStartMeasure: Int?
     var loopEndMeasure: Int?
     var metronomeEnabled: Bool?
     var countInEnabled: Bool?
+    var showTabEnabled: Bool? = nil
 
     init(
         id: UUID = UUID(),
@@ -123,7 +125,8 @@ final class SongDocument {
             loopStartMeasure: loopStartMeasure,
             loopEndMeasure: loopEndMeasure,
             metronomeEnabled: metronomeEnabled ?? false,
-            countInEnabled: countInEnabled ?? false
+            countInEnabled: countInEnabled ?? false,
+            showTab: showTabEnabled ?? true
         )
     }
 
@@ -150,6 +153,7 @@ final class SongDocument {
         loopEndMeasure = model.loopEndMeasure
         metronomeEnabled = model.player.isMetronomeEnabled
         countInEnabled = model.player.isCountInEnabled
+        showTabEnabled = model.player.showTab
         updatedAt = .now
     }
 

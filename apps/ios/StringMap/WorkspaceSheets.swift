@@ -51,6 +51,7 @@ struct PracticeSettingsView: View {
                     Button("Previous measure", systemImage: "backward.end") { model.previousMeasure() }
                     Button("Back five seconds", systemImage: "gobackward.5") { model.jumpBackward() }
                     Button("Next measure", systemImage: "forward.end") { model.nextMeasure() }
+                        .accessibilityIdentifier("practiceNextMeasure")
                     Button("Loop current measure", systemImage: "repeat.1") { model.loopCurrentMeasure() }
                         .accessibilityIdentifier("practiceLoopCurrentMeasure")
                         .disabled(model.currentMeasureIndex == nil)
@@ -184,6 +185,7 @@ struct InstrumentSettingsView: View {
                             Text(capo == 0 ? "None" : "Fret \(capo)").stableNumber(.body)
                         }
                     }
+                    .accessibilityIdentifier("instrumentCapo")
                     Stepper(value: $maxFret, in: 12...30) {
                         LabeledContent("Last fret") { Text("\(maxFret)").stableNumber(.body) }
                     }

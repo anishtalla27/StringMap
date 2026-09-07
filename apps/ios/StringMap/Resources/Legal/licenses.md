@@ -52,6 +52,12 @@ StringMap's original metronome click and bank mapping adaptation are also dedica
 
 The unmodified alphaTab source is available at https://github.com/CoderLine/alphaTab/tree/v1.8.4. The app bundles the MPL-2.0 license. StringMap's separate bridge is original application code.
 
+## Songbook · Familiar Classics
+
+20 traditional songs and classical themes are provided in 40 original StringMap guitar arrangements: Melody and Chords. Only historical instrumental melodies are used. No lyrics, historical piano/choral accompaniments, external recordings, source images, commercial tabs, or modern guitar arrangements are bundled. Each song’s About this tune section identifies its historical edition, chosen version, and source link.
+
+The collection includes Amazing Grace, Auld Lang Syne, Greensleeves, Flow Gently Sweet Afton, The Ash Grove, The Blue Bells of Scotland, Home Sweet Home, Long Long Ago, Oh Susanna, Home on the Range, Ode to Joy (theme), Für Elise (opening theme), Petzold’s Minuet in G, Brahms’ Lullaby, Twinkle Twinkle Little Star, Frère Jacques, Mary Had a Little Lamb, London Bridge, Row Row Row Your Boat, and Drink to Me Only with Thine Eyes. Historical variants are identified in the catalog. Chords is an original beginner accompaniment, not the melody or a copy of an earlier harmonization.
+
 ## Original exercises
 
 The 18 bundled single-note exercises were created for StringMap. No third-party song or arrangement is included in this catalog.
@@ -680,4 +686,4 @@ Reproduction: download `SpanishClassicalGuitar-SF2-20190618.7z` from the source 
 
 ## Original tutorial course
 
-The 12 tutorial lessons, 16 musical examples, and teaching overlays were authored for StringMap. No third-party course text, arrangements, or recordings are included. See Tutorial/PROVENANCE.md in the bundled resources.
+The 24 tutorial lessons, 40 musical examples, and teaching overlays were authored for StringMap. No third-party course text, arrangements, or recordings are included. See Tutorial/PROVENANCE.md in the bundled resources.
