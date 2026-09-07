@@ -219,10 +219,10 @@
   "rotationReview": {
     "runs": [
       "songbook-rotation-ipad-25",
-      "songbook-rotation-phone-26"
+      "songbook-rotation-phone-29"
     ],
-    "scope": "Full-display landscape and landscape-score captures inspected on both devices. No black crop, missing fretboard edge or overlap; large text content scrolls to notation and controls.",
-    "result": "passed",
+    "scope": "Full-display landscape/score images inspected on iPad. On iPhone at accessibility large text, targeted scrolling exposes all six G-chord markers; notation and board require separate scroll positions on the short screen. The initial header-only capture is retained to show why whole-app swipes were insufficient.",
+    "result": "passed within stated simulator scope; physical-device accessibility remains pending",
     "environment": "Simulator orientation stopped updating intermittently; restart resolved both devices without an app change. App-scoped screenshot crop was independently corrected to full-display capture."
   }
 }

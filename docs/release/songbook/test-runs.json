@@ -144,5 +144,35 @@
     "skippedTests": 0,
     "startTime": 1788799850.554,
     "finishTime": 1788799899.083
+  },
+  "songbook-rotation-phone-27": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799986.799,
+    "finishTime": 1788800026.311,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
+  },
+  "songbook-rotation-phone-28": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788800083.4,
+    "finishTime": 1788800164.803,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
+  },
+  "songbook-rotation-phone-29": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788800162.697,
+    "finishTime": 1788800204.613,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
   }
 }

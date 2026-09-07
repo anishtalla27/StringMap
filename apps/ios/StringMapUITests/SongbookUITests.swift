@@ -217,7 +217,20 @@ extension SongbookUITests {
         RunLoop.current.run(until: Date().addingTimeInterval(2))
         XCTAssertTrue(app.buttons["playPause"].isHittable)
         capture("songbook-large-text-landscape", app)
-        app.swipeUp()
+        // Swipe inside the content scroll view: a whole-app swipe can start
+        // on the fixed bottom transport/tab bar in short iPhone landscape.
+        let contentScroll = app.scrollViews.firstMatch
+        for _ in 0..<24 {
+            let frame = board.frame
+            if frame.minY >= 60 && frame.maxY <= app.frame.height - 100 { break }
+            let start = contentScroll.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.6))
+            let delta = max(-25.0, min(25.0, app.frame.height * 0.4 - frame.midY))
+            let end = contentScroll.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.6 + delta / contentScroll.frame.height))
+            start.press(forDuration: 0.1, thenDragTo: end)
+        }
+        XCTAssertTrue(board.isHittable)
+        capture("songbook-large-text-landscape-board", app)
+        contentScroll.swipeUp()
         capture("songbook-large-text-landscape-score", app)
         XCUIDevice.shared.orientation = .portrait
         expectation(for: NSPredicate { _, _ in app.frame.height > app.frame.width }, evaluatedWith: app)
