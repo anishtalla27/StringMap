@@ -16,6 +16,7 @@ settings:
     IPHONEOS_DEPLOYMENT_TARGET: "26.0"
     TARGETED_DEVICE_FAMILY: "1,2"
     CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: S8DY583234
 
 targets:
   StringMap:
@@ -101,8 +102,6 @@ targets:
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
     settings:
-      base:
-        DEVELOPMENT_TEAM: S8DY583234
       configs:
         Debug:
           APP_ATTEST_ENVIRONMENT: development

@@ -56,3 +56,5 @@ Run `SongbookUITests` on both iPhone and iPad using the `StringMap` scheme, exce
 3. Upload the qualified candidate separately, update the App Store draft with current metadata/screenshots, verify country availability and account-holder content-rights/trader declarations, and complete the planned seven-day TestFlight exercise. Earlier build-1 draft/contact/privacy work remains historical evidence; it does not establish the new candidate is ready. Submission and public release remain separate actions.
 
 The optional white-background icon image is saved under docs/design/icon; it has not replaced the selected Orange Frame app icon.
+
+Newly connected iPhone 14 Pro: current Release build installed and launched September 7; three physical UI smoke tests passed with zero failures. See [physical-device-smoke.md](physical-device-smoke.md) for scope and reviewed captures.
