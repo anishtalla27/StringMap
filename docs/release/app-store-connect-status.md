@@ -1,4 +1,12 @@
-# App Store Connect preparation
+# App Store Connect submission
+
+## Current status — September 7, 2026, 3:17 PM EDT
+
+StringMap 1.0.0 (5) submitted successfully; Apple shows **Waiting for Review**. Submission ID: 889a503b-ffb6-40da-a94a-8629bfc0b741. The account holder saved the affirmative third-party content rights declaration before submission. Manual release remains selected; approval will not automatically publish the app. EU trader status still requires the account holder's answer, and elapsed TestFlight qualification remains incomplete. The user explicitly requested expedited submission. No elapsed testing success is implied.
+
+Status page: https://appstoreconnect.apple.com/apps/6809277270/distribution/reviewsubmissions/details/889a503b-ffb6-40da-a94a-8629bfc0b741
+
+The following notes are historical preparation milestones, superseded by the status above.
 
 Historical status: verified September 6, 2026 in the signed-in account.
 
