@@ -34,5 +34,6 @@
     "com.apple.developer.team-identifier": "S8DY583234",
     "get-task-allow": false,
     "beta-reports-active": true
-  }
+  },
+  "keychainAuthorization": "User selected Always Allow. A subsequent fresh export succeeded without another password prompt on 2026-09-07; artifacts/songbook-permission-verified.log."
 }
