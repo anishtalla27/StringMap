@@ -11,3 +11,16 @@ const settings = new Settings(); settings.fillFromJson(api.initialSettings);
 assert.equal(settings.notation.isNotationElementVisible(NotationElement.ScoreTitle),false);
 assert.equal(settings.notation.isNotationElementVisible(NotationElement.ScoreSubTitle),false);
 console.log("PASS: actual alphaTab settings suppress duplicate native score titles");
+
+// WebKit owns a separate session: configure it before synth creation and restore
+// it on resume (for example after an internal microphone session).
+const audioSession = {type: 'auto'};
+const AudioAPI = class extends API {
+  constructor(...args) { assert.equal(audioSession.type, 'playback'); super(...args); }
+  playPause() { assert.equal(audioSession.type, 'playback'); return true; }
+};
+const audioContext = {...context, navigator: {audioSession}, alphaTab: {...context.alphaTab, AlphaTabApi: AudioAPI}, window: {...context.window}};
+vm.runInNewContext(fs.readFileSync('apps/ios/StringMap/Resources/AlphaTab/bridge.js','utf8'), audioContext);
+audioSession.type = 'auto';
+assert.equal(audioContext.window.stringMap.playPause(), true);
+console.log('PASS: Web Audio requests media playback before synth creation and on resume; missing API remains supported');

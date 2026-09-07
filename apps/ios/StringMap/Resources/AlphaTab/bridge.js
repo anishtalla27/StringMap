@@ -1,6 +1,15 @@
 (() => {
   "use strict";
 
+  // WKWebView's Web Audio session is separate from the host's AVAudioSession.
+  // Music must use the media volume even when the Ring/Silent switch is silent.
+  const preparePlaybackSession = () => {
+    if (globalThis.navigator?.audioSession) {
+      navigator.audioSession.type = "playback";
+    }
+  };
+  preparePlaybackSession();
+
   const post = (type, detail = {}) => {
     window.webkit?.messageHandlers?.stringMap?.postMessage({ type, ...detail });
   };
@@ -137,6 +146,7 @@
       if (host) { host.style.visibility = "hidden"; }
     },
     playPause() {
+      preparePlaybackSession();
       return api.playPause();
     },
     pause() { api.pause(); },
