@@ -1,0 +1,504 @@
+{
+  "releaseQualified": false,
+  "realCameraImages": 0,
+  "images": 22,
+  "printed": 15,
+  "printedRecognized": 11,
+  "printedStrictParsed": 10,
+  "printedStandardTabPlayable": 7,
+  "handwritingRecognized": 0,
+  "cases": [
+    {
+      "image": "handwritten_photos/01_CVC-MUSCIMA_W-07_N-05_D-ideal__soft_shadow.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "9f563bcdb48d02cdfa0b4ddff7f9d08383d53a3900f583ef4a54d5e8c4a0e6be",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 6.071534957998665
+    },
+    {
+      "image": "handwritten_photos/02_CVC-MUSCIMA_W-29_N-10_D-ideal__perspective.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "91e1d91b1cff37dc9ee9f8ba73ed46d3be0f7edd00f69359092e3f3fddf3dd8d",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 6.042247584002325
+    },
+    {
+      "image": "handwritten_photos/03_CVC-MUSCIMA_W-37_N-17_D-ideal__tilt_right.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "78b1c45dcd8ef8a6273e2a17b562a850e4e754c9f0cc0ed01e2227200b4c5ff3",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 8.078142374986783
+    },
+    {
+      "image": "handwritten_photos/04_CVC-MUSCIMA_W-27_N-16_D-ideal__hard_shadow.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "33b5f382a582bff1f77a96fa9a684fd73ac3301cfba0d35df914da666d905498",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 4.048595333006233
+    },
+    {
+      "image": "handwritten_photos/05_CVC-MUSCIMA_W-09_N-13_D-ideal__flat.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "b213138de3a385c139510900c97fe3f9d4ccca6980659246963d1c4ca8fadc2c",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 6.075315333000617
+    },
+    {
+      "image": "handwritten_photos/06_CVC-MUSCIMA_W-50_N-08_D-ideal__tilt_left.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "8ac444b83441f68fa84f0e9bbbfd3608232b5482e2890db5a6c71d1ef3179c10",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 4.06204233400058
+    },
+    {
+      "image": "handwritten_photos/07_CVC-MUSCIMA_W-16_N-17_D-ideal__soft_shadow.jpg",
+      "kind": "handwritten_general_notation",
+      "status": "failed",
+      "error": "This layout contains multiple or unresolved staves. Crop the guitar part alone; no staves were discarded.",
+      "imageSHA256": "26c8410aec7a15abcb9bcc0c46442575303405560bc033364236cbc91f377416",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 4.055878792016301
+    },
+    {
+      "image": "printed_photos/01_fantasy_p5__flat.jpg",
+      "kind": "printed_guitar",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "0f87d278994a2b63aeb5e6bc30201d9cc0e7fb5cf7af2a8a465a9f3d22951475",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 24.10609195800498
+    },
+    {
+      "image": "printed_photos/02_fancy_p6__tilt_left.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "ca598dc81fa3d1d2660ffb57f8ca7361db02f1ca12882d6ff081973ee077a60f",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 328,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 328,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 24.41964283300331
+    },
+    {
+      "image": "printed_photos/03_solus_cum_sola__soft_shadow.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "8af891ab3e7d3b114ee7e846b689f31b20c92a51017d53fcb43966764b3aba29",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": false,
+      "tabError": "The notes sounding at beat 32.75 cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 342,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "seconds": 24.325347665988375
+    },
+    {
+      "image": "printed_photos/04_solus_sine_sola__perspective.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "198d8188902402c5403c9d767cdafae05da08d222c9bcba3343734c8d8a38ca4",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 311,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 311,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 24.37314220800181
+    },
+    {
+      "image": "printed_photos/05_dr_cases_pavan__tilt_right.jpg",
+      "kind": "printed_guitar",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 28.108881457999814
+    },
+    {
+      "image": "printed_photos/06_lachrimae_pavan__hard_shadow.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "058d76dd986da89bf836fe1c5adadc13f8cb391d247e7b5915da1ec54f071bce",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 398,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 28.423918458021944
+    },
+    {
+      "image": "printed_photos/07_digorie_pipers_galliard__flat.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "1ea02839d0a67591d4f382dec23899395f88e686cb92fddfaa9ad37909f470b1",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": false,
+      "tabError": "The notes sounding at beat 51.5 cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 535,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "seconds": 32.35938479201286
+    },
+    {
+      "image": "printed_photos/08_dowlands_first_galliard__tilt_left.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "8b0382089cc3231284143191c4358487be0783987d29b1c21e5ec01650251e0f",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 265,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 24.366610958008096
+    },
+    {
+      "image": "printed_photos/09_frog_galliard__soft_shadow.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "75d3a064a93c1215f6b2fc3982e956569d1b80848625afaef5c97cc0ca2ea44b",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 463,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 34.48455974998069
+    },
+    {
+      "image": "printed_photos/10_galliard_p24__perspective.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "6b791b9f0d14850d97fd0d4bc9a713d26b5a292cead0914cd7abd12ac3c642d7",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 360,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 22.3986007909989
+    },
+    {
+      "image": "printed_photos/11_melancholy_galliard__tilt_right.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "7a0067aa2fcaf43148f898f70171a21c22bb0b58b7da44c34646615917a24052",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": false,
+      "importError": "Invalid MusicXML: Measure 10: <fermata> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 50.33522179198917
+    },
+    {
+      "image": "printed_photos/12_galliard_p27__hard_shadow.jpg",
+      "kind": "printed_guitar",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "ec524544e114de314096cd8adaf0a57e2f2251ce2bff35c45d6070a175b394cd",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 26.13231712501147
+    },
+    {
+      "image": "printed_photos/13_galliard_p28__flat.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "fba6966a915dbdb92407f9bc38ca084b0fd8c72615f2326ea0a42001fea6ab46",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": false,
+      "tabError": "The notes sounding at beat 25.5 cannot fit on this six-string guitar without dropping notes or exceeding the hand span. Review the notes or change the instrument.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 652,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      },
+      "seconds": 64.90182129200548
+    },
+    {
+      "image": "printed_photos/14_giles_hobies_galliard__tilt_left.jpg",
+      "kind": "printed_guitar",
+      "status": "failed",
+      "error": "The page could not be read. Retake it or import MusicXML.",
+      "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": null,
+      "importError": null,
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null,
+      "seconds": 54.44954516700818
+    },
+    {
+      "image": "printed_photos/15_galliard_p30__soft_shadow.jpg",
+      "kind": "printed_guitar",
+      "status": "completed",
+      "error": null,
+      "imageSHA256": "ae15faf24b74edbee19f8fca831ff7dfd354a3570425057f016329d6fd0bbef0",
+      "recognizerSHA256": "288941a65b7975e54107a04a61dfb4d55f05c06b17e8914da88148a6e5d5654f",
+      "photoPitchConvention": "guitarWritten",
+      "parsed": true,
+      "importError": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 287,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "seconds": 30.62868100000196
+    }
+  ],
+  "controlledCleanRegression": {
+    "images": 32,
+    "noteEvents": 1136,
+    "noteEventF1": 1.0,
+    "chordOnsets": 168,
+    "completeChords": 168,
+    "actualHTTPRecognition": true,
+    "pitchConvention": "Historical generated concert-pitch scores; not guitar-written photo qualification",
+    "negativeInputsRejected": 3
+  },
+  "finalSimulatorWorkflow": {
+    "iphone": {
+      "result": "passed",
+      "tests": 1,
+      "failures": 0,
+      "observedNotes": 314,
+      "observedMeasures": 21,
+      "xcresult": "artifacts/preserved-unison-final-iphone.xcresult"
+    },
+    "ipad": {
+      "result": "passed",
+      "tests": 1,
+      "failures": 0,
+      "observedNotes": 314,
+      "observedMeasures": 21,
+      "xcresult": "artifacts/preserved-unison-final-ipad.xcresult"
+    },
+    "scope": "Actual Photos, crop and rotation, real recognition, explicit warnings, edit and undo, audition, tab, save, relaunch and removal of the test copy. Not full reference correction or physical audio qualification."
+  }
+}

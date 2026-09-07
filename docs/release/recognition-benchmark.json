@@ -1,0 +1,609 @@
+{
+  "engine": "HOMR 457e7c6518a10ba755db2e60883419e56c4d7369 + StringMap guitar adapter v2",
+  "environment": "Linux ARM64, Python 3.12.13, ONNX CPU",
+  "completedImages": 153,
+  "printedImages": 148,
+  "distinctOriginalCompositions": 32,
+  "expectedRejections": 5,
+  "noteEventF1": 1.0,
+  "matchingNoteEvents": 5120,
+  "completeChordOnsets": 800,
+  "missingNotes": 0,
+  "extraNotes": 0,
+  "pitchOnsetDurationExact": true,
+  "sourceIdentityAndTabPlaybackRecheck": [
+    {
+      "images": 102,
+      "exactRecognizedImages": 100,
+      "expectedRejections": 2,
+      "notes": 2880,
+      "chords": 640
+    },
+    {
+      "images": 48,
+      "exactRecognizedImages": 48,
+      "expectedRejections": 0,
+      "notes": 2240,
+      "chords": 160
+    }
+  ],
+  "basicCorpus": {
+    "recordedAt": "2026-09-06T00:31:29.145204+00:00",
+    "plannedImages": 102,
+    "completedCases": 102,
+    "pendingCases": 0,
+    "groups": {
+      "synthetic": {
+        "images": 2,
+        "recognitionFailures": 2,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          }
+        },
+        "chords": {
+          "total": 0,
+          "complete": 0
+        },
+        "medianSeconds": 6.055,
+        "maxSeconds": 6.06
+      },
+      "synthetic-blur": {
+        "images": 20,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 128,
+          "complete": 128
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 6.2
+      },
+      "engraved": {
+        "images": 20,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 128,
+          "complete": 128
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 9.49
+      },
+      "synthetic-dim": {
+        "images": 20,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 128,
+          "complete": 128
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 6.2
+      },
+      "synthetic-perspective": {
+        "images": 20,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 128,
+          "complete": 128
+        },
+        "medianSeconds": 3.1550000000000002,
+        "maxSeconds": 6.19
+      },
+      "synthetic-rotate": {
+        "images": 20,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 576,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 128,
+          "complete": 128
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 15.49
+      }
+    },
+    "realCameraImages": 0,
+    "genuineHandwritingImages": 0,
+    "independentlyReviewedReferences": 0,
+    "correctedInAppAndMatchedReference": 0,
+    "releaseTargetsMet": false,
+    "buildFingerprints": [
+      "9531a4bc9503e0ca767721586d43b3c5c9924351757caf45b8845a09e7fde350"
+    ],
+    "scope": "102 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+    "engines": [
+      "homr-457e7c6-guitar-v2-linux-arm64"
+    ]
+  },
+  "complexCorpus": {
+    "recordedAt": "2026-09-06T00:38:25.060704+00:00",
+    "plannedImages": 48,
+    "completedCases": 48,
+    "pendingCases": 0,
+    "groups": {
+      "synthetic-blur": {
+        "images": 12,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 40,
+          "complete": 40
+        },
+        "medianSeconds": 6.245,
+        "maxSeconds": 18.42
+      },
+      "engraved": {
+        "images": 12,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 40,
+          "complete": 40
+        },
+        "medianSeconds": 6.300000000000001,
+        "maxSeconds": 12.38
+      },
+      "synthetic-dim": {
+        "images": 12,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 40,
+          "complete": 40
+        },
+        "medianSeconds": 6.359999999999999,
+        "maxSeconds": 16.34
+      },
+      "synthetic-rotate": {
+        "images": 12,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 560,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 40,
+          "complete": 40
+        },
+        "medianSeconds": 9.195,
+        "maxSeconds": 15.33
+      }
+    },
+    "realCameraImages": 0,
+    "genuineHandwritingImages": 0,
+    "independentlyReviewedReferences": 0,
+    "correctedInAppAndMatchedReference": 0,
+    "releaseTargetsMet": false,
+    "buildFingerprints": [
+      "9531a4bc9503e0ca767721586d43b3c5c9924351757caf45b8845a09e7fde350"
+    ],
+    "scope": "48 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+    "engines": [
+      "homr-457e7c6-guitar-v2-linux-arm64"
+    ]
+  },
+  "realCameraImages": 0,
+  "independentlyReviewedReferences": 0,
+  "guitarHandwritingImages": 0,
+  "releaseTargetsMet": false,
+  "unmetQualification": "Actual camera photos, independently checked references, guitar handwriting and in-app correction qualification remain required. Generated image variants do not satisfy those requirements.",
+  "handwritingResearchPilot": {
+    "scope": "One isolated treble staff from a historical piano manuscript, not guitar qualification or shipping support. Research-only NC-licensed dataset.",
+    "results": {
+      "homr.musicxml": {
+        "pitch": {
+          "truePositive": 23,
+          "missing": 4,
+          "extra": 7,
+          "f1": 0.8070175438596491
+        },
+        "onset": {
+          "truePositive": 15,
+          "missing": 12,
+          "extra": 15,
+          "f1": 0.5263157894736842
+        },
+        "duration": {
+          "truePositive": 24,
+          "missing": 3,
+          "extra": 6,
+          "f1": 0.8421052631578947
+        },
+        "noteEvent": {
+          "truePositive": 8,
+          "missing": 19,
+          "extra": 22,
+          "f1": 0.2807017543859649
+        },
+        "chords": {
+          "total": 0,
+          "complete": 0
+        }
+      },
+      "zeus/page.musicxml": {
+        "pitch": {
+          "truePositive": 23,
+          "missing": 4,
+          "extra": 4,
+          "f1": 0.8518518518518519
+        },
+        "onset": {
+          "truePositive": 25,
+          "missing": 2,
+          "extra": 2,
+          "f1": 0.9259259259259259
+        },
+        "duration": {
+          "truePositive": 23,
+          "missing": 4,
+          "extra": 4,
+          "f1": 0.8518518518518519
+        },
+        "noteEvent": {
+          "truePositive": 19,
+          "missing": 8,
+          "extra": 8,
+          "f1": 0.7037037037037037
+        },
+        "chords": {
+          "total": 0,
+          "complete": 0
+        }
+      }
+    }
+  },
+  "preservedInitialRuns": [
+    "artifacts/omr-results (18 oemer cases, stopped for failures)",
+    "artifacts/engine-evaluation/linux-http-v2 (startup race; connection failures retained)",
+    "artifacts/engine-evaluation/homr-rhythm-v1 (triplet reference engraving omitted tuplet numeral; replaced by separately generated v2, never overwritten)"
+  ],
+  "container": {
+    "sourceArchiveSHA256": "0c998c051594b4a9eec026ee963ec30dc98a8de5fa96b3124d28004936f6c2ee",
+    "sourceMatchesLocal": true,
+    "publicAppleRootIncluded": true,
+    "containerImageID": "sha256:550eac5e4e85dffa5b9e358ac4d865e851aa4714c847ecaf2227ec7f72903be3"
+  },
+  "additionalUnsupportedCorpus": {
+    "recordedAt": "2026-09-06T00:51:47.068044+00:00",
+    "plannedImages": 3,
+    "completedCases": 3,
+    "pendingCases": 0,
+    "groups": {
+      "generated-unsupported": {
+        "images": 3,
+        "recognitionFailures": 3,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 0,
+            "extra": 0,
+            "f1": null
+          }
+        },
+        "chords": {
+          "total": 0,
+          "complete": 0
+        },
+        "medianSeconds": 6.15,
+        "maxSeconds": 9.08
+      }
+    },
+    "realCameraImages": 0,
+    "genuineHandwritingImages": 0,
+    "independentlyReviewedReferences": 0,
+    "correctedInAppAndMatchedReference": 0,
+    "releaseTargetsMet": false,
+    "buildFingerprints": [],
+    "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+    "engines": [
+      "homr-457e7c6-guitar-v2-linux-arm64"
+    ]
+  },
+  "liveSimulatorWorkflow": {
+    "iphone": {
+      "passed": true,
+      "evidence": "artifacts/ios-final-live-iphone.xcresult"
+    },
+    "ipad": {
+      "passed": true,
+      "evidence": "artifacts/ios-final-chord-ipad.xcresult"
+    },
+    "scope": "Actual system Photos selection of a controlled printed fixture, crop, consent, HTTP recognition, note edit/undo, audition, saving, chord fretboard and library relaunch. Not physical camera or audible device qualification."
+  }
+}

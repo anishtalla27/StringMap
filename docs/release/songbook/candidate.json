@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "build": "5",
+  "archive": "artifacts/StringMap-1.0.0-build5-candidate.xcarchive",
+  "signing": "Apple Development; signature verified with codesign --verify --deep --strict",
+  "team": "S8DY583234",
+  "distributionExport": "Passed 2026-09-07 after Xcode GUI validation refreshed provisioning. CLI export succeeded; signature verification and offline release audit passed.",
+  "uploaded": true,
+  "submitted": true,
+  "physicalListening": "Passed per user confirmation on 2026-09-07: audible playback, Bluetooth/headphones and interruptions worked well.",
+  "spokenVoiceOver": "Passed per user confirmation on 2026-09-07.",
+  "testFlight": "Build 5 Ready to Test; StringMap Release Testing internal group created, account holder invited, current testing instructions saved. Invitation acceptance and elapsed testing not yet verified.",
+  "entitlements": {
+    "application-identifier": "S8DY583234.com.anishtalla.StringMap",
+    "com.apple.developer.team-identifier": "S8DY583234",
+    "get-task-allow": true
+  },
+  "hashes": {
+    "StringMap": "ec64bb290199314c25b30ec5e0eda34c99331710fafd9ae64e1564a206d1426e",
+    "AlphaTab/bridge.js": "60976d84d16f3bdf9d01a7c1cb8428c189070bf11d460e65c5ca9f4dc2e784b4",
+    "Songbook/catalog.json": "750cf7d08043a3ec8c1b78a8a5ebbe50fae659b9e5860395f26cc825c7800733",
+    "Tutorial/course.json": "1d63d9c3cba03b946aca36e97d7d3d01c7e6aff3f9e0649c990d5da86d70d875",
+    "Exercises/catalog.json": "1c980e881a7051f449d72b99aea8a32287d3a5d7e217d91e12605bd53af5caa3"
+  },
+  "physicalInstall": "Passed 2026-09-07: current build 5 Release installed on newly registered iPhone 14 Pro, iOS 26.6.1.",
+  "physicalLaunch": "Passed 2026-09-07: standalone CoreDevice launch after Release UI tests.",
+  "physicalDeviceStatus": "Connected iPhone 14 Pro, iOS 26.6.1; Developer Mode and provisioning ready.",
+  "physicalQualificationSource": "User-reported testing; device models, OS versions and detailed trial records not supplied.",
+  "appleValidation": "Passed 2026-09-07 at 13:11 EDT: Organizer shows Validation succeeded for version 1.0.0 (5).",
+  "distributionPackage": "artifacts/songbook-distribution-validated/StringMap.ipa",
+  "distributionSHA256": "b6ef008938d73ed1cf6c54ca7716681c527adaa27fbeac81cf29d0b9f642862c",
+  "distributionEntitlements": {
+    "application-identifier": "S8DY583234.com.anishtalla.StringMap",
+    "com.apple.developer.team-identifier": "S8DY583234",
+    "get-task-allow": false,
+    "beta-reports-active": true
+  },
+  "keychainAuthorization": "User selected Always Allow. A subsequent fresh export succeeded without another password prompt on 2026-09-07; artifacts/songbook-permission-verified.log.",
+  "physicalReleaseSmoke": "3 Release UI tests passed, 0 failures, 77.272 seconds. Home transport, tutorial and Free Practice clock/fretboard progression, pause/resume, Songbook melody/chord switching and saved seek restoration. See physical-device-smoke.md.",
+  "appleUpload": "Passed September 7, 2026, 2:57 PM EDT via Xcode Organizer. Build 5 processed successfully in App Store Connect.",
+  "submissionStatus": "Waiting for Review; submitted September 7, 2026 at 3:17 PM EDT. Version 1.0.0 (5).",
+  "submissionID": "889a503b-ffb6-40da-a94a-8629bfc0b741",
+  "releaseMode": "Manual release after approval; not publicly released.",
+  "contentRights": "Confirmed saved in App Store Connect: Yes, this app has the necessary rights to its third-party content.",
+  "remainingQualification": "Elapsed seven-day TestFlight exercise remains incomplete. EU trader declaration still requires account-holder status. User requested expedited App Review submission; no claim that elapsed testing passed."
+}

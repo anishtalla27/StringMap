@@ -1,0 +1,707 @@
+{
+  "date": "2026-09-06",
+  "status": "Exact-duration export defect fixed and verified; broad recognition qualification remains open.",
+  "releaseQualified": false,
+  "problem": "Pinned HOMR chooses its integer timing grid using only the shortest note of each chord. A longer simultaneous tuplet can be truncated by int() during XML export.",
+  "fix": "Build-time hash-checked patch includes every duration denominator in each positive-duration chord, preserving the original onset calculation and all predicted note fields. Startup and direct recognition verify the patched file.",
+  "upstreamWriterSHA256": "b337f97cf0cc8d9892e1eba89df911d2a6346b53675223258bcc37efac2a8f80",
+  "patchedWriterSHA256": "0a92f02bea0eda50f8a6606c37c222bbfaf9d792010b98f56ecc2d18ccab4dce",
+  "sourceSHA256": {
+    "recognizer.py": "75478cc41e177376ec990aa623032bad5cd240cb596ce9c27508b12e0892b2e8",
+    "production.py": "ef2ac2f82efa3f2f067883b6fc45c4dc3eef361359ba450108b138130993c7b5",
+    "patch_homr.py": "a45b2d1d2e3e2595b948d6b7280b1f5ea4b7bd62f4a9e093d9f42b7f29218871",
+    "test_homr_export.py": "a9936c2325d05329936efe66af47313831e5a61cf5706f16ab75412faa6e0a62",
+    "bootstrap.sh": "fff75b97588876fd146fe4ad67df46226ce850c1b09eed1b82de6277285d6283",
+    "Dockerfile": "b3e3545e8b95e4b72513652e4239ce4a3caacf53274424a9195d817381029097",
+    "build_source_offer.py": "f1fd95805ea1610de9477154ea8f0c0da607ad2aefae6508fba165b67e32c713",
+    "README.md": "3ee6ab06f83e8093341111fb73a91a8fe89569a06e940d591e841af269dd5814"
+  },
+  "beforeRegression": {
+    "tests": 4,
+    "failures": 2,
+    "log": "artifacts/exact-export-before.log",
+    "observed": "A 4/3-quarter triplet and 6/5-quarter dotted quintuplet each exported as one quarter."
+  },
+  "macTests": {
+    "passed": 51,
+    "log": "artifacts/exact-export-service-tests.log"
+  },
+  "linuxTests": {
+    "passed": 45,
+    "log": "artifacts/exact-export-linux-tests-final.log",
+    "broadDiscoveryFailure": "The initial discover command imported a host benchmark utility whose repository-root lookup requires checkout nesting absent from /app. This is retained in artifacts/exact-export-linux-tests.log. The final command explicitly runs recognizer, page image, staff image, production and exact-export tests.",
+    "testDependencies": "httpx 0.28.1, httpcore 1.0.9 and sniffio 1.3.1 installed only into /tmp/stringmap-test-deps; shipping environment unchanged."
+  },
+  "nativeMacExports": [
+    {
+      "id": "ordinary",
+      "nativeParsed": true,
+      "tabPlayable": true,
+      "nativeError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "quintuplet",
+      "nativeParsed": false,
+      "tabPlayable": null,
+      "nativeError": "Measure 1 contains a tuplet, which is not supported yet.",
+      "playback": {
+        "unrenderable": {
+          "parsed": false,
+          "error": "Measure 1 contains a tuplet, which is not supported yet."
+        }
+      }
+    },
+    {
+      "id": "triplet",
+      "nativeParsed": true,
+      "tabPlayable": true,
+      "nativeError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    }
+  ],
+  "nativeLinuxExports": [
+    {
+      "id": "ordinary",
+      "nativeParsed": true,
+      "tabPlayable": true,
+      "nativeError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "expectedResultVerified": true
+    },
+    {
+      "id": "quintuplet",
+      "nativeParsed": false,
+      "tabPlayable": null,
+      "nativeError": "Measure 1 contains a tuplet, which is not supported yet.",
+      "playback": {
+        "unrenderable": {
+          "parsed": false,
+          "error": "Measure 1 contains a tuplet, which is not supported yet."
+        }
+      },
+      "expectedResultVerified": true
+    },
+    {
+      "id": "triplet",
+      "nativeParsed": true,
+      "tabPlayable": true,
+      "nativeError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 3,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      },
+      "expectedResultVerified": true
+    }
+  ],
+  "freshActualMacRecognition": {
+    "releaseQualified": false,
+    "realCameraImages": 0,
+    "referenceBoundaryStatus": "Provisional first MusicXML page; independent visual audit required",
+    "referencesUsedByInference": false,
+    "sourceSHA256": {
+      "recognizer.py": "75478cc41e177376ec990aa623032bad5cd240cb596ce9c27508b12e0892b2e8",
+      "staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+      "page_image.py": "ffcf135317e6873027c8353bf852620bb8971e6f79bc4b75a7d5a1cfc2635343",
+      "score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+      "production.py": "ef2ac2f82efa3f2f067883b6fc45c4dc3eef361359ba450108b138130993c7b5",
+      "patch_homr.py": "a45b2d1d2e3e2595b948d6b7280b1f5ea4b7bd62f4a9e093d9f42b7f29218871"
+    },
+    "cases": [
+      {
+        "id": "rhythm-06-clean",
+        "category": "generated",
+        "imageSHA256": "cbba9164e237ab5b8f20833eecf4c8805d3fc7cb6c81b2a843c0b244ad54bd0a",
+        "recognitionSeconds": 2.3719058749848045,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 20,
+              "recognized": 20
+            },
+            {
+              "detected": 20,
+              "recognized": 20
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 8,
+            "complete": 8
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "rhythm-12-clean",
+        "category": "generated",
+        "imageSHA256": "ccf291be9689abc0da43465dc58bd5438222f4f3c5671eb6091d76b200daccd2",
+        "recognitionSeconds": 2.087510665995069,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 28,
+              "recognized": 28
+            },
+            {
+              "detected": 28,
+              "recognized": 28
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "study-01-clean",
+        "category": "generated",
+        "imageSHA256": "5c6be8bf6db5d0d963887cac9f0b8cdb5a3062cf95507079030ac8847ecbbe44",
+        "recognitionSeconds": 1.4092978330154438,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 1,
+          "noteCounts": [
+            {
+              "detected": 16,
+              "recognized": 16
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "05_dr_cases_pavan__tilt_right",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+        "recognitionSeconds": 37.28579150000587,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 7,
+          "noteCounts": [
+            {
+              "detected": 52,
+              "recognized": 54
+            },
+            {
+              "detected": 77,
+              "recognized": 78
+            },
+            {
+              "detected": 69,
+              "recognized": 71
+            },
+            {
+              "detected": 61,
+              "recognized": 60
+            },
+            {
+              "detected": 66,
+              "recognized": 65
+            },
+            {
+              "detected": 54,
+              "recognized": 54
+            },
+            {
+              "detected": 40,
+              "recognized": 40
+            }
+          ],
+          "preparation": "standard",
+          "pageDeskew": {
+            "rotationDegrees": -4.988343857270241,
+            "longSegments": 235,
+            "agreement": 0.9063952821352226
+          },
+          "attempts": 5,
+          "timingWarnings": 18
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 421,
+            "missing": 0,
+            "extra": 1,
+            "f1": 0.9988137603795967
+          },
+          "onset": {
+            "truePositive": 187,
+            "missing": 234,
+            "extra": 235,
+            "f1": 0.44365361803084225
+          },
+          "duration": {
+            "truePositive": 408,
+            "missing": 13,
+            "extra": 14,
+            "f1": 0.9679715302491103
+          },
+          "noteEvent": {
+            "truePositive": 19,
+            "missing": 402,
+            "extra": 403,
+            "f1": 0.045077105575326216
+          },
+          "chords": {
+            "total": 107,
+            "complete": 1
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": false,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 414,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        },
+        "playbackPassed": true
+      }
+    ]
+  },
+  "freshActualLinuxControls": {
+    "recordedAt": "2026-09-06T11:36:02.691573+00:00",
+    "plannedImages": 3,
+    "completedCases": 3,
+    "pendingCases": 0,
+    "groups": {
+      "engraved": {
+        "images": 3,
+        "recognitionFailures": 0,
+        "importFailures": 0,
+        "tabFailures": 0,
+        "playbackFailures": 0,
+        "metrics": {
+          "pitch": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 112,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          }
+        },
+        "chords": {
+          "total": 8,
+          "complete": 8
+        },
+        "medianSeconds": 3.16,
+        "maxSeconds": 3.24
+      }
+    },
+    "realCameraImages": 0,
+    "genuineHandwritingImages": 0,
+    "independentlyReviewedReferences": 0,
+    "correctedInAppAndMatchedReference": 0,
+    "releaseTargetsMet": false,
+    "buildFingerprints": [
+      "8d8df29c0e4b30d9377b8a600cefa6e24bfb59b1445517f8cf9c6799e9d99da2"
+    ],
+    "scope": "3 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+    "engines": [
+      "homr-457e7c6-stringmap-guitar-v2-cpu"
+    ]
+  },
+  "linuxHTTPPavan": {
+    "result": "artifacts/exact-export-linux-pavan/printed_guitar-05_dr_cases_pavan__tilt_right.json",
+    "nativeScoreAndPlaybackMatchPrevious": true,
+    "previous": "artifacts/page-deskew-linux-results/printed_guitar-05_dr_cases_pavan__tilt_right.json"
+  },
+  "retainedTokenComparison": {
+    "scope": "Re-export of retained column-crop model tokens; no new image inference or reference scoring. Not the production-selected full corpus.",
+    "cases": [
+      {
+        "id": "01_fantasy_p5__flat",
+        "staffs": 7,
+        "exported": true,
+        "predictedNotes": 343,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "03_solus_cum_sola__soft_shadow",
+        "staffs": 7,
+        "exported": true,
+        "predictedNotes": 344,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "04_solus_sine_sola__perspective",
+        "staffs": 6,
+        "exported": true,
+        "predictedNotes": 317,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "05_dr_cases_pavan__tilt_right",
+        "staffs": 7,
+        "exported": true,
+        "predictedNotes": 422,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "06_lachrimae_pavan__hard_shadow",
+        "staffs": 9,
+        "exported": true,
+        "predictedNotes": 403,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "07_digorie_pipers_galliard__flat",
+        "staffs": 8,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "08_dowlands_first_galliard__tilt_left",
+        "staffs": 5,
+        "exported": true,
+        "predictedNotes": 265,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "09_frog_galliard__soft_shadow",
+        "staffs": 9,
+        "exported": true,
+        "predictedNotes": 468,
+        "eventTimingUnchanged": true
+      },
+      {
+        "id": "10_galliard_p24__perspective",
+        "staffs": 4,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "11_melancholy_galliard__tilt_right",
+        "staffs": 9,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "12_galliard_p27__hard_shadow",
+        "staffs": 6,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "13_galliard_p28__flat",
+        "staffs": 11,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "14_giles_hobies_galliard__tilt_left",
+        "staffs": 10,
+        "exported": false,
+        "error": "The recognized notes could not all be exported. No partial score was saved."
+      },
+      {
+        "id": "15_galliard_p30__soft_shadow",
+        "staffs": 6,
+        "exported": true,
+        "predictedNotes": 292,
+        "eventTimingUnchanged": true
+      }
+    ],
+    "changedPages": 0
+  },
+  "packaging": {
+    "archiveSHA256": "711f167d10cf957063aca9ce044dd414723f04e5d1a5e687742c0a4a2ac2a09b",
+    "pythonFilesVerified": [
+      "export_clarity_guitar_evaluation.py",
+      "score_quality.py",
+      "server.py",
+      "build_rhythm_corpus.py",
+      "report_benchmark.py",
+      "summarize_external_pack.py",
+      "staff_image.py",
+      "benchmark.py",
+      "models.py",
+      "recognizer.py",
+      "build_source_offer.py",
+      "patch_homr.py",
+      "build_corpus.py",
+      "recheck_results.py",
+      "check_external_references.py",
+      "attestation.py",
+      "receipt.py",
+      "evaluate_zeus_crops.py",
+      "compare_external_pack.py",
+      "page_image.py",
+      "build_unsupported_corpus.py",
+      "engine_benchmark.py",
+      "evaluate_jazzmus.py",
+      "benchmark_external_pack.py",
+      "production.py",
+      "compare_staff_crops.py"
+    ],
+    "buildAndReadmeFilesVerified": [
+      "README.md",
+      "Dockerfile",
+      "bootstrap.sh",
+      "entrypoint.sh"
+    ],
+    "imageID": "sha256:a464c07e023d1e96383275b69bc7c49756c5213d0834dd4f67d42071d3d8fae4",
+    "memoryLimitBytes": 3221225472,
+    "nanoCPUs": 2000000000,
+    "workerUIDEvidence": "PID                 USER                COMMAND\n1667                10001               uvicorn\n"
+  },
+  "sourceArchive": "artifacts/exact-export-linux-source.tar.gz",
+  "buildLog": "artifacts/exact-export-linux-build.log",
+  "resourceLog": "artifacts/exact-export-linux-server.log",
+  "limits": [
+    "Regression fixtures are recognized symbolic inputs to the actual writer, not new independently photographed triplet images.",
+    "Triplet and ordinary fixtures preserve exact pitches/onsets/durations in native tab and notation MIDI. Quintuplet XML duration is exact but the native importer intentionally rejects that unsupported tuplet.",
+    "The three fresh generated controls preserve 112 reference events. The supplied Pavan output and its poor whole-page recognition accuracy are unchanged.",
+    "Retained column-crop tokens cover 14 earlier experimental pages: eight export without event timing changes, six fail existing note-preservation checks. This is not a fresh full-corpus recognition run.",
+    "No iOS source changed or new simulator UI test was run for this service-only precision fix.",
+    "Physical camera/audio, hosted App Attest, signing, TestFlight and broader recognition release gates remain open. No manual user input was requested."
+  ],
+  "cleanup": {
+    "remainingImageDirectories": 0,
+    "ownedContainerRemoved": true,
+    "ownedProxyStopped": true,
+    "colimaStopped": true,
+    "dockerContextRestored": "default"
+  }
+}

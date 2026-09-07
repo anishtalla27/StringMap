@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "build": "1",
+  "certificateType": "Cloud Managed Apple Distribution",
+  "team": "S8DY583234",
+  "entitlements": {
+    "application-identifier": "S8DY583234.com.anishtalla.StringMap",
+    "beta-reports-active": true,
+    "com.apple.developer.team-identifier": "S8DY583234",
+    "get-task-allow": false
+  },
+  "ipaSHA256": "9281522ae323969fa3669ffc708c52b11b14cebd829c4e5933c3384eaf4413ba",
+  "archive": "artifacts/StringMap-1.0.0-provisioned.xcarchive",
+  "appleValidation": {
+    "status": "passed",
+    "evidence": "Xcode Organizer: StringMap 1.0.0 (1) validated; Your app successfully passed all validation checks.",
+    "verifiedAt": "2026-09-06T22:27:00-04:00"
+  },
+  "physicalTutorialUITest": {
+    "status": "passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "scope": "Public course test covering all 12 lessons",
+    "device": "iPhone 14 Pro",
+    "os": "26.6.1",
+    "resultBundle": "artifacts/finalization-physical-tutorial.xcresult",
+    "durationSeconds": 596.509
+  },
+  "appStoreUpload": {
+    "status": "processed",
+    "version": "1.0.0",
+    "build": "1",
+    "testFlightStatus": "Ready to Submit",
+    "selectedInReleaseDraft": true,
+    "testInstructionsSaved": true,
+    "testersInvited": false
+  }
+}

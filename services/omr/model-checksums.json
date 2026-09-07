@@ -1,0 +1,10 @@
+{
+  "checkpoints/seg_net/metadata.pkl": "30807e33a339c7009411deb815e07f29d894c3e7a68141d76a6ba800abe0b21f",
+  "checkpoints/seg_net/model.onnx": "ed2e1a86ea75712ee6cdc740e96f7a36753543cf9bb980227c071c9256d9d82e",
+  "checkpoints/unet_big/metadata.pkl": "3e792857c2be583f3e774a0278c458d0c26908165a37f3b5fa3a4d1069a774fa",
+  "checkpoints/unet_big/model.onnx": "37512e858731096439746f60b377c049f07055b4a23ec6eb9a178ce92cfba174",
+  "sklearn_models/clef.model": "5ad9c21ed98242be117a69d01c8d92717c6546e89f3f0267e43e2a41a06cbfda",
+  "sklearn_models/rests.model": "b079103783e6c6994b3f01bff722efceb72f43ffb2122068748caec936d6077f",
+  "sklearn_models/rests_above8.model": "3deae5548686ccd77e4bcf88408ed9068d1f049b8f4d271a93fab6ba90a3af00",
+  "sklearn_models/sfn.model": "9e85b4e974b2b9043a7944a8ef8346e66ee4c857488157241487c67b095682d2"
+}

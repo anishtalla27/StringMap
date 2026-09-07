@@ -3,5 +3,22 @@ dist/
 .DS_Store
 coverage/
 *.tsbuildinfo
+.build/
+DerivedData/
+xcuserdata/
+.swiftpm/
+*.xcresult
+services/omr/.venv/
+services/omr/.venv-*/
+__pycache__/
+services/omr/__pycache__/
 apps/web/public/font/
 apps/web/public/soundfont/
+
+# Agent skills installed with `npx skills add`.
+# skills-lock.json stays tracked so the set can be restored reproducibly.
+.agents/
+.claude/skills/
+
+# Generated release evidence and benchmark images.
+artifacts/

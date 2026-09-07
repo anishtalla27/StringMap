@@ -1,0 +1,614 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Licenses · StringMap</title><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#content">Skip to content</a><nav aria-label="Main"><a href="./">StringMap</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="licenses.html">Licenses</a></nav><main id="content"><h1>StringMap licenses and acknowledgements</h1>
+<h2>Runtime dependencies</h2>
+<h3>alphaTab</h3>
+<ul>
+<li>Project: <a href="https://github.com/CoderLine/alphaTab">https://github.com/CoderLine/alphaTab</a></li>
+<li>Inspected revision: <code>2a460d7</code></li>
+<li>Runtime version: <code>1.8.4</code></li>
+<li>Package: <code>@coderline/alphatab</code> and <code>@coderline/alphatab-vite</code></li>
+<li>License: Mozilla Public License 2.0</li>
+<li>Use: notation and tablature engraving, SoundFont playback, playback cursor, workers, and Vite integration.</li>
+</ul>
+<p>The iOS application bundles alphaTab's published JavaScript distribution, Bravura font, a separate CC0 FreePats guitar SoundFont, and MPL license. The web and iOS implementations are pinned to the same release. The published 1.8.4 distribution is pinned reproducibly.</p>
+<h3>ZIPFoundation</h3>
+<ul>
+<li>Project: <a href="https://github.com/weichsel/ZIPFoundation">https://github.com/weichsel/ZIPFoundation</a></li>
+<li>Runtime version: <code>0.9.20</code>, exact revision <code>22787ffb59de99e5dc1fbfe80b19c97a904ad48d</code></li>
+<li>License: MIT (complete text below)</li>
+<li>Use: on-device compressed MusicXML reading. Its bundled privacy manifest declares file timestamp access under reason <code>0A2A.1</code>; no tracking or collected data.</li>
+</ul>
+<p>MIT License</p>
+<p>Copyright (c) 2017-2025 Thomas Zoechling (https://www.peakstep.com)</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<h2>Bundled font and SoundFont notices</h2>
+<p>Bravura is copyright 2015 Steinberg Media Technologies GmbH, with Reserved Font Name Bravura, under SIL Open Font License 1.1. The exact license and font log shipped by alphaTab 1.8.4 are bundled with the app and reproduced in Settings.</p>
+<p>StringMap classical guitar SoundFont is based on FreePats <strong>Spanish classical guitar, 2019-06-18</strong>, recorded by Roberto <a href="mailto:roberto@zenvoid.org">roberto@zenvoid.org</a> and dedicated by its creator to the public domain under CC0 1.0. Source: https://freepats.zenvoid.org/Guitar/acoustic-guitar.html . The complete CC0 dedication, provenance and exact source/output checksums are bundled with the app.</p>
+<p>StringMap's original metronome click and bank mapping adaptation are also dedicated to CC0 1.0. Guitar samples remain unchanged. The source-pinned reproduction script is <code>scripts/build-guitar-soundfont.py</code>. The previous SONiVOX/Creative-derived bank is no longer bundled in iOS. The web development reference still uses alphaTab's upstream bank and is not the distributed iOS product.</p>
+<p>The unmodified alphaTab source is available at https://github.com/CoderLine/alphaTab/tree/v1.8.4. The app bundles the MPL-2.0 license. StringMap's separate bridge is original application code.</p>
+<h2>Songbook · Familiar Classics</h2>
+<p>20 traditional songs and classical themes are provided in 40 original StringMap guitar arrangements: Melody and Chords. Only historical instrumental melodies are used. No lyrics, historical piano/choral accompaniments, external recordings, source images, commercial tabs, or modern guitar arrangements are bundled. Each song’s About this tune section identifies its historical edition, chosen version, and source link.</p>
+<p>The collection includes Amazing Grace, Auld Lang Syne, Greensleeves, Flow Gently Sweet Afton, The Ash Grove, The Blue Bells of Scotland, Home Sweet Home, Long Long Ago, Oh Susanna, Home on the Range, Ode to Joy (theme), Für Elise (opening theme), Petzold’s Minuet in G, Brahms’ Lullaby, Twinkle Twinkle Little Star, Frère Jacques, Mary Had a Little Lamb, London Bridge, Row Row Row Your Boat, and Drink to Me Only with Thine Eyes. Historical variants are identified in the catalog. Chords is an original beginner accompaniment, not the melody or a copy of an earlier harmonization.</p>
+<h2>Original exercises</h2>
+<p>The 18 bundled single-note exercises were created for StringMap. No third-party song or arrangement is included in this catalog.</p>
+<h2>LICENSE-MPL-2.0.txt</h2>
+<p>alphaTab is licensed under MPL-2.0.
+Copyright © 2025, Daniel Kuschny and Contributors, All rights reserved.</p>
+<p>See LICENSE.header for further licenses of integrated submodules.</p>
+<h1>Mozilla Public License Version 2.0</h1>
+<ol>
+<li>Definitions</li>
+</ol>
+<hr />
+<p>1.1. &quot;Contributor&quot;
+means each individual or legal entity that creates, contributes to
+the creation of, or owns Covered Software.</p>
+<p>1.2. &quot;Contributor Version&quot;
+means the combination of the Contributions of others (if any) used
+by a Contributor and that particular Contributor's Contribution.</p>
+<p>1.3. &quot;Contribution&quot;
+means Covered Software of a particular Contributor.</p>
+<p>1.4. &quot;Covered Software&quot;
+means Source Code Form to which the initial Contributor has attached
+the notice in Exhibit A, the Executable Form of such Source Code
+Form, and Modifications of such Source Code Form, in each case
+including portions thereof.</p>
+<p>1.5. &quot;Incompatible With Secondary Licenses&quot;
+means</p>
+<pre><code>(a) that the initial Contributor has attached the notice described
+    in Exhibit B to the Covered Software; or
+
+(b) that the Covered Software was made available under the terms of
+    version 1.1 or earlier of the License, but not also under the
+    terms of a Secondary License.
+</code></pre>
+<p>1.6. &quot;Executable Form&quot;
+means any form of the work other than Source Code Form.</p>
+<p>1.7. &quot;Larger Work&quot;
+means a work that combines Covered Software with other material, in
+a separate file or files, that is not Covered Software.</p>
+<p>1.8. &quot;License&quot;
+means this document.</p>
+<p>1.9. &quot;Licensable&quot;
+means having the right to grant, to the maximum extent possible,
+whether at the time of the initial grant or subsequently, any and
+all of the rights conveyed by this License.</p>
+<p>1.10. &quot;Modifications&quot;
+means any of the following:</p>
+<pre><code>(a) any file in Source Code Form that results from an addition to,
+    deletion from, or modification of the contents of Covered
+    Software; or
+
+(b) any new file in Source Code Form that contains any Covered
+    Software.
+</code></pre>
+<p>1.11. &quot;Patent Claims&quot; of a Contributor
+means any patent claim(s), including without limitation, method,
+process, and apparatus claims, in any patent Licensable by such
+Contributor that would be infringed, but for the grant of the
+License, by the making, using, selling, offering for sale, having
+made, import, or transfer of either its Contributions or its
+Contributor Version.</p>
+<p>1.12. &quot;Secondary License&quot;
+means either the GNU General Public License, Version 2.0, the GNU
+Lesser General Public License, Version 2.1, the GNU Affero General
+Public License, Version 3.0, or any later versions of those
+licenses.</p>
+<p>1.13. &quot;Source Code Form&quot;
+means the form of the work preferred for making modifications.</p>
+<p>1.14. &quot;You&quot; (or &quot;Your&quot;)
+means an individual or a legal entity exercising rights under this
+License. For legal entities, &quot;You&quot; includes any entity that
+controls, is controlled by, or is under common control with You. For
+purposes of this definition, &quot;control&quot; means (a) the power, direct
+or indirect, to cause the direction or management of such entity,
+whether by contract or otherwise, or (b) ownership of more than
+fifty percent (50%) of the outstanding shares or beneficial
+ownership of such entity.</p>
+<ol start="2">
+<li>License Grants and Conditions</li>
+</ol>
+<hr />
+<p>2.1. Grants</p>
+<p>Each Contributor hereby grants You a world-wide, royalty-free,
+non-exclusive license:</p>
+<p>(a) under intellectual property rights (other than patent or trademark)
+Licensable by such Contributor to use, reproduce, make available,
+modify, display, perform, distribute, and otherwise exploit its
+Contributions, either on an unmodified basis, with Modifications, or
+as part of a Larger Work; and</p>
+<p>(b) under Patent Claims of such Contributor to make, use, sell, offer
+for sale, have made, import, and otherwise transfer either its
+Contributions or its Contributor Version.</p>
+<p>2.2. Effective Date</p>
+<p>The licenses granted in Section 2.1 with respect to any Contribution
+become effective for each Contribution on the date the Contributor first
+distributes such Contribution.</p>
+<p>2.3. Limitations on Grant Scope</p>
+<p>The licenses granted in this Section 2 are the only rights granted under
+this License. No additional rights or licenses will be implied from the
+distribution or licensing of Covered Software under this License.
+Notwithstanding Section 2.1(b) above, no patent license is granted by a
+Contributor:</p>
+<p>(a) for any code that a Contributor has removed from Covered Software;
+or</p>
+<p>(b) for infringements caused by: (i) Your and any other third party's
+modifications of Covered Software, or (ii) the combination of its
+Contributions with other software (except as part of its Contributor
+Version); or</p>
+<p>(c) under Patent Claims infringed by Covered Software in the absence of
+its Contributions.</p>
+<p>This License does not grant any rights in the trademarks, service marks,
+or logos of any Contributor (except as may be necessary to comply with
+the notice requirements in Section 3.4).</p>
+<p>2.4. Subsequent Licenses</p>
+<p>No Contributor makes additional grants as a result of Your choice to
+distribute the Covered Software under a subsequent version of this
+License (see Section 10.2) or under the terms of a Secondary License (if
+permitted under the terms of Section 3.3).</p>
+<p>2.5. Representation</p>
+<p>Each Contributor represents that the Contributor believes its
+Contributions are its original creation(s) or it has sufficient rights
+to grant the rights to its Contributions conveyed by this License.</p>
+<p>2.6. Fair Use</p>
+<p>This License is not intended to limit any rights You have under
+applicable copyright doctrines of fair use, fair dealing, or other
+equivalents.</p>
+<p>2.7. Conditions</p>
+<p>Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted
+in Section 2.1.</p>
+<ol start="3">
+<li>Responsibilities</li>
+</ol>
+<hr />
+<p>3.1. Distribution of Source Form</p>
+<p>All distribution of Covered Software in Source Code Form, including any
+Modifications that You create or to which You contribute, must be under
+the terms of this License. You must inform recipients that the Source
+Code Form of the Covered Software is governed by the terms of this
+License, and how they can obtain a copy of this License. You may not
+attempt to alter or restrict the recipients' rights in the Source Code
+Form.</p>
+<p>3.2. Distribution of Executable Form</p>
+<p>If You distribute Covered Software in Executable Form then:</p>
+<p>(a) such Covered Software must also be made available in Source Code
+Form, as described in Section 3.1, and You must inform recipients of
+the Executable Form how they can obtain a copy of such Source Code
+Form by reasonable means in a timely manner, at a charge no more
+than the cost of distribution to the recipient; and</p>
+<p>(b) You may distribute such Executable Form under the terms of this
+License, or sublicense it under different terms, provided that the
+license for the Executable Form does not attempt to limit or alter
+the recipients' rights in the Source Code Form under this License.</p>
+<p>3.3. Distribution of a Larger Work</p>
+<p>You may create and distribute a Larger Work under terms of Your choice,
+provided that You also comply with the requirements of this License for
+the Covered Software. If the Larger Work is a combination of Covered
+Software with a work governed by one or more Secondary Licenses, and the
+Covered Software is not Incompatible With Secondary Licenses, this
+License permits You to additionally distribute such Covered Software
+under the terms of such Secondary License(s), so that the recipient of
+the Larger Work may, at their option, further distribute the Covered
+Software under the terms of either this License or such Secondary
+License(s).</p>
+<p>3.4. Notices</p>
+<p>You may not remove or alter the substance of any license notices
+(including copyright notices, patent notices, disclaimers of warranty,
+or limitations of liability) contained within the Source Code Form of
+the Covered Software, except that You may alter any license notices to
+the extent required to remedy known factual inaccuracies.</p>
+<p>3.5. Application of Additional Terms</p>
+<p>You may choose to offer, and to charge a fee for, warranty, support,
+indemnity or liability obligations to one or more recipients of Covered
+Software. However, You may do so only on Your own behalf, and not on
+behalf of any Contributor. You must make it absolutely clear that any
+such warranty, support, indemnity, or liability obligation is offered by
+You alone, and You hereby agree to indemnify every Contributor for any
+liability incurred by such Contributor as a result of warranty, support,
+indemnity or liability terms You offer. You may include additional
+disclaimers of warranty and limitations of liability specific to any
+jurisdiction.</p>
+<ol start="4">
+<li>Inability to Comply Due to Statute or Regulation</li>
+</ol>
+<hr />
+<p>If it is impossible for You to comply with any of the terms of this
+License with respect to some or all of the Covered Software due to
+statute, judicial order, or regulation then You must: (a) comply with
+the terms of this License to the maximum extent possible; and (b)
+describe the limitations and the code they affect. Such description must
+be placed in a text file included with all distributions of the Covered
+Software under this License. Except to the extent prohibited by statute
+or regulation, such description must be sufficiently detailed for a
+recipient of ordinary skill to be able to understand it.</p>
+<ol start="5">
+<li>Termination</li>
+</ol>
+<hr />
+<p>5.1. The rights granted under this License will terminate automatically
+if You fail to comply with any of its terms. However, if You become
+compliant, then the rights granted under this License from a particular
+Contributor are reinstated (a) provisionally, unless and until such
+Contributor explicitly and finally terminates Your grants, and (b) on an
+ongoing basis, if such Contributor fails to notify You of the
+non-compliance by some reasonable means prior to 60 days after You have
+come back into compliance. Moreover, Your grants from a particular
+Contributor are reinstated on an ongoing basis if such Contributor
+notifies You of the non-compliance by some reasonable means, this is the
+first time You have received notice of non-compliance with this License
+from such Contributor, and You become compliant prior to 30 days after
+Your receipt of the notice.</p>
+<p>5.2. If You initiate litigation against any entity by asserting a patent
+infringement claim (excluding declaratory judgment actions,
+counter-claims, and cross-claims) alleging that a Contributor Version
+directly or indirectly infringes any patent, then the rights granted to
+You by any and all Contributors for the Covered Software under Section
+2.1 of this License shall terminate.</p>
+<p>5.3. In the event of termination under Sections 5.1 or 5.2 above, all
+end user license agreements (excluding distributors and resellers) which
+have been validly granted by You or Your distributors under this License
+prior to termination shall survive termination.</p>
+<hr />
+<ul>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+<li>
+<ol start="6">
+<li>Disclaimer of Warranty                                           *</li>
+</ol>
+</li>
+<li>-------------------------                                           *</li>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+<li>Covered Software is provided under this License on an &quot;as is&quot;       *</li>
+<li>basis, without warranty of any kind, either expressed, implied, or  *</li>
+<li>statutory, including, without limitation, warranties that the       *</li>
+<li>Covered Software is free of defects, merchantable, fit for a        *</li>
+<li>particular purpose or non-infringing. The entire risk as to the     *</li>
+<li>quality and performance of the Covered Software is with You.        *</li>
+<li>Should any Covered Software prove defective in any respect, You     *</li>
+<li>(not any Contributor) assume the cost of any necessary servicing,   *</li>
+<li>repair, or correction. This disclaimer of warranty constitutes an   *</li>
+<li>essential part of this License. No use of any Covered Software is   *</li>
+<li>authorized under this License except under this disclaimer.         *</li>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+</ul>
+<hr />
+<hr />
+<ul>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+<li>
+<ol start="7">
+<li>Limitation of Liability                                          *</li>
+</ol>
+</li>
+<li>--------------------------                                          *</li>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+<li>Under no circumstances and under no legal theory, whether tort      *</li>
+<li>(including negligence), contract, or otherwise, shall any           *</li>
+<li>Contributor, or anyone who distributes Covered Software as          *</li>
+<li>permitted above, be liable to You for any direct, indirect,         *</li>
+<li>special, incidental, or consequential damages of any character      *</li>
+<li>including, without limitation, damages for lost profits, loss of    *</li>
+<li>goodwill, work stoppage, computer failure or malfunction, or any    *</li>
+<li>and all other commercial damages or losses, even if such party      *</li>
+<li>shall have been informed of the possibility of such damages. This   *</li>
+<li>limitation of liability shall not apply to liability for death or   *</li>
+<li>personal injury resulting from such party's negligence to the       *</li>
+<li>extent applicable law prohibits such limitation. Some               *</li>
+<li>jurisdictions do not allow the exclusion or limitation of           *</li>
+<li>incidental or consequential damages, so this exclusion and          *</li>
+<li>limitation may not apply to You.                                    *</li>
+<li>
+<pre><code>                                                                 *
+</code></pre>
+</li>
+</ul>
+<hr />
+<ol start="8">
+<li>Litigation</li>
+</ol>
+<hr />
+<p>Any litigation relating to this License may be brought only in the
+courts of a jurisdiction where the defendant maintains its principal
+place of business and such litigation shall be governed by laws of that
+jurisdiction, without reference to its conflict-of-law provisions.
+Nothing in this Section shall prevent a party's ability to bring
+cross-claims or counter-claims.</p>
+<ol start="9">
+<li>Miscellaneous</li>
+</ol>
+<hr />
+<p>This License represents the complete agreement concerning the subject
+matter hereof. If any provision of this License is held to be
+unenforceable, such provision shall be reformed only to the extent
+necessary to make it enforceable. Any law or regulation which provides
+that the language of a contract shall be construed against the drafter
+shall not be used to construe this License against a Contributor.</p>
+<ol start="10">
+<li>Versions of the License</li>
+</ol>
+<hr />
+<p>10.1. New Versions</p>
+<p>Mozilla Foundation is the license steward. Except as provided in Section
+10.3, no one other than the license steward has the right to modify or
+publish new versions of this License. Each version will be given a
+distinguishing version number.</p>
+<p>10.2. Effect of New Versions</p>
+<p>You may distribute the Covered Software under the terms of the version
+of the License under which You originally received the Covered Software,
+or under the terms of any subsequent version published by the license
+steward.</p>
+<p>10.3. Modified Versions</p>
+<p>If you create software not governed by this License, and you want to
+create a new license for such software, you may create and use a
+modified version of this License if you rename the license and remove
+any references to the name of the license steward (except to note that
+such modified license differs from this License).</p>
+<p>10.4. Distributing Source Code Form that is Incompatible With Secondary
+Licenses</p>
+<p>If You choose to distribute Source Code Form that is Incompatible With
+Secondary Licenses under the terms of this version of the License, the
+notice described in Exhibit B of this License must be attached.</p>
+<h2>Exhibit A - Source Code Form License Notice</h2>
+<p>This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at http://mozilla.org/MPL/2.0/.</p>
+<p>If it is not possible or desirable to put the notice in a particular
+file, then You may include the notice in a location (such as a LICENSE
+file in a relevant directory) where a recipient would be likely to look
+for such a notice.</p>
+<p>You may add additional accurate notices of copyright ownership.</p>
+<h2>Exhibit B - &quot;Incompatible With Secondary Licenses&quot; Notice</h2>
+<p>This Source Code Form is &quot;Incompatible With Secondary Licenses&quot;, as
+defined by the Mozilla Public License, v. 2.0.</p>
+<h2>font/Bravura-OFL.txt</h2>
+<p>Copyright © 2015, Steinberg Media Technologies GmbH (http://www.steinberg.net/),
+with Reserved Font Name &quot;Bravura&quot;.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.</p>
+<h2>soundfont/LICENSE</h2>
+<p>Creative Commons Legal Code</p>
+<p>CC0 1.0 Universal</p>
+<pre><code>CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+INFORMATION ON AN &quot;AS-IS&quot; BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+HEREUNDER.
+</code></pre>
+<p>Statement of Purpose</p>
+<p>The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an &quot;owner&quot;) of an original work of
+authorship and/or a database (each, a &quot;Work&quot;).</p>
+<p>Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works (&quot;Commons&quot;) that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part through the use and efforts of others.</p>
+<p>For these and/or other purposes and motivations, and without any
+expectation of additional consideration or compensation, the person
+associating CC0 with a Work (the &quot;Affirmer&quot;), to the extent that he or she
+is an owner of Copyright and Related Rights in the Work, voluntarily
+elects to apply CC0 to the Work and publicly distribute the Work under its
+terms, with knowledge of his or her Copyright and Related Rights in the
+Work and the meaning and intended legal effect of CC0 on those rights.</p>
+<ol>
+<li>Copyright and Related Rights. A Work made available under CC0 may be
+protected by copyright and related or neighboring rights (&quot;Copyright and
+Related Rights&quot;). Copyright and Related Rights include, but are not
+limited to, the following:</li>
+</ol>
+<p>i. the right to reproduce, adapt, distribute, perform, display,
+communicate, and translate a Work;
+ii. moral rights retained by the original author(s) and/or performer(s);
+iii. publicity and privacy rights pertaining to a person's image or
+likeness depicted in a Work;
+iv. rights protecting against unfair competition in regards to a Work,
+subject to the limitations in paragraph 4(a), below;
+v. rights protecting the extraction, dissemination, use and reuse of data
+in a Work;
+vi. database rights (such as those arising under Directive 96/9/EC of the
+European Parliament and of the Council of 11 March 1996 on the legal
+protection of databases, and under any national implementation
+thereof, including any amended or successor version of such
+directive); and
+vii. other similar, equivalent or corresponding rights throughout the
+world based on applicable law or treaty, and any national
+implementations thereof.</p>
+<ol start="2">
+<li>
+<p>Waiver. To the greatest extent permitted by, but not in contravention
+of, applicable law, Affirmer hereby overtly, fully, permanently,
+irrevocably and unconditionally waives, abandons, and surrenders all of
+Affirmer's Copyright and Related Rights and associated claims and causes
+of action, whether now known or unknown (including existing as well as
+future claims and causes of action), in the Work (i) in all territories
+worldwide, (ii) for the maximum duration provided by applicable law or
+treaty (including future time extensions), (iii) in any current or future
+medium and for any number of copies, and (iv) for any purpose whatsoever,
+including without limitation commercial, advertising or promotional
+purposes (the &quot;Waiver&quot;). Affirmer makes the Waiver for the benefit of each
+member of the public at large and to the detriment of Affirmer's heirs and
+successors, fully intending that such Waiver shall not be subject to
+revocation, rescission, cancellation, termination, or any other legal or
+equitable action to disrupt the quiet enjoyment of the Work by the public
+as contemplated by Affirmer's express Statement of Purpose.</p>
+</li>
+<li>
+<p>Public License Fallback. Should any part of the Waiver for any reason
+be judged legally invalid or ineffective under applicable law, then the
+Waiver shall be preserved to the maximum extent permitted taking into
+account Affirmer's express Statement of Purpose. In addition, to the
+extent the Waiver is so judged Affirmer hereby grants to each affected
+person a royalty-free, non transferable, non sublicensable, non exclusive,
+irrevocable and unconditional license to exercise Affirmer's Copyright and
+Related Rights in the Work (i) in all territories worldwide, (ii) for the
+maximum duration provided by applicable law or treaty (including future
+time extensions), (iii) in any current or future medium and for any number
+of copies, and (iv) for any purpose whatsoever, including without
+limitation commercial, advertising or promotional purposes (the
+&quot;License&quot;). The License shall be deemed effective as of the date CC0 was
+applied by Affirmer to the Work. Should any part of the License for any
+reason be judged legally invalid or ineffective under applicable law, such
+partial invalidity or ineffectiveness shall not invalidate the remainder
+of the License, and in such case Affirmer hereby affirms that he or she
+will not (i) exercise any of his or her remaining Copyright and Related
+Rights in the Work or (ii) assert any associated claims and causes of
+action with respect to the Work, in either case contrary to Affirmer's
+express Statement of Purpose.</p>
+</li>
+<li>
+<p>Limitations and Disclaimers.</p>
+</li>
+</ol>
+<p>a. No trademark or patent rights held by Affirmer are waived, abandoned,
+surrendered, licensed or otherwise affected by this document.
+b. Affirmer offers the Work as-is and makes no representations or
+warranties of any kind concerning the Work, express, implied,
+statutory or otherwise, including without limitation warranties of
+title, merchantability, fitness for a particular purpose, non
+infringement, or the absence of latent or other defects, accuracy, or
+the present or absence of errors, whether or not discoverable, all to
+the greatest extent permissible under applicable law.
+c. Affirmer disclaims responsibility for clearing rights of other persons
+that may apply to the Work or any use thereof, including without
+limitation any person's Copyright and Related Rights in the Work.
+Further, Affirmer disclaims responsibility for obtaining any necessary
+consents, permissions or other rights required for any use of the
+Work.
+d. Affirmer understands and acknowledges that Creative Commons is not a
+party to this document and has no duty or obligation with respect to
+this CC0 or use of the Work.</p>
+<h2>soundfont/README.md</h2>
+<h1>StringMap classical guitar SoundFont</h1>
+<p>Based on FreePats <strong>Spanish classical guitar, version 2019-06-18</strong>, recorded by Roberto <a href="mailto:roberto@zenvoid.org">roberto@zenvoid.org</a> in 2008 using an AKG Perception 120 microphone. Samples were filtered and processed by their creator. Source: https://freepats.zenvoid.org/Guitar/acoustic-guitar.html .</p>
+<p>The creator dedicates the recordings and bank to the public domain under <strong>CC0 1.0</strong>. The complete dedication is in <code>LICENSE</code>. StringMap also dedicates its original metronome click and bank adaptation to CC0 1.0.</p>
+<p>No SONiVOX or Creative-bank samples are included. Guitar PCM is unchanged from the pinned source. A 10 dB preset attenuation reserves headroom for simultaneous strings; six-string chords at maximum MIDI velocity are checked for clipping. <code>scripts/build-guitar-soundfont.py</code> adds General MIDI nylon program 24, program 25 for older saved scores, and an original 60 ms synthesized metronome click on percussion key 33. Edge sample zones extend across MIDI 0–127 for notation audition, with resampling; the normal tested guitar range is MIDI 36–88. Natural sample tuning is within 18 cents of equal temperament across that tested range. Physical device listening remains part of release QA.</p>
+<p>Reproduction: download <code>SpanishClassicalGuitar-SF2-20190618.7z</code> from the source page, extract it, and run the build script with its <code>SpanishClassicalGuitar-20190618.sf2</code> path. The script rejects a different source checksum.</p>
+<ul>
+<li>Download SHA-256: <code>8c192f1fc640a553199a4a43a17ae12354a6a05e3d6aad79bd43b5d29314ff51</code></li>
+<li>Original SF2 SHA-256: <code>0d4c08ea8c1c8924b3829084b0c8778f6d6b906f331e44fde51bc159f76b03b9</code></li>
+<li>Bundled SF2 SHA-256: <code>c5aaed6f4e1782ae11a6c783a92c9522d32b46bb8c6828afc7bb4db32e8a9ec5</code></li>
+</ul>
+<p><code>node scripts/verify-soundfont.mjs</code> renders actual PCM using the bundled alphaTab synthesizer, checking finite, non-silent guitar samples, compatibility program 25, and metronome audio. This is synthesis evidence, not a physical speaker/Bluetooth test.</p>
+<h2>Original tutorial course</h2>
+<p>The 24 tutorial lessons, 40 musical examples, and teaching overlays were authored for StringMap. No third-party course text, arrangements, or recordings are included. See Tutorial/PROVENANCE.md in the bundled resources.</p>
+</main><footer>© 2026 Anish Talla. <a href="mailto:stringmap.support@gmail.com">Contact support</a></footer></body></html>

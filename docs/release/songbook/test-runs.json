@@ -1,0 +1,178 @@
+{
+  "songbook-all-phone-11": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 49,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788762647.046,
+    "finishTime": 1788763934.502
+  },
+  "songbook-all-ipad-12": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 50,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788762854.89,
+    "finishTime": 1788764355.265
+  },
+  "songbook-controls-phone-16": {
+    "title": "Test - StringMap",
+    "result": "Failed",
+    "passedTests": 50,
+    "failedTests": 1,
+    "skippedTests": 0,
+    "startTime": 1788764415.112,
+    "finishTime": 1788764540.08
+  },
+  "songbook-controls-ipad-16": {
+    "title": "Test - StringMap",
+    "result": "Failed",
+    "passedTests": 50,
+    "failedTests": 1,
+    "skippedTests": 0,
+    "startTime": 1788764415.887,
+    "finishTime": 1788764515.493
+  },
+  "songbook-controls-phone-17": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788764585.105,
+    "finishTime": 1788767212.215
+  },
+  "songbook-controls-ipad-17": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788764585.905,
+    "finishTime": 1788767436.782
+  },
+  "songbook-final-ui-phone-18": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788767219.7,
+    "finishTime": 1788768525.258
+  },
+  "songbook-final-ui-ipad-18": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788767441.995,
+    "finishTime": 1788768905.086
+  },
+  "songbook-regression-phone-21": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 6,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788790516.708,
+    "finishTime": 1788792981.316
+  },
+  "songbook-regression-ipad-21": {
+    "title": "Test - StringMap",
+    "result": "Failed",
+    "passedTests": 4,
+    "failedTests": 2,
+    "skippedTests": 0,
+    "startTime": 1788790516.708,
+    "finishTime": 1788792249.682,
+    "resolution": "Rotation-only failures passed unchanged after simulator restart in songbook-rotation-ipad-23. Other four regressions passed in run 21."
+  },
+  "songbook-store-phone-24": {
+    "title": "Test - ReleaseValidation",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799608.639,
+    "finishTime": 1788799666.04
+  },
+  "songbook-store-ipad-24": {
+    "title": "Test - ReleaseValidation",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799639.669,
+    "finishTime": 1788799691.145
+  },
+  "songbook-rotation-ipad-23": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 2,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799514.096,
+    "finishTime": 1788799617.394
+  },
+  "songbook-rotation-phone-25": {
+    "title": "Test - StringMap",
+    "result": "Failed",
+    "passedTests": 0,
+    "failedTests": 1,
+    "skippedTests": 0,
+    "startTime": 1788799714.805,
+    "finishTime": 1788799756.025,
+    "resolution": "Same rotation timeout resolved unchanged after simulator restart in run 26."
+  },
+  "songbook-rotation-ipad-25": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799760.606,
+    "finishTime": 1788799800.562
+  },
+  "songbook-rotation-phone-26": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799850.554,
+    "finishTime": 1788799899.083
+  },
+  "songbook-rotation-phone-27": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788799986.799,
+    "finishTime": 1788800026.311,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
+  },
+  "songbook-rotation-phone-28": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788800083.4,
+    "finishTime": 1788800164.803,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
+  },
+  "songbook-rotation-phone-29": {
+    "title": "Test - StringMap",
+    "result": "Passed",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "startTime": 1788800162.697,
+    "finishTime": 1788800204.613,
+    "scope": "Targeted capture-helper refinement; app code unchanged."
+  }
+}

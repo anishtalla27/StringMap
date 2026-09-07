@@ -1,0 +1,18 @@
+{
+  "status": "configured-not-deployed",
+  "provider": "Railway",
+  "plan": "Hobby",
+  "workspaceId": "327d8bd0-6053-4e44-b1fa-d3a9ebefaf54",
+  "projectId": "4baf7b4d-f78a-401e-a9a9-678b34e90bd8",
+  "serviceId": "8ffd18d1-c40d-4724-af13-2546b541f601",
+  "computeHardLimitUSD": 15,
+  "computeAlertUSD": 10,
+  "agentHardLimitUSD": 0,
+  "pending": [
+    "Verified Apple App ID prefix and allowed signed build",
+    "Runtime resource ceilings and private volume",
+    "Container deployment and HTTPS validation",
+    "Physical App Attest end-to-end validation"
+  ],
+  "evidence": "Hobby verified in live dashboard; limits independently confirmed via Railway CLI. Xcode still shows Personal Team and zero provisioned devices. No container deployed or public endpoint created."
+}

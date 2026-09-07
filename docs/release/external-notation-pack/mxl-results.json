@@ -1,0 +1,343 @@
+{
+  "realImageRecognitionTest": false,
+  "cases": [
+    {
+      "id": "01_fantasy_p5",
+      "compressedInput": {
+        "sha256": "6e75424cfee12e18452f2b65e95840d8bd093215fd0dd170e08b5fcc7738e71a",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 618,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 618,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "02_fancy_p6",
+      "compressedInput": {
+        "sha256": "b8faf260081c6bf05a1126de54c1c3b05152ae29706160a1115bb55a37e67cd8",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 711,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 711,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "03_solus_cum_sola",
+      "compressedInput": {
+        "sha256": "443a147341def08866f4e6cad4aa761e11d15557b408530bb487db81fd5cb26b",
+        "plainPipelineIdentical": true
+      },
+      "parsed": false,
+      "error": "Invalid MusicXML: Tie into event-460 has no unique matching sustained note.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null
+    },
+    {
+      "id": "04_solus_sine_sola",
+      "compressedInput": {
+        "sha256": "327daab4fa3b5bedb81eaa6f8771eef97c786deba92fdbf28151f91770633089",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 1043,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 1043,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "05_dr_cases_pavan",
+      "compressedInput": {
+        "sha256": "aeab32833fda4ad36fb58224fa1755b063955d51baf91f6ef54ea0e1b2b90c57",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": false,
+      "tabError": "Note event-66 (MIDI 38) is outside this guitar's playable range.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 401,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      }
+    },
+    {
+      "id": "06_lachrimae_pavan",
+      "compressedInput": {
+        "sha256": "89c9213f4984733922c677c6c174816c451c173a9e09e4c4b1c5ef423b34618a",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 823,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 823,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "07_digorie_pipers_galliard",
+      "compressedInput": {
+        "sha256": "ca6c557a798d5b08bd9ed3aca7b52d451fcd3ba14eddee07aa5c9e13d1bcb820",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 513,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 513,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "08_dowlands_first_galliard",
+      "compressedInput": {
+        "sha256": "b73d9f002137bc43827a53b5731309d37ead45aa35bf69a9559de531ea5fe1c8",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 622,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 622,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "09_frog_galliard",
+      "compressedInput": {
+        "sha256": "441aa89e74af05df8e8aa14f7df0f0ec51a47af666c252f0a03d4c85f5c6a11d",
+        "plainPipelineIdentical": true
+      },
+      "parsed": false,
+      "error": "Invalid MusicXML: Measure 81: <ending> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null
+    },
+    {
+      "id": "10_galliard_p24",
+      "compressedInput": {
+        "sha256": "45e07282e06d24560b571f33bdb70b4a58aa6cfbacb5f10fa84b5e8c3ab7c0ce",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 352,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 352,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "11_melancholy_galliard",
+      "compressedInput": {
+        "sha256": "5975e6491d060863667c64e4d3cb1887cc80c8468df09797ede853b2db87fe41",
+        "plainPipelineIdentical": true
+      },
+      "parsed": false,
+      "error": "Invalid MusicXML: Measure 49: <fermata> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null
+    },
+    {
+      "id": "12_galliard_p27",
+      "compressedInput": {
+        "sha256": "d4ac77944ff17794291086e53ea515d429a32c3d9c706752956d79b9077518de",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": false,
+      "tabError": "Note event-10 (MIDI 38) is outside this guitar's playable range.",
+      "playback": {
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 466,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        }
+      }
+    },
+    {
+      "id": "13_galliard_p28",
+      "compressedInput": {
+        "sha256": "237ef15d676c2286241c38ff1848b7d7ec2a1b3dd4f8cc58765f92c990902297",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 630,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 630,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "14_giles_hobies_galliard",
+      "compressedInput": {
+        "sha256": "9ccb5fa343c6e93510fc7682b0b55a13b168ea0ef7ba142637b9de6a38c8bc85",
+        "plainPipelineIdentical": true
+      },
+      "parsed": true,
+      "error": null,
+      "tabPlayable": true,
+      "tabError": null,
+      "playback": {
+        "alphaTex": {
+          "parsed": true,
+          "notes": 569,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "notationAlphaTex": {
+          "parsed": true,
+          "notes": 569,
+          "sourceIdentitiesPreserved": true,
+          "exactPlayback": true
+        },
+        "tabPitchExact": true,
+        "allNotesAssigned": true,
+        "distinctStrings": true
+      }
+    },
+    {
+      "id": "15_galliard_p30",
+      "compressedInput": {
+        "sha256": "1a77bbe1879246b1c1aac6ebbf4933540ff0bc059bedc6599373c9bd9c08328e",
+        "plainPipelineIdentical": true
+      },
+      "parsed": false,
+      "error": "Invalid MusicXML: Measure 48: <fermata> is not supported yet.",
+      "tabPlayable": null,
+      "tabError": null,
+      "playback": null
+    }
+  ]
+}

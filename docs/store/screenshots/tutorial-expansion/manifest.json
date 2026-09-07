@@ -1,0 +1,80 @@
+{
+  "iphone-6.9": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/tutorial-expansion-iphone-final.xcresult",
+    "selectedTest": "ReleaseTutorialUITests/testPublicCourseAndStoreScreenshots()",
+    "screenshots": [
+      {
+        "file": "iphone-6.9/01-home.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "384fad01a7ac5e045aaceb03dc2b130adf3cb359fc4d65de13fff4859155e302",
+        "sourceSHA256": "384fad01a7ac5e045aaceb03dc2b130adf3cb359fc4d65de13fff4859155e302",
+        "sourceAttachment": "store-01-home_0_32C17DC6-F053-44BC-99F0-6FD9B24B2FC9.png"
+      },
+      {
+        "file": "iphone-6.9/02-learn.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "3cb24434b18ff7ca582ca23e8d464a98ea878e30e312b51011548866b37da171",
+        "sourceSHA256": "3cb24434b18ff7ca582ca23e8d464a98ea878e30e312b51011548866b37da171",
+        "sourceAttachment": "store-02-learn_0_C9408742-785A-4456-AAAD-607A26A8FA00.png"
+      },
+      {
+        "file": "iphone-6.9/03-first-notes.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "2016cf492b5baf7ad2725f67876e1a6fecfa055bf3595eb143928fef5b14f79c",
+        "sourceSHA256": "2016cf492b5baf7ad2725f67876e1a6fecfa055bf3595eb143928fef5b14f79c",
+        "sourceAttachment": "store-03-first-notes_0_482E8C4D-FB67-400F-9C45-F82ACEC7C306.png"
+      },
+      {
+        "file": "iphone-6.9/04-chord-shape.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "38b2abcc28cd697259b6d9d5b8c41120aebd83c401fd4e2844b2ed8fc9093600",
+        "sourceSHA256": "38b2abcc28cd697259b6d9d5b8c41120aebd83c401fd4e2844b2ed8fc9093600",
+        "sourceAttachment": "store-04-chord-shape_0_11F4F50B-3B5F-41C7-B8D6-D3E6A14B008A.png"
+      },
+      {
+        "file": "iphone-6.9/05-optional-tab.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "4c6ea3d72332a051050e3d6cb75d67cff6aebddd34796b7ca445438ce1a2eeb2",
+        "sourceSHA256": "4c6ea3d72332a051050e3d6cb75d67cff6aebddd34796b7ca445438ce1a2eeb2",
+        "sourceAttachment": "store-05-optional-tab_0_F7CAF431-DBDC-4F7D-9F52-30268702CAA1.png"
+      },
+      {
+        "file": "iphone-6.9/06-free-practice.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "62f58b821a427d039e5b6eb93059c82444efd8fe14eda9140d1e5f761a15d961",
+        "sourceSHA256": "62f58b821a427d039e5b6eb93059c82444efd8fe14eda9140d1e5f761a15d961",
+        "sourceAttachment": "store-06-free-practice_0_29793BE8-52C6-49A1-A51B-CE182638403D.png"
+      },
+      {
+        "file": "iphone-6.9/07-play.png",
+        "width": 1320,
+        "height": 2868,
+        "sha256": "2d36bf18fda583d5c04226168e34014d8c862e645fbf9254cb41ce3edb4b5765",
+        "sourceSHA256": "2d36bf18fda583d5c04226168e34014d8c862e645fbf9254cb41ce3edb4b5765",
+        "sourceAttachment": "store-07-play_0_C6C184C8-6170-4E22-9831-1743E71742BF.png"
+      }
+    ]
+  },
+  "ipad-13": {
+    "configuration": "Release",
+    "resultBundle": "artifacts/tutorial-expansion-learn-ipad.xcresult",
+    "selectedTest": "ReleaseTutorialUITests/testUpdatedLearnStoreScreen()",
+    "screenshots": [
+      {
+        "file": "ipad-13/02-learn.png",
+        "width": 2064,
+        "height": 2752,
+        "sha256": "91bab664f4d03f471e076d6516983a78c209d177bbe672c0028b9a16463a8165",
+        "sourceSHA256": "91bab664f4d03f471e076d6516983a78c209d177bbe672c0028b9a16463a8165",
+        "sourceAttachment": "store-02-learn_0_8833E43E-E095-4FB1-A96D-00319748812F.png"
+      }
+    ]
+  }
+}

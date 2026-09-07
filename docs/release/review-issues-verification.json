@@ -1,0 +1,187 @@
+{
+  "date": "2026-09-06",
+  "status": "Local correction regression verified; recognition and release qualification remain open",
+  "sourceSHA256": {
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/Types.swift": "0d7c6f488b5f88aacaf148c08b1e689f3602da508c5819a77a1e9282d4cd8403",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "aa95346a923c3be5cb7f032fb0da6e0644c1a2dfba2f26cdf0b49e70ccc752e0",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/ScoreEditing.swift": "6477e35793ff63238d6d5cd20a70227675b6c935a6dcf25987cf9b8a4a3f1922",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "73a77f808af4c98fd4387be92685aa2763310e1a6e524b4a75fcb1cfb8a68709",
+    "apps/ios/StringMap/ScoreReviewView.swift": "2d5ce9b5c815c797113af17898698a48fe71c016a5d788154d0a5f26fe448d9e",
+    "apps/ios/StringMap/ScanDraft.swift": "009c4ab7949ec6a962fa28b4c6699ce04e5faad9a0400dceee322b7d2fe9e603",
+    "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/ReviewIssueTests.swift": "1fa675f7e49b02a2331d4be8ec487a385eeba14efc893caf868cf2b27de8aa9e",
+    "apps/ios/StringMapTests/OMRRecoveryTests.swift": "871f503cb2bd9c0a65145b4c5958ba9f476f4d58f4ad9310a8eb069adaabb8cf",
+    "apps/ios/StringMapUITests/StringMapUITests.swift": "50209bb3aefdf055098f8a232bffa07ede04601904484bbc33d5c6c58cc96a66"
+  },
+  "core": {
+    "passed": 75,
+    "log": "artifacts/review-issues-core-tests.log"
+  },
+  "iOSUnit": {
+    "passed": 34,
+    "bundle": "artifacts/review-issues-final-iphone.xcresult",
+    "note": "Unit suite passes; UI test in this bundle failed on a duplicate confirmation accessibility selector."
+  },
+  "handwritingReimports": {
+    "cases": [
+      {
+        "writer": 2,
+        "sourceSHA256": "d52329e195d52ab9fa16a2845c28cf5dd377d028a030a6d3fef3854f1eaeb2b1",
+        "strictParsed": false,
+        "strictError": "Invalid MusicXML: Measure 3: <staccato> is not supported yet.",
+        "reviewParsed": true,
+        "reviewError": null,
+        "issues": [
+          {
+            "eventID": "event-8",
+            "id": "event-8-mark-0",
+            "mark": "staccato",
+            "measureIndex": 2,
+            "measureNumber": "3"
+          },
+          {
+            "eventID": "event-13",
+            "id": "event-13-mark-0",
+            "mark": "arpeggiate",
+            "measureIndex": 2,
+            "measureNumber": "3"
+          },
+          {
+            "eventID": "event-22",
+            "id": "event-22-mark-0",
+            "mark": "staccato",
+            "measureIndex": 3,
+            "measureNumber": "4"
+          },
+          {
+            "eventID": "event-30",
+            "id": "event-30-mark-0",
+            "mark": "staccato",
+            "measureIndex": 3,
+            "measureNumber": "4"
+          }
+        ],
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 3: resolve the unsupported staccato mark in note review before playback or saving.",
+        "sourceXMLEventsPreserved": 46
+      },
+      {
+        "writer": 4,
+        "sourceSHA256": "3caee1bafd7f988d594b2df5f5f335e68115a7c1afc753b0ba2e7940b39c6290",
+        "strictParsed": false,
+        "strictError": "Invalid MusicXML: Measure 4: <arpeggiate> is not supported yet.",
+        "reviewParsed": true,
+        "reviewError": null,
+        "issues": [
+          {
+            "eventID": "event-10",
+            "id": "event-10-mark-0",
+            "mark": "arpeggiate",
+            "measureIndex": 3,
+            "measureNumber": "4"
+          },
+          {
+            "eventID": "event-18",
+            "id": "event-18-mark-0",
+            "mark": "arpeggiate",
+            "measureIndex": 5,
+            "measureNumber": "6"
+          }
+        ],
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 4: resolve the unsupported arpeggiate mark in note review before playback or saving.",
+        "sourceXMLEventsPreserved": 21
+      },
+      {
+        "writer": 6,
+        "sourceSHA256": "47a77f1c1cf0393a695af5a56abe63cf5b7f5f27374db8237fc3a4559d6d5bea",
+        "strictParsed": false,
+        "strictError": "Invalid MusicXML: Measure 1: <staccato> is not supported yet.",
+        "reviewParsed": false,
+        "reviewError": "Measure 2 contains a grace note, which is not supported yet.",
+        "issues": [],
+        "tabPlayable": null,
+        "notationError": null
+      },
+      {
+        "writer": 7,
+        "sourceSHA256": "51706499f431b2b4ff5fdc4461b62b841d8a8e5e4e8d65d7b356558a06c92537",
+        "strictParsed": false,
+        "strictError": "Invalid MusicXML: Measure 1: <trill-mark> is not supported yet.",
+        "reviewParsed": true,
+        "reviewError": null,
+        "issues": [
+          {
+            "eventID": "event-0",
+            "id": "event-0-mark-0",
+            "mark": "trill-mark",
+            "measureIndex": 0,
+            "measureNumber": "1"
+          }
+        ],
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 1: resolve the unsupported trill-mark mark in note review before playback or saving.",
+        "sourceXMLEventsPreserved": 20
+      }
+    ],
+    "scope": "Re-imports retained real recognizer XML; no new inference and no automatic correction. Recognition accuracy unchanged."
+  },
+  "limits": [
+    "No new recognizer inference or accuracy improvement.",
+    "No real handwriting output was automatically corrected or represented as playable.",
+    "Writer 06 remains rejected for unsupported grace timing.",
+    "No physical device, hosted service, signing or release validation in this change."
+  ],
+  "iPhoneUI": {
+    "summary": "artifacts/review-issues-visible-iphone-summary.json",
+    "bundle": "artifacts/review-issues-visible-iphone.xcresult",
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "screenshot": "docs/release/screenshots/review-issues-iphone.png"
+  },
+  "symbolicPlayback": {
+    "passed": 46,
+    "log": "artifacts/review-issues-symbolic.log",
+    "checks": [
+      "MIDI pitch",
+      "onset",
+      "sustain duration",
+      "source identities",
+      "complete tab assignment",
+      "distinct strings"
+    ]
+  },
+  "retainedUITestFailures": [
+    {
+      "bundle": "artifacts/review-issues-iphone.xcresult",
+      "reason": "Original helper scrolled away from a virtualized earlier mark row."
+    },
+    {
+      "bundle": "artifacts/review-issues-final-iphone.xcresult",
+      "reason": "Duplicate accessibility matches for the confirmation button; changed query to firstMatch."
+    },
+    {
+      "bundle": "artifacts/review-issues-ipad.xcresult",
+      "reason": "Original helper scrolled away from the earlier signature row after undo."
+    },
+    {
+      "bundle": "artifacts/review-issues-verified-ipad.xcresult",
+      "reason": "XCTest reported a measure-length row behind the navigation bar as hittable; tap did not open editor. Helper now requires full visible bounds.",
+      "hierarchyEvidence": "artifacts/review-issues-verified-ipad-attachments/FDB1728B-F6A1-4AD7-B2F3-B3FE43ADC929.txt"
+    },
+    {
+      "bundle": "artifacts/review-issues-visible-ipad.xcresult",
+      "reason": "After restoring and undoing a note correction, test read the virtualized offscreen note without bringing it back into view. Earlier-row checks now scroll explicitly upward."
+    }
+  ],
+  "iPadUI": {
+    "summary": "artifacts/review-issues-final-ipad-summary.json",
+    "bundle": "artifacts/review-issues-final-ipad.xcresult",
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "screenshot": "docs/release/screenshots/review-issues-ipad.png"
+  },
+  "visualInspection": "Unresolved-mark layout inspected on iPhone and iPad screenshots; measure, event location and correction controls readable. No physical-device or VoiceOver validation claimed.",
+  "testSourceNote": "iPhone passed with visible-bounds scroll checks. Final iPad test additionally scrolls back to earlier note/length controls before post-undo/discard assertions; shipping app code is identical."
+}

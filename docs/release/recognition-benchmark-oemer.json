@@ -1,0 +1,213 @@
+{
+  "recordedAt": "2026-09-06T00:48:15.493126+00:00",
+  "plannedImages": 102,
+  "completedCases": 18,
+  "pendingCases": 84,
+  "groups": {
+    "synthetic-blur": {
+      "images": 4,
+      "recognitionFailures": 4,
+      "importFailures": 0,
+      "tabFailures": 0,
+      "playbackFailures": 0,
+      "metrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        }
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      },
+      "medianSeconds": 466.35,
+      "maxSeconds": 601.59
+    },
+    "engraved": {
+      "images": 4,
+      "recognitionFailures": 3,
+      "importFailures": 0,
+      "tabFailures": 1,
+      "playbackFailures": 1,
+      "metrics": {
+        "pitch": {
+          "truePositive": 3,
+          "missing": 61,
+          "extra": 5,
+          "f1": 0.08333333333333333
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 8,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 1,
+          "missing": 63,
+          "extra": 7,
+          "f1": 0.027777777777777776
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 8,
+          "f1": 0.0
+        }
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      },
+      "medianSeconds": 313.79499999999996,
+      "maxSeconds": 379.38
+    },
+    "synthetic-dim": {
+      "images": 3,
+      "recognitionFailures": 3,
+      "importFailures": 0,
+      "tabFailures": 0,
+      "playbackFailures": 0,
+      "metrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        }
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      },
+      "medianSeconds": 325.37,
+      "maxSeconds": 340.7
+    },
+    "synthetic-perspective": {
+      "images": 3,
+      "recognitionFailures": 3,
+      "importFailures": 0,
+      "tabFailures": 0,
+      "playbackFailures": 0,
+      "metrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 48,
+          "extra": 0,
+          "f1": 0.0
+        }
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      },
+      "medianSeconds": 352.17,
+      "maxSeconds": 400.8
+    },
+    "synthetic-rotate": {
+      "images": 4,
+      "recognitionFailures": 4,
+      "importFailures": 0,
+      "tabFailures": 0,
+      "playbackFailures": 0,
+      "metrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 64,
+          "extra": 0,
+          "f1": 0.0
+        }
+      },
+      "chords": {
+        "total": 0,
+        "complete": 0
+      },
+      "medianSeconds": 424.395,
+      "maxSeconds": 568.49
+    }
+  },
+  "realCameraImages": 0,
+  "genuineHandwritingImages": 0,
+  "independentlyReviewedReferences": 0,
+  "correctedInAppAndMatchedReference": 0,
+  "releaseTargetsMet": false,
+  "buildFingerprints": [],
+  "scope": "102 manifest images; capture categories and recognition failures are reported separately. Generated variants do not count as camera or handwriting coverage.",
+  "engines": [
+    "oemer-dbe2a933-stringmap-patches-v1-cpu"
+  ]
+}

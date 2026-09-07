@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<score-partwise version="4.0">
+  <work><work-title>Open or Shift?</work-title></work>
+  <identification><creator type="composer">StringMap original study</creator></identification>
+  <part-list><score-part id="P1"><part-name>Melody</part-name></score-part></part-list>
+  <part id="P1">
+    <measure number="1">
+      <attributes><divisions>2</divisions><key><fifths>1</fifths></key><time><beats>4</beats><beat-type>4</beat-type></time></attributes>
+      <direction><sound tempo="104"/></direction>
+      <note id="contrast-e2"><pitch><step>E</step><octave>2</octave></pitch><duration>2</duration></note>
+      <note id="contrast-g2"><pitch><step>G</step><octave>2</octave></pitch><duration>2</duration></note>
+      <note id="contrast-b3a"><pitch><step>B</step><octave>3</octave></pitch><duration>2</duration></note>
+      <note id="contrast-a3"><pitch><step>A</step><octave>3</octave></pitch><duration>2</duration></note>
+    </measure>
+    <measure number="2">
+      <note id="contrast-b3b"><pitch><step>B</step><octave>3</octave></pitch><duration>1</duration></note>
+      <note id="contrast-c4"><pitch><step>C</step><alter>1</alter><octave>4</octave></pitch><duration>1</duration></note>
+      <note id="contrast-d4"><pitch><step>D</step><octave>4</octave></pitch><duration>1</duration></note>
+      <note id="contrast-e4"><pitch><step>E</step><octave>4</octave></pitch><duration>1</duration></note>
+      <note id="contrast-b3c"><pitch><step>B</step><octave>3</octave></pitch><duration>2</duration></note>
+      <note id="contrast-g3"><pitch><step>G</step><octave>3</octave></pitch><duration>2</duration></note>
+    </measure>
+  </part>
+</score-partwise>

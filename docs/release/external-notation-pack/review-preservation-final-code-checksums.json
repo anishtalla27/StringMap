@@ -1,0 +1,14 @@
+{
+  "services/omr/production.py": "e2e647bcd472180c2392050b6f32386200756551750cf1d866721f2b5ffc732d",
+  "services/omr/test_production.py": "41ddd46b5d1ae68a875d4f8f97b0cab17c677c913c39f08219815cece75e6fb5",
+  "services/omr/recognizer.py": "22edfe73dad2935a6bb73ba18d5236daef3b9b8a70ca55993762adf23a6d4c77",
+  "services/omr/score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+  "services/omr/test_recognizer.py": "9935df172e82b21c1fa3d8cbf32f0317ef1edbedda9fe0221aeeba7732b269f0",
+  "services/omr/benchmark.py": "67733c5fde377debb52e3e1fe6769b67ef5de758d8d24b4e2a31bcd723936207",
+  "services/omr/benchmark_external_pack.py": "e764cc5bba3e08b6b9719312e13b1dbf7e65bdcf4745454fe195791f4bd09ba0",
+  "services/omr/README.md": "a2a2c59f8db5273dfcec9dae5fc9bbec415f99d5d4c0229294913b28710aec3d",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "fd050365722e950fc960d7de4c393fd4f0c9051282380100d71e28829672f0b8",
+  "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/ScorePipelineTests.swift": "cd2cddcda9ba2c07e83d26c9ebfc0c356fff598e31b52d96f445187587d839a1",
+  "apps/ios/StringMapUITests/StringMapUITests.swift": "f68f639a0fa67a70a3d4646a36a89564981ac972db799104a6fde2ed10ec9fa2",
+  "scripts/test-score-playback.py": "62c7f7a8e6796288d60a0b2d4b2aaba87a55ee483dcbd7381e7f504e6324d5b7"
+}

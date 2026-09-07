@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-07",
+  "note": "Historical reference materials are research-only and not app resources. Exact melody references and transformation decisions are in source-review.json.",
+  "sources": [
+    {
+      "id": "long-long-ago",
+      "url": "https://archive.org/download/BaylyLongLongAgo1839Sheetmusic/Bayly-LongLongAgo-1839-sheetmusic.pdf",
+      "edition": "Cramer, Addison & Beale, plate 2538, circa 1839",
+      "scope": "Vocal staff, one verse, excluding piano introduction and postlude",
+      "pages": [
+        3,
+        4
+      ],
+      "localResearchFile": "artifacts/songbook-sources/long-ago.pdf",
+      "sha256": "2936178996f7598712e15056cce3a48060213d64cd95c6e79b062de3e136bfaa"
+    },
+    {
+      "id": "fur-elise",
+      "url": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly",
+      "edition": "Breitkopf & H\u00e4rtel 1888, public-domain transcription by Stelios Samelis (Mutopia 931)",
+      "scope": "Opening right-hand eight-bar period, pickup and first ending, one pass; no left-hand or later sections",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": "sweet-afton",
+      "url": "https://levysheetmusic.mse.jhu.edu/sites/default/files/collection-pdfs/levy-063-040.pdf",
+      "edition": "George Willig, Philadelphia, 1838, Levy 063/040",
+      "scope": "Vocal melody, once; omit small ornament at dis-, omit terminal quarter rest; piano introduction and postlude excluded",
+      "pages": [
+        1,
+        2
+      ],
+      "localResearchFile": "artifacts/songbook-sources/sweet-afton.pdf",
+      "sha256": "b33e2880368c632515d931cdeffb88c11bb8ea2d41bc6e929d7e62275ade5c79"
+    },
+    {
+      "id": "home-sweet-home",
+      "url": "https://www.gutenberg.org/files/21566/21566-h/images/home.pdf",
+      "edition": "McKinley Music Co., circa 1914, vocal setting of Bishop\u2019s 1823 melody",
+      "scope": "Vocal staff only, verse and refrain once; no piano introduction/postlude",
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "home-on-range",
+      "url": "https://www.gutenberg.org/files/21300/21300-h/pdf/homeontherange.pdf",
+      "edition": "Cowboy Songs and Other Frontier Ballads (1910), Gutenberg notation transcription",
+      "scope": "Vocal staff, verse and refrain once; tied durations combined into a single sounding event",
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "brahms-lullaby",
+      "url": "https://www.mutopiaproject.org/ftp/BrahmsJ/O49/Wiegenlied/Wiegenlied-lys.zip",
+      "edition": "Brahms Op.49 No.4, voice/piano edition held by Indiana University; public-domain Mutopia 1037 transcription by Shogo Mori (2007)",
+      "scope": "Complete vocal melody once, omit introductory rests and small grace notes, trim terminal rest; no piano part copied",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/brahms.zip",
+      "sha256": "30a426c3a10b6b4395ec725918cb213772a5bfc4828dc71e3b5c7ac2b9040ffc"
+    },
+    {
+      "id": "minuet-g",
+      "url": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04.ly",
+      "edition": "Bach-Gesellschaft, public-domain Mutopia 75 transcription by Allen Garvin",
+      "scope": "Upper voice, all 32 bars, each section once; grace notes and mordents omitted",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/minuet.ly",
+      "sha256": "aa6c19e6fecf20753591d739f9e6cf32f3d925fa8a50245c011c8928a1cd1d83"
+    },
+    {
+      "id": "greensleeves",
+      "url": "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Greensleeves",
+      "edition": "Grove, A Dictionary of Music and Musicians, vol.1 (1879), Greensleeves; tune from William Chappell, Popular Music of the Olden Time (1859)",
+      "scope": "Complete historical monophonic tune, both sections once; no lyrics or existing harmony copied",
+      "pages": null
+    },
+    {
+      "id": "frere-jacques",
+      "url": "https://www.gutenberg.org/files/42711/42711-h/music/018-019frerejacques.pdf",
+      "edition": "Vieilles chansons pour les petits enfants (1883), Gutenberg transcription, first vocal entry only",
+      "scope": "One complete traditional round melody. Rebarred to begin on beat one; later contrapuntal entries and Widor accompaniment excluded.",
+      "pages": null
+    },
+    {
+      "id": "twinkle",
+      "url": "https://www.gutenberg.org/files/42711/42711-h/music/039maman.pdf",
+      "edition": "Vieilles chansons pour les petits enfants (1883), Ah! vous dirai-je, maman, vocal staff",
+      "scope": "Complete traditional tune, 24 source 2/4 bars paired into 12 guitar 4/4 bars; no accompaniment copied",
+      "pages": null
+    },
+    {
+      "id": "mary-lamb",
+      "url": "https://archive.org/download/carminacollegens00wait/carminacollegens00wait.pdf",
+      "edition": "Carmina Collegensia, expanded edition (1876), supplement p.55, Mary Had a Little Lamb (Hobart Version)",
+      "scope": "Upper melody, first complete verse only; following verse and medley excluded; separate pickup before fleece joined to preceding bar",
+      "pages": [
+        337
+      ]
+    },
+    {
+      "id": "auld-lang-syne",
+      "url": "https://deriv.nls.uk/dcn23/9041/90414454.23.pdf",
+      "edition": "The Popular Songs of Scotland, J. Muir Wood, Edinburgh, 1887, pp.240\u2013241",
+      "scope": "One verse and chorus, no introduction or piano copied; terminal rest trimmed",
+      "pages": [
+        254,
+        255
+      ],
+      "localResearchFile": "artifacts/songbook-sources/popular-scottish-songs.pdf",
+      "sha256": "516f8be371f2e7ea9dae326eba5ac9f0b8271e9e7c2077d73b2727a71fe8e671"
+    },
+    {
+      "id": "drink-to-me",
+      "url": "https://hcmc.uvic.ca/eol/cambridge/benjonson/static/music/pdf/N.2.1.1.pdf",
+      "edition": "Anonymous late-eighteenth-century melody, Carr Baltimore glee (Levy 038/040); Cambridge critical transcription N.2.1/1 used for legible pitch comparison",
+      "scope": "Treble 1 complete tune; initial four-bar strain repeated with both endings, followed by remaining eight bars. Tied same-pitch cadences merged into one attack. No other voices copied.",
+      "pages": null
+    },
+    {
+      "id": "ash-grove",
+      "url": "https://archive.org/download/The_Bardic_Museum/BardicMuseum.pdf",
+      "edition": "Edward Jones, The Bardic Museum (London, 1802), p.83, Llwyn-onn",
+      "scope": "Complete 24-bar principal tune, each section once, excluding following six-eight variation and lower voice. Small grace and turn ornaments omitted.",
+      "pages": [
+        104
+      ],
+      "localResearchFile": "artifacts/songbook-sources/bardic-museum.pdf",
+      "sha256": "8fc4ddc595ab697b6e3ed263b0908505b3adcf13706c64b08d21650be02a6aca"
+    },
+    {
+      "id": "oh-susanna",
+      "url": "https://archive.org/details/OhSusannaOriginal1848SheetMusic",
+      "edition": "Oh! Susanna, 1848 engraved edition, vocal staff pp.2\u20134. Complete 16-bar verse and 8-bar chorus with pickup; piano material excluded. Original C-major guitar accompaniment.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/oh-susanna.pdf",
+      "sha256": "981dae1e35ccab7a79b6cd5e25e96c251956c7d4df378a2bfba09313518640f0"
+    },
+    {
+      "id": "blue-bells",
+      "url": "https://levysheetmusic.mse.jhu.edu/collection/031/034",
+      "edition": "The Blue Bell of Scotland, G. Willig, Philadelphia, circa 1800\u20131801, Levy 031/034. Early vocal version: first strain twice, second strain once; introduction/postlude and small ornaments excluded. New guitar harmony.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/blue-1800.pdf",
+      "sha256": "838410c2ecf6b93d8d51ddb6124a407783c9bafb9e9726de5e7d610096076e3e"
+    },
+    {
+      "id": "london-bridge",
+      "url": "https://en.wikisource.org/wiki/Page:Singing_games.djvu/14",
+      "edition": "Singing Games, Josephine Pollard (1890), p.100. Complete familiar eight-bar tune in its historical cadence variant. Note values doubled into 4/4; original guitar accompaniment.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/london-1890-page.jpg",
+      "sha256": "f96fa1fda2bd2a4f97af163aee7994e1d1bfad2a8f26c7926cceea464cd78e09"
+    },
+    {
+      "id": "row-your-boat",
+      "url": "https://archive.org/download/franklinsquares04mccagoog/franklinsquares04mccagoog.pdf",
+      "edition": "Franklin Square Song Collection (1881), p.69, E. O. Lyte round. One complete voice; historical 6/8 version with repeated third-degree notes in bar 3. Original guitar harmony.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": [
+        74
+      ],
+      "localResearchFile": "artifacts/songbook-sources/franklin-vol1.pdf",
+      "sha256": "7bc73113873f7a841e8d9dd22d4d3ba05db0be50f6dc331c0a338cbbeee940eb"
+    },
+    {
+      "id": "amazing-grace",
+      "url": "https://www.ccel.org/ccel/walker/harmony.html",
+      "edition": "New Britain, The Southern Harmony (1847 edition), p.8, tenor melody. Historical fourteen-bar setting with pickup, one pass using the final ending. New G-major guitar harmony; no hymn text included.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/southern-harmony.pdf",
+      "sha256": "d10b2f92add21fce06b0f1e348259f7f144c76cc3e6daef0204d9b0468d7ac39"
+    },
+    {
+      "id": "ode-to-joy",
+      "url": "https://www.hymnologyarchive.com/joyful-joyful-we-adore-thee",
+      "edition": "Beethoven\u2019s joy theme (1824), complete sixteen-bar melody as printed in The Hymnal (Presbyterian Board, 1911), no.115. Original C-major guitar setting; Amen and hymn accompaniment excluded.",
+      "scope": "Complete instrumental melody, one pass; historical accompaniment and lyrics excluded",
+      "pages": null,
+      "localResearchFile": "artifacts/songbook-sources/ode-1911.jpg",
+      "sha256": "162eb57b1d06b3abf42df0e8e57d3cdc2c9bfe9415013b59eb1b7c2408971aca"
+    }
+  ]
+}

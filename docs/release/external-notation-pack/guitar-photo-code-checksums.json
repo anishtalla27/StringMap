@@ -1,0 +1,15 @@
+{
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "088c468822e6002750fd55b763777d4b952bf061569b11490344b56133ed35c8",
+  "apps/ios/Packages/StringMapCore/Sources/StringMapCheck/main.swift": "daba4f02d32b5faed7a9b8ffcd994a65261f6e3bfdb9e485470747c8c6dd6c72",
+  "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/GuitarPhotoPitchTests.swift": "8cfdc05b8a0e7b9c5089913ce76542fa7214739ba561a2a45286f44581a50998",
+  "apps/ios/StringMap/SheetMusicScanView.swift": "be4f9a1f5bd5260435d3d46666e7bf4ec34b879c8f1c57d10eb842073fdfe4a1",
+  "apps/ios/StringMap/ScoreReviewView.swift": "a08c071528a503af0975a193efd370b8593ee5767d512c43bca4964258cb6032",
+  "apps/ios/StringMap/ScanDraft.swift": "88065e373d99d8c834bbb5b730fb14e1591007e3c95e7b86a1f339959bed2f49",
+  "apps/ios/StringMap/HomeView.swift": "cb041ded3315f94a8f7b0a3dc1138e388600074042c09f557e6d4f9249298a61",
+  "apps/ios/StringMapTests/OMRRecoveryTests.swift": "ad160bb6318d01183e0b6fb4af2b4b1c75568566d36f0b3e45b603116fbe58d9",
+  "apps/ios/StringMapUITests/StringMapUITests.swift": "ef510e45de3b257fd8bc4fde747d8fbf5c5317c5b75ea0dc1624202c6f22bcc3",
+  "services/omr/recognizer.py": "727a50aeead3511bad323cb2d01cab92db623cc01b29b76a12e13d244a403afd",
+  "services/omr/test_recognizer.py": "660906fdbc60a5262c3e0d611098eeb453bb973ea07543d9272d0d95cb70ae9d",
+  "services/omr/benchmark_external_pack.py": "1a0f169a0eec8ee38f9cdce61d6a2a4cb1a8dcba4e991975056de361b76f047a",
+  "scripts/test-score-playback.py": "505b24240bbbc6aedf6ebb6b3a1b00b018dcae00dae155fedbae7eca43dbf533"
+}

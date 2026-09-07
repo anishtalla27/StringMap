@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-06T18:50:09.795324+00:00",
+  "publicCourseLessonsExercisedPerDevice": 12,
+  "releaseUITestResults": [
+    {
+      "resultBundle": "artifacts/finalization-release-ipad-final.xcresult",
+      "passed": 2,
+      "failed": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "3E129F2F-D271-414C-A5B5-3F1596ECF6C7",
+        "deviceName": "StringMap Offline iPad",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    },
+    {
+      "resultBundle": "artifacts/finalization-release-max-final.xcresult",
+      "passed": 2,
+      "failed": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "7D193C12-8B82-4718-82FA-931C19EA259A",
+        "deviceName": "StringMap Release iPhone Max",
+        "modelName": "iPhone 17 Pro Max",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    },
+    {
+      "resultBundle": "artifacts/finalization-ready-ipad.xcresult",
+      "passed": 2,
+      "failed": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "3E129F2F-D271-414C-A5B5-3F1596ECF6C7",
+        "deviceName": "StringMap Offline iPad",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    },
+    {
+      "resultBundle": "artifacts/finalization-ready-max.xcresult",
+      "passed": 2,
+      "failed": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "7D193C12-8B82-4718-82FA-931C19EA259A",
+        "deviceName": "StringMap Release iPhone Max",
+        "modelName": "iPhone 17 Pro Max",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    }
+  ],
+  "tutorialMIDIAndPCMExamples": 16,
+  "freePracticeBridgeClockAndSeekChecks": 3108,
+  "manualDesktopInteraction": "Not performed: Mac locked; user requested continuing without unlock",
+  "screenshotInspection": "Reviewed iPhone/iPad native screenshots; corrected navigation contrast and duplicate score title clipping",
+  "signedDistribution": "Blocked: Xcode No Accounts and no matching provisioning profile",
+  "physicalDeviceAndTestFlight": "Not performed",
+  "sourceSHA256": {
+    "apps/ios/StringMap/ContentView.swift": "7390eca0e31353845a96bcdc50a308751ea4daa5e20c4316142d80b727abfc8f",
+    "apps/ios/StringMap/TutorialView.swift": "ece48eb273995847ca214d516ae61ac754efcbe370842e5d364919c7f5a2e1e4",
+    "apps/ios/StringMap/SettingsView.swift": "bc151e3d74e97e90f024c5e071608d0ad9503213161f63e75f33cf6c177968c2",
+    "apps/ios/StringMap/Resources/AlphaTab/bridge.js": "80dcb6cdeced55a1b70d82a9ce448badc6c7a713f06c23de3506edbb34e4e85c",
+    "apps/ios/StringMap/TutorialCourse.swift": "d1c646780159aff438109b7e99c1eab2b0281e08782a41120cf116e1463b3400",
+    "apps/ios/StringMap/Resources/Tutorial/course.json": "3759f18237e8f2006a38d16c5c251fc8aef52888ce44670d43b267f3543c2fd8"
+  }
+}

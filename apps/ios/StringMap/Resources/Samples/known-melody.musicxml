@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<score-partwise version="4.0">
+  <work><work-title>Known melody</work-title></work>
+  <identification><creator type="composer">StringMap original study</creator></identification>
+  <part-list><score-part id="P1"><part-name>Lead</part-name></score-part></part-list>
+  <part id="P1">
+    <measure number="1">
+      <attributes>
+        <divisions>2</divisions>
+        <time><beats>3</beats><beat-type>4</beat-type></time>
+      </attributes>
+      <direction><sound tempo="88"/></direction>
+      <note><pitch><step>C</step><octave>4</octave></pitch><duration>2</duration></note>
+      <note><pitch><step>D</step><octave>4</octave></pitch><duration>2</duration></note>
+      <note><pitch><step>E</step><octave>4</octave></pitch><duration>2</duration></note>
+    </measure>
+    <measure number="2">
+      <note><rest/><duration>1</duration></note>
+      <note><pitch><step>F</step><alter>1</alter><octave>4</octave></pitch><duration>1</duration></note>
+      <note><pitch><step>G</step><octave>4</octave></pitch><duration>4</duration></note>
+    </measure>
+  </part>
+</score-partwise>

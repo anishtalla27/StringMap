@@ -1,0 +1,2613 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="4.0">
+  <work>
+    <work-title>Flow Gently, Sweet Afton · Chords</work-title>
+  </work>
+  <identification>
+    <creator type="composer">Jonathan E. Spilman</creator>
+  </identification>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Guitar</part-name>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="1" implicit="yes">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <direction>
+        <sound tempo="84" />
+      </direction>
+      <note id="sweet-afton-chords-m1-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note id="sweet-afton-chords-m1-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note id="sweet-afton-chords-m1-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note id="sweet-afton-chords-m1-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note id="sweet-afton-chords-m1-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note id="sweet-afton-chords-m1-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+    </measure>
+    <measure number="2">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m2-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m2-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m2-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m2-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m2-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m2-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="3">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m3-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m3-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m3-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m3-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m3-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m3-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m4-n1">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m4-n2">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m4-n3">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m4-n4">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m4-n5">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m5-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m5-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m5-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m5-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m5-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m5-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m6-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m6-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m6-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m6-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m6-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m6-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="7">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m7-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m7-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m7-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m7-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m7-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m7-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="8">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m8-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m8-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m8-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m8-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="9">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m9-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m9-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m9-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m9-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m9-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m9-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="10">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m10-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m10-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m10-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m10-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m10-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m10-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="11">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m11-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m11-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m11-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m11-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m11-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m11-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="12">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m12-n1">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m12-n2">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m12-n3">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m12-n4">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m12-n5">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="13">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m13-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m13-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m13-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m13-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m13-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m13-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="14">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m14-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m14-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m14-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m14-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m14-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m14-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="15">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m15-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m15-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m15-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m15-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m15-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m15-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="16">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m16-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m16-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m16-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m16-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="17">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m17-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m17-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m17-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m17-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m17-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m17-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="18">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m18-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m18-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m18-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m18-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="19">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m19-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m19-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m19-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m19-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="20">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m20-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m20-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m20-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m20-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="21">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m21-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m21-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m21-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m21-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m21-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m21-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="22">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m22-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m22-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m22-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m22-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="23">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m23-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m23-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m23-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m23-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="24">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m24-n1">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m24-n2">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m24-n3">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m24-n4">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m24-n5">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="25">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m25-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m25-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m25-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m25-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="26">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m26-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m26-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m26-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m26-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m26-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m26-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="27">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m27-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m27-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m27-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m27-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m27-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m27-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="28">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m28-n1">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m28-n2">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m28-n3">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m28-n4">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m28-n5">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="29">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m29-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m29-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m29-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m29-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m29-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m29-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="30">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m30-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m30-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m30-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m30-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m30-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m30-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="31">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m31-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m31-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m31-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m31-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m31-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m31-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="32">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m32-n1">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m32-n2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m32-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+      <note id="sweet-afton-chords-m32-n4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+      </note>
+    </measure>
+    <measure number="33" implicit="yes">
+      <attributes>
+        <divisions>8</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>-1</octave-change>
+        </transpose>
+      </attributes>
+      <note id="sweet-afton-chords-m33-n1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+      <note id="sweet-afton-chords-m33-n2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+      <note id="sweet-afton-chords-m33-n3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+      <note id="sweet-afton-chords-m33-n4">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+      <note id="sweet-afton-chords-m33-n5">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+      <note id="sweet-afton-chords-m33-n6">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>half</type>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

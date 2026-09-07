@@ -1,0 +1,43 @@
+{
+  "method": "Separately reviewed original whole-measure guitar accompaniment plan. Grips below are written from standard guitar tuning and triad intervals, not exported from MusicXML. Melody references are independent and live in source-review.json. A chord sounds once per measure, including a shortened pickup; nonchord melody tones act as passing tones or suspensions. These are beginner accompaniments, not historical piano harmonizations.",
+  "grips": {
+    "C": {"strings": [5,4,3,2,1], "frets": [3,2,0,1,0], "fingers": [3,2,0,1,0], "midi": [48,52,55,60,64]},
+    "G": {"strings": [6,5,4,3,2,1], "frets": [3,2,0,0,0,3], "fingers": [2,1,0,0,0,3], "midi": [43,47,50,55,59,67]},
+    "D": {"strings": [4,3,2,1], "frets": [0,2,3,2], "fingers": [0,1,3,2], "midi": [50,57,62,66]},
+    "Am": {"strings": [5,4,3,2,1], "frets": [0,2,2,1,0], "fingers": [0,2,3,1,0], "midi": [45,52,57,60,64]},
+    "Em": {"strings": [6,5,4,3,2,1], "frets": [0,2,2,0,0,0], "fingers": [0,2,3,0,0,0], "midi": [40,47,52,55,59,64]},
+    "E": {"strings": [6,5,4,3,2,1], "frets": [0,2,2,1,0,0], "fingers": [0,2,3,1,0,0], "midi": [40,47,52,56,59,64]},
+    "A": {"strings": [5,4,3,2,1], "frets": [0,2,2,2,0], "fingers": [0,1,2,3,0], "midi": [45,52,57,61,64]},
+    "F": {"strings": [4,3,2,1], "frets": [3,2,1,1], "fingers": [3,2,1,1], "midi": [53,57,60,65]},
+    "Dm": {"strings": [4,3,2,1], "frets": [0,2,3,1], "fingers": [0,2,3,1], "midi": [50,57,62,65]}
+  },
+  "measureChords": {
+    "amazing-grace": "G G G C G G G D G C C G G D G",
+    "auld-lang-syne": "G G D G C G D C G G D G C G D C G",
+    "greensleeves": "Am Am G Am E Am G E Am C G Am E C G E Am",
+    "sweet-afton": "G G G C G G G D G G G C G G G D G D D D G D D A D G G C G G G D G",
+    "ash-grove": "G G C D G C D G C C G G D D A D G G C D G C D G",
+    "blue-bells": "C C G C C C G C C F F G C C G C C",
+    "home-sweet-home": "C C C G C C C G C F C G C F C G C C G G C F C G C",
+    "long-long-ago": "C C G C C C G C G C G C C C G C",
+    "oh-susanna": "C C C C G C C G C C C C G C C G C F F C G C C G C",
+    "home-on-range": "G G C G D G C D G G G G D G C D G",
+    "ode-to-joy": "C G C G C G C C G G G G C G C C",
+    "fur-elise": "E E Am E Am E Am E Am",
+    "minuet-g": "G G C G C G D D G G C G C G D G G D Em A D Em A D G C G D D C D G",
+    "brahms-lullaby": "C C C F G Dm Dm G C F C F C F C G C",
+    "twinkle": "C F C C C G C G C F C C",
+    "frere-jacques": "C C C C C C G C",
+    "mary-lamb": "C C G C C C G C",
+    "london-bridge": "C C G C C C G C",
+    "row-your-boat": "C C C C C C G C",
+    "drink-to-me": "G C D G G C D G G G C D G C D G"
+  },
+  "reviewNotes": [
+    "All grips contain exactly the major or minor root/third/fifth pitch classes, use one tone per string and keep fretting within frets 0–3.",
+    "F is a four-string small barre, not a six-string F barre. The low two strings are omitted. D/Dm omit low E and A; C/Am/A omit low E.",
+    "Ash Grove bar 18 is tonic G to support its D–B–G melodic triad. Drink to Me bar 11 uses C to support the E and C melody, resolving to D. Blue Bells uses the early Willig version, with tonic support under its E–E–F–D figure.",
+    "Minor-key pieces use E major where G-sharp leads toward A minor. No chord symbol is substituted for actual note events.",
+    "Historical phrases are complete within each stated scope. Accompaniment follows every pickup, rest-containing measure and final measure for exactly the melody arrangement timeline. Melody rests do not force the accompaniment to rest."
+  ]
+}

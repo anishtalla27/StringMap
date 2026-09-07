@@ -1,0 +1,49 @@
+{
+  "releaseQualified": false,
+  "newRecognitionRun": false,
+  "changes": [
+    "Persist origin scan ID atomically with each new photo song; repeated final save returns the committed song without overwriting it.",
+    "Detect a committed song when restoring a surviving scan draft and offer Open saved score rather than recognition or another review save.",
+    "Clear obsolete pipeline results immediately when processing another score so background persistence cannot copy the prior song metadata; clear selected note on new song load."
+  ],
+  "verificationStatus": "passed",
+  "retainedEarlierBundles": [
+    "artifacts/scan-commit-recovery-iphone.xcresult",
+    "artifacts/scan-commit-recovery-ipad.xcresult"
+  ],
+  "earlierResults": "32 unit tests passed. Both UI runs reached recovery but stopped at a title selector matching both the player bar and library card. Final test scopes to librarySong identifiers and asserts exactly one matching card.",
+  "limits": [
+    "App-only persistence verification using initially injected recognized XML; no new optical recognition accuracy claim.",
+    "UI fixture deliberately retains the committed draft to reproduce the state after interruption between database save and draft cleanup. Recovery reads actual persisted data after app termination.",
+    "No physical-device audio, memory-pressure, signing, hosting or TestFlight qualification."
+  ],
+  "sourceSHA256": {
+    "apps/ios/StringMap/SongLibrary.swift": "c89ccc2e64116cdb67455bd41b88060d02022b2068d916dc8048905bd95ebf4d",
+    "apps/ios/StringMap/SheetMusicScanView.swift": "9a7ca339f81b4a30eded53710541d3963f178824577da7c0b661e22cf95beb46",
+    "apps/ios/StringMap/AppModel.swift": "23888615e59d85e402d46c2a6be605b7f64cb2052a4e029265b33281f2a8eeb8",
+    "apps/ios/StringMapTests/SongLibraryTests.swift": "2f8e2dc420a95a3347db884994a0a43482084f89beb480b32669246704551112",
+    "apps/ios/StringMapUITests/StringMapUITests.swift": "a98874e5ef335cd1d912adc1ae43d75ee8ae6e25ab7f63969fafd0bce7baa148"
+  },
+  "iosUnitTests": {
+    "passed": 33,
+    "failed": 0,
+    "evidence": "artifacts/scan-commit-recovery-final-iphone.xcresult"
+  },
+  "simulatorUIFlows": {
+    "test": "testRecoveredScanCanBeCorrectedUndoneAuditionedAndSaved",
+    "iPhone": {
+      "passed": 1,
+      "failed": 0,
+      "evidence": "artifacts/scan-commit-recovery-final-iphone.xcresult"
+    },
+    "iPad": {
+      "passed": 1,
+      "failed": 0,
+      "evidence": "artifacts/scan-commit-recovery-final-ipad.xcresult"
+    }
+  },
+  "screenshots": [
+    "docs/release/screenshots/scan-save-recovery-iphone.png",
+    "docs/release/screenshots/scan-save-recovery-ipad.png"
+  ]
+}

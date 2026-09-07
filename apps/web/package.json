@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@coderline/alphatab": "^1.8.4",
+    "@coderline/alphatab": "1.8.4",
     "@stringmap/fingering-engine": "*",
     "@stringmap/score-pipeline": "*"
   },
   "devDependencies": {
-    "@coderline/alphatab-vite": "^1.8.4"
+    "@coderline/alphatab-vite": "1.8.4"
   }
 }

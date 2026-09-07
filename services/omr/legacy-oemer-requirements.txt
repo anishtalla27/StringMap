@@ -1,0 +1,19 @@
+oemer @ git+https://github.com/BreezeWhite/oemer.git@dbe2a933d630d0f74805d717960eb259473f5978
+matplotlib==3.8.4
+numpy==1.26.4
+onnxruntime==1.17.3
+opencv-python-headless==4.9.0.80
+pillow==12.3.0
+scikit-learn==1.5.2
+scipy==1.11.4
+types-Pillow==10.2.0.20240822
+types-tensorflow==2.18.0.20260730
+typing-extensions==4.16.0
+
+# Owned API and Apple App Attest validation.
+fastapi==0.141.1
+uvicorn==0.52.4
+cryptography==50.0.1
+cbor2==6.1.4
+asn1crypto==1.5.1
+setuptools==83.0.0

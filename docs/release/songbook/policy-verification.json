@@ -1,0 +1,20 @@
+{
+  "privacy": {
+    "url": "https://anishtalla27.github.io/StringMap/privacy.html",
+    "status": 200,
+    "matchesLocal": true,
+    "sha256": "92bf02bdbf89ed4bf293dcd61d6361362316a79e82f5fe2e507d6e662cac867e"
+  },
+  "support": {
+    "url": "https://anishtalla27.github.io/StringMap/support.html",
+    "status": 200,
+    "matchesLocal": true,
+    "sha256": "462278987d29a2d537d0a79337d9094abc3541961cd5c07835213fcfe7afaacf"
+  },
+  "licenses": {
+    "url": "https://anishtalla27.github.io/StringMap/licenses.html",
+    "status": 200,
+    "matchesLocal": true,
+    "sha256": "d30fe8f2c3db9f99d3d462fea6b5afee55b87a3b607fa9d7688c0263694328b8"
+  }
+}

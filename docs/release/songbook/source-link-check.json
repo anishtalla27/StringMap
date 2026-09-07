@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-09-07T07:55:56.314043+00:00",
+  "method": "HTTP HEAD, no source images bundled",
+  "results": [
+    {
+      "id": "amazing-grace",
+      "url": "https://www.ccel.org/ccel/walker/harmony.html",
+      "status": 200,
+      "resolvedURL": "https://www.ccel.org/ccel/walker/harmony.html"
+    },
+    {
+      "id": "auld-lang-syne",
+      "url": "https://deriv.nls.uk/dcn23/9041/90414454.23.pdf",
+      "status": 200,
+      "resolvedURL": "https://deriv.nls.uk/dcn23/9041/90414454.23.pdf"
+    },
+    {
+      "id": "greensleeves",
+      "url": "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Greensleeves",
+      "status": 200,
+      "resolvedURL": "https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Greensleeves"
+    },
+    {
+      "id": "sweet-afton",
+      "url": "https://levysheetmusic.mse.jhu.edu/collection/063/040",
+      "status": 200,
+      "resolvedURL": "https://levysheetmusic.mse.jhu.edu/collection/063/040"
+    },
+    {
+      "id": "ash-grove",
+      "url": "https://archive.org/details/The_Bardic_Museum",
+      "status": 200,
+      "resolvedURL": "https://archive.org/details/The_Bardic_Museum"
+    },
+    {
+      "id": "blue-bells",
+      "url": "https://levysheetmusic.mse.jhu.edu/collection/031/034",
+      "status": 200,
+      "resolvedURL": "https://levysheetmusic.mse.jhu.edu/collection/031/034"
+    },
+    {
+      "id": "home-sweet-home",
+      "url": "https://www.gutenberg.org/files/21566/21566-h/images/home.pdf",
+      "status": 200,
+      "resolvedURL": "https://www.gutenberg.org/files/21566/21566-h/images/home.pdf"
+    },
+    {
+      "id": "long-long-ago",
+      "url": "https://imslp.org/wiki/Long%2C_Long_Ago_(Bayly%2C_Thomas_Haynes)",
+      "status": 200,
+      "resolvedURL": "https://imslp.org/wiki/Long%2C_Long_Ago_(Bayly%2C_Thomas_Haynes)"
+    },
+    {
+      "id": "oh-susanna",
+      "url": "https://archive.org/details/OhSusannaOriginal1848SheetMusic",
+      "status": 200,
+      "resolvedURL": "https://archive.org/details/OhSusannaOriginal1848SheetMusic"
+    },
+    {
+      "id": "home-on-range",
+      "url": "https://www.gutenberg.org/ebooks/21300",
+      "status": 200,
+      "resolvedURL": "https://www.gutenberg.org/ebooks/21300"
+    },
+    {
+      "id": "ode-to-joy",
+      "url": "https://www.hymnologyarchive.com/joyful-joyful-we-adore-thee",
+      "status": 200,
+      "resolvedURL": "https://www.hymnologyarchive.com/joyful-joyful-we-adore-thee"
+    },
+    {
+      "id": "fur-elise",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=931",
+      "status": 200,
+      "resolvedURL": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=931"
+    },
+    {
+      "id": "minuet-g",
+      "url": "https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "getRetry": {
+        "status": 200,
+        "resolvedURL": "https://imslp.org/wiki/Minuet_in_G_major,_BWV_Anh.114_(Pezold,_Christian)"
+      },
+      "webReaderConfirmation": "IMSLP page opened successfully with the web reader; authorship note and historical score listing present."
+    },
+    {
+      "id": "brahms-lullaby",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1037",
+      "status": 200,
+      "resolvedURL": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1037"
+    },
+    {
+      "id": "twinkle",
+      "url": "https://www.gutenberg.org/ebooks/42711",
+      "status": 200,
+      "resolvedURL": "https://www.gutenberg.org/ebooks/42711"
+    },
+    {
+      "id": "frere-jacques",
+      "url": "https://www.gutenberg.org/ebooks/42711",
+      "status": 200,
+      "resolvedURL": "https://www.gutenberg.org/ebooks/42711"
+    },
+    {
+      "id": "mary-lamb",
+      "url": "https://archive.org/details/carminacollegens00wait",
+      "status": 200,
+      "resolvedURL": "https://archive.org/details/carminacollegens00wait"
+    },
+    {
+      "id": "london-bridge",
+      "url": "https://en.wikisource.org/wiki/Page:Singing_games.djvu/14",
+      "status": 200,
+      "resolvedURL": "https://en.wikisource.org/wiki/Page:Singing_games.djvu/14"
+    },
+    {
+      "id": "row-your-boat",
+      "getRetry": {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "previousURL": "https://www.themorgan.org/music-manuscripts-and-printed-music/311191",
+      "previousError": "HTTP Error 403: Forbidden",
+      "url": "https://archive.org/details/franklinsquares04mccagoog/page/n73/mode/1up",
+      "status": 200,
+      "fix": "Use inspected historical scan instead of the Morgan catalog page that rejects this client with HTTP 403."
+    },
+    {
+      "id": "drink-to-me",
+      "url": "https://levysheetmusic.mse.jhu.edu/collection/038/040",
+      "status": 200,
+      "resolvedURL": "https://levysheetmusic.mse.jhu.edu/collection/038/040"
+    }
+  ]
+}

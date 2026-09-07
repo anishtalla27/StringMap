@@ -1,0 +1,59 @@
+{
+  "scope": "18 original single-note exercises; no public scanning or file import",
+  "pieces": 18,
+  "notes": 500,
+  "events": 518,
+  "authoredEventComparison": true,
+  "exactAlphaTabMIDI": true,
+  "sourceIDsPreserved": true,
+  "exactFretPitchReconstruction": true,
+  "bridgeChecks": 3108,
+  "speeds": [
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2
+  ],
+  "fullNotationVisuallyInspected": [
+    "exercise-01",
+    "exercise-02",
+    "exercise-03",
+    "exercise-04",
+    "exercise-05",
+    "exercise-06",
+    "exercise-07",
+    "exercise-08",
+    "exercise-09",
+    "exercise-10",
+    "exercise-11",
+    "exercise-12",
+    "exercise-13",
+    "exercise-14",
+    "exercise-15",
+    "exercise-16",
+    "exercise-17",
+    "exercise-18"
+  ],
+  "physicalAudioVerified": false,
+  "iPhoneUI": "running",
+  "iPadReleaseManual": "catalog and playback inspected; remaining controls pending",
+  "coreTests": 75,
+  "iOSUnitTests": 35,
+  "typeScriptTests": 13,
+  "typecheck": "passed",
+  "signedArchive": "blocked: no registered device/provisioning profile",
+  "unsignedDeviceArchive": "passed; final minor UI changes require rebuild",
+  "policyWebsite": {
+    "branch": "codex/policy-pages",
+    "commit": "c7c18e1eb9e9efef5ef12fd9040bfc22d7236d2c",
+    "liveBytesVerified": true,
+    "pages": {
+      "index.html": true,
+      "privacy.html": true,
+      "support.html": true,
+      "licenses.html": true
+    }
+  }
+}

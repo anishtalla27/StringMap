@@ -1,0 +1,3826 @@
+[
+  {
+    "resource": "exercise-01",
+    "title": "Open String Walk",
+    "detail": "Meet all six open strings, one note at a time.",
+    "tempo": 72,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-01-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-01-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-01-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-01-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-01-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-01-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-01-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-01-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-01-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-01-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-01-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-01-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-01-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-01-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-01-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-01-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-01-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-01-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      }
+    ]
+  },
+  {
+    "resource": "exercise-02",
+    "title": "First Steps in C",
+    "detail": "Read a first-position C-major melody.",
+    "tempo": 80,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-02-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-02-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-02-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-02-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-02-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-02-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-02-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-02-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-02-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-02-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-02-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-03",
+    "title": "Two String Conversation",
+    "detail": "Cross between the top two strings.",
+    "tempo": 76,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-03-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-03-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-03-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-03-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-03-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-03-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-03-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-03-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-03-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-03-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-03-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-03-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-03-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-03-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 59
+      }
+    ]
+  },
+  {
+    "resource": "exercise-04",
+    "title": "Quiet Quarter Notes",
+    "detail": "Keep a steady pulse through repeated notes.",
+    "tempo": 84,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-04-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-04-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-04-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-04-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-04-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-04-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-04-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-04-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-04-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-04-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-04-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-04-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-04-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-04-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-04-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-04-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-05",
+    "title": "Room to Breathe",
+    "detail": "Count the rests without losing the beat.",
+    "tempo": 72,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-05-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-05-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-05-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-05-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-05-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-05-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-05-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-05-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-05-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-05-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-05-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-05-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-05-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-05-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-05-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-05-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-05-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-05-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-05-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-05-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": null
+      }
+    ]
+  },
+  {
+    "resource": "exercise-06",
+    "title": "Half Note Horizon",
+    "detail": "Hold longer notes for their full value.",
+    "tempo": 88,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-06-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-06-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-06-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-06-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-06-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-06-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-06-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-06-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-06-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-06-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-06-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-06-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-06-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-06-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-06-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-06-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-06-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-06-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-07",
+    "title": "Three Beat Stroll",
+    "detail": "Feel three quarter-note beats in each bar.",
+    "tempo": 90,
+    "beats": 3,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-07-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-07-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-07-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-07-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-07-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-07-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-07-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-07-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-07-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 3.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-07-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-07-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-07-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-07-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-07-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-07-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-07-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-07-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-07-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 3.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-08",
+    "title": "Eighth Note River",
+    "detail": "Play even pairs of eighth notes.",
+    "tempo": 72,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-08-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-08-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m1-e5",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-08-m1-e6",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-08-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-08-m2-e5",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-08-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-08-m3-e5",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m3-e6",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-08-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-08-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m5-e5",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-08-m5-e6",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-08-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-08-m6-e5",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-08-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-08-m7-e5",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m7-e6",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-08-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-08-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-08-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-09",
+    "title": "Dotted Footsteps",
+    "detail": "Count a dotted quarter followed by an eighth.",
+    "tempo": 76,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-09-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-09-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 60
+      },
+      {
+        "id": "exercise-09-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 59
+      },
+      {
+        "id": "exercise-09-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-09-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-09-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-09-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-09-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-09-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 60
+      },
+      {
+        "id": "exercise-09-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 59
+      },
+      {
+        "id": "exercise-09-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-09-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-09-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-09-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-09-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-09-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-10",
+    "title": "G Major Path",
+    "detail": "Find F-sharp in a one-sharp key signature.",
+    "tempo": 84,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 1,
+    "events": [
+      {
+        "id": "exercise-10-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-10-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-10-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-10-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-10-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-10-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-10-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-10-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-10-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-10-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-10-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-10-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-10-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-10-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-10-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-10-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-10-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-10-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-10-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-10-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 55
+      }
+    ]
+  },
+  {
+    "resource": "exercise-11",
+    "title": "D Major Turn",
+    "detail": "Follow F-sharp and C-sharp in D major.",
+    "tempo": 80,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 2,
+    "events": [
+      {
+        "id": "exercise-11-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-11-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-11-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-11-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-11-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-11-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 61
+      },
+      {
+        "id": "exercise-11-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-11-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-11-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-11-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-11-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-11-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-11-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-11-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-11-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 61
+      },
+      {
+        "id": "exercise-11-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 59
+      },
+      {
+        "id": "exercise-11-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-11-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 50
+      }
+    ]
+  },
+  {
+    "resource": "exercise-12",
+    "title": "A Minor Lantern",
+    "detail": "Shape a short melody in natural minor.",
+    "tempo": 78,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-12-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-12-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-12-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-12-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-12-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-12-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-12-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-12-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-12-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-12-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-12-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-12-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-12-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-12-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-12-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-12-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-12-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-12-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 45
+      }
+    ]
+  },
+  {
+    "resource": "exercise-13",
+    "title": "Chromatic Neighbors",
+    "detail": "Read adjacent semitones and accidentals.",
+    "tempo": 68,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-13-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-13-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-13-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-13-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 56
+      },
+      {
+        "id": "exercise-13-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-13-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 56
+      },
+      {
+        "id": "exercise-13-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-13-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-13-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-13-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 51
+      },
+      {
+        "id": "exercise-13-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-13-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-13-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-13-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-13-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 56
+      },
+      {
+        "id": "exercise-13-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-13-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 56
+      },
+      {
+        "id": "exercise-13-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-13-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 54
+      },
+      {
+        "id": "exercise-13-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-13-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 51
+      },
+      {
+        "id": "exercise-13-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 2.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-13-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": null
+      }
+    ]
+  },
+  {
+    "resource": "exercise-14",
+    "title": "Six Eight Drift",
+    "detail": "Group six eighth notes into two dotted-quarter pulses.",
+    "tempo": 72,
+    "beats": 6,
+    "beatType": 8,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-14-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-14-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-14-m1-e5",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m1-e6",
+        "measureIndex": 0,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-14-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 1.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-14-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-14-m3-e5",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m3-e6",
+        "measureIndex": 2,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 3.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-14-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 48
+      },
+      {
+        "id": "exercise-14-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-14-m5-e5",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m5-e6",
+        "measureIndex": 4,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-14-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 1.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-14-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-14-m7-e5",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-14-m7-e6",
+        "measureIndex": 6,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-14-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 3.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-15",
+    "title": "Bass String Trail",
+    "detail": "Read low notes on the bass strings.",
+    "tempo": 76,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-15-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-15-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-15-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-15-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-15-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-15-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 40
+      },
+      {
+        "id": "exercise-15-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-15-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-15-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-15-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 47
+      },
+      {
+        "id": "exercise-15-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 45
+      },
+      {
+        "id": "exercise-15-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 43
+      },
+      {
+        "id": "exercise-15-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 40
+      }
+    ]
+  },
+  {
+    "resource": "exercise-16",
+    "title": "Upper String Answer",
+    "detail": "Practice a melody in the upper register.",
+    "tempo": 82,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-16-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 69
+      },
+      {
+        "id": "exercise-16-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-16-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-16-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-16-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 69
+      },
+      {
+        "id": "exercise-16-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-16-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 67
+      },
+      {
+        "id": "exercise-16-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 64
+      },
+      {
+        "id": "exercise-16-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-16-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 62
+      },
+      {
+        "id": "exercise-16-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 65
+      },
+      {
+        "id": "exercise-16-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 64
+      }
+    ]
+  },
+  {
+    "resource": "exercise-17",
+    "title": "Offbeat Echo",
+    "detail": "Enter after a rest and keep eighth-note timing.",
+    "tempo": 76,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-17-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-17-m1-e5",
+        "measureIndex": 0,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m1-e6",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-17-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m2-e5",
+        "measureIndex": 1,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-17-m2-e6",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-17-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 59
+      },
+      {
+        "id": "exercise-17-m3-e5",
+        "measureIndex": 2,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m3-e6",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-17-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-17-m5-e5",
+        "measureIndex": 4,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m5-e6",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-17-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m6-e5",
+        "measureIndex": 5,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-17-m6-e6",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 60
+      },
+      {
+        "id": "exercise-17-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 0.5,
+        "midi": 59
+      },
+      {
+        "id": "exercise-17-m7-e5",
+        "measureIndex": 6,
+        "onsetQuarters": 2.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-17-m7-e6",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-17-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-17-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-17-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  },
+  {
+    "resource": "exercise-18",
+    "title": "Small Journey",
+    "detail": "Combine rests, dotted rhythms, and string crossings.",
+    "tempo": 84,
+    "beats": 4,
+    "beatType": 4,
+    "keyFifths": 0,
+    "events": [
+      {
+        "id": "exercise-18-m1-e1",
+        "measureIndex": 0,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-18-m1-e2",
+        "measureIndex": 0,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m1-e3",
+        "measureIndex": 0,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m1-e4",
+        "measureIndex": 0,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-18-m1-e5",
+        "measureIndex": 0,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m2-e1",
+        "measureIndex": 1,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m2-e2",
+        "measureIndex": 1,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-18-m2-e3",
+        "measureIndex": 1,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m2-e4",
+        "measureIndex": 1,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-18-m3-e1",
+        "measureIndex": 2,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-18-m3-e2",
+        "measureIndex": 2,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m3-e3",
+        "measureIndex": 2,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m3-e4",
+        "measureIndex": 2,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-18-m3-e5",
+        "measureIndex": 2,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-18-m4-e1",
+        "measureIndex": 3,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m4-e2",
+        "measureIndex": 3,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-18-m4-e3",
+        "measureIndex": 3,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-18-m5-e1",
+        "measureIndex": 4,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 48
+      },
+      {
+        "id": "exercise-18-m5-e2",
+        "measureIndex": 4,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 0.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m5-e3",
+        "measureIndex": 4,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m5-e4",
+        "measureIndex": 4,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 57
+      },
+      {
+        "id": "exercise-18-m5-e5",
+        "measureIndex": 4,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m6-e1",
+        "measureIndex": 5,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.5,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m6-e2",
+        "measureIndex": 5,
+        "onsetQuarters": 1.5,
+        "durationQuarters": 0.5,
+        "midi": 53
+      },
+      {
+        "id": "exercise-18-m6-e3",
+        "measureIndex": 5,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m6-e4",
+        "measureIndex": 5,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": null
+      },
+      {
+        "id": "exercise-18-m7-e1",
+        "measureIndex": 6,
+        "onsetQuarters": 0,
+        "durationQuarters": 0.5,
+        "midi": 57
+      },
+      {
+        "id": "exercise-18-m7-e2",
+        "measureIndex": 6,
+        "onsetQuarters": 0.5,
+        "durationQuarters": 0.5,
+        "midi": 55
+      },
+      {
+        "id": "exercise-18-m7-e3",
+        "measureIndex": 6,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m7-e4",
+        "measureIndex": 6,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-18-m7-e5",
+        "measureIndex": 6,
+        "onsetQuarters": 3.0,
+        "durationQuarters": 1.0,
+        "midi": 53
+      },
+      {
+        "id": "exercise-18-m8-e1",
+        "measureIndex": 7,
+        "onsetQuarters": 0,
+        "durationQuarters": 1.0,
+        "midi": 52
+      },
+      {
+        "id": "exercise-18-m8-e2",
+        "measureIndex": 7,
+        "onsetQuarters": 1.0,
+        "durationQuarters": 1.0,
+        "midi": 50
+      },
+      {
+        "id": "exercise-18-m8-e3",
+        "measureIndex": 7,
+        "onsetQuarters": 2.0,
+        "durationQuarters": 2.0,
+        "midi": 48
+      }
+    ]
+  }
+]

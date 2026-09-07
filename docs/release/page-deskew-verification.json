@@ -1,0 +1,453 @@
+{
+  "date": "2026-09-06",
+  "status": "Bounded recovery verified locally, in Linux and through simulator Photos; recognition and release qualification remain open",
+  "sourceSHA256": {
+    "recognizer.py": "f08507b711b2281ac5f7508769b270ee1ab196870b99fdba8897508e22b57903",
+    "page_image.py": "ffcf135317e6873027c8353bf852620bb8971e6f79bc4b75a7d5a1cfc2635343",
+    "staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+    "production.py": "7095ecf60a3fce2fc2737f6731f36f3f29d6390ef8f4121cefba2c0c43218ade",
+    "score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+    "README.md": "fd1d1e7bb2d30a0463768b24b6bc4c3aea438735d8cca1877b6027ccadfaf5ea"
+  },
+  "serviceTests": {
+    "passed": 47,
+    "log": "artifacts/page-deskew-service-tests.log"
+  },
+  "directRecognition": {
+    "releaseQualified": false,
+    "realCameraImages": 0,
+    "referenceBoundaryStatus": "Provisional first MusicXML page; independent visual audit required",
+    "referencesUsedByInference": false,
+    "sourceSHA256": {
+      "recognizer.py": "f08507b711b2281ac5f7508769b270ee1ab196870b99fdba8897508e22b57903",
+      "staff_image.py": "e2f13a417554472f326c11d2097435da1051276538a21f378d0dcad70ab46cc2",
+      "page_image.py": "ffcf135317e6873027c8353bf852620bb8971e6f79bc4b75a7d5a1cfc2635343",
+      "score_quality.py": "5e92704cd107cf1229249c0855f0660dd11834911276726870aad828b690d95a",
+      "production.py": "7095ecf60a3fce2fc2737f6731f36f3f29d6390ef8f4121cefba2c0c43218ade"
+    },
+    "cases": [
+      {
+        "id": "rhythm-06-clean",
+        "category": "generated",
+        "imageSHA256": "cbba9164e237ab5b8f20833eecf4c8805d3fc7cb6c81b2a843c0b244ad54bd0a",
+        "recognitionSeconds": 2.1003040419891477,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 20,
+              "recognized": 20
+            },
+            {
+              "detected": 20,
+              "recognized": 20
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 40,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 8,
+            "complete": 8
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 40,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "rhythm-12-clean",
+        "category": "generated",
+        "imageSHA256": "ccf291be9689abc0da43465dc58bd5438222f4f3c5671eb6091d76b200daccd2",
+        "recognitionSeconds": 1.8803328330104705,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 2,
+          "noteCounts": [
+            {
+              "detected": 28,
+              "recognized": 28
+            },
+            {
+              "detected": 28,
+              "recognized": 28
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 56,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 56,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "study-01-clean",
+        "category": "generated",
+        "imageSHA256": "5c6be8bf6db5d0d963887cac9f0b8cdb5a3062cf95507079030ac8847ecbbe44",
+        "recognitionSeconds": 1.3883479590003844,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 1,
+          "noteCounts": [
+            {
+              "detected": 16,
+              "recognized": 16
+            }
+          ],
+          "preparation": "standard",
+          "attempts": 1,
+          "timingWarnings": 0
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "onset": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "duration": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "noteEvent": {
+            "truePositive": 16,
+            "missing": 0,
+            "extra": 0,
+            "f1": 1.0
+          },
+          "chords": {
+            "total": 0,
+            "complete": 0
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": true,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 16,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "05_dr_cases_pavan__tilt_right",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+        "recognitionSeconds": 37.167543458985165,
+        "recognition": {
+          "status": "completed",
+          "staffCount": 7,
+          "noteCounts": [
+            {
+              "detected": 52,
+              "recognized": 54
+            },
+            {
+              "detected": 77,
+              "recognized": 78
+            },
+            {
+              "detected": 69,
+              "recognized": 71
+            },
+            {
+              "detected": 61,
+              "recognized": 60
+            },
+            {
+              "detected": 66,
+              "recognized": 65
+            },
+            {
+              "detected": 54,
+              "recognized": 54
+            },
+            {
+              "detected": 40,
+              "recognized": 40
+            }
+          ],
+          "preparation": "standard",
+          "pageDeskew": {
+            "rotationDegrees": -4.988343857270241,
+            "longSegments": 235,
+            "agreement": 0.9063952821352226
+          },
+          "attempts": 5,
+          "timingWarnings": 18
+        },
+        "exported": true,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 421,
+            "missing": 0,
+            "extra": 1,
+            "f1": 0.9988137603795967
+          },
+          "onset": {
+            "truePositive": 187,
+            "missing": 234,
+            "extra": 235,
+            "f1": 0.44365361803084225
+          },
+          "duration": {
+            "truePositive": 408,
+            "missing": 13,
+            "extra": 14,
+            "f1": 0.9679715302491103
+          },
+          "noteEvent": {
+            "truePositive": 19,
+            "missing": 402,
+            "extra": 403,
+            "f1": 0.045077105575326216
+          },
+          "chords": {
+            "total": 107,
+            "complete": 1
+          }
+        },
+        "nativeAccepted": true,
+        "nativeError": null,
+        "tabPlayable": false,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 414,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        },
+        "playbackPassed": true
+      },
+      {
+        "id": "14_giles_hobies_galliard__tilt_left",
+        "category": "supplied-photo-simulation",
+        "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+        "recognitionSeconds": 65.28674883299391,
+        "recognition": {
+          "status": "failed",
+          "type": "ValueError"
+        },
+        "exported": false,
+        "writtenWholePageMetrics": {
+          "pitch": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "onset": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "duration": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "noteEvent": {
+            "truePositive": 0,
+            "missing": 593,
+            "extra": 0,
+            "f1": 0.0
+          },
+          "chords": {
+            "total": 111,
+            "complete": 0
+          }
+        }
+      }
+    ]
+  },
+  "http": {
+    "result": "artifacts/page-deskew-http-results/printed_guitar-05_dr_cases_pavan__tilt_right.json",
+    "notes": 421,
+    "measures": 24,
+    "playback": {
+      "notationAlphaTex": {
+        "parsed": true,
+        "notes": 413,
+        "sourceIdentitiesPreserved": true,
+        "exactPlayback": true
+      }
+    },
+    "seconds": 56.79027087500435,
+    "imagesRemoved": true
+  },
+  "cancellation": {
+    "job": "7e389871-9805-4ef2-a9d2-f39f775a4ffa",
+    "scope": "Real local HTTP worker cancellation during the new image-recovery stage",
+    "recoveryStageObserved": true,
+    "workerPIDs": [
+      18108
+    ],
+    "deleteStatus": 204,
+    "deleteSeconds": 0.05991795798763633,
+    "finalStatus": "cancelled",
+    "workDirectoryRemoved": true,
+    "workersStopped": true,
+    "passed": true
+  },
+  "resourceLog": "artifacts/page-deskew-http-server.log",
+  "sourceOffer": {
+    "path": "artifacts/page-deskew-recognizer-source.tar.gz",
+    "sha256": "075660e72967404883b73c21911f527e16e14f56f3d81c34468ce3f03e9881f1",
+    "verifiedPythonFiles": [
+      "export_clarity_guitar_evaluation.py",
+      "score_quality.py",
+      "server.py",
+      "build_rhythm_corpus.py",
+      "report_benchmark.py",
+      "summarize_external_pack.py",
+      "staff_image.py",
+      "benchmark.py",
+      "models.py",
+      "recognizer.py",
+      "build_source_offer.py",
+      "build_corpus.py",
+      "recheck_results.py",
+      "check_external_references.py",
+      "attestation.py",
+      "receipt.py",
+      "evaluate_zeus_crops.py",
+      "compare_external_pack.py",
+      "page_image.py",
+      "build_unsupported_corpus.py",
+      "engine_benchmark.py",
+      "evaluate_jazzmus.py",
+      "benchmark_external_pack.py",
+      "production.py",
+      "compare_staff_crops.py"
+    ]
+  },
+  "limits": [
+    "This recovers a failed page for correction; its rhythm errors remain.",
+    "Three actual generated controls preserve 112 reference events. The full external corpus was not rerun on this final service revision.",
+    "The two supplied test pages are photo simulations, not physical camera captures.",
+    "Audiveris remains excluded from the shipping service.",
+    "Linux and iPhone/iPad UI follow-up is recorded separately; no hosted deployment, signed archive or physical-device qualification."
+  ],
+  "linuxAndSimulatorFollowUp": "docs/release/page-deskew-container-ui-verification.json"
+}

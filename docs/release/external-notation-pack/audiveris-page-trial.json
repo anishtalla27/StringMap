@@ -1,0 +1,3042 @@
+{
+  "date": "2026-09-06",
+  "releaseQualified": false,
+  "shippingChanged": false,
+  "referencesUsedByInference": false,
+  "realCameraImages": 0,
+  "metricLimits": "Provisional XML first-page boundary. Pitch-only totals do not prove correct note sequence. Per-measure diagnostics reset each bar and do not qualify whole-page timing. Grace notes are omitted by the existing event comparator; native rejection remains separately recorded.",
+  "raw": {
+    "01_fantasy_p5__flat": {
+      "id": "01_fantasy_p5__flat",
+      "imageSHA256": "0f87d278994a2b63aeb5e6bc30201d9cc0e7fb5cf7af2a8a465a9f3d22951475",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.239,
+      "xmlSHA256": "91ed62c4d79b1ca06eb8583b863115f0a399fdfb8a931c79027d7c949f5d266a",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 328,
+          "missing": 15,
+          "extra": 2,
+          "f1": 0.974739970282318
+        },
+        "onset": {
+          "truePositive": 216,
+          "missing": 127,
+          "extra": 114,
+          "f1": 0.6419019316493314
+        },
+        "duration": {
+          "truePositive": 330,
+          "missing": 13,
+          "extra": 0,
+          "f1": 0.9806835066864784
+        },
+        "noteEvent": {
+          "truePositive": 21,
+          "missing": 322,
+          "extra": 309,
+          "f1": 0.06240713224368499
+        },
+        "chords": {
+          "total": 93,
+          "complete": 1
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 142,
+          "missing": 201,
+          "extra": 188,
+          "f1": 0.42199108469539376
+        },
+        "onset": {
+          "truePositive": 216,
+          "missing": 127,
+          "extra": 114,
+          "f1": 0.6419019316493314
+        },
+        "duration": {
+          "truePositive": 330,
+          "missing": 13,
+          "extra": 0,
+          "f1": 0.9806835066864784
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 338,
+          "extra": 325,
+          "f1": 0.014858841010401188
+        },
+        "chords": {
+          "total": 93,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": true,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 317,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 317,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        }
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": true,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "alphaTex": {
+            "parsed": true,
+            "notes": 317,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 317,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          },
+          "tabPitchExact": true,
+          "allNotesAssigned": true,
+          "distinctStrings": true
+        }
+      },
+      "totalSeconds": 6.734,
+      "artifactDirectory": "artifacts/audiveris-external-pilot/01_fantasy_p5__flat",
+      "measureAlignedDiagnostic": {
+        "truePositive": 311,
+        "missing": 32,
+        "extra": 19,
+        "f1": 0.924219910846954
+      }
+    },
+    "05_dr_cases_pavan__tilt_right": {
+      "id": "05_dr_cases_pavan__tilt_right",
+      "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.636,
+      "xmlSHA256": "dd14e789e8d6a4cc7f3d7c649e4cc61e303d6be19d352987487a2f8380c19c3b",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 90,
+          "missing": 331,
+          "extra": 0,
+          "f1": 0.3522504892367906
+        },
+        "onset": {
+          "truePositive": 46,
+          "missing": 375,
+          "extra": 44,
+          "f1": 0.18003913894324852
+        },
+        "duration": {
+          "truePositive": 85,
+          "missing": 336,
+          "extra": 5,
+          "f1": 0.33268101761252444
+        },
+        "noteEvent": {
+          "truePositive": 8,
+          "missing": 413,
+          "extra": 82,
+          "f1": 0.03131115459882583
+        },
+        "chords": {
+          "total": 107,
+          "complete": 1
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 50,
+          "missing": 371,
+          "extra": 40,
+          "f1": 0.19569471624266144
+        },
+        "onset": {
+          "truePositive": 46,
+          "missing": 375,
+          "extra": 44,
+          "f1": 0.18003913894324852
+        },
+        "duration": {
+          "truePositive": 85,
+          "missing": 336,
+          "extra": 5,
+          "f1": 0.33268101761252444
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 421,
+          "extra": 90,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 107,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 5: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 5: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 5.696,
+      "artifactDirectory": "artifacts/audiveris-external-pilot/05_dr_cases_pavan__tilt_right",
+      "measureAlignedDiagnostic": {
+        "truePositive": 5,
+        "missing": 416,
+        "extra": 85,
+        "f1": 0.019569471624266144
+      }
+    },
+    "07_digorie_pipers_galliard__flat": {
+      "id": "07_digorie_pipers_galliard__flat",
+      "imageSHA256": "1ea02839d0a67591d4f382dec23899395f88e686cb92fddfaa9ad37909f470b1",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.385,
+      "xmlSHA256": "b23f32229dae2c62f099eba044954762f909bf00c3b629ca15a8c768846d3a74",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 503,
+          "missing": 35,
+          "extra": 0,
+          "f1": 0.9663784822286263
+        },
+        "onset": {
+          "truePositive": 173,
+          "missing": 365,
+          "extra": 330,
+          "f1": 0.3323727185398655
+        },
+        "duration": {
+          "truePositive": 489,
+          "missing": 49,
+          "extra": 14,
+          "f1": 0.9394812680115274
+        },
+        "noteEvent": {
+          "truePositive": 32,
+          "missing": 506,
+          "extra": 471,
+          "f1": 0.06147934678194044
+        },
+        "chords": {
+          "total": 112,
+          "complete": 4
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 199,
+          "missing": 339,
+          "extra": 304,
+          "f1": 0.38232468780019213
+        },
+        "onset": {
+          "truePositive": 173,
+          "missing": 365,
+          "extra": 330,
+          "f1": 0.3323727185398655
+        },
+        "duration": {
+          "truePositive": 489,
+          "missing": 49,
+          "extra": 14,
+          "f1": 0.9394812680115274
+        },
+        "noteEvent": {
+          "truePositive": 3,
+          "missing": 535,
+          "extra": 500,
+          "f1": 0.005763688760806916
+        },
+        "chords": {
+          "total": 112,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 7: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 7: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 5.465,
+      "artifactDirectory": "artifacts/audiveris-external-pilot/07_digorie_pipers_galliard__flat",
+      "measureAlignedDiagnostic": {
+        "truePositive": 341,
+        "missing": 197,
+        "extra": 162,
+        "f1": 0.6551392891450528
+      }
+    },
+    "14_giles_hobies_galliard__tilt_left": {
+      "id": "14_giles_hobies_galliard__tilt_left",
+      "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.636,
+      "xmlSHA256": "a38fe9672207c187d703583fc9e5fa4e483c560f9dc27ff1f40927a02aa43bdb",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 97,
+          "missing": 496,
+          "extra": 0,
+          "f1": 0.2811594202898551
+        },
+        "onset": {
+          "truePositive": 44,
+          "missing": 549,
+          "extra": 53,
+          "f1": 0.12753623188405797
+        },
+        "duration": {
+          "truePositive": 97,
+          "missing": 496,
+          "extra": 0,
+          "f1": 0.2811594202898551
+        },
+        "noteEvent": {
+          "truePositive": 3,
+          "missing": 590,
+          "extra": 94,
+          "f1": 0.008695652173913044
+        },
+        "chords": {
+          "total": 111,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 55,
+          "missing": 538,
+          "extra": 42,
+          "f1": 0.15942028985507245
+        },
+        "onset": {
+          "truePositive": 44,
+          "missing": 549,
+          "extra": 53,
+          "f1": 0.12753623188405797
+        },
+        "duration": {
+          "truePositive": 97,
+          "missing": 496,
+          "extra": 0,
+          "f1": 0.2811594202898551
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 593,
+          "extra": 97,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 111,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 7: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 8: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 6.715,
+      "artifactDirectory": "artifacts/audiveris-external-pilot/14_giles_hobies_galliard__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 4,
+        "missing": 589,
+        "extra": 93,
+        "f1": 0.011594202898550725
+      }
+    },
+    "02_fancy_p6__tilt_left": {
+      "id": "02_fancy_p6__tilt_left",
+      "imageSHA256": "ca598dc81fa3d1d2660ffb57f8ca7361db02f1ca12882d6ff081973ee077a60f",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.406,
+      "xmlSHA256": "6013c3e9db27a2406c1d18f9f0179935b57c409190d9d8b3e3afccf11fb39a83",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 107,
+          "missing": 225,
+          "extra": 0,
+          "f1": 0.4874715261958998
+        },
+        "onset": {
+          "truePositive": 60,
+          "missing": 272,
+          "extra": 47,
+          "f1": 0.2733485193621868
+        },
+        "duration": {
+          "truePositive": 106,
+          "missing": 226,
+          "extra": 1,
+          "f1": 0.48291571753986334
+        },
+        "noteEvent": {
+          "truePositive": 3,
+          "missing": 329,
+          "extra": 104,
+          "f1": 0.01366742596810934
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 36,
+          "missing": 296,
+          "extra": 71,
+          "f1": 0.16400911161731208
+        },
+        "onset": {
+          "truePositive": 60,
+          "missing": 272,
+          "extra": 47,
+          "f1": 0.2733485193621868
+        },
+        "duration": {
+          "truePositive": 106,
+          "missing": 226,
+          "extra": 1,
+          "f1": 0.48291571753986334
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 332,
+          "extra": 107,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 6.452,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/02_fancy_p6__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 4,
+        "missing": 328,
+        "extra": 103,
+        "f1": 0.018223234624145785
+      }
+    },
+    "03_solus_cum_sola__soft_shadow": {
+      "id": "03_solus_cum_sola__soft_shadow",
+      "imageSHA256": "8af891ab3e7d3b114ee7e846b689f31b20c92a51017d53fcb43966764b3aba29",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.752,
+      "xmlSHA256": "9ebfad269e0a02ae99ee967464d8e581a3fa5eed200645704bc2202bb272ce22",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 319,
+          "missing": 25,
+          "extra": 0,
+          "f1": 0.9622926093514329
+        },
+        "onset": {
+          "truePositive": 167,
+          "missing": 177,
+          "extra": 152,
+          "f1": 0.5037707390648567
+        },
+        "duration": {
+          "truePositive": 314,
+          "missing": 30,
+          "extra": 5,
+          "f1": 0.947209653092006
+        },
+        "noteEvent": {
+          "truePositive": 14,
+          "missing": 330,
+          "extra": 305,
+          "f1": 0.042232277526395176
+        },
+        "chords": {
+          "total": 61,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 97,
+          "missing": 247,
+          "extra": 222,
+          "f1": 0.29260935143288086
+        },
+        "onset": {
+          "truePositive": 167,
+          "missing": 177,
+          "extra": 152,
+          "f1": 0.5037707390648567
+        },
+        "duration": {
+          "truePositive": 314,
+          "missing": 30,
+          "extra": 5,
+          "f1": 0.947209653092006
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 343,
+          "extra": 318,
+          "f1": 0.0030165912518853697
+        },
+        "chords": {
+          "total": 61,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 11: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 11: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 1
+      },
+      "totalSeconds": 5.827,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/03_solus_cum_sola__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 241,
+        "missing": 103,
+        "extra": 78,
+        "f1": 0.726998491704374
+      }
+    },
+    "04_solus_sine_sola__perspective": {
+      "id": "04_solus_sine_sola__perspective",
+      "imageSHA256": "198d8188902402c5403c9d767cdafae05da08d222c9bcba3343734c8d8a38ca4",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.129,
+      "xmlSHA256": "3fd1a8ecd205a8fa1d218eeb1cfe4a1280b2049fd521ac7706160b688046bf5b",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 302,
+          "missing": 15,
+          "extra": 1,
+          "f1": 0.9741935483870968
+        },
+        "onset": {
+          "truePositive": 211,
+          "missing": 106,
+          "extra": 92,
+          "f1": 0.6806451612903226
+        },
+        "duration": {
+          "truePositive": 298,
+          "missing": 19,
+          "extra": 5,
+          "f1": 0.9612903225806452
+        },
+        "noteEvent": {
+          "truePositive": 112,
+          "missing": 205,
+          "extra": 191,
+          "f1": 0.36129032258064514
+        },
+        "chords": {
+          "total": 66,
+          "complete": 19
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 111,
+          "missing": 206,
+          "extra": 192,
+          "f1": 0.3580645161290323
+        },
+        "onset": {
+          "truePositive": 211,
+          "missing": 106,
+          "extra": 92,
+          "f1": 0.6806451612903226
+        },
+        "duration": {
+          "truePositive": 298,
+          "missing": 19,
+          "extra": 5,
+          "f1": 0.9612903225806452
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 311,
+          "extra": 297,
+          "f1": 0.01935483870967742
+        },
+        "chords": {
+          "total": 66,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 284,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 284,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "totalSeconds": 6.533,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/04_solus_sine_sola__perspective",
+      "measureAlignedDiagnostic": {
+        "truePositive": 258,
+        "missing": 59,
+        "extra": 45,
+        "f1": 0.832258064516129
+      }
+    },
+    "06_lachrimae_pavan__hard_shadow": {
+      "id": "06_lachrimae_pavan__hard_shadow",
+      "imageSHA256": "058d76dd986da89bf836fe1c5adadc13f8cb391d247e7b5915da1ec54f071bce",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.878,
+      "xmlSHA256": "ee23875b12b8bf644e33678cdd520afc793f82a9f6edd036cf416577606b72a6",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 221,
+          "missing": 182,
+          "extra": 0,
+          "f1": 0.7083333333333334
+        },
+        "onset": {
+          "truePositive": 83,
+          "missing": 320,
+          "extra": 138,
+          "f1": 0.266025641025641
+        },
+        "duration": {
+          "truePositive": 220,
+          "missing": 183,
+          "extra": 1,
+          "f1": 0.7051282051282052
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 397,
+          "extra": 215,
+          "f1": 0.019230769230769232
+        },
+        "chords": {
+          "total": 85,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 90,
+          "missing": 313,
+          "extra": 131,
+          "f1": 0.28846153846153844
+        },
+        "onset": {
+          "truePositive": 83,
+          "missing": 320,
+          "extra": 138,
+          "f1": 0.266025641025641
+        },
+        "duration": {
+          "truePositive": 220,
+          "missing": 183,
+          "extra": 1,
+          "f1": 0.7051282051282052
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 401,
+          "extra": 219,
+          "f1": 0.00641025641025641
+        },
+        "chords": {
+          "total": 85,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 15: <staccatissimo> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 15: resolve the unsupported staccatissimo mark in note review before playback or saving.",
+        "unresolvedMarks": 2
+      },
+      "totalSeconds": 5.947,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/06_lachrimae_pavan__hard_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 15,
+        "missing": 388,
+        "extra": 206,
+        "f1": 0.04807692307692308
+      }
+    },
+    "08_dowlands_first_galliard__tilt_left": {
+      "id": "08_dowlands_first_galliard__tilt_left",
+      "imageSHA256": "8b0382089cc3231284143191c4358487be0783987d29b1c21e5ec01650251e0f",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.912,
+      "xmlSHA256": "6dd028381eb9872468d7e21c465f1046f71ee94ac2263c049c49bbc0f6b3c24d",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 58,
+          "missing": 207,
+          "extra": 0,
+          "f1": 0.3591331269349845
+        },
+        "onset": {
+          "truePositive": 30,
+          "missing": 235,
+          "extra": 28,
+          "f1": 0.18575851393188855
+        },
+        "duration": {
+          "truePositive": 58,
+          "missing": 207,
+          "extra": 0,
+          "f1": 0.3591331269349845
+        },
+        "noteEvent": {
+          "truePositive": 8,
+          "missing": 257,
+          "extra": 50,
+          "f1": 0.04953560371517028
+        },
+        "chords": {
+          "total": 57,
+          "complete": 2
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 29,
+          "missing": 236,
+          "extra": 29,
+          "f1": 0.17956656346749225
+        },
+        "onset": {
+          "truePositive": 30,
+          "missing": 235,
+          "extra": 28,
+          "f1": 0.18575851393188855
+        },
+        "duration": {
+          "truePositive": 58,
+          "missing": 207,
+          "extra": 0,
+          "f1": 0.3591331269349845
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 264,
+          "extra": 57,
+          "f1": 0.006191950464396285
+        },
+        "chords": {
+          "total": 57,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 1: <arpeggiate> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 5.947,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/08_dowlands_first_galliard__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 8,
+        "missing": 257,
+        "extra": 50,
+        "f1": 0.04953560371517028
+      }
+    },
+    "09_frog_galliard__soft_shadow": {
+      "id": "09_frog_galliard__soft_shadow",
+      "imageSHA256": "75d3a064a93c1215f6b2fc3982e956569d1b80848625afaef5c97cc0ca2ea44b",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.499,
+      "xmlSHA256": "45a12129aa46569cd4a06b5ea641612e4b2226e3ee11b5866c36889de6489dbd",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 456,
+          "missing": 15,
+          "extra": 8,
+          "f1": 0.9754010695187165
+        },
+        "onset": {
+          "truePositive": 212,
+          "missing": 259,
+          "extra": 252,
+          "f1": 0.453475935828877
+        },
+        "duration": {
+          "truePositive": 460,
+          "missing": 11,
+          "extra": 4,
+          "f1": 0.983957219251337
+        },
+        "noteEvent": {
+          "truePositive": 112,
+          "missing": 359,
+          "extra": 352,
+          "f1": 0.23957219251336898
+        },
+        "chords": {
+          "total": 106,
+          "complete": 19
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 177,
+          "missing": 294,
+          "extra": 287,
+          "f1": 0.3786096256684492
+        },
+        "onset": {
+          "truePositive": 212,
+          "missing": 259,
+          "extra": 252,
+          "f1": 0.453475935828877
+        },
+        "duration": {
+          "truePositive": 460,
+          "missing": 11,
+          "extra": 4,
+          "f1": 0.983957219251337
+        },
+        "noteEvent": {
+          "truePositive": 7,
+          "missing": 464,
+          "extra": 457,
+          "f1": 0.014973262032085561
+        },
+        "chords": {
+          "total": 106,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 16: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 54: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 6.583,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/09_frog_galliard__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 209,
+        "missing": 262,
+        "extra": 255,
+        "f1": 0.4470588235294118
+      }
+    },
+    "10_galliard_p24__perspective": {
+      "id": "10_galliard_p24__perspective",
+      "imageSHA256": "6b791b9f0d14850d97fd0d4bc9a713d26b5a292cead0914cd7abd12ac3c642d7",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.217,
+      "xmlSHA256": "141bbe8218653be222fc02865c4388fa35f13323565ff6f9433d360788cb9aa7",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 166,
+          "missing": 14,
+          "extra": 0,
+          "f1": 0.9595375722543352
+        },
+        "onset": {
+          "truePositive": 9,
+          "missing": 171,
+          "extra": 157,
+          "f1": 0.05202312138728324
+        },
+        "duration": {
+          "truePositive": 159,
+          "missing": 21,
+          "extra": 7,
+          "f1": 0.9190751445086706
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 175,
+          "extra": 161,
+          "f1": 0.028901734104046242
+        },
+        "chords": {
+          "total": 41,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 71,
+          "missing": 109,
+          "extra": 95,
+          "f1": 0.41040462427745666
+        },
+        "onset": {
+          "truePositive": 9,
+          "missing": 171,
+          "extra": 157,
+          "f1": 0.05202312138728324
+        },
+        "duration": {
+          "truePositive": 159,
+          "missing": 21,
+          "extra": 7,
+          "f1": 0.9190751445086706
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 180,
+          "extra": 166,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 41,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 10: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 10: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 2
+      },
+      "totalSeconds": 5.269,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/10_galliard_p24__perspective",
+      "measureAlignedDiagnostic": {
+        "truePositive": 138,
+        "missing": 42,
+        "extra": 28,
+        "f1": 0.7976878612716763
+      }
+    },
+    "11_melancholy_galliard__tilt_right": {
+      "id": "11_melancholy_galliard__tilt_right",
+      "imageSHA256": "7a0067aa2fcaf43148f898f70171a21c22bb0b58b7da44c34646615917a24052",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 7.911,
+      "xmlSHA256": "1df8998edcb42ca6eed76367481f5201135c626a0ca69b24175326e1cf5fa86c",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 148,
+          "missing": 380,
+          "extra": 0,
+          "f1": 0.4378698224852071
+        },
+        "onset": {
+          "truePositive": 66,
+          "missing": 462,
+          "extra": 82,
+          "f1": 0.1952662721893491
+        },
+        "duration": {
+          "truePositive": 148,
+          "missing": 380,
+          "extra": 0,
+          "f1": 0.4378698224852071
+        },
+        "noteEvent": {
+          "truePositive": 20,
+          "missing": 508,
+          "extra": 128,
+          "f1": 0.05917159763313609
+        },
+        "chords": {
+          "total": 104,
+          "complete": 1
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 56,
+          "missing": 472,
+          "extra": 92,
+          "f1": 0.16568047337278108
+        },
+        "onset": {
+          "truePositive": 66,
+          "missing": 462,
+          "extra": 82,
+          "f1": 0.1952662721893491
+        },
+        "duration": {
+          "truePositive": 148,
+          "missing": 380,
+          "extra": 0,
+          "f1": 0.4378698224852071
+        },
+        "noteEvent": {
+          "truePositive": 3,
+          "missing": 525,
+          "extra": 145,
+          "f1": 0.008875739644970414
+        },
+        "chords": {
+          "total": 104,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 2: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 3: <caesura> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 7.971,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/11_melancholy_galliard__tilt_right",
+      "measureAlignedDiagnostic": {
+        "truePositive": 10,
+        "missing": 518,
+        "extra": 138,
+        "f1": 0.029585798816568046
+      }
+    },
+    "12_galliard_p27__hard_shadow": {
+      "id": "12_galliard_p27__hard_shadow",
+      "imageSHA256": "ec524544e114de314096cd8adaf0a57e2f2251ce2bff35c45d6070a175b394cd",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 5.638,
+      "xmlSHA256": "2836e2d1d3bb9d5bdd8a7c9bd3ff9ac4cbe6f3df61a67185a2ef88a7c42527d0",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 225,
+          "missing": 12,
+          "extra": 9,
+          "f1": 0.9554140127388535
+        },
+        "onset": {
+          "truePositive": 139,
+          "missing": 98,
+          "extra": 95,
+          "f1": 0.5902335456475584
+        },
+        "duration": {
+          "truePositive": 226,
+          "missing": 11,
+          "extra": 8,
+          "f1": 0.9596602972399151
+        },
+        "noteEvent": {
+          "truePositive": 46,
+          "missing": 191,
+          "extra": 188,
+          "f1": 0.19532908704883228
+        },
+        "chords": {
+          "total": 56,
+          "complete": 8
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 91,
+          "missing": 146,
+          "extra": 143,
+          "f1": 0.386411889596603
+        },
+        "onset": {
+          "truePositive": 139,
+          "missing": 98,
+          "extra": 95,
+          "f1": 0.5902335456475584
+        },
+        "duration": {
+          "truePositive": 226,
+          "missing": 11,
+          "extra": 8,
+          "f1": 0.9596602972399151
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 235,
+          "extra": 232,
+          "f1": 0.008492569002123142
+        },
+        "chords": {
+          "total": 56,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 12: <ending> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 12: <ending> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 5.672,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/12_galliard_p27__hard_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 44,
+        "missing": 193,
+        "extra": 190,
+        "f1": 0.18683651804670912
+      }
+    },
+    "13_galliard_p28__flat": {
+      "id": "13_galliard_p28__flat",
+      "imageSHA256": "fba6966a915dbdb92407f9bc38ca084b0fd8c72615f2326ea0a42001fea6ab46",
+      "exitCode": 1,
+      "status": "failed",
+      "error": "[Errno 2] No such file or directory: 'artifacts/audiveris-external-remaining/13_galliard_p28__flat/page.mxl'",
+      "totalSeconds": 2.015,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/13_galliard_p28__flat",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 0,
+          "missing": 669,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "onset": {
+          "truePositive": 0,
+          "missing": 669,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "duration": {
+          "truePositive": 0,
+          "missing": 669,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 669,
+          "extra": 0,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 145,
+          "complete": 0
+        }
+      }
+    },
+    "15_galliard_p30__soft_shadow": {
+      "id": "15_galliard_p30__soft_shadow",
+      "imageSHA256": "ae15faf24b74edbee19f8fca831ff7dfd354a3570425057f016329d6fd0bbef0",
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 6.122,
+      "xmlSHA256": "131ba9212b402147a67975b6f2e58d3455060f65b9137990250d687684a1ac42",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 285,
+          "missing": 7,
+          "extra": 6,
+          "f1": 0.9777015437392796
+        },
+        "onset": {
+          "truePositive": 178,
+          "missing": 114,
+          "extra": 113,
+          "f1": 0.6106346483704974
+        },
+        "duration": {
+          "truePositive": 272,
+          "missing": 20,
+          "extra": 19,
+          "f1": 0.9331046312178388
+        },
+        "noteEvent": {
+          "truePositive": 80,
+          "missing": 212,
+          "extra": 211,
+          "f1": 0.274442538593482
+        },
+        "chords": {
+          "total": 68,
+          "complete": 14
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 106,
+          "missing": 186,
+          "extra": 185,
+          "f1": 0.36363636363636365
+        },
+        "onset": {
+          "truePositive": 178,
+          "missing": 114,
+          "extra": 113,
+          "f1": 0.6106346483704974
+        },
+        "duration": {
+          "truePositive": 272,
+          "missing": 20,
+          "extra": 19,
+          "f1": 0.9331046312178388
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 286,
+          "extra": 285,
+          "f1": 0.02058319039451115
+        },
+        "chords": {
+          "total": 68,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 283,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 283,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "totalSeconds": 6.512,
+      "artifactDirectory": "artifacts/audiveris-external-remaining/15_galliard_p30__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 253,
+        "missing": 39,
+        "extra": 38,
+        "f1": 0.8679245283018868
+      }
+    }
+  },
+  "prepared": {
+    "01_fantasy_p5__flat": {
+      "id": "01_fantasy_p5__flat",
+      "imageSHA256": "0f87d278994a2b63aeb5e6bc30201d9cc0e7fb5cf7af2a8a465a9f3d22951475",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 136,
+        "angleAgreement": 0.9474496831304283,
+        "scale": 2,
+        "inputSize": [
+          1773,
+          2220
+        ],
+        "outputSize": [
+          3546,
+          4440
+        ],
+        "outputSHA256": "fd7c4d202a53f6bc443507febdb712987678f55b8ccd9bc4245e0b01e07aaf23"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 16.484,
+      "xmlSHA256": "3947561e847cda0addb117f05ca7e5416988ccfdde5d8eeefd22d31b3e3eb91d",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 334,
+          "missing": 9,
+          "extra": 0,
+          "f1": 0.9867060561299852
+        },
+        "onset": {
+          "truePositive": 239,
+          "missing": 104,
+          "extra": 95,
+          "f1": 0.7060561299852289
+        },
+        "duration": {
+          "truePositive": 334,
+          "missing": 9,
+          "extra": 0,
+          "f1": 0.9867060561299852
+        },
+        "noteEvent": {
+          "truePositive": 19,
+          "missing": 324,
+          "extra": 315,
+          "f1": 0.056129985228951254
+        },
+        "chords": {
+          "total": 93,
+          "complete": 1
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 142,
+          "missing": 201,
+          "extra": 192,
+          "f1": 0.4194977843426883
+        },
+        "onset": {
+          "truePositive": 239,
+          "missing": 104,
+          "extra": 95,
+          "f1": 0.7060561299852289
+        },
+        "duration": {
+          "truePositive": 334,
+          "missing": 9,
+          "extra": 0,
+          "f1": 0.9867060561299852
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 342,
+          "extra": 333,
+          "f1": 0.0029542097488921715
+        },
+        "chords": {
+          "total": 93,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 1: <octave-shift> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 1: <octave-shift> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 16.544,
+      "artifactDirectory": "artifacts/audiveris-prepared-pilot/01_fantasy_p5__flat",
+      "measureAlignedDiagnostic": {
+        "truePositive": 316,
+        "missing": 27,
+        "extra": 18,
+        "f1": 0.9335302806499262
+      }
+    },
+    "05_dr_cases_pavan__tilt_right": {
+      "id": "05_dr_cases_pavan__tilt_right",
+      "imageSHA256": "04483973212e5a9a11bd51206af7fe87b3faedcc13d7cead2be7be4421f7c11b",
+      "imagePreparation": {
+        "angleDegrees": -4.988343857270241,
+        "appliedDegrees": -4.988343857270241,
+        "longSegments": 235,
+        "angleAgreement": 0.9063952821352226,
+        "scale": 2,
+        "effectiveScale": 1.8509901754181617,
+        "inputSize": [
+          1907,
+          2340
+        ],
+        "outputSize": [
+          3894,
+          4621
+        ],
+        "outputSHA256": "6f24003241b4cb1f9015657c6c33401553429c257580c2c637126957b4c6d8f5"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.565,
+      "xmlSHA256": "918979457b481ff5dd3587a7b40c051b29f5c19bc65b3a66c4a45dce492b75d2",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 401,
+          "missing": 20,
+          "extra": 1,
+          "f1": 0.9744835965978129
+        },
+        "onset": {
+          "truePositive": 106,
+          "missing": 315,
+          "extra": 296,
+          "f1": 0.25759416767922233
+        },
+        "duration": {
+          "truePositive": 390,
+          "missing": 31,
+          "extra": 12,
+          "f1": 0.9477521263669502
+        },
+        "noteEvent": {
+          "truePositive": 61,
+          "missing": 360,
+          "extra": 341,
+          "f1": 0.14823815309842042
+        },
+        "chords": {
+          "total": 107,
+          "complete": 6
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 178,
+          "missing": 243,
+          "extra": 224,
+          "f1": 0.43256379100850545
+        },
+        "onset": {
+          "truePositive": 106,
+          "missing": 315,
+          "extra": 296,
+          "f1": 0.25759416767922233
+        },
+        "duration": {
+          "truePositive": 390,
+          "missing": 31,
+          "extra": 12,
+          "f1": 0.9477521263669502
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 420,
+          "extra": 401,
+          "f1": 0.002430133657351154
+        },
+        "chords": {
+          "total": 107,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 24: <staccatissimo> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 24: resolve the unsupported staccatissimo mark in note review before playback or saving.",
+        "unresolvedMarks": 1
+      },
+      "totalSeconds": 15.651,
+      "artifactDirectory": "artifacts/audiveris-bounded-pilot/05_dr_cases_pavan__tilt_right",
+      "measureAlignedDiagnostic": {
+        "truePositive": 310,
+        "missing": 111,
+        "extra": 92,
+        "f1": 0.7533414337788579
+      }
+    },
+    "07_digorie_pipers_galliard__flat": {
+      "id": "07_digorie_pipers_galliard__flat",
+      "imageSHA256": "1ea02839d0a67591d4f382dec23899395f88e686cb92fddfaa9ad37909f470b1",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 247,
+        "angleAgreement": 0.9590585166649627,
+        "scale": 2,
+        "inputSize": [
+          1774,
+          2220
+        ],
+        "outputSize": [
+          3548,
+          4440
+        ],
+        "outputSHA256": "621d55282cc1c36e45dfb9f4d798b23c73e9869f8a1cd3ae146c8ba5af177f95"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.268,
+      "xmlSHA256": "bc41be3e5f5f6cf5232c118b6acf7dd7ac01ac0806be4bc5259136605f319a4f",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 522,
+          "missing": 16,
+          "extra": 1,
+          "f1": 0.9839773798303487
+        },
+        "onset": {
+          "truePositive": 264,
+          "missing": 274,
+          "extra": 259,
+          "f1": 0.49764373232799247
+        },
+        "duration": {
+          "truePositive": 511,
+          "missing": 27,
+          "extra": 12,
+          "f1": 0.9632422243166824
+        },
+        "noteEvent": {
+          "truePositive": 48,
+          "missing": 490,
+          "extra": 475,
+          "f1": 0.09048067860508954
+        },
+        "chords": {
+          "total": 112,
+          "complete": 5
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 208,
+          "missing": 330,
+          "extra": 315,
+          "f1": 0.3920829406220547
+        },
+        "onset": {
+          "truePositive": 264,
+          "missing": 274,
+          "extra": 259,
+          "f1": 0.49764373232799247
+        },
+        "duration": {
+          "truePositive": 511,
+          "missing": 27,
+          "extra": 12,
+          "f1": 0.9632422243166824
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 536,
+          "extra": 521,
+          "f1": 0.003770028275212064
+        },
+        "chords": {
+          "total": 112,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Measure 7 contains a tuplet, which is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 15.334,
+      "artifactDirectory": "artifacts/audiveris-prepared-pilot/07_digorie_pipers_galliard__flat",
+      "measureAlignedDiagnostic": {
+        "truePositive": 437,
+        "missing": 101,
+        "extra": 86,
+        "f1": 0.823751178133836
+      }
+    },
+    "14_giles_hobies_galliard__tilt_left": {
+      "id": "14_giles_hobies_galliard__tilt_left",
+      "imageSHA256": "908238d2a6edf677ae09807f13445878dc47bd08db820f45f3d57eb702aefb31",
+      "imagePreparation": {
+        "angleDegrees": 5.99409294910847,
+        "appliedDegrees": 5.99409294910847,
+        "longSegments": 323,
+        "angleAgreement": 0.8806693815294374,
+        "scale": 2,
+        "effectiveScale": 1.7867615231920737,
+        "inputSize": [
+          1968,
+          2364
+        ],
+        "outputSize": [
+          3939,
+          4568
+        ],
+        "outputSHA256": "a0e4a86befffd0473eafd3a20179eff888976ff659d562cfdf9a63811a46e0c3"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.425,
+      "xmlSHA256": "83958b70e72002bee3b5a7463c94d858f67be3b90d3f8cba468cb7b53a21c4ce",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 522,
+          "missing": 71,
+          "extra": 1,
+          "f1": 0.9354838709677419
+        },
+        "onset": {
+          "truePositive": 293,
+          "missing": 300,
+          "extra": 230,
+          "f1": 0.525089605734767
+        },
+        "duration": {
+          "truePositive": 517,
+          "missing": 76,
+          "extra": 6,
+          "f1": 0.9265232974910395
+        },
+        "noteEvent": {
+          "truePositive": 39,
+          "missing": 554,
+          "extra": 484,
+          "f1": 0.06989247311827956
+        },
+        "chords": {
+          "total": 111,
+          "complete": 6
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 250,
+          "missing": 343,
+          "extra": 273,
+          "f1": 0.44802867383512546
+        },
+        "onset": {
+          "truePositive": 293,
+          "missing": 300,
+          "extra": 230,
+          "f1": 0.525089605734767
+        },
+        "duration": {
+          "truePositive": 517,
+          "missing": 76,
+          "extra": 6,
+          "f1": 0.9265232974910395
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 591,
+          "extra": 521,
+          "f1": 0.0035842293906810036
+        },
+        "chords": {
+          "total": 111,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 24: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 24: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 1
+      },
+      "totalSeconds": 15.552,
+      "artifactDirectory": "artifacts/audiveris-bounded-pilot/14_giles_hobies_galliard__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 389,
+        "missing": 204,
+        "extra": 134,
+        "f1": 0.6971326164874552
+      }
+    },
+    "02_fancy_p6__tilt_left": {
+      "id": "02_fancy_p6__tilt_left",
+      "imageSHA256": "ca598dc81fa3d1d2660ffb57f8ca7361db02f1ca12882d6ff081973ee077a60f",
+      "imagePreparation": {
+        "angleDegrees": 5.98984562619012,
+        "appliedDegrees": 5.98984562619012,
+        "longSegments": 257,
+        "angleAgreement": 0.8847062411562732,
+        "scale": 2,
+        "effectiveScale": 1.787166822397285,
+        "inputSize": [
+          1968,
+          2364
+        ],
+        "outputSize": [
+          3938,
+          4569
+        ],
+        "outputSHA256": "98356157f62983ebdde05395acf27b0fd09054cb43ee9c426017e423f9a7bfd5"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.898,
+      "xmlSHA256": "0fd1937f73690f89108c7d7ee3e7abf1b0c642fd3c8ea4c3ab0af2592e58f801",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 312,
+          "missing": 20,
+          "extra": 0,
+          "f1": 0.968944099378882
+        },
+        "onset": {
+          "truePositive": 182,
+          "missing": 150,
+          "extra": 130,
+          "f1": 0.5652173913043478
+        },
+        "duration": {
+          "truePositive": 309,
+          "missing": 23,
+          "extra": 3,
+          "f1": 0.9596273291925466
+        },
+        "noteEvent": {
+          "truePositive": 23,
+          "missing": 309,
+          "extra": 289,
+          "f1": 0.07142857142857142
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 90,
+          "missing": 242,
+          "extra": 222,
+          "f1": 0.2795031055900621
+        },
+        "onset": {
+          "truePositive": 182,
+          "missing": 150,
+          "extra": 130,
+          "f1": 0.5652173913043478
+        },
+        "duration": {
+          "truePositive": 309,
+          "missing": 23,
+          "extra": 3,
+          "f1": 0.9596273291925466
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 330,
+          "extra": 310,
+          "f1": 0.006211180124223602
+        },
+        "chords": {
+          "total": 74,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 4: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 5
+      },
+      "totalSeconds": 15.973,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/02_fancy_p6__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 165,
+        "missing": 167,
+        "extra": 147,
+        "f1": 0.5124223602484472
+      }
+    },
+    "03_solus_cum_sola__soft_shadow": {
+      "id": "03_solus_cum_sola__soft_shadow",
+      "imageSHA256": "8af891ab3e7d3b114ee7e846b689f31b20c92a51017d53fcb43966764b3aba29",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 210,
+        "angleAgreement": 0.8367407988334512,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1745,
+          2220
+        ],
+        "outputSize": [
+          3490,
+          4440
+        ],
+        "outputSHA256": "cb670c5a33a6813fd25c24e8367a53f888aedb057977905c1110a3bc1ad4d5ac"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 16.209,
+      "xmlSHA256": "349e0323a89f5344a4efbad50bfd4bd4feae530fb27d782d35c944380596a8aa",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 329,
+          "missing": 15,
+          "extra": 0,
+          "f1": 0.9777117384843982
+        },
+        "onset": {
+          "truePositive": 224,
+          "missing": 120,
+          "extra": 105,
+          "f1": 0.6656760772659732
+        },
+        "duration": {
+          "truePositive": 319,
+          "missing": 25,
+          "extra": 10,
+          "f1": 0.9479940564635958
+        },
+        "noteEvent": {
+          "truePositive": 22,
+          "missing": 322,
+          "extra": 307,
+          "f1": 0.06537890044576523
+        },
+        "chords": {
+          "total": 61,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 98,
+          "missing": 246,
+          "extra": 231,
+          "f1": 0.2912332838038633
+        },
+        "onset": {
+          "truePositive": 224,
+          "missing": 120,
+          "extra": 105,
+          "f1": 0.6656760772659732
+        },
+        "duration": {
+          "truePositive": 319,
+          "missing": 25,
+          "extra": 10,
+          "f1": 0.9479940564635958
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 343,
+          "extra": 328,
+          "f1": 0.0029717682020802376
+        },
+        "chords": {
+          "total": 61,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 325,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": null,
+        "unresolvedMarks": 0,
+        "playback": {
+          "notationAlphaTex": {
+            "parsed": true,
+            "notes": 325,
+            "sourceIdentitiesPreserved": true,
+            "exactPlayback": true
+          }
+        }
+      },
+      "totalSeconds": 16.677,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/03_solus_cum_sola__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 269,
+        "missing": 75,
+        "extra": 60,
+        "f1": 0.799405646359584
+      }
+    },
+    "04_solus_sine_sola__perspective": {
+      "id": "04_solus_sine_sola__perspective",
+      "imageSHA256": "198d8188902402c5403c9d767cdafae05da08d222c9bcba3343734c8d8a38ca4",
+      "imagePreparation": {
+        "angleDegrees": 1.469908757076767,
+        "appliedDegrees": 1.469908757076767,
+        "longSegments": 227,
+        "angleAgreement": 0.7137722764120348,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1773,
+          2220
+        ],
+        "outputSize": [
+          3660,
+          4530
+        ],
+        "outputSHA256": "e1695ee34892f26414e66d8371d449e6e07ecdb7eb9c75ebafe4b90df4839269"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 21.144,
+      "xmlSHA256": "f3f99cb8b7d1b019ef06abe7e5f6b7b76ff3c62d1664ff276fd75f5bad7e4666",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 303,
+          "missing": 14,
+          "extra": 1,
+          "f1": 0.9758454106280193
+        },
+        "onset": {
+          "truePositive": 190,
+          "missing": 127,
+          "extra": 114,
+          "f1": 0.6119162640901772
+        },
+        "duration": {
+          "truePositive": 299,
+          "missing": 18,
+          "extra": 5,
+          "f1": 0.9629629629629629
+        },
+        "noteEvent": {
+          "truePositive": 54,
+          "missing": 263,
+          "extra": 250,
+          "f1": 0.17391304347826086
+        },
+        "chords": {
+          "total": 66,
+          "complete": 5
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 111,
+          "missing": 206,
+          "extra": 193,
+          "f1": 0.357487922705314
+        },
+        "onset": {
+          "truePositive": 190,
+          "missing": 127,
+          "extra": 114,
+          "f1": 0.6119162640901772
+        },
+        "duration": {
+          "truePositive": 299,
+          "missing": 18,
+          "extra": 5,
+          "f1": 0.9629629629629629
+        },
+        "noteEvent": {
+          "truePositive": 3,
+          "missing": 314,
+          "extra": 301,
+          "f1": 0.00966183574879227
+        },
+        "chords": {
+          "total": 66,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 4: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 4: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 2
+      },
+      "totalSeconds": 21.229,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/04_solus_sine_sola__perspective",
+      "measureAlignedDiagnostic": {
+        "truePositive": 268,
+        "missing": 49,
+        "extra": 36,
+        "f1": 0.8631239935587761
+      }
+    },
+    "06_lachrimae_pavan__hard_shadow": {
+      "id": "06_lachrimae_pavan__hard_shadow",
+      "imageSHA256": "058d76dd986da89bf836fe1c5adadc13f8cb391d247e7b5915da1ec54f071bce",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 187,
+        "angleAgreement": 0.923696224500228,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1745,
+          2220
+        ],
+        "outputSize": [
+          3490,
+          4440
+        ],
+        "outputSHA256": "0aff1a6fb690ce59d187c0539267a646a3f8f07ea1c7c79fbd9eb427bb00879b"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 18.274,
+      "xmlSHA256": "d0b322b3e7b23b5a83135f69797561f179ca09199b258ce0538e092c6fbb671d",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 368,
+          "missing": 35,
+          "extra": 1,
+          "f1": 0.9533678756476683
+        },
+        "onset": {
+          "truePositive": 142,
+          "missing": 261,
+          "extra": 227,
+          "f1": 0.36787564766839376
+        },
+        "duration": {
+          "truePositive": 363,
+          "missing": 40,
+          "extra": 6,
+          "f1": 0.9404145077720207
+        },
+        "noteEvent": {
+          "truePositive": 51,
+          "missing": 352,
+          "extra": 318,
+          "f1": 0.13212435233160622
+        },
+        "chords": {
+          "total": 85,
+          "complete": 11
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 137,
+          "missing": 266,
+          "extra": 232,
+          "f1": 0.3549222797927461
+        },
+        "onset": {
+          "truePositive": 142,
+          "missing": 261,
+          "extra": 227,
+          "f1": 0.36787564766839376
+        },
+        "duration": {
+          "truePositive": 363,
+          "missing": 40,
+          "extra": 6,
+          "f1": 0.9404145077720207
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 397,
+          "extra": 363,
+          "f1": 0.015544041450777202
+        },
+        "chords": {
+          "total": 85,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 11: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 11: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 8
+      },
+      "totalSeconds": 18.364,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/06_lachrimae_pavan__hard_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 318,
+        "missing": 85,
+        "extra": 51,
+        "f1": 0.8238341968911918
+      }
+    },
+    "08_dowlands_first_galliard__tilt_left": {
+      "id": "08_dowlands_first_galliard__tilt_left",
+      "imageSHA256": "8b0382089cc3231284143191c4358487be0783987d29b1c21e5ec01650251e0f",
+      "imagePreparation": {
+        "angleDegrees": 5.998346277708103,
+        "appliedDegrees": 5.998346277708103,
+        "longSegments": 152,
+        "angleAgreement": 0.8969196309049816,
+        "scale": 2,
+        "effectiveScale": 1.787166822397285,
+        "inputSize": [
+          1967,
+          2364
+        ],
+        "outputSize": [
+          3938,
+          4569
+        ],
+        "outputSHA256": "6b65438518cde15bc1268fcc1d3a6d849e4d713c292136b9eb94ca0e88e34ceb"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 13.553,
+      "xmlSHA256": "b18334303605265131a88e33b3a7c5821c0e2f1fc6f124e0959152e8fe01099a",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 259,
+          "missing": 6,
+          "extra": 0,
+          "f1": 0.9885496183206107
+        },
+        "onset": {
+          "truePositive": 106,
+          "missing": 159,
+          "extra": 153,
+          "f1": 0.40458015267175573
+        },
+        "duration": {
+          "truePositive": 256,
+          "missing": 9,
+          "extra": 3,
+          "f1": 0.9770992366412213
+        },
+        "noteEvent": {
+          "truePositive": 63,
+          "missing": 202,
+          "extra": 196,
+          "f1": 0.24045801526717558
+        },
+        "chords": {
+          "total": 57,
+          "complete": 11
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 97,
+          "missing": 168,
+          "extra": 162,
+          "f1": 0.3702290076335878
+        },
+        "onset": {
+          "truePositive": 106,
+          "missing": 159,
+          "extra": 153,
+          "f1": 0.40458015267175573
+        },
+        "duration": {
+          "truePositive": 256,
+          "missing": 9,
+          "extra": 3,
+          "f1": 0.9770992366412213
+        },
+        "noteEvent": {
+          "truePositive": 6,
+          "missing": 259,
+          "extra": 253,
+          "f1": 0.022900763358778626
+        },
+        "chords": {
+          "total": 57,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 7: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 6: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 6
+      },
+      "totalSeconds": 13.615,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/08_dowlands_first_galliard__tilt_left",
+      "measureAlignedDiagnostic": {
+        "truePositive": 83,
+        "missing": 182,
+        "extra": 176,
+        "f1": 0.31679389312977096
+      }
+    },
+    "09_frog_galliard__soft_shadow": {
+      "id": "09_frog_galliard__soft_shadow",
+      "imageSHA256": "75d3a064a93c1215f6b2fc3982e956569d1b80848625afaef5c97cc0ca2ea44b",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 168,
+        "angleAgreement": 0.91095836141768,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1773,
+          2220
+        ],
+        "outputSize": [
+          3546,
+          4440
+        ],
+        "outputSHA256": "2cf01ac4aa38dc9cd9b69b129c091b1b1943c016acdf2436e37e9a1a15ac99bb"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.024,
+      "xmlSHA256": "400fff02eb15d45acb4ef75f6d998e44efde3938aa36be95b239b4d29404c41e",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 463,
+          "missing": 8,
+          "extra": 0,
+          "f1": 0.9914346895074947
+        },
+        "onset": {
+          "truePositive": 463,
+          "missing": 8,
+          "extra": 0,
+          "f1": 0.9914346895074947
+        },
+        "duration": {
+          "truePositive": 424,
+          "missing": 47,
+          "extra": 39,
+          "f1": 0.9079229122055674
+        },
+        "noteEvent": {
+          "truePositive": 417,
+          "missing": 54,
+          "extra": 46,
+          "f1": 0.892933618843683
+        },
+        "chords": {
+          "total": 106,
+          "complete": 68
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 172,
+          "missing": 299,
+          "extra": 291,
+          "f1": 0.3683083511777302
+        },
+        "onset": {
+          "truePositive": 463,
+          "missing": 8,
+          "extra": 0,
+          "f1": 0.9914346895074947
+        },
+        "duration": {
+          "truePositive": 424,
+          "missing": 47,
+          "extra": 39,
+          "f1": 0.9079229122055674
+        },
+        "noteEvent": {
+          "truePositive": 25,
+          "missing": 446,
+          "extra": 438,
+          "f1": 0.05353319057815846
+        },
+        "chords": {
+          "total": 106,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 5: <breath-mark> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 5: <breath-mark> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 15.098,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/09_frog_galliard__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 417,
+        "missing": 54,
+        "extra": 46,
+        "f1": 0.892933618843683
+      }
+    },
+    "10_galliard_p24__perspective": {
+      "id": "10_galliard_p24__perspective",
+      "imageSHA256": "6b791b9f0d14850d97fd0d4bc9a713d26b5a292cead0914cd7abd12ac3c642d7",
+      "imagePreparation": {
+        "angleDegrees": 1.5031993675336308,
+        "appliedDegrees": 1.5031993675336308,
+        "longSegments": 160,
+        "angleAgreement": 0.8105503472386041,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1774,
+          2220
+        ],
+        "outputSize": [
+          3664,
+          4532
+        ],
+        "outputSHA256": "3f471768956856533d41de589f111ac44df1660c53d1d7b4e91afb00c759abc5"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.948,
+      "xmlSHA256": "48cd54c517f01d66798507c6aacf4b3403ef01a052e883d34ee92431023cfb94",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 58,
+          "missing": 122,
+          "extra": 5,
+          "f1": 0.4773662551440329
+        },
+        "onset": {
+          "truePositive": 9,
+          "missing": 171,
+          "extra": 54,
+          "f1": 0.07407407407407407
+        },
+        "duration": {
+          "truePositive": 63,
+          "missing": 117,
+          "extra": 0,
+          "f1": 0.5185185185185185
+        },
+        "noteEvent": {
+          "truePositive": 1,
+          "missing": 179,
+          "extra": 62,
+          "f1": 0.00823045267489712
+        },
+        "chords": {
+          "total": 41,
+          "complete": 0
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 31,
+          "missing": 149,
+          "extra": 32,
+          "f1": 0.2551440329218107
+        },
+        "onset": {
+          "truePositive": 9,
+          "missing": 171,
+          "extra": 54,
+          "f1": 0.07407407407407407
+        },
+        "duration": {
+          "truePositive": 63,
+          "missing": 117,
+          "extra": 0,
+          "f1": 0.5185185185185185
+        },
+        "noteEvent": {
+          "truePositive": 0,
+          "missing": 180,
+          "extra": 63,
+          "f1": 0.0
+        },
+        "chords": {
+          "total": 41,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 6: <staccatissimo> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Measure 14 contains a grace note, which is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 15.98,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/10_galliard_p24__perspective",
+      "measureAlignedDiagnostic": {
+        "truePositive": 2,
+        "missing": 178,
+        "extra": 61,
+        "f1": 0.01646090534979424
+      }
+    },
+    "11_melancholy_galliard__tilt_right": {
+      "id": "11_melancholy_galliard__tilt_right",
+      "imageSHA256": "7a0067aa2fcaf43148f898f70171a21c22bb0b58b7da44c34646615917a24052",
+      "imagePreparation": {
+        "angleDegrees": -4.988343857270241,
+        "appliedDegrees": -4.988343857270241,
+        "longSegments": 308,
+        "angleAgreement": 0.8859250396951616,
+        "scale": 2,
+        "effectiveScale": 1.8509901754181617,
+        "inputSize": [
+          1907,
+          2340
+        ],
+        "outputSize": [
+          3894,
+          4621
+        ],
+        "outputSHA256": "b9ddc3d05138677a589382c740f0a3c3af41fba67ba50488a418260be00c8098"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 16.741,
+      "xmlSHA256": "5f40e21b67c2e81cdd64abc679b0e84ca12dda5047d5e1411cff22b905a9edb1",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 485,
+          "missing": 43,
+          "extra": 5,
+          "f1": 0.9528487229862476
+        },
+        "onset": {
+          "truePositive": 192,
+          "missing": 336,
+          "extra": 298,
+          "f1": 0.37721021611001965
+        },
+        "duration": {
+          "truePositive": 478,
+          "missing": 50,
+          "extra": 12,
+          "f1": 0.9390962671905697
+        },
+        "noteEvent": {
+          "truePositive": 16,
+          "missing": 512,
+          "extra": 474,
+          "f1": 0.03143418467583497
+        },
+        "chords": {
+          "total": 104,
+          "complete": 1
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 161,
+          "missing": 367,
+          "extra": 329,
+          "f1": 0.3163064833005894
+        },
+        "onset": {
+          "truePositive": 192,
+          "missing": 336,
+          "extra": 298,
+          "f1": 0.37721021611001965
+        },
+        "duration": {
+          "truePositive": 478,
+          "missing": 50,
+          "extra": 12,
+          "f1": 0.9390962671905697
+        },
+        "noteEvent": {
+          "truePositive": 5,
+          "missing": 523,
+          "extra": 485,
+          "f1": 0.009823182711198428
+        },
+        "chords": {
+          "total": 104,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 2: <staccatissimo> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 2: resolve the unsupported staccatissimo mark in note review before playback or saving.",
+        "unresolvedMarks": 5
+      },
+      "totalSeconds": 16.846,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/11_melancholy_galliard__tilt_right",
+      "measureAlignedDiagnostic": {
+        "truePositive": 108,
+        "missing": 420,
+        "extra": 382,
+        "f1": 0.21218074656188604
+      }
+    },
+    "12_galliard_p27__hard_shadow": {
+      "id": "12_galliard_p27__hard_shadow",
+      "imageSHA256": "ec524544e114de314096cd8adaf0a57e2f2251ce2bff35c45d6070a175b394cd",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 111,
+        "angleAgreement": 0.9072225967625283,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1745,
+          2220
+        ],
+        "outputSize": [
+          3490,
+          4440
+        ],
+        "outputSHA256": "2c634e64e783d8401ed74affaef0b66b7e849113e902fe168f23a178d59c8848"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 17.034,
+      "xmlSHA256": "246067468d976404340de0c7f72936ab4f8430d95d55c920d836f04394984388",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 222,
+          "missing": 15,
+          "extra": 4,
+          "f1": 0.958963282937365
+        },
+        "onset": {
+          "truePositive": 132,
+          "missing": 105,
+          "extra": 94,
+          "f1": 0.5701943844492441
+        },
+        "duration": {
+          "truePositive": 218,
+          "missing": 19,
+          "extra": 8,
+          "f1": 0.9416846652267818
+        },
+        "noteEvent": {
+          "truePositive": 40,
+          "missing": 197,
+          "extra": 186,
+          "f1": 0.17278617710583152
+        },
+        "chords": {
+          "total": 56,
+          "complete": 7
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 91,
+          "missing": 146,
+          "extra": 135,
+          "f1": 0.3930885529157667
+        },
+        "onset": {
+          "truePositive": 132,
+          "missing": 105,
+          "extra": 94,
+          "f1": 0.5701943844492441
+        },
+        "duration": {
+          "truePositive": 218,
+          "missing": 19,
+          "extra": 8,
+          "f1": 0.9416846652267818
+        },
+        "noteEvent": {
+          "truePositive": 4,
+          "missing": 233,
+          "extra": 222,
+          "f1": 0.017278617710583154
+        },
+        "chords": {
+          "total": 56,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 7: <arpeggiate> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 11: <ending> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "totalSeconds": 17.081,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/12_galliard_p27__hard_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 42,
+        "missing": 195,
+        "extra": 184,
+        "f1": 0.18142548596112312
+      }
+    },
+    "13_galliard_p28__flat": {
+      "id": "13_galliard_p28__flat",
+      "imageSHA256": "fba6966a915dbdb92407f9bc38ca084b0fd8c72615f2326ea0a42001fea6ab46",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 399,
+        "angleAgreement": 0.9239720991730787,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1664,
+          2220
+        ],
+        "outputSize": [
+          3328,
+          4440
+        ],
+        "outputSHA256": "b1c52127054b122d983e5be2fc3a27a58b1c0ab9435bf1b46d2ad9742872a1ec"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 16.641,
+      "xmlSHA256": "ab73c55848a96d9a7b95df2f0a87b619d976c8e015982fed1284f395a0f50a63",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 535,
+          "missing": 134,
+          "extra": 0,
+          "f1": 0.8887043189368771
+        },
+        "onset": {
+          "truePositive": 49,
+          "missing": 620,
+          "extra": 486,
+          "f1": 0.08139534883720931
+        },
+        "duration": {
+          "truePositive": 534,
+          "missing": 135,
+          "extra": 1,
+          "f1": 0.8870431893687708
+        },
+        "noteEvent": {
+          "truePositive": 10,
+          "missing": 659,
+          "extra": 525,
+          "f1": 0.016611295681063124
+        },
+        "chords": {
+          "total": 145,
+          "complete": 3
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 211,
+          "missing": 458,
+          "extra": 324,
+          "f1": 0.3504983388704319
+        },
+        "onset": {
+          "truePositive": 49,
+          "missing": 620,
+          "extra": 486,
+          "f1": 0.08139534883720931
+        },
+        "duration": {
+          "truePositive": 534,
+          "missing": 135,
+          "extra": 1,
+          "f1": 0.8870431893687708
+        },
+        "noteEvent": {
+          "truePositive": 2,
+          "missing": 667,
+          "extra": 533,
+          "f1": 0.0033222591362126247
+        },
+        "chords": {
+          "total": 145,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 13: <fermata> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 13: resolve the unsupported fermata mark in note review before playback or saving.",
+        "unresolvedMarks": 3
+      },
+      "totalSeconds": 16.778,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/13_galliard_p28__flat",
+      "measureAlignedDiagnostic": {
+        "truePositive": 23,
+        "missing": 646,
+        "extra": 512,
+        "f1": 0.03820598006644518
+      }
+    },
+    "15_galliard_p30__soft_shadow": {
+      "id": "15_galliard_p30__soft_shadow",
+      "imageSHA256": "ae15faf24b74edbee19f8fca831ff7dfd354a3570425057f016329d6fd0bbef0",
+      "imagePreparation": {
+        "angleDegrees": 0.0,
+        "appliedDegrees": 0.0,
+        "longSegments": 168,
+        "angleAgreement": 0.9220844677086202,
+        "scale": 2,
+        "effectiveScale": 2,
+        "inputSize": [
+          1774,
+          2220
+        ],
+        "outputSize": [
+          3548,
+          4440
+        ],
+        "outputSHA256": "f28a46670bca0a60d5de22e020f2050b2615fcf97783cb4ab50e7547b90941f3"
+      },
+      "exitCode": 0,
+      "status": "completed",
+      "recognitionSeconds": 15.757,
+      "xmlSHA256": "47961201ee5306eb4704d94b414b1a6865b50fc1e0e4c252a041bbf730b4493a",
+      "writtenWholePageMetrics": {
+        "pitch": {
+          "truePositive": 286,
+          "missing": 6,
+          "extra": 1,
+          "f1": 0.9879101899827288
+        },
+        "onset": {
+          "truePositive": 286,
+          "missing": 6,
+          "extra": 1,
+          "f1": 0.9879101899827288
+        },
+        "duration": {
+          "truePositive": 269,
+          "missing": 23,
+          "extra": 18,
+          "f1": 0.9291882556131261
+        },
+        "noteEvent": {
+          "truePositive": 264,
+          "missing": 28,
+          "extra": 23,
+          "f1": 0.9119170984455959
+        },
+        "chords": {
+          "total": 68,
+          "complete": 51
+        }
+      },
+      "soundingWholePageMetrics": {
+        "pitch": {
+          "truePositive": 106,
+          "missing": 186,
+          "extra": 181,
+          "f1": 0.36614853195164077
+        },
+        "onset": {
+          "truePositive": 286,
+          "missing": 6,
+          "extra": 1,
+          "f1": 0.9879101899827288
+        },
+        "duration": {
+          "truePositive": 269,
+          "missing": 23,
+          "extra": 18,
+          "f1": 0.9291882556131261
+        },
+        "noteEvent": {
+          "truePositive": 8,
+          "missing": 284,
+          "extra": 279,
+          "f1": 0.027633851468048358
+        },
+        "chords": {
+          "total": 68,
+          "complete": 0
+        }
+      },
+      "strict": {
+        "parsed": false,
+        "error": "Invalid MusicXML: Measure 2: <staccato> is not supported yet.",
+        "tabPlayable": null,
+        "notationError": null,
+        "unresolvedMarks": 0
+      },
+      "review": {
+        "parsed": true,
+        "error": null,
+        "tabPlayable": false,
+        "notationError": "Invalid MusicXML: Measure 2: resolve the unsupported staccato mark in note review before playback or saving.",
+        "unresolvedMarks": 3
+      },
+      "totalSeconds": 15.831,
+      "artifactDirectory": "artifacts/audiveris-prepared-remaining/15_galliard_p30__soft_shadow",
+      "measureAlignedDiagnostic": {
+        "truePositive": 264,
+        "missing": 28,
+        "extra": 23,
+        "f1": 0.9119170984455959
+      }
+    }
+  },
+  "groups": {
+    "raw": {
+      "images": 15,
+      "exported": 14,
+      "strictNative": 3,
+      "reviewNative": 6,
+      "tabPlayable": 1,
+      "writtenNoteEvent": {
+        "truePositive": 470,
+        "missing": 5463,
+        "extra": 2861,
+        "f1": 0.10146804835924007
+      },
+      "totalSeconds": 89.338
+    },
+    "prepared": {
+      "images": 15,
+      "exported": 15,
+      "strictNative": 1,
+      "reviewNative": 10,
+      "tabPlayable": 0,
+      "writtenNoteEvent": {
+        "truePositive": 1128,
+        "missing": 4805,
+        "extra": 4291,
+        "f1": 0.19873150105708245
+      },
+      "totalSeconds": 246.553
+    }
+  },
+  "sourceSHA256": {
+    "services/omr/research/evaluate_audiveris_pages.py": "4567cce3816f3fc9d9d78d885766325ea7d016bc6ca2709e26b4f6422b4ff76e",
+    "services/omr/research/deskew_page.py": "36e5f57ecaf0ea54e1619383f66cd8d46321fa50e633b57eb47e158b31dc6d08",
+    "services/omr/research/check_deskew_page.py": "8da878d203ba37380fb66c4f9bcf73c32d68de3005bd5d62bab82e2558ae206c",
+    "services/omr/research/compare_measure_timing.py": "0f8e5986f828a4dd242ee15e29dbf1f8b428fd8576e76a798ab3d89be9dfeb93"
+  },
+  "geometryChecks": {
+    "passed": 3,
+    "log": "artifacts/audiveris-deskew-tests-final.log",
+    "initialLog": "artifacts/audiveris-deskew-tests.log",
+    "note": "Initial residual threshold 0.1 degree was inconsistent with the 0.15 degree source-angle tolerance. Both now use 0.15 degree, with actual residuals retained. No release recognition threshold changed."
+  },
+  "retainedInfrastructureFailures": {
+    "artifacts/audiveris-prepared-pilot": "Upscaling rotated pages 05 and 14 exceeded the engine 20-million-pixel limit. Bounded reruns stay at or below 18 million pixels."
+  },
+  "versionVerified": "Audiveris.app CFBundleShortVersionString = 5.11.0"
+}

@@ -1,0 +1,6009 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "lesson-01",
+      "number": 1,
+      "title": "Meet your guitar",
+      "summary": "Find your way around the instrument.",
+      "see": "Rest the guitar securely and let your shoulders relax. The thinnest string is 1; the thickest is 6. A fret number names the space just before that metal fret. Touch a string on the diagram to explore it.",
+      "detail": "Your fretting fingers are index 1, middle 2, ring 3, and little finger 4. Press just behind the fret, not on its wire, using only enough pressure for a clear note. Pick one string gently. Pause if anything hurts.",
+      "practice": "Play each reference tone and match your open string by ear, or use your own tuner. These are reference pitches, not automatic tuning measurements. Spend a minute finding strings 1 and 6 without rushing.",
+      "recap": "You can name the strings, find a fret, and identify your fretting fingers.",
+      "quizString": 6,
+      "quizFret": 0,
+      "phrases": [
+        {
+          "id": "lesson-01-phrase-1",
+          "name": "Reference tones",
+          "events": [
+            {
+              "id": "lesson-01-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-01-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-01-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-01-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-01-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-01-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-02",
+      "number": 2,
+      "title": "Six open strings",
+      "summary": "Hear the low-to-high string order.",
+      "see": "An open string rings without a fretting finger. Read the board from string 6 to string 1: E, A, D, G, B, E. The two E strings share a letter but sound two octaves apart.",
+      "detail": "The hollow circle means open: no fretting finger. The staff uses guitar treble notation, written one octave above what you hear. A sounding high-string E4 is written as E5; the tab and fretboard still mean the open first string.",
+      "practice": "Play each open string slowly. Say its name before picking. Then try returning from high E to low E. Repeat twice, leaving time to move your picking hand.",
+      "recap": "You have connected six open-string sounds to names and locations.",
+      "quizString": 1,
+      "quizFret": 0,
+      "phrases": [
+        {
+          "id": "lesson-02-phrase-1",
+          "name": "Open-string return",
+          "events": [
+            {
+              "id": "lesson-02-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-02-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-02-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-02-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-02-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-02-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-02-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-02-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-02-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 1,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-02-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 1,
+              "duration": 1,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-02-phrase-1-m3-e3-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-02-phrase-1-m3-e4-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-03",
+      "number": 3,
+      "title": "Your first three notes",
+      "summary": "E, F, and G on string 1.",
+      "see": "Keep your hand near the nut. Play E open, F with finger 1 at fret 1, and G with finger 3 at fret 3. This is first position: your fingers work near frets 1\u20134.",
+      "detail": "The number inside a lit marker is your finger, not the fret number. Read the fret along the bottom edge. Keep unused fingers relaxed and close to the string.",
+      "practice": "Step through E, F, G, F. Say each name and place your finger before picking. Repeat the phrase three times, then try finding F with the labels as your guide.",
+      "recap": "You can play E\u2013F\u2013G without moving your hand out of first position.",
+      "quizString": 1,
+      "quizFret": 1,
+      "phrases": [
+        {
+          "id": "lesson-03-phrase-1",
+          "name": "First three notes",
+          "events": [
+            {
+              "id": "lesson-03-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-03-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-03-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67
+            },
+            {
+              "id": "lesson-03-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-03-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-03-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67
+            },
+            {
+              "id": "lesson-03-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-04",
+      "number": 4,
+      "title": "A second string",
+      "summary": "B, C, and D; then cross to string 1.",
+      "see": "String 2 gives you B open, C at fret 1 with finger 1, and D at fret 3 with finger 3. Check the string number before placing the finger.",
+      "detail": "When crossing strings, move the picking hand only as far as needed. The next-note marker shows where to prepare. Listen for one clear note at a time.",
+      "practice": "Play B\u2013C\u2013D, then cross to the open E on string 1. Try the return journey slowly. If a string buzzes, reset your fingertip just behind the fret.",
+      "recap": "You can connect two strings into a short musical phrase.",
+      "quizString": 2,
+      "quizFret": 1,
+      "phrases": [
+        {
+          "id": "lesson-04-phrase-1",
+          "name": "Across two strings",
+          "events": [
+            {
+              "id": "lesson-04-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-04-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-04-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-04-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-04-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67
+            },
+            {
+              "id": "lesson-04-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-04-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-04-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-04-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-04-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-05",
+      "number": 5,
+      "title": "Into the middle",
+      "summary": "G\u2013A and D\u2013E\u2013F on strings 3 and 4.",
+      "see": "On string 3, play G open and A at fret 2 with finger 2. On string 4, play D open, E at fret 2 with finger 2, and F at fret 3 with finger 3.",
+      "detail": "Some note letters appear in several octaves. Use the staff height and string number together. These middle-string notes sound lower than the notes from your first two strings.",
+      "practice": "Explore each string separately, then join the phrase. Keep the wrist comfortable and let your elbow move naturally as you reach another string.",
+      "recap": "You have extended your first-position map to the middle strings.",
+      "quizString": 3,
+      "quizFret": 2,
+      "phrases": [
+        {
+          "id": "lesson-05-phrase-1",
+          "name": "Middle-string answer",
+          "events": [
+            {
+              "id": "lesson-05-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-05-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52
+            },
+            {
+              "id": "lesson-05-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 3,
+              "finger": 3,
+              "midi": 53
+            },
+            {
+              "id": "lesson-05-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-05-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57
+            },
+            {
+              "id": "lesson-05-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-05-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52
+            },
+            {
+              "id": "lesson-05-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-05-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 2,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-06",
+      "number": 6,
+      "title": "The bass strings",
+      "summary": "A\u2013B\u2013C and low E\u2013F\u2013G.",
+      "see": "String 5: A open, B at fret 2 with finger 2, C at fret 3 with finger 3. String 6: E open, F at fret 1 with finger 1, G at fret 3 with finger 3.",
+      "detail": "Bass notes use ledger lines below the staff. Follow one line or space at a time rather than guessing from the distance. The board labels always show the sounding octave.",
+      "practice": "Play the bass phrase at an easy tempo. Compare the low open E with the high open E from lesson 2. Keep the string order clear as you move between strings 6 and 5.",
+      "recap": "You can locate natural notes across all six strings in first position.",
+      "quizString": 5,
+      "quizFret": 2,
+      "phrases": [
+        {
+          "id": "lesson-06-phrase-1",
+          "name": "Bass-string path",
+          "events": [
+            {
+              "id": "lesson-06-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-06-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 6,
+              "fret": 1,
+              "finger": 1,
+              "midi": 41
+            },
+            {
+              "id": "lesson-06-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 6,
+              "fret": 3,
+              "finger": 3,
+              "midi": 43
+            },
+            {
+              "id": "lesson-06-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-06-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-06-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 5,
+              "fret": 3,
+              "finger": 3,
+              "midi": 48
+            },
+            {
+              "id": "lesson-06-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-06-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-06-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 6,
+              "fret": 3,
+              "finger": 3,
+              "midi": 43
+            },
+            {
+              "id": "lesson-06-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 2,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-07",
+      "number": 7,
+      "title": "Keep the pulse",
+      "summary": "Count notes and silence.",
+      "see": "In 4/4, count 1\u20132\u20133\u20134 evenly. A quarter note lasts one beat, a half note two beats, and two eighth notes divide one beat: say \u201c1 and\u201d. A rest is counted silence.",
+      "detail": "The cursor keeps moving during a rest while the sounding marker disappears. Stop the string gently for a rest. BPM here counts quarter-note beats.",
+      "practice": "Clap the rhythm first. Then play it on open E. Start slowly and count aloud. Try three loops, keeping the rests as steady as the notes.",
+      "recap": "You can keep counting through long notes, short notes, and rests.",
+      "quizString": 1,
+      "quizFret": 0,
+      "phrases": [
+        {
+          "id": "lesson-07-phrase-1",
+          "name": "Count and breathe",
+          "events": [
+            {
+              "id": "lesson-07-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-07-phrase-1-m1-e2",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            },
+            {
+              "id": "lesson-07-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-07-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-07-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-07-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-07-phrase-1-m2-e4",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            },
+            {
+              "id": "lesson-07-phrase-1-m2-e5-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-08",
+      "number": 8,
+      "title": "Your first melody",
+      "summary": "Make a small musical sentence.",
+      "see": "Use the notes you already know to play this original melody. Read a few notes ahead and prepare the next finger while the current note sounds.",
+      "detail": "Practice the two bars separately, then join them. Long notes are a chance to breathe and prepare, not a reason to lose the beat.",
+      "practice": "Choose a tempo where you can stay relaxed. Play one phrase, pause to reset, and play it again. Aim for a steady pulse rather than speed.",
+      "recap": "You can combine note reading, string changes, and rhythm into a melody.",
+      "quizString": 2,
+      "quizFret": 3,
+      "phrases": [
+        {
+          "id": "lesson-08-phrase-1",
+          "name": "A small beginning",
+          "events": [
+            {
+              "id": "lesson-08-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-08-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67
+            },
+            {
+              "id": "lesson-08-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-08-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-08-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-08-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-08-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-08-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-08-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-08-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-08-phrase-1-m3-e3-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-08-phrase-1-m4-e1-n1",
+              "measure": 3,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-08-phrase-1-m4-e2",
+              "measure": 3,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-09",
+      "number": 9,
+      "title": "E minor",
+      "summary": "Build your first open chord.",
+      "see": "Place finger 2 on string 5 at fret 2 and finger 3 on string 4 at fret 2. Leave strings 6, 3, 2, and 1 open. Together these notes form E minor, written Em.",
+      "detail": "A chord sounds several notes together. The board shows the whole shape. First check each string separately so you can hear whether every intended note rings.",
+      "practice": "Choose String check and pick from string 6 to 1. Adjust any muffled note, then choose Chord to hear all six together. Strum gently downward and let it ring for four beats.",
+      "recap": "You can build Em and check each of its six strings.",
+      "quizString": 5,
+      "quizFret": 2,
+      "phrases": [
+        {
+          "id": "lesson-09-phrase-1",
+          "name": "String check",
+          "events": [
+            {
+              "id": "lesson-09-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-09-phrase-1-m1-e7",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            }
+          ],
+          "mutedStrings": []
+        },
+        {
+          "id": "lesson-09-phrase-2",
+          "name": "Chord",
+          "events": [
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n4",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n5",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-09-phrase-2-m1-e1-n6",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n4",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n5",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-09-phrase-2-m2-e1-n6",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-10",
+      "number": 10,
+      "title": "A minor",
+      "summary": "Build Am and make a slow chord change.",
+      "see": "For Am, place finger 1 on string 2 fret 1, finger 2 on string 4 fret 2, and finger 3 on string 3 fret 2. Play strings 5 through 1; leave string 6 out.",
+      "detail": "An X means do not play that string. Check the five intended strings individually. Move slowly between Em and Am, letting the shape settle before the next strum.",
+      "practice": "Practice the Am string check, then the Changes phrase. Strum on beat 1 and use the remaining beats to prepare. Pause between changes whenever you need to.",
+      "recap": "You can form Am and move between two open chord shapes.",
+      "quizString": 2,
+      "quizFret": 1,
+      "phrases": [
+        {
+          "id": "lesson-10-phrase-1",
+          "name": "String check",
+          "events": [
+            {
+              "id": "lesson-10-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-10-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52
+            },
+            {
+              "id": "lesson-10-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57
+            },
+            {
+              "id": "lesson-10-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-10-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-10-phrase-1-m1-e6",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            }
+          ],
+          "mutedStrings": [
+            6
+          ]
+        },
+        {
+          "id": "lesson-10-phrase-2",
+          "name": "Changes",
+          "events": [
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n4",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n5",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-10-phrase-2-m1-e1-n6",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-10-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-10-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52
+            },
+            {
+              "id": "lesson-10-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57
+            },
+            {
+              "id": "lesson-10-phrase-2-m2-e1-n4",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-10-phrase-2-m2-e1-n5",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "id": "lesson-11",
+      "number": 11,
+      "title": "D major",
+      "summary": "A smaller chord with a sharp.",
+      "see": "Place finger 1 on string 3 fret 2, finger 3 on string 2 fret 3, and finger 2 on string 1 fret 2. Play from open string 4 down toward string 1. Omit strings 5 and 6.",
+      "detail": "String 1 fret 2 is F-sharp: one fret above F. The sharp sign raises a note by one semitone. This F-sharp helps give D major its sound.",
+      "practice": "Check the four strings separately. Keep fingertips curved enough for adjacent strings to ring, without forcing your hand. Then try one gentle four-string strum every four beats.",
+      "recap": "You can read a sharp and form the open D-major shape.",
+      "quizString": 1,
+      "quizFret": 2,
+      "phrases": [
+        {
+          "id": "lesson-11-phrase-1",
+          "name": "String check",
+          "events": [
+            {
+              "id": "lesson-11-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-11-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57
+            },
+            {
+              "id": "lesson-11-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-11-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66
+            }
+          ],
+          "mutedStrings": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "lesson-11-phrase-2",
+          "name": "Chord",
+          "events": [
+            {
+              "id": "lesson-11-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-11-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57
+            },
+            {
+              "id": "lesson-11-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-11-phrase-2-m1-e1-n4",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66
+            },
+            {
+              "id": "lesson-11-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-11-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57
+            },
+            {
+              "id": "lesson-11-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-11-phrase-2-m2-e1-n4",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66
+            }
+          ],
+          "mutedStrings": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson-12",
+      "number": 12,
+      "title": "Put it together",
+      "summary": "Finish with melody and chord changes.",
+      "see": "First play the melody using single notes. Then choose Chord changes for a separate Em\u2013Am\u2013D exercise. These are two activities: you do not need to play melody and chords at once.",
+      "detail": "Review the notes or chord shapes whenever you need to. Progress means taking part and noticing what to practice next, not passing a speed test.",
+      "practice": "Spend a minute on the melody and a minute changing chords slowly. Finish by choosing one earlier lesson to revisit. A few relaxed minutes repeated regularly are enough for a useful practice session.",
+      "recap": "You have explored open strings, first-position notes, rhythm, a melody, and three chord shapes. Keep revisiting them at your own pace.",
+      "quizString": 1,
+      "quizFret": 3,
+      "phrases": [
+        {
+          "id": "lesson-12-phrase-1",
+          "name": "Melody",
+          "events": [
+            {
+              "id": "lesson-12-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-12-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-12-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-12-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-12-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67
+            },
+            {
+              "id": "lesson-12-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65
+            },
+            {
+              "id": "lesson-12-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-12-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-12-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-12-phrase-1-m3-e3-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-12-phrase-1-m4-e1-n1",
+              "measure": 3,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-12-phrase-1-m4-e2",
+              "measure": 3,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null
+            }
+          ],
+          "mutedStrings": []
+        },
+        {
+          "id": "lesson-12-phrase-2",
+          "name": "Chord changes",
+          "events": [
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n4",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n5",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-12-phrase-2-m1-e1-n6",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-12-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45
+            },
+            {
+              "id": "lesson-12-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52
+            },
+            {
+              "id": "lesson-12-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57
+            },
+            {
+              "id": "lesson-12-phrase-2-m2-e1-n4",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60
+            },
+            {
+              "id": "lesson-12-phrase-2-m2-e1-n5",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            },
+            {
+              "id": "lesson-12-phrase-2-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50
+            },
+            {
+              "id": "lesson-12-phrase-2-m3-e1-n2",
+              "measure": 2,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57
+            },
+            {
+              "id": "lesson-12-phrase-2-m3-e1-n3",
+              "measure": 2,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62
+            },
+            {
+              "id": "lesson-12-phrase-2-m3-e1-n4",
+              "measure": 2,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n1",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n2",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 5,
+              "fret": 2,
+              "finger": 2,
+              "midi": 47
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n3",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 4,
+              "fret": 2,
+              "finger": 3,
+              "midi": 52
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n4",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n5",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59
+            },
+            {
+              "id": "lesson-12-phrase-2-m4-e1-n6",
+              "measure": 3,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64
+            }
+          ],
+          "mutedStrings": []
+        }
+      ]
+    },
+    {
+      "title": "Control the eighth notes",
+      "summary": "Keep a steady pick through string crossings.",
+      "see": "Count 1 and 2 and 3 and 4 and. A downstroke starts each numbered beat; an upstroke answers on \u201cand\u201d. Keep the motion small.",
+      "detail": "The picking cue is separate from the fretting finger inside the marker. Start with open strings, then keep the same alternating motion while crossing between strings 2 and 1.",
+      "practice": "Say the count before playing. Loop the first example until each pair is even, then play the crossing phrase. Choose a slower BPM whenever the upstroke catches.",
+      "recap": "You can divide a beat evenly and carry alternate picking across a string change.",
+      "quizString": 1,
+      "quizFret": 0,
+      "question": {
+        "question": "Which stroke follows a downstroke in this exercise?",
+        "answers": [
+          "An upstroke",
+          "Another downstroke",
+          "No stroke"
+        ],
+        "correctIndex": 0,
+        "hint": "Keep alternating down and up, including across strings."
+      },
+      "id": "lesson-13",
+      "number": 13,
+      "phrases": [
+        {
+          "id": "lesson-13-phrase-1",
+          "name": "Even pairs",
+          "events": [
+            {
+              "id": "lesson-13-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 1.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 1.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 2.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 2.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e7-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m1-e8-n1",
+              "measure": 0,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 4.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 4.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 5.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 5.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e5-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 6.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e6-n1",
+              "measure": 1,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 6.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e7-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 7.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-1-m2-e8-n1",
+              "measure": 1,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 7.5,
+              "cue": "Pick up"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-13-phrase-2",
+          "name": "Crossing current",
+          "events": [
+            {
+              "id": "lesson-13-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 0.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 1.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 1.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 2.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 2.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e7-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m1-e8-n1",
+              "measure": 0,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 3.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 4.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 4.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 5.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 5.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e5-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 6.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e6-n1",
+              "measure": 1,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 6.5,
+              "cue": "Pick up"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e7-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 7.0,
+              "cue": "Pick down"
+            },
+            {
+              "id": "lesson-13-phrase-2-m2-e8-n1",
+              "measure": 1,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 7.5,
+              "cue": "Pick up"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Play across the beat",
+      "summary": "Hear the difference between a tie and a new attack.",
+      "see": "A dotted quarter lasts one and a half beats. A tie joins two notes of the same pitch: hold through the second note instead of picking again.",
+      "detail": "Keep counting during rests. In Across the barline, the open E crosses from beat 4 into the next measure. The sound continues, even though the notation needs two noteheads.",
+      "practice": "Clap the dotted rhythm. Then count the rests and hold the tied E without another pick. Compare it with the repeated E near the end.",
+      "recap": "You can separate silence, a held note, and a repeated attack.",
+      "quizString": 1,
+      "quizFret": 0,
+      "question": {
+        "question": "What do you do at the second note of a tie?",
+        "answers": [
+          "Keep the first note sounding",
+          "Pick the note again",
+          "Change to another string"
+        ],
+        "correctIndex": 0,
+        "hint": "A tie holds the same pitch; it is not a new attack."
+      },
+      "id": "lesson-14",
+      "number": 14,
+      "phrases": [
+        {
+          "id": "lesson-14-phrase-1",
+          "name": "Offbeat doorway",
+          "events": [
+            {
+              "id": "lesson-14-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-14-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 1.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0.5
+            },
+            {
+              "id": "lesson-14-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 2.0
+            },
+            {
+              "id": "lesson-14-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 2.5
+            },
+            {
+              "id": "lesson-14-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.0
+            },
+            {
+              "id": "lesson-14-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1.5,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-14-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 5.5
+            },
+            {
+              "id": "lesson-14-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-14-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 7.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-14-phrase-2",
+          "name": "Across the barline",
+          "events": [
+            {
+              "id": "lesson-14-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-14-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 1
+            },
+            {
+              "id": "lesson-14-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-14-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3
+            },
+            {
+              "id": "lesson-14-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-14-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 5.0
+            },
+            {
+              "id": "lesson-14-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-14-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 7.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Feel six-eight",
+      "summary": "Count two groups of three.",
+      "see": "Say ONE two three FOUR five six. Each syllable is an eighth note; each group of three makes one dotted-quarter pulse.",
+      "detail": "The BPM control still counts quarter notes. At 60 quarter-note BPM, the dotted-quarter pulse is 40 per minute. The six-eight grouping comes from your count, not a change to the slider\u2019s unit.",
+      "practice": "Clap two larger pulses while saying six subdivisions. Play the broken pattern with the same grouping, then let the dotted notes fill a complete group.",
+      "recap": "You can read six-eight without treating it as six heavy beats.",
+      "quizString": 3,
+      "quizFret": 0,
+      "question": {
+        "question": "How many eighth notes fill one dotted-quarter pulse?",
+        "answers": [
+          "Three",
+          "Two",
+          "Four"
+        ],
+        "correctIndex": 0,
+        "hint": "Count ONE two three as one larger pulse."
+      },
+      "id": "lesson-15",
+      "number": 15,
+      "phrases": [
+        {
+          "id": "lesson-15-phrase-1",
+          "name": "Two groups",
+          "events": [
+            {
+              "id": "lesson-15-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 5,
+              "fret": 3,
+              "finger": 3,
+              "midi": 48,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-15-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52,
+              "startQuarter": 0.5
+            },
+            {
+              "id": "lesson-15-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 1.0
+            },
+            {
+              "id": "lesson-15-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 1.5
+            },
+            {
+              "id": "lesson-15-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 2.0
+            },
+            {
+              "id": "lesson-15-phrase-1-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52,
+              "startQuarter": 2.5
+            },
+            {
+              "id": "lesson-15-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1.5,
+              "string": 4,
+              "fret": 3,
+              "finger": 3,
+              "midi": 53,
+              "startQuarter": 3.0
+            },
+            {
+              "id": "lesson-15-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 4.5
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-15-phrase-2",
+          "name": "Drifting answer",
+          "events": [
+            {
+              "id": "lesson-15-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-15-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 0.5
+            },
+            {
+              "id": "lesson-15-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52,
+              "startQuarter": 1.0
+            },
+            {
+              "id": "lesson-15-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 1.5
+            },
+            {
+              "id": "lesson-15-phrase-2-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 0.5,
+              "string": 4,
+              "fret": 2,
+              "finger": 2,
+              "midi": 52,
+              "startQuarter": 2.0
+            },
+            {
+              "id": "lesson-15-phrase-2-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 2.5
+            },
+            {
+              "id": "lesson-15-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 3,
+              "string": 5,
+              "fret": 3,
+              "finger": 3,
+              "midi": 48,
+              "startQuarter": 3.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Move beyond first position",
+      "summary": "Release, travel, and land with a guide finger.",
+      "see": "Your index finger names the position. Let it guide you from fret 1 to fret 3 and then fret 5. Release pressing force before travelling; do not squeeze while moving.",
+      "detail": "The position caption marks the intended hand location. Look at the landing fret before moving. A guide finger may lightly touch the string; this is a position shift, not a sounded slide.",
+      "practice": "Step through each landing before using Play. Keep the thumb mobile and the wrist comfortable. Stop and reset if the hand feels forced.",
+      "recap": "You can prepare a new position and land before picking.",
+      "quizString": 1,
+      "quizFret": 5,
+      "question": {
+        "question": "What should happen before a position shift?",
+        "answers": [
+          "Release excess fretting pressure",
+          "Squeeze harder",
+          "Lock the thumb in place"
+        ],
+        "correctIndex": 0,
+        "hint": "Lighten the grip so the hand can move freely."
+      },
+      "maxFret": 8,
+      "id": "lesson-16",
+      "number": 16,
+      "phrases": [
+        {
+          "id": "lesson-16-phrase-1",
+          "name": "Three landing places",
+          "events": [
+            {
+              "id": "lesson-16-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 0,
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 1,
+              "midi": 67,
+              "startQuarter": 1,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 2,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 7,
+              "finger": 3,
+              "midi": 71,
+              "startQuarter": 3,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 4.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 1,
+              "midi": 67,
+              "startQuarter": 5.0,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 6.0,
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-16-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 7.0,
+              "positionLabel": "First position"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-16-phrase-2",
+          "name": "Across the landing",
+          "events": [
+            {
+              "id": "lesson-16-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 1,
+              "midi": 62,
+              "startQuarter": 0,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 3,
+              "midi": 64,
+              "startQuarter": 1,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 1,
+              "midi": 67,
+              "startQuarter": 2,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 3,
+              "midi": 69,
+              "startQuarter": 3,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 4.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 7,
+              "finger": 3,
+              "midi": 66,
+              "startQuarter": 5.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 6.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-16-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 7,
+              "finger": 3,
+              "midi": 71,
+              "startQuarter": 7.0,
+              "positionLabel": "Fifth position"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "A minor pentatonic",
+      "summary": "Map five notes across six strings.",
+      "see": "The A-minor pentatonic scale contains A, C, D, E, and G. Start with index finger 1 at fret 5; use finger 3 at fret 7 and finger 4 at fret 8.",
+      "detail": "Root rings mark A. Frets 5\u20138 form this position, even though the board also shows the nut for orientation. Say the note names instead of memorizing only a shape.",
+      "practice": "Play the lower three strings first and then the upper three. Pause on every A. Use the second example to come back down without speeding up.",
+      "recap": "You can find A roots and follow a fifth-position pentatonic route.",
+      "quizString": 1,
+      "quizFret": 5,
+      "question": {
+        "question": "Which notes belong to A minor pentatonic?",
+        "answers": [
+          "A C D E G",
+          "A B C D E",
+          "A C-sharp E F-sharp G"
+        ],
+        "correctIndex": 0,
+        "hint": "Use the five-note collection, with A as the home note."
+      },
+      "maxFret": 8,
+      "rootPitchClass": 9,
+      "id": "lesson-17",
+      "number": 17,
+      "phrases": [
+        {
+          "id": "lesson-17-phrase-1",
+          "name": "Five-note staircase",
+          "events": [
+            {
+              "id": "lesson-17-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 6,
+              "fret": 5,
+              "finger": 1,
+              "midi": 45,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-17-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 6,
+              "fret": 8,
+              "finger": 4,
+              "midi": 48,
+              "startQuarter": 1
+            },
+            {
+              "id": "lesson-17-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 5,
+              "fret": 5,
+              "finger": 1,
+              "midi": 50,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-17-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 5,
+              "fret": 7,
+              "finger": 3,
+              "midi": 52,
+              "startQuarter": 3
+            },
+            {
+              "id": "lesson-17-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 4,
+              "fret": 5,
+              "finger": 1,
+              "midi": 55,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 5.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 3,
+              "fret": 5,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 3,
+              "fret": 7,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 7.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 8.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 9.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m3-e3-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 10.0
+            },
+            {
+              "id": "lesson-17-phrase-1-m3-e4-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 11.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-17-phrase-2",
+          "name": "Return to the root",
+          "events": [
+            {
+              "id": "lesson-17-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-17-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 1
+            },
+            {
+              "id": "lesson-17-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-17-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 3
+            },
+            {
+              "id": "lesson-17-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 3,
+              "fret": 7,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 3,
+              "fret": 5,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 5.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 4,
+              "fret": 5,
+              "finger": 1,
+              "midi": 55,
+              "startQuarter": 7.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 1,
+              "string": 5,
+              "fret": 7,
+              "finger": 3,
+              "midi": 52,
+              "startQuarter": 8.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m3-e2-n1",
+              "measure": 2,
+              "onset": 1,
+              "duration": 1,
+              "string": 5,
+              "fret": 5,
+              "finger": 1,
+              "midi": 50,
+              "startQuarter": 9.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m3-e3-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 6,
+              "fret": 8,
+              "finger": 4,
+              "midi": 48,
+              "startQuarter": 10.0
+            },
+            {
+              "id": "lesson-17-phrase-2-m3-e4-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 6,
+              "fret": 5,
+              "finger": 1,
+              "midi": 45,
+              "startQuarter": 11.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Make a musical phrase",
+      "summary": "Turn a scale into a question and answer.",
+      "see": "A phrase has shape and space. Play a short idea, leave silence, then answer it. You do not have to use every note in the pattern.",
+      "detail": "Listen for the A root as a resting place. The examples use the same pentatonic collection with different rhythms. Keep silences intentional and stop the string for each rest.",
+      "practice": "Loop the call, then answer with the written response. Finally invent a two-note answer on the shown positions; the app is a reference, not a judge of your improvisation.",
+      "recap": "You can use rhythm and silence to give a small group of notes a musical shape.",
+      "quizString": 2,
+      "quizFret": 5,
+      "question": {
+        "question": "What can make a short phrase clearer?",
+        "answers": [
+          "Leaving intentional space",
+          "Playing every note as fast as possible",
+          "Ignoring the pulse"
+        ],
+        "correctIndex": 0,
+        "hint": "A counted rest gives an idea room to breathe."
+      },
+      "maxFret": 8,
+      "rootPitchClass": 9,
+      "id": "lesson-18",
+      "number": 18,
+      "phrases": [
+        {
+          "id": "lesson-18-phrase-1",
+          "name": "A short question",
+          "events": [
+            {
+              "id": "lesson-18-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-18-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 0.5
+            },
+            {
+              "id": "lesson-18-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 1.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 2.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 3.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 3,
+              "fret": 7,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 3,
+              "fret": 5,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 5.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-18-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 7.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-18-phrase-2",
+          "name": "Leave an answer",
+          "events": [
+            {
+              "id": "lesson-18-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-18-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 1
+            },
+            {
+              "id": "lesson-18-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 1.5
+            },
+            {
+              "id": "lesson-18-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 2.0
+            },
+            {
+              "id": "lesson-18-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1.5,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-18-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 5.5
+            },
+            {
+              "id": "lesson-18-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-18-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 7.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Fingerpicking foundations",
+      "summary": "Let the thumb and fingers share the work.",
+      "see": "Picking-hand letters are p for thumb, i for index, m for middle, and a for ring. They are not the fretting-hand numbers. Assign p to the bass and i\u2013m\u2013a to strings 3\u20132\u20131.",
+      "detail": "Hold the Em or Am shape while the picking hand moves. Notes on different strings overlap and keep glowing until their written durations end. The blue marker shows the next attack, not a command to stop the others.",
+      "practice": "Read each picking cue aloud. Keep the hand relaxed and pluck toward the palm with a small motion. First play one four-note cycle, then join two cycles.",
+      "recap": "You can separate the roles of both hands and let a broken chord ring.",
+      "quizString": 2,
+      "quizFret": 1,
+      "question": {
+        "question": "What does p mean in a picking cue?",
+        "answers": [
+          "Picking-hand thumb",
+          "Fretting finger 1",
+          "Pull off"
+        ],
+        "correctIndex": 0,
+        "hint": "Letters describe the picking hand; numbers describe the fretting hand."
+      },
+      "id": "lesson-19",
+      "number": 19,
+      "phrases": [
+        {
+          "id": "lesson-19-phrase-1",
+          "name": "Em ringing pattern",
+          "events": [
+            {
+              "id": "lesson-19-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40,
+              "startQuarter": 0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 0.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 1.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 1.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40,
+              "startQuarter": 2.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 2.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e7-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 3.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-1-m1-e8-n1",
+              "measure": 0,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40,
+              "startQuarter": 4.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 4.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 5.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 5.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e5-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 6,
+              "fret": 0,
+              "finger": 0,
+              "midi": 40,
+              "startQuarter": 6.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e6-n1",
+              "measure": 1,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 6.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e7-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 7.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-1-m2-e8-n1",
+              "measure": 1,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 7.5,
+              "cue": "a \u00b7 ring"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-19-phrase-2",
+          "name": "Am ringing pattern",
+          "events": [
+            {
+              "id": "lesson-19-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 0.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 1.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 1.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 2.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 2.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e7-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 3.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-2-m1-e8-n1",
+              "measure": 0,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 4.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 4.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 5.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 5.5,
+              "cue": "a \u00b7 ring"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e5-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 6.0,
+              "cue": "p \u00b7 thumb"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e6-n1",
+              "measure": 1,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 6.5,
+              "cue": "i \u00b7 index"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e7-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 7.0,
+              "cue": "m \u00b7 middle"
+            },
+            {
+              "id": "lesson-19-phrase-2-m2-e8-n1",
+              "measure": 1,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 7.5,
+              "cue": "a \u00b7 ring"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Small chords, clear voices",
+      "summary": "Compare major and minor triads.",
+      "see": "A triad contains a root, a third, and a fifth. These small shapes use only strings 3, 2, and 1. Leave the other strings out.",
+      "detail": "Compare D major with D minor: only the highest note moves from F-sharp to F. Compare A major with A minor: the C-sharp on string 2 lowers to C. One semitone changes the chord quality.",
+      "practice": "Check each shape one string at a time, then hear its three notes together. Keep the same pulse while changing and let your hand reset between attempts.",
+      "recap": "You can hear and locate the note that changes a major triad into minor.",
+      "quizString": 1,
+      "quizFret": 1,
+      "question": {
+        "question": "Which chord tone lowers to change major into minor?",
+        "answers": [
+          "The third",
+          "The root",
+          "The fifth"
+        ],
+        "correctIndex": 0,
+        "hint": "D major has F-sharp; D minor has F. This is its third."
+      },
+      "id": "lesson-20",
+      "number": 20,
+      "phrases": [
+        {
+          "id": "lesson-20-phrase-1",
+          "name": "D to D minor",
+          "events": [
+            {
+              "id": "lesson-20-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-1-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-1-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-20-phrase-1-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-20-phrase-1-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 4.0
+            }
+          ],
+          "mutedStrings": [
+            4,
+            5,
+            6
+          ],
+          "barre": null
+        },
+        {
+          "id": "lesson-20-phrase-2",
+          "name": "A to A minor",
+          "events": [
+            {
+              "id": "lesson-20-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 2,
+              "finger": 2,
+              "midi": 61,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-20-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-20-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-20-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 4,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 4.0
+            }
+          ],
+          "mutedStrings": [
+            4,
+            5,
+            6
+          ],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Your first small barre",
+      "summary": "One finger, two strings, without excess pressure.",
+      "see": "Lay the side of index finger 1 across strings 1 and 2 at fret 1. Add finger 2 on string 3 fret 2. This small F shape uses only the top three strings.",
+      "detail": "The bar on the diagram is one finger covering two strings. Bring it close behind the fret and use only enough pressure for clarity. Release between attempts; stop if anything hurts.",
+      "practice": "Check strings 3, 2, and 1 individually. If one is muted, adjust the index angle instead of squeezing harder. Then alternate the shape with open E minor on the top strings.",
+      "recap": "You can recognize a small barre and check both strings it covers.",
+      "quizString": 1,
+      "quizFret": 1,
+      "question": {
+        "question": "What does the short barre represent?",
+        "answers": [
+          "One finger holding two strings",
+          "Two fingers on one string",
+          "A capo across all six strings"
+        ],
+        "correctIndex": 0,
+        "hint": "Index finger 1 covers strings 1 and 2 at fret 1."
+      },
+      "id": "lesson-21",
+      "number": 21,
+      "phrases": [
+        {
+          "id": "lesson-21-phrase-1",
+          "name": "Check the barre",
+          "events": [
+            {
+              "id": "lesson-21-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-21-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 1
+            },
+            {
+              "id": "lesson-21-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-21-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 3
+            },
+            {
+              "id": "lesson-21-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-1-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-1-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            }
+          ],
+          "mutedStrings": [
+            4,
+            5,
+            6
+          ],
+          "barre": {
+            "fret": 1,
+            "firstString": 1,
+            "lastString": 2,
+            "finger": 1
+          }
+        },
+        {
+          "id": "lesson-21-phrase-2",
+          "name": "Grip and release",
+          "events": [
+            {
+              "id": "lesson-21-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-21-phrase-2-m1-e1-n2",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-21-phrase-2-m1-e1-n3",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 0
+            },
+            {
+              "id": "lesson-21-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-21-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 3,
+              "fret": 0,
+              "finger": 0,
+              "midi": 55,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-2-m2-e1-n2",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-2-m2-e1-n3",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 4.0
+            },
+            {
+              "id": "lesson-21-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            }
+          ],
+          "mutedStrings": [
+            4,
+            5,
+            6
+          ],
+          "barre": {
+            "fret": 1,
+            "firstString": 1,
+            "lastString": 2,
+            "finger": 1
+          }
+        }
+      ]
+    },
+    {
+      "title": "Hammer-ons and ascending slurs",
+      "summary": "Pick once, then sound the higher note.",
+      "see": "Pick the lower note once, then bring the next fretting finger down clearly just behind its fret. The second note comes from the fretting hand. H and a curved slur connect the pair.",
+      "detail": "A hammer-on changes pitch; a tie holds the same pitch. Keep the lower fretting finger placed for the fretted pair. Use a small controlled movement, not a large swing.",
+      "practice": "Step through each pair to place the fingers. Use Play to hear the connected rhythm, then play it yourself with one initial pick. Keep both notes clear before increasing BPM.",
+      "recap": "You can distinguish a hammer-on from a picked pair or a tie.",
+      "quizString": 1,
+      "quizFret": 3,
+      "question": {
+        "question": "How many pick strokes begin a two-note hammer-on pair?",
+        "answers": [
+          "One",
+          "Two",
+          "None"
+        ],
+        "correctIndex": 0,
+        "hint": "Pick the first note; the fretting hand sounds the second."
+      },
+      "id": "lesson-22",
+      "number": 22,
+      "phrases": [
+        {
+          "id": "lesson-22-phrase-1",
+          "name": "Open to fretted",
+          "events": [
+            {
+              "id": "lesson-22-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-22-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 1,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-22-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-22-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 3,
+              "cue": "Reset and pick"
+            },
+            {
+              "id": "lesson-22-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 4.0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-22-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 5.0,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-22-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-22-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 0,
+              "finger": 0,
+              "midi": 59,
+              "startQuarter": 7.0,
+              "cue": "Reset and pick"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-22-phrase-2",
+          "name": "Two fretted notes",
+          "events": [
+            {
+              "id": "lesson-22-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-22-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 1,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-22-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-22-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 3,
+              "cue": "Reset and pick"
+            },
+            {
+              "id": "lesson-22-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 4.0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-22-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 5.0,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-22-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-22-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 7.0,
+              "cue": "Reset and pick"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Pull-offs and connected phrases",
+      "summary": "Prepare the lower note before releasing the higher one.",
+      "see": "Place the lower finger first. Pick the higher note, then make a small controlled plucking release with that fretting finger so the lower note sounds. P and a slur identify the pull-off.",
+      "detail": "Simply lifting away may make the second note too quiet. Keep the prepared finger firm without excess force and avoid catching an unintended string. H rises in pitch; P falls.",
+      "practice": "Practice descending pairs, then the three-note connected group. Pick only at the start of each group. Compare clarity at a slow tempo and take breaks.",
+      "recap": "You can connect notes in both directions with prepared fingers.",
+      "quizString": 1,
+      "quizFret": 1,
+      "question": {
+        "question": "What should be ready before a fretted pull-off?",
+        "answers": [
+          "The lower finger is already placed",
+          "The lower finger stays in the air",
+          "Both fingers leave the string"
+        ],
+        "correctIndex": 0,
+        "hint": "Prepare the destination before sounding the higher note."
+      },
+      "id": "lesson-23",
+      "number": 23,
+      "phrases": [
+        {
+          "id": "lesson-23-phrase-1",
+          "name": "Descending pairs",
+          "events": [
+            {
+              "id": "lesson-23-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-23-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 1,
+              "cue": "P \u00b7 Pull off"
+            },
+            {
+              "id": "lesson-23-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 2
+            },
+            {
+              "id": "lesson-23-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 3,
+              "cue": "Reset and pick"
+            },
+            {
+              "id": "lesson-23-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 4.0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-23-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 5.0,
+              "cue": "P \u00b7 Pull off"
+            },
+            {
+              "id": "lesson-23-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-23-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 7.0,
+              "cue": "Reset and pick"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-23-phrase-2",
+          "name": "Up and back",
+          "events": [
+            {
+              "id": "lesson-23-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-23-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 3,
+              "midi": 67,
+              "startQuarter": 1,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-23-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 2,
+              "cue": "P \u00b7 Pull off"
+            },
+            {
+              "id": "lesson-23-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 3
+            },
+            {
+              "id": "lesson-23-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 4.0,
+              "cue": "Pick once"
+            },
+            {
+              "id": "lesson-23-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 5.0,
+              "cue": "H \u00b7 Hammer on"
+            },
+            {
+              "id": "lesson-23-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 6.0,
+              "cue": "P \u00b7 Pull off"
+            },
+            {
+              "id": "lesson-23-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 7.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    },
+    {
+      "title": "Put the new skills together",
+      "summary": "Two original studies, one step at a time.",
+      "see": "Choose Lead study for position shifts, pentatonic phrases, and H/P connections. Choose Ringing triads for a separate fingerpicking study. You do not need to play both parts together.",
+      "detail": "Practice two bars at a time. Before a shift, locate the landing fret; before a slur, prepare its destination. In fingerpicking, follow p\u2013i\u2013m\u2013a while the fretting hand holds the shape.",
+      "practice": "Play each study slowly, then revisit the bar that needed the most attention. Finish with one relaxed complete pass. Accuracy and comfort matter more than finishing at a particular speed.",
+      "recap": "You have connected rhythm, fretboard movement, lead technique, and small chord textures. Choose your next practice focus and return whenever you like.",
+      "quizString": 1,
+      "quizFret": 5,
+      "question": {
+        "question": "What is a useful response to a difficult bar?",
+        "answers": [
+          "Slow down and isolate the transition",
+          "Always restart the entire piece",
+          "Push through discomfort"
+        ],
+        "correctIndex": 0,
+        "hint": "Work on the small transition, then reconnect it to the phrase."
+      },
+      "maxFret": 8,
+      "rootPitchClass": 9,
+      "id": "lesson-24",
+      "number": 24,
+      "phrases": [
+        {
+          "id": "lesson-24-phrase-1",
+          "name": "Lead study",
+          "events": [
+            {
+              "id": "lesson-24-phrase-1-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 3,
+              "finger": 1,
+              "midi": 67,
+              "startQuarter": 0,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m1-e2-n1",
+              "measure": 0,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 3,
+              "midi": 69,
+              "startQuarter": 1,
+              "positionLabel": "Third position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m1-e3-n1",
+              "measure": 0,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 2,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m1-e4-n1",
+              "measure": 0,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 3,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 4.0,
+              "cue": "Pick once",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m2-e2-n1",
+              "measure": 1,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 5.0,
+              "cue": "H \u00b7 Hammer on",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m2-e3-n1",
+              "measure": 1,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 6.0
+            },
+            {
+              "id": "lesson-24-phrase-1-m2-e4-n1",
+              "measure": 1,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 7.0,
+              "cue": "Reset and pick",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 8.0,
+              "cue": "Pick once",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m3-e2-n1",
+              "measure": 2,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 9.0,
+              "cue": "P \u00b7 Pull off",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m3-e3-n1",
+              "measure": 2,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 10.0
+            },
+            {
+              "id": "lesson-24-phrase-1-m3-e4-n1",
+              "measure": 2,
+              "onset": 3,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 11.0,
+              "cue": "Reset and pick",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m4-e1-n1",
+              "measure": 3,
+              "onset": 0,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 7,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 12.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m4-e2-n1",
+              "measure": 3,
+              "onset": 1.5,
+              "duration": 0.5,
+              "string": 3,
+              "fret": 5,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 13.5,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m4-e3-n1",
+              "measure": 3,
+              "onset": 2.0,
+              "duration": 1,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 14.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m4-e4-n1",
+              "measure": 3,
+              "onset": 3.0,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 15.0
+            },
+            {
+              "id": "lesson-24-phrase-1-m5-e1-n1",
+              "measure": 4,
+              "onset": 0,
+              "duration": 1,
+              "string": 2,
+              "fret": 5,
+              "finger": 1,
+              "midi": 64,
+              "startQuarter": 16.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m5-e2-n1",
+              "measure": 4,
+              "onset": 1,
+              "duration": 1,
+              "string": 2,
+              "fret": 8,
+              "finger": 4,
+              "midi": 67,
+              "startQuarter": 17.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m5-e3-n1",
+              "measure": 4,
+              "onset": 2,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 18.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m5-e4-n1",
+              "measure": 4,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 19.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m6-e1-n1",
+              "measure": 5,
+              "onset": 0,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 20.0,
+              "cue": "Pick once",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m6-e2-n1",
+              "measure": 5,
+              "onset": 1,
+              "duration": 1,
+              "string": 1,
+              "fret": 5,
+              "finger": 1,
+              "midi": 69,
+              "startQuarter": 21.0,
+              "cue": "P \u00b7 Pull off",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m6-e3-n1",
+              "measure": 5,
+              "onset": 2,
+              "duration": 1,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 22.0
+            },
+            {
+              "id": "lesson-24-phrase-1-m6-e4-n1",
+              "measure": 5,
+              "onset": 3,
+              "duration": 1,
+              "string": 1,
+              "fret": 8,
+              "finger": 4,
+              "midi": 72,
+              "startQuarter": 23.0,
+              "cue": "Reset and pick",
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m7-e1-n1",
+              "measure": 6,
+              "onset": 0,
+              "duration": 1,
+              "string": 3,
+              "fret": 7,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 24.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m7-e2-n1",
+              "measure": 6,
+              "onset": 1,
+              "duration": 1,
+              "string": 3,
+              "fret": 5,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 25.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m7-e3-n1",
+              "measure": 6,
+              "onset": 2,
+              "duration": 1,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 26.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m7-e4-n1",
+              "measure": 6,
+              "onset": 3,
+              "duration": 1,
+              "string": 4,
+              "fret": 5,
+              "finger": 1,
+              "midi": 55,
+              "startQuarter": 27.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m8-e1-n1",
+              "measure": 7,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 7,
+              "finger": 3,
+              "midi": 57,
+              "startQuarter": 28.0,
+              "positionLabel": "Fifth position"
+            },
+            {
+              "id": "lesson-24-phrase-1-m8-e2-n1",
+              "measure": 7,
+              "onset": 2,
+              "duration": 2,
+              "string": 0,
+              "fret": 0,
+              "finger": 0,
+              "midi": null,
+              "startQuarter": 30.0
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        },
+        {
+          "id": "lesson-24-phrase-2",
+          "name": "Ringing triads",
+          "events": [
+            {
+              "id": "lesson-24-phrase-2-m1-e1-n1",
+              "measure": 0,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e2-n1",
+              "measure": 0,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 0.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e3-n1",
+              "measure": 0,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 1.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e4-n1",
+              "measure": 0,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66,
+              "startQuarter": 1.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e5-n1",
+              "measure": 0,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 2.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e6-n1",
+              "measure": 0,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 2.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e7-n1",
+              "measure": 0,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 3.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m1-e8-n1",
+              "measure": 0,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66,
+              "startQuarter": 3.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e1-n1",
+              "measure": 1,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 4.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e2-n1",
+              "measure": 1,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 4.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e3-n1",
+              "measure": 1,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 5.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e4-n1",
+              "measure": 1,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 5.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e5-n1",
+              "measure": 1,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 6.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e6-n1",
+              "measure": 1,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 6.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e7-n1",
+              "measure": 1,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 7.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m2-e8-n1",
+              "measure": 1,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 7.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e1-n1",
+              "measure": 2,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 8.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e2-n1",
+              "measure": 2,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 8.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e3-n1",
+              "measure": 2,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 2,
+              "finger": 2,
+              "midi": 61,
+              "startQuarter": 9.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e4-n1",
+              "measure": 2,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 9.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e5-n1",
+              "measure": 2,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 10.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e6-n1",
+              "measure": 2,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 10.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e7-n1",
+              "measure": 2,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 2,
+              "finger": 2,
+              "midi": 61,
+              "startQuarter": 11.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m3-e8-n1",
+              "measure": 2,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 11.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e1-n1",
+              "measure": 3,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 12.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e2-n1",
+              "measure": 3,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 12.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e3-n1",
+              "measure": 3,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 13.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e4-n1",
+              "measure": 3,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 13.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e5-n1",
+              "measure": 3,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 14.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e6-n1",
+              "measure": 3,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 14.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e7-n1",
+              "measure": 3,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 15.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m4-e8-n1",
+              "measure": 3,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 15.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e1-n1",
+              "measure": 4,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 16.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e2-n1",
+              "measure": 4,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 16.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e3-n1",
+              "measure": 4,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 17.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e4-n1",
+              "measure": 4,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66,
+              "startQuarter": 17.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e5-n1",
+              "measure": 4,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 18.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e6-n1",
+              "measure": 4,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 18.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e7-n1",
+              "measure": 4,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 19.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m5-e8-n1",
+              "measure": 4,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 2,
+              "finger": 2,
+              "midi": 66,
+              "startQuarter": 19.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e1-n1",
+              "measure": 5,
+              "onset": 0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 20.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e2-n1",
+              "measure": 5,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 20.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e3-n1",
+              "measure": 5,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 21.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e4-n1",
+              "measure": 5,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 21.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e5-n1",
+              "measure": 5,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 4,
+              "fret": 0,
+              "finger": 0,
+              "midi": 50,
+              "startQuarter": 22.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e6-n1",
+              "measure": 5,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 22.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e7-n1",
+              "measure": 5,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 3,
+              "finger": 3,
+              "midi": 62,
+              "startQuarter": 23.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m6-e8-n1",
+              "measure": 5,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 1,
+              "finger": 1,
+              "midi": 65,
+              "startQuarter": 23.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e1-n1",
+              "measure": 6,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 24.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e2-n1",
+              "measure": 6,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 24.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e3-n1",
+              "measure": 6,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 2,
+              "finger": 2,
+              "midi": 61,
+              "startQuarter": 25.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e4-n1",
+              "measure": 6,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 25.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e5-n1",
+              "measure": 6,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 26.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e6-n1",
+              "measure": 6,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 1,
+              "midi": 57,
+              "startQuarter": 26.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e7-n1",
+              "measure": 6,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 2,
+              "finger": 2,
+              "midi": 61,
+              "startQuarter": 27.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m7-e8-n1",
+              "measure": 6,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 27.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e1-n1",
+              "measure": 7,
+              "onset": 0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 28.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e2-n1",
+              "measure": 7,
+              "onset": 0.5,
+              "duration": 2,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 28.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e3-n1",
+              "measure": 7,
+              "onset": 1.0,
+              "duration": 2,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 29.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e4-n1",
+              "measure": 7,
+              "onset": 1.5,
+              "duration": 2,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 29.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e5-n1",
+              "measure": 7,
+              "onset": 2.0,
+              "duration": 2,
+              "string": 5,
+              "fret": 0,
+              "finger": 0,
+              "midi": 45,
+              "startQuarter": 30.0,
+              "cue": "p \u00b7 thumb",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e6-n1",
+              "measure": 7,
+              "onset": 2.5,
+              "duration": 1.5,
+              "string": 3,
+              "fret": 2,
+              "finger": 2,
+              "midi": 57,
+              "startQuarter": 30.5,
+              "cue": "i \u00b7 index",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e7-n1",
+              "measure": 7,
+              "onset": 3.0,
+              "duration": 1.0,
+              "string": 2,
+              "fret": 1,
+              "finger": 1,
+              "midi": 60,
+              "startQuarter": 31.0,
+              "cue": "m \u00b7 middle",
+              "positionLabel": "First position"
+            },
+            {
+              "id": "lesson-24-phrase-2-m8-e8-n1",
+              "measure": 7,
+              "onset": 3.5,
+              "duration": 0.5,
+              "string": 1,
+              "fret": 0,
+              "finger": 0,
+              "midi": 64,
+              "startQuarter": 31.5,
+              "cue": "a \u00b7 ring",
+              "positionLabel": "First position"
+            }
+          ],
+          "mutedStrings": [],
+          "barre": null
+        }
+      ]
+    }
+  ]
+}

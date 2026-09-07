@@ -1,0 +1,40 @@
+{
+  "releaseQualified": false,
+  "newRecognitionRun": false,
+  "change": "Preserve and edit explicitly encoded trailing measure silence through import, correction, save, playback and seeking. Existing scores without the optional minimum duration retain their prior timing.",
+  "coreTests": 69,
+  "iosUnitTests": 27,
+  "symbolicMIDICases": 46,
+  "simulatorReviewFlows": {
+    "iPhone": "artifacts/measure-timing-iphone.xcresult",
+    "iPad": "artifacts/measure-timing-ipad.xcresult"
+  },
+  "retainedRecognitionOutputs": {
+    "count": 159,
+    "exactPlayback": 158,
+    "tabPlayable": 155,
+    "allPriorImportAndTabStatusesPreserved": true,
+    "evidence": "artifacts/measure-timing-pipeline-recheck/summary.json"
+  },
+  "independentRawXMLTiming": {
+    "scores": 12,
+    "notes": 7299,
+    "evidence": "artifacts/measure-timing-reference-recheck/independent-timing.json",
+    "limits": "Compares encoded MusicXML with Swift timing, not photographed notation accuracy. Three unsupported scores remain rejected. The first comparison incorrectly compared expanded repeats with written measures; corrected using import-only verification mode."
+  },
+  "sourceSHA256": {
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/Types.swift": "a1c649f9b1c0f3fa0b16ac77b697ee047ed1bd718a9dba02b054ebf2e5f7c291",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "12d339a6e0be9db5d465f8504c13ccd8e52188dcef8bb9afdbf8cfe7d3af617b",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/ScoreEditing.swift": "c54384c3f9c3019c5c8359a9fd09abec166c8867cffed24a97a4be4d827867be",
+    "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "32803c112b1dc6478771796faa6aabe9355cce6f5eaebe82fd31d6b6e01b8410",
+    "apps/ios/Packages/StringMapCore/Sources/StringMapCheck/main.swift": "2eb6a33a1f860024082dfef69f39edc2a88297f94e6fe465997ede44f8551da4",
+    "apps/ios/Packages/StringMapCore/Tests/ScorePipelineTests/MeasureTimingTests.swift": "420851c995005bcfed0bd87a28a8495fd37410bde22d714b0a807f269560b950",
+    "apps/ios/StringMap/AppModel.swift": "03d21e51a7544e0d19ce27ce0cf234c979abe10fade1987e25abf6b671265dfe",
+    "apps/ios/StringMap/ScoreReviewView.swift": "ef6a8bdb5656b24e12987601cc0b178d6b4907665fb19a487fde0697f00883dd",
+    "apps/ios/StringMapTests/AlphaTabBridgeTests.swift": "faf86dcfa5f52effd5239514dcfd45c8557fea8cf07944477c4974220ee6aa23",
+    "apps/ios/StringMapUITests/StringMapUITests.swift": "8a1cf06efb85d2e0b0fe85f8a8c6041afea47ed35d5f07e0d0f235a2b5f91b16",
+    "scripts/verify-score-playback.mjs": "abe64f1ad132b2d6af15f394d9c4011c4a2194f78aef22910166906c042d9a73",
+    "scripts/test-score-playback.py": "56e5185112d742ec5f17b1a6e56b920c577c04d38422f062ee0d0d0ff318ea77",
+    "services/omr/benchmark.py": "4abf96ef1326baa77946a50b1a78b83ce22b6f1f0f20613e47e0d931bd9d1b2b"
+  }
+}

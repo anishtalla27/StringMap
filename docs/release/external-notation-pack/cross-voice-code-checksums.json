@@ -1,0 +1,11 @@
+{
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/ScoreEditing.swift": "4278c7aedba42c92986fb204e827cbcb2c07134889044ef53d43fb73db83705f",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/Types.swift": "b7205e034ad95cc38d9e94bfe24dea4d07f4247fa42a7c4ee30b605132ae0ed4",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/AlphaTexGenerator.swift": "7f68033d0541e61e8d478922b922a8d14e23c86f0ef2c6da896596aa9d80eb4c",
+  "apps/ios/Packages/StringMapCore/Sources/ScorePipeline/MusicXMLImporter.swift": "0b01ffd93a4365fb047f6289a250a3ad91b85221812009d975845a5965adf9f6",
+  "apps/ios/Packages/StringMapCore/Sources/StringMapCheck/main.swift": "5e508f1e3866d009c8a9099b21a73e2d89441c9823995dd8cb74746201f63ab8",
+  "apps/ios/StringMap/AlphaTabWebView.swift": "1a26d0f7ec59cdfc81a401f4c939dc3aa19c6d023efafc9690f2cbd795475628",
+  "apps/ios/StringMap/ImportScoreView.swift": "0011397d792422c1ac6aebbd4f833a3dd114e6c431f61f163d992629f2b5baf1",
+  "scripts/verify-score-playback.mjs": "f80297ce2107de60069a1a67d6ecce75fb5f9e88e1559aedc0af2dc755acc15e",
+  "services/omr/recognizer.py": "86eca4aed065a9b584fd4f40c78de63d7b74009435eeb610f6176ca7b82e4866"
+}
