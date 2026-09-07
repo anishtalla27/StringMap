@@ -1,6 +1,6 @@
 # Physical-device and seven-day TestFlight exercise
 
-Status: NOT STARTED. No signed upload or invitations have been verified. Simulator tests and MIDI/PCM checks do not establish physical audible playback.
+Status: Seven-day exercise NOT STARTED. Signed build 1.0.0 (1) passed Apple validation, uploaded, and processed in TestFlight. Testing instructions are saved; no invitations have been sent. A full-course automated UI test passed on physical iPhone 14 Pro (iOS 26.6.1). Automated UI tests and MIDI/PCM checks do not establish physical audible playback.
 
 Run on a physical iPhone and iPad with iOS/iPadOS 26+. Record model, OS, build, tester, date, evidence, and pass/fail. Do not mark a day complete in advance. This seven-day exercise is our release gate, not an Apple-mandated minimum.
 
