@@ -11,7 +11,7 @@ struct TutorialCourse: Decodable {
             throw CocoaError(.fileNoSuchFile)
         }
         let course = try JSONDecoder().decode(Self.self, from: Data(contentsOf: url))
-        guard course.version == 1, course.lessons.count == 12,
+        guard course.version == 1, !course.lessons.isEmpty,
               Set(course.lessons.map(\.id)).count == course.lessons.count else { throw CocoaError(.coderReadCorrupt) }
         return course
     }
@@ -25,20 +25,32 @@ struct TutorialLesson: Decodable, Identifiable {
     let detail: String
     let practice: String
     let recap: String
+    let maxFret: Int?
+    let rootPitchClass: Int?
+    let question: TutorialQuestion?
+    var section: String { number <= 12 ? "Foundations" : number <= 18 ? "Building Skills" : "Connected Playing" }
+    var fretChoices: [Int] { Array(Set([quizFret, max(0, quizFret-1), min(maxFret ?? 5, quizFret+1), 0])).sorted() }
     let quizString: Int
     let quizFret: Int
     let phrases: [TutorialPhrase]
     var quizMIDI: Int { GuitarTuning.standard.openMIDIPitches[quizString - 1] + quizFret }
+}
+struct TutorialQuestion: Decodable {
+    let question: String
+    let answers: [String]
+    let correctIndex: Int
+    let hint: String
 }
 struct TutorialPhrase: Decodable, Identifiable {
     let id: String
     let name: String
     let events: [TutorialEvent]
     let mutedStrings: [Int]
+    let barre: TeachingBarre?
     func result(bundle: Bundle = .main) throws -> PipelineResult {
         guard let url = bundle.url(forResource: id, withExtension: "musicxml", subdirectory: "Tutorial") else { throw CocoaError(.fileNoSuchFile) }
         let locks = Dictionary(uniqueKeysWithValues: events.compactMap { e in e.position.map { (e.id, $0) } })
-        return try StructuredScorePipeline().run(musicXML: Data(contentsOf: url), options: .init(maxFret: 5, lockedPositions: locks))
+        return try StructuredScorePipeline(importer: MusicXMLImporter(allowGuitarSlurs: true)).run(musicXML: Data(contentsOf: url), options: .init(maxFret: max(5, events.map(\.fret).max() ?? 5), lockedPositions: locks))
     }
 }
 struct TutorialEvent: Decodable, Identifiable {
@@ -50,7 +62,10 @@ struct TutorialEvent: Decodable, Identifiable {
     let fret: Int
     let finger: Int
     let midi: Int?
-    var start: Double { Double(measure) * 4 + onset }
+    var startQuarter: Double?
+    let cue: String?
+    let positionLabel: String?
+    var start: Double { startQuarter ?? Double(measure) * 4 + onset }
     var position: GuitarPosition? { midi.map { GuitarPosition(string: string, fret: fret, midi: $0) } }
 }
 func tutorialPitchName(_ midi: Int) -> String {
@@ -113,6 +128,7 @@ struct TutorialProgressRecord: Codable, Equatable {
         self.lesson = lesson; self.progress = progress
         let saved = progress.record(lesson.id)
         stage = saved.stage; phraseIndex = min(max(0, saved.phraseIndex), lesson.phrases.count - 1)
+        player.setTutorialPresentation(true)
         player.setShowTab(showTab)
         loadPhrase()
         player.setPlaybackSpeed(saved.speed)
@@ -122,15 +138,26 @@ struct TutorialProgressRecord: Codable, Equatable {
     var completed: Bool { progress.record(lesson.id).completed }
     var phrase: TutorialPhrase { lesson.phrases[phraseIndex] }
     var quarter: Double { player.cursorMilliseconds / 1000 } // All authored lessons use 60 quarter-note BPM.
+    var events: [TutorialEvent] {
+        guard let score = result?.score else { return [] }
+        var offsets: [Double] = []; var sum = 0.0
+        for measure in score.measures { offsets.append(sum); sum += measure.durationQuarters }
+        return phrase.events.map { event in
+            var resolved = event
+            if offsets.indices.contains(event.measure) { resolved.startQuarter = offsets[event.measure] + event.onset }
+            return resolved
+        }
+    }
     var activeEvents: [TutorialEvent] {
         let q = min(quarter, max(0, totalQuarters - 0.0001))
-        return phrase.events.filter { $0.start <= q + 0.000001 && $0.start + $0.duration > q }
+        return events.filter { $0.start <= q + 0.000001 && $0.start + $0.duration > q }
     }
-    var totalQuarters: Double { phrase.events.map { $0.start + $0.duration }.max() ?? 0 }
-    var upcoming: GuitarPosition? { phrase.events.first { $0.start > quarter + 0.0001 && $0.midi != nil }?.position }
+    var currentAttack: TutorialEvent? { activeEvents.max { $0.start < $1.start } }
+    var totalQuarters: Double { result?.score.measures.reduce(0) { $0 + $1.durationQuarters } ?? 0 }
+    var upcoming: GuitarPosition? { events.first { $0.start > quarter + 0.0001 && $0.midi != nil }?.position }
     var fingers: [GuitarPosition: Int] {
         var mapping: [GuitarPosition: Int] = [:]
-        let next = phrase.events.first { $0.start > quarter + 0.0001 && $0.midi != nil }
+        let next = events.first { $0.start > quarter + 0.0001 && $0.midi != nil }
         for event in activeEvents + (next.map { [$0] } ?? []) {
             if let position = event.position, mapping[position] == nil { mapping[position] = event.finger }
         }
@@ -165,16 +192,47 @@ struct TutorialProgressRecord: Codable, Equatable {
     func restart() { stop(); player.clearLoop(); player.stop(); player.seek(milliseconds: 0); save() }
     func seek(_ milliseconds: Double) { stop(); player.seek(milliseconds: min(totalQuarters * 1000, max(0, milliseconds))); save() }
     func step(_ direction: Int) {
-        let starts = Array(Set(phrase.events.map(\.start))).sorted()
+        let starts = Array(Set(events.map(\.start))).sorted()
         let next = direction > 0 ? starts.first { $0 > quarter + 0.001 } : starts.last { $0 < quarter - 0.001 }
         seek((next ?? (direction > 0 ? starts.last : starts.first) ?? 0) * 1000)
     }
+    var auditionRange: Range<Double> {
+        guard let attack = currentAttack else { return 0..<1 }
+        var first = attack
+        var last = attack
+        let notes = result?.score.notes ?? []
+        // Audition the complete authored slur, including its initial pick.
+        // A destination alone cannot demonstrate a hammer-on or pull-off.
+        while let note = notes.first(where: { $0.id == first.id }),
+              let source = note.slurFromID, let event = events.first(where: { $0.id == source }) {
+            first = event
+        }
+        while let destination = notes.first(where: { $0.slurFromID == last.id }),
+              let event = events.first(where: { $0.id == destination.id }) {
+            last = event
+        }
+        while let note = notes.first(where: { $0.id == first.id }), note.tieStop,
+              let previous = notes.first(where: { candidate in
+                  candidate.tieStart && candidate.midi == note.midi && candidate.voice == note.voice &&
+                  events.contains { $0.id == candidate.id && abs($0.start + $0.duration - first.start) < 0.0001 }
+              }), let event = events.first(where: { $0.id == previous.id }) { first = event }
+        while let note = notes.first(where: { $0.id == last.id }), note.tieStart,
+              let following = notes.first(where: { candidate in
+                  candidate.tieStop && candidate.midi == note.midi && candidate.voice == note.voice &&
+                  events.contains { $0.id == candidate.id && abs($0.start - last.start - last.duration) < 0.0001 }
+              }), let event = events.first(where: { $0.id == following.id }) { last = event }
+        if first.id != attack.id || last.id != attack.id { return first.start..<(last.start + last.duration) }
+        let nextStart = events.first { $0.start > attack.start + 0.0001 }?.start ?? totalQuarters
+        return attack.start..<min(attack.start + attack.duration, nextStart)
+    }
+
     func hearCurrent() {
         guard player.isPlayerReady else { return }
         stop()
         player.clearLoop()
-        let start = activeEvents.first?.start ?? 0
-        let length = activeEvents.map(\.duration).min() ?? 1
+        let range = auditionRange
+        let start = range.lowerBound
+        let length = range.upperBound - start
         player.seek(milliseconds: start * 1000)
         player.playPause()
         auditionTask = Task { [weak self] in
@@ -185,7 +243,7 @@ struct TutorialProgressRecord: Codable, Equatable {
     }
     func changeStage(_ stage: TutorialStage) { stop(); self.stage = stage; save() }
     func explore(_ position: GuitarPosition) {
-        guard let event = phrase.events.first(where: { $0.position == position }) else {
+        guard let event = events.first(where: { $0.position == position }) else {
             explorationHint = "That position is not in this example. Follow the lit notes, or use Next to explore the phrase."
             return
         }
@@ -199,6 +257,11 @@ struct TutorialProgressRecord: Codable, Equatable {
         } else {
             quizMatched = false; quizFeedback = "That is \(tutorialPitchName(position.midi)). Try string \(lesson.quizString), \(lesson.quizFret == 0 ? "open" : "fret \(lesson.quizFret)")."
         }
+    }
+    func answerKnowledge(_ index: Int) {
+        guard let question = lesson.question else { return }
+        quizMatched = index == question.correctIndex
+        quizFeedback = quizMatched ? "That’s right. " + question.hint : question.hint
     }
     func save(completed: Bool? = nil) {
         progress.save(lesson.id, record: .init(stage: stage, phraseIndex: phraseIndex, position: player.cursorMilliseconds,

@@ -1,0 +1,485 @@
+[
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/2C4B4EC1-8D74-427B-B042-B0368580FBC4.png",
+    "sha256": "a5db7dd332c9ec1a5602ba2d5abe35f539e4efd97cd7dde98ba7bc0413b798b7"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/259903A3-3D24-4002-B42E-90CC4203C358.png",
+    "sha256": "e29290f6ad738eae2df3bde4b5627fce686df91093fc89eb86299141147bb675"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/319AE726-CC78-4C85-9B1D-A7D062A511DF.png",
+    "sha256": "5b7a57d421afae027375174660835bce46e0b5f62b5aa63f15ac86843ba428d8"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 3,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/B785DBD9-73A1-464E-BE92-25389AFEAC4D.png",
+    "sha256": "7c0cfc51577f33a5adad0b3c16d937d47175fcde3864850efca6cb69257599ed"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/5121C264-28D7-4741-B29B-94884A336D3B.png",
+    "sha256": "d4dfff9d341e5c7c36a1ed14456b2ae92fb48d67642aabdc589bb2b141c195c7"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/92B5959A-9DF8-47AB-98A4-97E823104967.png",
+    "sha256": "dc6fcb43099a50a6ed16834cc32502e936ec574b92ea75f3c96907bea15a5a29"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 6,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/030C2F80-04BD-49E0-A7B7-2EFD5038689B.png",
+    "sha256": "adf9605e459448f5a886093809c0df104cf503ae47588c14fff0caca833c4e6b"
+  },
+  {
+    "lesson": 16,
+    "phrase": 1,
+    "step": 7,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/2D52ECD1-55FD-4E82-9AB3-FDC23A3C1A69.png",
+    "sha256": "8405df137634fd1c64359624247bdaca2c5dd816673fc291fe1470a8bde0d716"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/41DC7B0A-915B-44A2-A1BF-32122CACACBB.png",
+    "sha256": "f7b6f7a4efdbe6a6f7ac99ca71981fe5ea86fce7c82ecdbe63a8a541d0c383cb"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/3FAB0170-E715-4A8D-A082-73515FDD5809.png",
+    "sha256": "c2761303e41e2bcb8c21919b2ab8faba2520bf7857c3a3445466d89eb84273ce"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/A1EA1359-9138-4E03-B5A2-3E183B131C13.png",
+    "sha256": "d014e9876887781de5a68cded761f29c270af02fbd5c450181a87f54512c7398"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 3,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/FB2B1C07-48E2-470B-A7BF-862B37972F2B.png",
+    "sha256": "cab1585284f967934c720d3db601aa9927625e04db581e47b0f1e5cc49c23c2e"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/CF07E003-0571-4042-A3BF-79C8D83DA7F3.png",
+    "sha256": "e26cdef19d47cfc79cc845aceed65a95ac2c59b443ff31b2f219067ca3d2eaeb"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/C95F2048-04BD-4CA2-A3FA-93C8F522394F.png",
+    "sha256": "943d260a61892a2b8c92b00ea4acbb5a58a6177c18ca6263b452ca211360f38e"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 6,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/169ABEBB-FC55-448B-947C-5DF7B8A61DB3.png",
+    "sha256": "a32ccb2f4bcffb07ad08f7ba3a0d5cf301df03fea41208a00749cb939ed6d4a5"
+  },
+  {
+    "lesson": 16,
+    "phrase": 2,
+    "step": 7,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/7E27F559-3B1A-4182-90AA-92047B20830B.png",
+    "sha256": "6bebec941a0b1011ec5aaf0138f868caaa6b6c125d4cf4a7607deb70fb713ab2"
+  },
+  {
+    "lesson": 20,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/792121CF-8083-420A-BDB7-2DDBE5671220.png",
+    "sha256": "7d72b6ed44dfed2980a7848553643be98dee2379f6c572e0ec8569e8a91470a3"
+  },
+  {
+    "lesson": 20,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/EF419417-289D-4D96-9294-9B403D1D6F04.png",
+    "sha256": "d688dc9e01bde4607ae7b67deed57cc433e241800ce9199a2ee3dcf66547dd51"
+  },
+  {
+    "lesson": 20,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/805BD302-D9D8-42C0-944F-49C21043F637.png",
+    "sha256": "46dfdccc0d65921e9ae62aac15b45f4e866b3ffea19ae84704a29c05368f45c1"
+  },
+  {
+    "lesson": 20,
+    "phrase": 2,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/9CF4BF6D-6865-45B9-AEBA-433DB3D90D2C.png",
+    "sha256": "a77b50286fc8701afd595856ddcbc120408452a2965f3d392d117ec7ec613723"
+  },
+  {
+    "lesson": 21,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/9FAB39E5-88D9-4DFD-8A83-2A5E7314E224.png",
+    "sha256": "5075deea4a29c87f5d11308ee766e3571bcfe2b58fdc10edcfd09c48c46ce9b6"
+  },
+  {
+    "lesson": 21,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/D1206BE1-C085-42DA-8760-FA3223BCEEC9.png",
+    "sha256": "32c06b2ba3a6537a6880729fdea20600a3482bd6d589b5596728d31d0f5fa829"
+  },
+  {
+    "lesson": 21,
+    "phrase": 1,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/8FDC3719-D90F-46CD-A07C-B701A63A565B.png",
+    "sha256": "51800a2ea9bbbc25ae02ce1a86fd397b1d52ae253f15248b31f486a0695eab09"
+  },
+  {
+    "lesson": 21,
+    "phrase": 1,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/C9945BAF-1398-4F86-8138-0FAACFE9A32C.png",
+    "sha256": "0d9a9e7b97f145a6a766b3ba410ae717ea71d815f2b47e7bd46af3e29f6ee75e"
+  },
+  {
+    "lesson": 21,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/29043CB8-935B-4C57-8674-E23744B9F1EE.png",
+    "sha256": "fae0783d9337d1e03bbce64102a04f5a637dee84f22fa6d082b044bb32b565c9"
+  },
+  {
+    "lesson": 21,
+    "phrase": 2,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/DCF82A23-7E26-46CD-86E3-90904715771A.png",
+    "sha256": "0fa0ee1ebedc8e5bdd5095f81eef9260c7e6ddc8d8fdf49f09be00f29cf7c311"
+  },
+  {
+    "lesson": 22,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/8E20A930-6EBB-4A44-9AF9-4634BAED335F.png",
+    "sha256": "8ab21bf71480c9e2ebc14f96f5d1878183df35187f89d9a08e855ddf59c8673a"
+  },
+  {
+    "lesson": 22,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/321134D6-2C0A-41CC-AD3B-E7BC64F74E14.png",
+    "sha256": "f77483dd85da74c9abbc491b9aa53eb1d99271d4ec5ee5159488c17dd5690420"
+  },
+  {
+    "lesson": 22,
+    "phrase": 1,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/10A66074-5F35-4EE6-A1CD-3191F46F6517.png",
+    "sha256": "70ed6e48fbe474d694c2dd386f80ee4be5c718bddc298fdb381041bff89090e6"
+  },
+  {
+    "lesson": 22,
+    "phrase": 1,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/50F07D8E-1F86-40AC-B047-5467087E8223.png",
+    "sha256": "1295b8cd131d9b4aa21d51d4d87f42d6e778d3aea86ec2f39ef8293d575f13b2"
+  },
+  {
+    "lesson": 22,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/9945B1A3-1D7C-4177-845F-3352221ED273.png",
+    "sha256": "7097f0aca210fd567acaef7d9b62acedb43752937fc949a09ec559bdc6c25774"
+  },
+  {
+    "lesson": 22,
+    "phrase": 2,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/238DC0FE-70DF-43D1-80D1-8FC3E7636667.png",
+    "sha256": "1034386e144a8e2690f5544a6b5361d0554690c688c5c82b7fd20485ab3f24dc"
+  },
+  {
+    "lesson": 22,
+    "phrase": 2,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/29E4E1DE-78A4-4D3E-B6C7-41BA09675E6B.png",
+    "sha256": "349d5d0b55e6125684d98fbf045731a6e28fa83a629be4af39ec92f03cde333f"
+  },
+  {
+    "lesson": 22,
+    "phrase": 2,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/E2372B12-7E54-4225-9286-827326B630AA.png",
+    "sha256": "cb0a1310404a668718d404fa83da7d234d72976e9e820807cc05d85ef7e515f7"
+  },
+  {
+    "lesson": 23,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/86641CA5-27DC-4DFE-A171-90020196FCBF.png",
+    "sha256": "d204911a0929d52f58d087e1917273d44e6c84096bf8bb7bb23c4f0f48ccc9f9"
+  },
+  {
+    "lesson": 23,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/CE4E2FF6-A8A7-4892-88D9-D2669CD57BF4.png",
+    "sha256": "cdb4d3833635daded409efa50e6a5ca687aa1dc3bfdb21ffacb1066b244ac8d9"
+  },
+  {
+    "lesson": 23,
+    "phrase": 1,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/23E4B8C8-2877-422D-9869-FF1EED0AF852.png",
+    "sha256": "c3d60e270e4c2ec429f609290b227688c854c956f698092bf3573a2694fb77e3"
+  },
+  {
+    "lesson": 23,
+    "phrase": 1,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/20BC2E38-18AC-4486-A2F4-57931163D9E9.png",
+    "sha256": "55662456d1d7173e2726b3f53c252deaab6a18222a4f45c4c635dcb2341d6641"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/C08F111A-A841-4B7F-8F26-7125CD7B7C91.png",
+    "sha256": "236fce04ec84bac002b0f04e412f5cd33567c9b5f76c33ba88b83bcf2d6dcd37"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/0E5F7E87-4A72-45FF-A934-D4A20F3F165C.png",
+    "sha256": "acbc3be39773b4d601912b8eb0d0de87764f5209aad5f39d5755cb5e55109153"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/5124179E-01F4-4DE5-8DD4-B51920CBCF14.png",
+    "sha256": "45f2a074f1d214c2394e2cebedeea13404ed071db9dbc89160a6c4d0b727911c"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/5337067A-88A8-4AF1-A68C-8ECE06B7AAF6.png",
+    "sha256": "2abb072f1f51211ca052532fe7c928350ff7c574e1f5158e730e4dc83922aa32"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/BE8BC2BE-D1A5-4D8E-8ED8-D95CEEAF9601.png",
+    "sha256": "ed78c4d1dd812232e6a8ef64fe8b77d8a41094a92ab2a1c2d996cc9509dec6de"
+  },
+  {
+    "lesson": 23,
+    "phrase": 2,
+    "step": 6,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/B6D1C6AC-9FE2-44F3-BE40-1AD42FDB0A30.png",
+    "sha256": "a0ac9f71654c793c00de8c5b12952900438656f7a67c736a5a200a8c7a5a6e8e"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/B5070B16-663F-466E-BFCA-C5D73C4028D8.png",
+    "sha256": "0d05664539065731e41b584bc86a7384d780184d6b1a17b0abec03a9adb9bff9"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/782024AB-682B-4FFC-9DD5-A844E8BACB5B.png",
+    "sha256": "603f873af0f2d1eb57dc1fabf63dcd9a97d78bd0b6697655e7b155918706bb34"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/D00D61B7-03A8-4006-87F4-B2B844A11505.png",
+    "sha256": "c97cc7d4810f0128cdbc99a34583cd03af4b85e79b96080f0bfca066663a6694"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 3,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/288D46F6-EC06-4782-ACDE-F12B6095913B.png",
+    "sha256": "0c2ab9b96db94ccdb1c90ac18426d6f4024b73838f0ef019f023aafd6749d17c"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 4,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/AFEAEA4C-CABC-4DE3-8125-FC9BA48D19B9.png",
+    "sha256": "73c22f8cba72ab584b1c0e2f1ed2f89ff58c81acce6209c18897b875c06f36f1"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 5,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/AAE9F462-825B-4F63-AE6A-8177B2BD7B74.png",
+    "sha256": "00907e6335d31e0c866c8201795db086502d33320bb72372f240fcc15a9b1c36"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 8,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/8F9AB817-79F4-42E4-8A02-F0166A9599C4.png",
+    "sha256": "d157025c69c8d4073b04aa99f05000ee2c207a9f36c9542ce13a4b7f83df1935"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 9,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/AFC5587C-B632-4C01-9EC4-4770D3EDCC3C.png",
+    "sha256": "4038917fee2fc6538b0aecc818fa3c041e1faea517d3c3dca0491b8b064bc617"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 16,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/96961CE8-4980-4E23-8AAC-25485C5A6503.png",
+    "sha256": "4da1947ce4cd337d42d5ed042bfd7bd2576f4a1db4085b789c723dec74992b43"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 17,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/26DA09A8-1BFB-4856-9D50-186045DC575C.png",
+    "sha256": "04cc9f6cae8a08b88ef473cb809482c6dfa42a41bf5c429f76f51b9cc62c5e57"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 18,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/ECEF70D7-02D4-438A-8A2A-36CE6D3F7346.png",
+    "sha256": "07b2c582d87939600ebc10237b7630149c65dfe3c3920bc2506d4cd7026db1f6"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 19,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/1E67B754-8F8A-414D-AA32-EEFDB6981C8D.png",
+    "sha256": "d270d1a7f49b59317930be6060b6c030926d6c080cb39954fa80a232f6082119"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 20,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/723219D6-D58A-4801-AF70-956FD39C8EBC.png",
+    "sha256": "9c22c2c62925a7f9f666ec3b618540999d750b0ad974f0fb6389201db7073776"
+  },
+  {
+    "lesson": 24,
+    "phrase": 1,
+    "step": 21,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/2AD8DC46-119A-4B38-A039-A49D46F4E8BB.png",
+    "sha256": "0b07023adaae1f7cee833cbda2dd9d88f34543a3c4c91f43ae5e4222f54eddb0"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 0,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/7BBF015E-012F-4A6D-BFFA-D1925AFD246D.png",
+    "sha256": "ef5db737319e2586a8a5598397cbe1b8a0f641a0cb5d8c0a9c3df07e711d0f57"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 1,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/E01C40B9-E11C-4560-8717-51A596D1FF28.png",
+    "sha256": "1de2b8cc94775f228eec8e0c90a33f9f2480c170a2294e63e41457a081ec4248"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 2,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/88F1F335-1794-47CD-88BE-6ADB13DD5900.png",
+    "sha256": "a9b31d50f8e5e45eecb14343131b09e48b18386b7ef8c87cd234308acec1616d"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 3,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/373BCC60-3F65-4D1D-B289-F4989853BB28.png",
+    "sha256": "f27b7d161d7a422c64637bfd699289319900b84a4914519b862c54a66bab20f9"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 8,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/29DA1D60-FD29-4222-B2B0-56682CFA3E45.png",
+    "sha256": "19606c24de5c3c7bb756622342a7942dfddefc08b21d7b3117a18b4d95506625"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 16,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/8C9CFD7F-F1D4-4D74-B862-7CA4669849F0.png",
+    "sha256": "859810af95c551f7276f8854395cc397d191f0fddb05c9b8813759fda3503040"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 24,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/91CE372D-7B40-4DF3-B7C7-F77EC2E33CEC.png",
+    "sha256": "43eaf502e4860d12d97855036ee550c8ec0e9cd9220607203c6ff0deda02b411"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 32,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/834991DF-2231-4616-A46E-823FEF6EF7FA.png",
+    "sha256": "b5c1f608b4af5bd78ae696f9bd7e7d5f0be660a97046e4ded93d4f5e0497877e"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 40,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/A162EF83-2EEA-4E88-8857-24E5E86702E9.png",
+    "sha256": "17ad05871d3c1fc8e0cc7b673b1b71bd5e6a14e515fbe1a5f137694a5ced59fd"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 48,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/2891FF5A-6111-4CCD-83A9-1F7678286C3E.png",
+    "sha256": "a798fa4cc871ba7b304d276669d37bc315babbba2c7efd7e289ee55b6a85911d"
+  },
+  {
+    "lesson": 24,
+    "phrase": 2,
+    "step": 56,
+    "raw": "artifacts/tutorial-expansion-transitions-shots/CCC619E7-837C-4712-8CAD-487BB7B62F57.png",
+    "sha256": "205369cf2b9012bdb13fcaa25c00281f39e611f0a21a2bad6e31e54dd33d3ad0"
+  }
+]

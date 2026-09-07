@@ -14,6 +14,7 @@
     window.webkit?.messageHandlers?.stringMap?.postMessage({ type, ...detail });
   };
 
+  const reducedMotion = globalThis.matchMedia?.("(prefers-reduced-motion: reduce)");
   const base = new URL(".", window.location.href);
   const api = new alphaTab.AlphaTabApi(document.getElementById("score"), {
     core: {
@@ -28,6 +29,8 @@
     // unwrapped duplicate, which can overflow narrow panels after tab toggles.
     notation: { elements: { scoreTitle: false, scoreSubTitle: false } },
     player: {
+      enableAnimatedBeatCursor: !reducedMotion?.matches,
+      scrollSpeed: reducedMotion?.matches ? 0 : 300,
       // Avoid the automatic mode's score-dependent initialization. Creating the
       // synthesizer immediately lets WKWebView load the SoundFont before Swift
       // enables the transport controls.
@@ -41,7 +44,14 @@
     },
   });
 
+  reducedMotion?.addEventListener("change", () => {
+    api.settings.player.enableAnimatedBeatCursor = !reducedMotion.matches;
+    api.settings.player.scrollSpeed = reducedMotion.matches ? 0 : 300;
+    api.updateSettings();
+  });
+
   let sourceNotes = [];
+  let tutorialPresentation = false;
   api.scoreLoaded.on(score => {
     if (sourceNotes.length) globalThis.StringMapSourceMap.assign(score, sourceNotes);
   });
@@ -51,9 +61,10 @@
   api.playerStateChanged.on(({ state, stopped }) => post("playerState", { state, stopped }));
   // alphaTab reports speed-adjusted milliseconds. Swift stores score-time
   // milliseconds so seeking, note identities and the fretboard share one clock.
-  api.playerPositionChanged.on(({ currentTime, endTime, originalTempo, modifiedTempo }) => {
+  api.playerPositionChanged.on(({ currentTime, endTime, originalTempo, modifiedTempo, isSeek }) => {
     const speed = originalTempo > 0 ? modifiedTempo / originalTempo : api.playbackSpeed;
     post("position", { currentTime: currentTime * speed, endTime: endTime * speed });
+    if (tutorialPresentation && isSeek) setTimeout(() => api.scrollToCursor(), 0);
   });
   api.error.on((error) => post("error", { message: String(error) }));
   window.addEventListener("error", ({ message }) => post("error", { message }));
@@ -65,6 +76,7 @@
   // fixed scale leaves the score marooned in the corner of a large panel, so
   // the scale follows the available width.
   const scaleForWidth = (width) => {
+    if (tutorialPresentation) return width >= 640 ? 1.1 : 1;
     if (width >= 1000) return 1.8;
     if (width >= 800) return 1.55;
     if (width >= 640) return 1.3;
@@ -94,6 +106,18 @@
   let lastTheme = null;
 
   window.stringMap = {
+    setTutorialPresentation(enabled) {
+      if (tutorialPresentation === enabled) return;
+      tutorialPresentation = enabled;
+      if (document.body) document.body.style.overflowX = enabled ? "auto" : "hidden";
+      api.settings.display.layoutMode = enabled ? alphaTab.LayoutMode.Horizontal : alphaTab.LayoutMode.Page;
+      api.settings.player.scrollMode = enabled ? alphaTab.ScrollMode.OffScreen : alphaTab.ScrollMode.Continuous;
+      for (const element of [alphaTab.NotationElement.EffectDynamics, alphaTab.NotationElement.GuitarTuning, alphaTab.NotationElement.TrackNames]) {
+        api.settings.notation.elements.set(element, !enabled);
+      }
+      appliedScale = 0;
+      applyScale();
+    },
     setShowTab(enabled) {
       const profile = enabled ? alphaTab.StaveProfile.ScoreTab : alphaTab.StaveProfile.Score;
       if (api.settings.display.staveProfile === profile) return;

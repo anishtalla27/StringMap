@@ -8,7 +8,8 @@ public enum MusicXMLPitchConvention: String, Codable, Sendable, CaseIterable {
 }
 
 public struct MusicXMLImporter: ScoreImporter {
-    public init() {}
+    private let allowGuitarSlurs: Bool
+    public init(allowGuitarSlurs: Bool = false) { self.allowGuitarSlurs = allowGuitarSlurs }
 
     public func importScore(from data: Data) throws -> NormalizedScore {
         try importScore(from: data, forReview: false)
@@ -19,7 +20,7 @@ public struct MusicXMLImporter: ScoreImporter {
     public func importScore(from data: Data, forReview: Bool,
                             pitchConvention: MusicXMLPitchConvention = .asEncoded) throws -> NormalizedScore {
         let data = try MusicXMLContainer.scoreData(from: data)
-        let delegate = ParserDelegate(pitchConvention: pitchConvention, forReview: forReview)
+        let delegate = ParserDelegate(pitchConvention: pitchConvention, forReview: forReview, allowGuitarSlurs: allowGuitarSlurs)
         let parser = XMLParser(data: data)
         parser.delegate = delegate
         parser.shouldProcessNamespaces = true
@@ -37,6 +38,7 @@ public struct MusicXMLImporter: ScoreImporter {
 
 private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Sendable {
     struct NoteBuilder {
+        var slurMarks: [(String, String, GuitarSlurKind)] = []
         var sourceID: String?
         var voice = "1"
         var hasExplicitVoice = false
@@ -99,10 +101,13 @@ private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Send
     private var reviewWarnings = Set<String>()
     private var recognitionWarning = false
 
+    private let allowGuitarSlurs: Bool
+    private var openSlurs: [String: String] = [:]
     private let forReview: Bool
     private var reviewIssues: [ScoreReviewIssue] = []
 
-    init(pitchConvention: MusicXMLPitchConvention, forReview: Bool) {
+    init(pitchConvention: MusicXMLPitchConvention, forReview: Bool, allowGuitarSlurs: Bool) {
+        self.allowGuitarSlurs = allowGuitarSlurs
         self.forReview = forReview
         // An explicit <transpose> resets these values before any of its notes
         // are read. Never infer an octave from playable range or fingering cost.
@@ -168,8 +173,14 @@ private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Send
             } else {
                 abort(parser, with: .malformed("Measure \(currentMeasureNumber): <\(name)> is not supported yet."))
             }
-        case "ending", "segno", "coda", "octave-shift", "tremolo", "glissando", "slide", "bend", "harmonic", "hammer-on", "pull-off", "breath-mark", "caesura", "beat-unit-dot":
+        case "ending", "segno", "coda", "octave-shift", "tremolo", "glissando", "slide", "bend", "harmonic", "breath-mark", "caesura", "beat-unit-dot":
             abort(parser, with: .malformed("Measure \(currentMeasureNumber): <\(name)> is not supported yet."))
+        case "hammer-on", "pull-off":
+            guard allowGuitarSlurs, note != nil,
+                  let type = attributeDict["type"], ["start", "stop"].contains(type) else {
+                abort(parser, with: .malformed("Unsupported guitar slur.")); return
+            }
+            note?.slurMarks.append((name + (attributeDict["number"] ?? "1"), type, name == "hammer-on" ? .hammerOn : .pullOff))
         case "harmony":
             abort(parser, with: .malformed("Chord names are not interpreted. Import the written notes of the guitar part."))
         case "dynamics", "wedge", "pedal", "slur", "accent", "strong-accent", "tenuto", "detached-legato":
@@ -247,6 +258,7 @@ private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Send
     }
 
     func finish(forReview: Bool) throws -> NormalizedScore {
+        guard openSlurs.isEmpty else { throw MusicXMLImportError.malformed("Unclosed guitar slur.") }
         let root = rootName ?? "missing root"
         guard root == "score-partwise" else { throw MusicXMLImportError.unsupportedRoot(root) }
         guard actualPartCount > 0 else { throw MusicXMLImportError.missingPart }
@@ -361,6 +373,17 @@ private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Send
         } else { onset = currentMeasure.cursorQuarters }
         let normalizedDuration = duration / divisions
 
+        var slurFromID: String?
+        var slurKind: GuitarSlurKind?
+        for (number, type, kind) in builder.slurMarks where type == "stop" {
+            guard slurFromID == nil, let origin = openSlurs.removeValue(forKey: builder.voice + number) else { throw MusicXMLImportError.malformed("Unpaired guitar slur.") }
+            slurFromID = origin; slurKind = kind
+        }
+        for (number, type, _) in builder.slurMarks where type == "start" {
+            guard openSlurs[builder.voice + number] == nil else { throw MusicXMLImportError.malformed("Overlapping guitar slur.") }
+            openSlurs[builder.voice + number] = id
+        }
+        if builder.isRest && !builder.slurMarks.isEmpty { throw MusicXMLImportError.malformed("A rest cannot carry a guitar slur.") }
         if builder.isRest {
             currentMeasure.events.append(.rest(NormalizedRest(
                 id: id,
@@ -383,7 +406,7 @@ private final class ParserDelegate: NSObject, XMLParserDelegate, @unchecked Send
                 midi: midi,
                 pitch: midiToPitch(midi),
                 tieStart: builder.tieStart,
-                tieStop: builder.tieStop, voice: builder.voice, staff: builder.staff
+                tieStop: builder.tieStop, voice: builder.voice, staff: builder.staff, slurFromID: slurFromID, slurKind: slurKind
             )))
         }
 

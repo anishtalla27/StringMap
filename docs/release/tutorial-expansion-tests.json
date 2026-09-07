@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-07",
+  "candidate": {
+    "version": "1.0.0",
+    "build": 4,
+    "archive": "artifacts/StringMap-1.0.0-build4-release.xcarchive",
+    "ipa": "artifacts/tutorial-expansion-distribution/StringMap.ipa",
+    "signed": true,
+    "exported": true,
+    "installedOnPhysicalIPhone": true,
+    "uploaded": false
+  },
+  "counts": {
+    "lessons": 24,
+    "tutorialExamples": 40,
+    "freePracticeExercises": 18,
+    "coreTests": 77,
+    "iosUnitTests": 43,
+    "typescriptTests": 13,
+    "synthTempoTrials": 160,
+    "exerciseEvents": 518,
+    "bridgeClockSeekChecks": 3108,
+    "visualExampleCaptures": 72,
+    "visualTransitionCaptures": 69
+  },
+  "passingEvidence": [
+    "tutorial-expansion-core-final.log",
+    "tutorial-expansion-unit-complete.xcresult",
+    "tutorial-expansion-typescript.log",
+    "tutorial-expansion-playback-layout.log",
+    "tutorial-expansion-exercises.log",
+    "tutorial-expansion-clock-final.log",
+    "tutorial-expansion-bridge-final.log",
+    "tutorial-expansion-iphone.xcresult",
+    "tutorial-expansion-ipad-final.xcresult",
+    "tutorial-expansion-targeted-iphone.xcresult",
+    "tutorial-expansion-targeted-ipad.xcresult",
+    "tutorial-expansion-transitions.xcresult",
+    "tutorial-expansion-learn-ipad.xcresult",
+    "tutorial-expansion-binary-audit.json",
+    "tutorial-expansion-release-archive.log",
+    "tutorial-expansion-export.log",
+    "tutorial-expansion-device-install.log"
+  ],
+  "evidenceRoot": "artifacts/",
+  "partiallyPassingBundle": {
+    "path": "artifacts/tutorial-expansion-iphone-final.xcresult",
+    "passed": [
+      "testPlaybackClockAdvancesAndResumes",
+      "testPublicCourseAndStoreScreenshots",
+      "testTechniqueTutorialVisuals"
+    ],
+    "testHelperFailuresRecoveredBy": "artifacts/tutorial-expansion-targeted-iphone.xcresult"
+  },
+  "physicalPending": [
+    "silent-switch audibility",
+    "picked versus tie versus hammer-on/pull-off listening",
+    "headphones and Bluetooth",
+    "interruptions and long sessions",
+    "spoken VoiceOver usability",
+    "representative iPhone and iPad TestFlight exercise"
+  ],
+  "separateReleaseActions": [
+    "Apple upload and validation",
+    "account-holder declarations",
+    "review submission",
+    "public release"
+  ]
+}

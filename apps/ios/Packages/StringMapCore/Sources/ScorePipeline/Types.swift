@@ -15,6 +15,8 @@ public struct TimeSignature: Codable, Equatable, Sendable {
     }
 }
 
+public enum GuitarSlurKind: String, Codable, Sendable { case hammerOn, pullOff }
+
 public struct NormalizedNote: Codable, Equatable, Sendable {
     public var id: String
     public var measureIndex: Int
@@ -26,15 +28,17 @@ public struct NormalizedNote: Codable, Equatable, Sendable {
     public var tieStop: Bool
     public var voice: String = "1"
     public var staff: Int = 1
+    public var slurFromID: String? = nil
+    public var slurKind: GuitarSlurKind? = nil
     public var tieFromID: String? = nil
 
     public init(id: String, measureIndex: Int, onsetQuarters: Double, durationQuarters: Double,
                 midi: Int, pitch: String, tieStart: Bool = false, tieStop: Bool = false,
-                voice: String = "1", staff: Int = 1, tieFromID: String? = nil) {
+                voice: String = "1", staff: Int = 1, tieFromID: String? = nil, slurFromID: String? = nil, slurKind: GuitarSlurKind? = nil) {
         self.id = id; self.measureIndex = measureIndex; self.onsetQuarters = onsetQuarters
         self.durationQuarters = durationQuarters; self.midi = midi; self.pitch = pitch
         self.tieStart = tieStart; self.tieStop = tieStop; self.voice = voice; self.staff = staff
-        self.tieFromID = tieFromID
+        self.tieFromID = tieFromID; self.slurFromID = slurFromID; self.slurKind = slurKind
     }
 }
 
@@ -177,7 +181,7 @@ public struct NormalizedScore: Codable, Equatable, Sendable {
                         midi: shiftedMIDI,
                         pitch: Self.pitchName(shiftedMIDI),
                         tieStart: note.tieStart,
-                        tieStop: note.tieStop, voice: note.voice, staff: note.staff, tieFromID: note.tieFromID
+                        tieStop: note.tieStop, voice: note.voice, staff: note.staff, tieFromID: note.tieFromID, slurFromID: note.slurFromID, slurKind: note.slurKind
                     ))
                 }
             }

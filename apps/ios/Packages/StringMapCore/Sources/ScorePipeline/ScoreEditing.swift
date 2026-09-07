@@ -85,6 +85,13 @@ public enum ScoreValidator {
             if allowUnresolvedTies { score.warnings.append("A tied note needs a continuation or removal of its tie mark.") }
             else { throw MusicXMLImportError.malformed("A tied note has no continuation. Correct the tie before saving.") }
         }
+        let linked = score.notes.filter { $0.slurFromID != nil || $0.slurKind != nil }
+        guard Set(linked.compactMap(\.slurFromID)).count == linked.count else { throw MusicXMLImportError.malformed("Each guitar slur needs a unique origin.") }
+        for note in linked {
+            guard let source = note.slurFromID, note.slurKind != nil,
+                  let origin = score.notes.first(where: { $0.id == source }), origin.id != note.id,
+                  origin.voice == note.voice else { throw MusicXMLImportError.malformed("Invalid guitar slur link.") }
+        }
         return score
     }
 
@@ -108,6 +115,7 @@ public enum MusicXMLWriter {
         var xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><score-partwise version=\"4.0\"><work><work-title>\(escape(score.title))</work-title></work>"
         if let composer = score.composer { xml += "<identification><creator type=\"composer\">\(escape(composer))</creator></identification>" }
         xml += "<part-list><score-part id=\"P1\"><part-name>\(escape(score.partName))</part-name></score-part></part-list><part id=\"P1\">"
+        let slurs = score.notes.filter { $0.slurFromID != nil }
         for measure in score.measures {
             xml += "<measure id=\"\(escape(measure.id))\" number=\"\(escape(measure.number))\"><attributes><divisions>\(divisions)</divisions><key><fifths>\(measure.keyFifths)</fifths></key><time><beats>\(measure.timeSignature.beats)</beats><beat-type>\(measure.timeSignature.beatType)</beat-type></time><clef><sign>G</sign><line>2</line><clef-octave-change>-1</clef-octave-change></clef></attributes>"
             if measure.index == 0 { xml += "<direction><sound tempo=\"\(score.tempo)\"/></direction>" }
@@ -132,7 +140,17 @@ public enum MusicXMLWriter {
                     if n.tieStop { xml += "<tie type=\"stop\"/>" }
                     if n.tieStart { xml += "<tie type=\"start\"/>" }
                 }
-                xml += "<voice>\(escape(event.voice))</voice></note>"; cursor = onset + duration
+                xml += "<voice>\(escape(event.voice))</voice>"
+                if case let .note(n) = event {
+                    var marks = ""
+                    for (index, destination) in slurs.enumerated() {
+                        let tag = destination.slurKind == .hammerOn ? "hammer-on" : "pull-off"
+                        if destination.id == n.id { marks += "<\(tag) type=\"stop\" number=\"\(index+1)\"/>" }
+                        if destination.slurFromID == n.id { marks += "<\(tag) type=\"start\" number=\"\(index+1)\"/>" }
+                    }
+                    if !marks.isEmpty { xml += "<notations><technical>\(marks)</technical></notations>" }
+                }
+                xml += "</note>"; cursor = onset + duration
             }
             if let minimum = measure.minimumDurationQuarters {
                 let end = try ticks(minimum)
@@ -170,7 +188,7 @@ extension NormalizedScore {
                         var copy = original; copy.id += "-repeat\(pass)"; copy.number += " (\(pass))"
                         copy.events = original.events.map { event in
                             switch event {
-                            case var .note(n): n.id += "-repeat\(pass)"; return .note(n)
+                            case var .note(n): n.id += "-repeat\(pass)"; if let source = n.slurFromID { n.slurFromID = source + "-repeat\(pass)" }; return .note(n)
                             case var .rest(r): r.id += "-repeat\(pass)"; return .rest(r)
                             }
                         }

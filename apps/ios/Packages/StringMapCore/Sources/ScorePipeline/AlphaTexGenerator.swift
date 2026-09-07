@@ -11,6 +11,7 @@ public enum AlphaTexGenerator {
             }
             return measure.events.isEmpty || abs(cursor - measure.durationQuarters) > 1e-8
         }) { return try generateVoices(score: score, fingering: fingering) }
+        let slurOrigins = Set(score.notes.compactMap(\.slurFromID))
         let stepsByID = Dictionary(uniqueKeysWithValues: fingering.steps.map { ($0.note.id, $0) })
         var lines = [
             "\\title \"\(escape(score.title))\"",
@@ -36,7 +37,7 @@ public enum AlphaTexGenerator {
                 previousTime = measure.timeSignature
             }
             for event in measure.events {
-                tokens.append(try token(for: event, stepsByID: stepsByID))
+                tokens.append(try token(for: event, stepsByID: stepsByID, slurOrigins: slurOrigins))
             }
             tokens.append("|")
             lines.append(tokens.joined(separator: " "))
@@ -87,7 +88,7 @@ public enum AlphaTexGenerator {
                             guard let p = positions[n.id] else { throw MusicXMLImportError.missingElement("fingering") }
                             value = "\(p.fret).\(p.string)"
                         } else { value = ScoreValidator.pitchName(n.midi).lowercased() }
-                        return value + ((n.tieStop || start > n.onsetQuarters + 1e-8) ? "{t}" : "")
+                        return value + (score.notes.contains { $0.slurFromID == n.id } && abs(start - n.onsetQuarters) < 1e-8 ? "{h}" : "") + ((n.tieStop || start > n.onsetQuarters + 1e-8) ? "{t}" : "")
                     }
                     let content = values.isEmpty ? "r" : (values.count == 1 ? values[0] : "(" + values.joined(separator: " ") + ")")
                     tokens.append("\(content).\(duration.value)\(duration.effect)")
@@ -101,7 +102,7 @@ public enum AlphaTexGenerator {
 
     private static func token(
         for event: NormalizedEvent,
-        stepsByID: [String: FingeringStep]
+        stepsByID: [String: FingeringStep], slurOrigins: Set<String>
     ) throws -> String {
         let duration = try alphaTexDuration(event.durationQuarters)
         switch event {
@@ -109,7 +110,7 @@ public enum AlphaTexGenerator {
             return "r.\(duration.value)\(duration.effect)"
         case let .note(note):
             guard let step = stepsByID[note.id] else { throw MusicXMLImportError.missingElement("fingering") }
-            let tie = note.tieStop ? "{t}" : ""
+            let tie = (note.tieStop ? "{t}" : "") + (slurOrigins.contains(note.id) ? "{h}" : "")
             return "\(step.position.fret).\(step.position.string)\(tie).\(duration.value)\(duration.effect)"
         }
     }

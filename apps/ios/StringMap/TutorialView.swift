@@ -22,11 +22,14 @@ struct LearnView: View {
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: Space.l) {
-                        SectionHeading(eyebrow: "Tutorial Mode", title: "Your first notes start here", detail: "12 short lessons. See the shape, hear the sound, then take your turn. Every lesson is open to you.")
-                        Text("\(progress.completedCount) of 12 lessons completed · At your own pace")
+                        SectionHeading(eyebrow: "Tutorial Mode", title: "Your first notes start here", detail: "\(course?.lessons.count ?? 0) lessons. See the shape, hear the sound, then take your turn. Every lesson is open to you.")
+                        Text("\(progress.completedCount) of \(course?.lessons.count ?? 0) lessons completed · At your own pace")
                             .font(.footnote).foregroundStyle(.secondary)
                         if let course {
                             ForEach(course.lessons) { lesson in
+                                if [1, 13, 19].contains(lesson.number) {
+                                    Text(lesson.section).font(.title2).padding(.top, Space.m)
+                                }
                                 Button { openLesson(lesson) } label: {
                                     Bezel {
                                         HStack(spacing: Space.m) {
@@ -35,7 +38,7 @@ struct LearnView: View {
                                             VStack(alignment: .leading, spacing: 4) {
                                                 Text(lesson.title).font(.headline).foregroundStyle(.primary)
                                                 Text(lesson.summary).font(.subheadline).foregroundStyle(.secondary)
-                                                Text("3–7 min · \(progress.record(lesson.id).completed ? "Completed" : "Guided practice")")
+                                                Text("\(lesson.number <= 12 ? "3–7" : "5–10") min · \(progress.record(lesson.id).completed ? "Completed" : "Guided practice")")
                                                     .font(.caption).foregroundStyle(.secondary)
                                             }
                                             Spacer(minLength: 0)
@@ -61,18 +64,20 @@ struct TutorialView: View {
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.colorScheme) private var colorScheme
+    let lessonCount: Int
     let nextLesson: (() -> Void)?
     let close: () -> Void
 
-    init(lesson: TutorialLesson, progress: TutorialProgress, nextLesson: (() -> Void)?, close: @escaping () -> Void) {
+    init(lesson: TutorialLesson, progress: TutorialProgress, lessonCount: Int, nextLesson: (() -> Void)?, close: @escaping () -> Void) {
         _session = State(initialValue: TutorialSession(lesson: lesson, progress: progress, showTab: UserDefaults.standard.bool(forKey: "tutorialShowTab")))
+        self.lessonCount = lessonCount
         self.nextLesson = nextLesson; self.close = close
     }
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Space.l) {
-                    Text("LESSON \(session.lesson.number) OF 12 · STANDARD TUNING · NO CAPO").eyebrow()
+                    Text("LESSON \(session.lesson.number) OF \(lessonCount) · STANDARD TUNING · NO CAPO").eyebrow()
                     if sizeClass == .regular && !typeSize.isAccessibilitySize {
                         HStack(alignment: .top, spacing: Space.l) {
                             instruction.frame(maxWidth: 310)
@@ -137,7 +142,7 @@ struct TutorialView: View {
     private var instructionText: String {
         switch session.stage {
         case .see: session.lesson.see
-        case .hear: "Listen to the example. Follow the lit note on the staff and the matching position on the board. Slow the BPM whenever you want. Use Hear this step to hear one note or chord on its own."
+        case .hear: "Listen to the example. Follow the lit note on the staff and the matching position on the board. Slow the BPM whenever you want. Use Hear this step to audition the current note, chord, or connected group."
         case .practice: session.lesson.practice
         case .recap: session.lesson.recap
         }
@@ -149,14 +154,23 @@ struct TutorialView: View {
                     ForEach(session.lesson.phrases.indices, id: \.self) { index in Text(session.lesson.phrases[index].name).tag(index) }
                 }.pickerStyle(.segmented).accessibilityIdentifier("tutorialPhrase")
             }
-            FretboardView(tuning: .standard, capo: 0, maxFret: 5, active: session.activeEvents.compactMap(\.position).first,
+            FretboardView(tuning: .standard, capo: 0, maxFret: session.lesson.maxFret ?? 5, active: session.activeEvents.compactMap(\.position).first,
                 sounding: session.activeEvents.compactMap(\.position), upcoming: session.upcoming, leftHanded: leftHanded, isExpanded: true,
-                teaching: .init(fingers: session.fingers, mutedStrings: session.mutedStrings,
+                teaching: .init(fingers: session.fingers, mutedStrings: session.mutedStrings, maxFret: session.lesson.maxFret ?? 5, rootPitchClass: session.lesson.rootPitchClass, barre: session.phrase.barre,
                     select: { position in
                         if session.stage == .practice { session.answer(position) } else { session.explore(position) }
                     }))
                 .frame(height: typeSize.isAccessibilitySize ? 330 : 270)
             Text(noteDescription).font(.callout.weight(.medium)).accessibilityIdentifier("tutorialNote")
+            if let cue = session.currentAttack?.cue {
+                Label(cue, systemImage: "hand.draw").font(.headline).accessibilityIdentifier("tutorialHandCue")
+            }
+            if let position = session.currentAttack?.positionLabel {
+                Text(position).font(.subheadline).accessibilityIdentifier("tutorialPositionLabel")
+            }
+            if session.lesson.rootPitchClass != nil { Text("Gold rings = A roots").font(.caption) }
+            if session.lesson.number >= 22 { Text("Synthesized technique reference · Practice the movement on your guitar").font(.caption).foregroundStyle(.secondary) }
+            if session.lesson.number == 15 { Text("BPM counts quarter notes · 60 BPM = 40 dotted-quarter pulses/min").font(.caption) }
             Text("Marker number = finger · ○ = open · × = do not play · Fret numbers below")
                 .font(.caption).foregroundStyle(.secondary)
             HStack {
@@ -165,7 +179,7 @@ struct TutorialView: View {
             }.font(.subheadline)
             if let error = session.error { Text(error).foregroundStyle(Palette.brand) }
             AlphaTabWebView(controller: session.player)
-                .frame(height: typeSize.isAccessibilitySize ? 370 : (showTab ? 320 : 240))
+                .frame(height: typeSize.isAccessibilitySize ? 420 : (showTab ? 380 : 280))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .accessibilityIdentifier("tutorialNotation")
             controls
@@ -211,10 +225,17 @@ struct TutorialView: View {
                     Text("Find this note").font(.title3.bold())
                     Text("Tap \(tutorialPitchName(session.lesson.quizMIDI)) on string \(session.lesson.quizString) on the fretboard. You can also choose its fret below.")
                     HStack {
-                        ForEach(0...3, id: \.self) { fret in
+                        ForEach(session.lesson.number <= 12 ? Array(0...3) : session.lesson.fretChoices, id: \.self) { fret in
                             Button(fret == 0 ? "Open" : "Fret \(fret)") {
                                 session.answer(GuitarPosition(string: session.lesson.quizString, fret: fret, midi: GuitarTuning.standard.openMIDIPitches[session.lesson.quizString - 1] + fret))
                             }.buttonStyle(.bordered).accessibilityIdentifier("tutorial-answer-\(fret)")
+                        }
+                    }
+                    if let question = session.lesson.question {
+                        Text(question.question).font(.headline)
+                        ForEach(question.answers.indices, id: \.self) { index in
+                            Button(question.answers[index]) { session.answerKnowledge(index) }
+                                .buttonStyle(.bordered).accessibilityIdentifier("tutorial-knowledge-\(index)")
                         }
                     }
                     if let feedback = session.quizFeedback {

@@ -16,9 +16,9 @@ Contact: stringmap.support@gmail.com
 
 Learn where each note belongs on your guitar.
 
-Start with Tutorial Mode: 12 short beginner lessons that take you from six open strings to first-position melodies and three basic open chords. See finger placement on an interactive fretboard, hear an example, then try it at your own pace. Standard notation stays visible, with optional tablature when you want it.
+Start with Tutorial Mode: 24 guided lessons that take you from six open strings and first-position melodies to richer rhythm, position shifts, pentatonic phrases, fingerpicking, triads, and hammer-ons/pull-offs. See finger placement on an interactive fretboard, hear an example, then try it at your own pace. Standard notation stays visible, with optional tablature when you want it.
 
-Follow See it, Hear it, Try it, and Recap. Explore notes, step through a phrase, loop an example, and answer friendly Find this note questions. Every lesson is open from the start. Your progress records participation, with no grades or pressure.
+Follow See it, Hear it, Try it, and Recap. Explore notes, step through a phrase, loop an example, and answer friendly note-location and technique questions. Every lesson is open from the start. Your progress records participation, with no grades or pressure.
 
 Free Practice includes 18 original single-note exercises covering open strings, string crossings, first-position melodies, rests, and varied rhythms. Read notation and tablature while the current note and guitar position light up together.
 
@@ -26,11 +26,11 @@ Pause, resume, restart, seek, and adjust BPM without changing pitch. Free Practi
 
 All lessons, exercises, playback, progress, and saved practice settings work offline. No account, advertising, subscription, or music uploads.
 
-Tutorial Mode uses standard tuning with no capo. It teaches E minor, A minor, and D major through authored examples. It does not listen to or grade your playing. Photo scanning and external score import are not included.
+Tutorial Mode uses standard tuning with no capo. It includes open chords, small major/minor triads, a two-string barre, and connected lead phrases through original examples. It does not listen to or grade your playing. Photo scanning and external score import are not included.
 
 ## Promotional text
 
-Meet your first notes with 12 guided guitar lessons, an interactive fretboard, optional tab, and 18 original exercises. Learn and practice offline at your own tempo.
+Meet your first notes with 24 guided guitar lessons, an interactive fretboard, optional tab, and 18 original exercises. Learn and practice offline at your own tempo.
 
 ## Keywords
 
@@ -41,7 +41,7 @@ guitar,fretboard,notation,tablature,practice,tempo,metronome,melody,beginner,exe
 No login, purchase, microphone permission, or server is required. All music is bundled and works offline.
 
 1. Open Learn → Tutorial Mode → Meet your guitar. The four stages are See it, Hear it, Try it, and Recap. Scroll to the playback controls; tap Play and follow the notation and fretboard. Show tab adds tablature. Use the BPM stepper, Lesson position slider, Previous/Next, and Hear this step. Try it includes a Find this note question. Recap can mark participation complete; all lessons stay accessible.
-2. Lessons 9–11 contain authored Em, Am, and D chord examples. Select the second example to hear the chord. These are guided demonstrations, not microphone grading or general chord import.
+2. Lessons 9–11 contain authored Em, Am, and D chord examples. Lessons 13–24 add rhythm, shifts, pentatonic phrases, fingerpicking, triads, a small barre, and hammer-ons/pull-offs. Use both examples in each new lesson. Technique audio is a synthesized reference; there is no microphone grading or general chord import.
 3. Close the lesson, select Learn → Free Practice → Open String Walk. Tap Play, pause, Restart, and drag Playback position. Open Practice for BPM, measure loops, metronome, and count-in. The exercise is saved to Library automatically.
 4. Settings contains offline privacy, support, and license documents, with public policy/support links. This build contains no scanner or listening preview controls.
 

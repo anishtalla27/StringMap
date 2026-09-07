@@ -5,9 +5,19 @@ import FingeringEngine
 /// a rosewood faceplate mounted into the app's cream chassis — nickel fret
 /// wire, a bone nut, bronze strings — because a pale diagram on a pale page
 /// gives light nowhere to go. On a dark board the route actually glows.
+struct TeachingBarre: Decodable {
+    let fret: Int
+    let firstString: Int
+    let lastString: Int
+    let finger: Int
+}
+
 struct FretboardTeaching {
     var fingers: [GuitarPosition: Int] = [:]
     var mutedStrings: Set<Int> = []
+    var maxFret = 5
+    var rootPitchClass: Int? = nil
+    var barre: TeachingBarre?
     var select: ((GuitarPosition) -> Void)? = nil
 }
 
@@ -25,7 +35,7 @@ struct FretboardView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var visibleFrets: Int {
-        if teaching != nil { return 5 }
+        if let teaching { return teaching.maxFret }
         let reach = max(active?.fret ?? 0, upcoming?.fret ?? 0)
         return max(5, min(maxFret - capo, max(12, max(reach, sounding.map(\.fret).max() ?? 0) + 1)))
     }
@@ -36,7 +46,8 @@ struct FretboardView: View {
                 size: geometry.size,
                 frets: visibleFrets,
                 leftHanded: leftHanded,
-                expanded: isExpanded
+                expanded: isExpanded,
+                compactTeaching: teaching != nil && geometry.size.width < 500
             )
 
             ZStack(alignment: .topLeading) {
@@ -47,6 +58,7 @@ struct FretboardView: View {
                 strings(metrics)
                 if capo > 0 { capoBar(metrics) } else { nut(metrics) }
                 route(metrics)
+                if let teaching { teachingBarre(teaching, metrics) }
                 markers(metrics)
                 stringLabels(metrics)
                 fretNumbers(metrics)
@@ -255,7 +267,7 @@ struct FretboardView: View {
 
     private func stringLabels(_ m: Metrics) -> some View {
         ForEach(0..<6, id: \.self) { index in
-            Text(teaching == nil ? tuning.pitchNames[index].replacingOccurrences(of: "#", with: "♯") : "\(index + 1) · \(tuning.pitchNames[index])")
+            Text(teaching == nil ? tuning.pitchNames[index].replacingOccurrences(of: "#", with: "♯") : (m.compactTeaching ? "\(index + 1)" : "\(index + 1) · \(tuning.pitchNames[index])"))
                 .font(.system(size: m.expanded ? 11 : 9, weight: .semibold, design: .rounded))
                 .monospacedDigit()
                 .foregroundStyle(Palette.onPlate)
@@ -267,7 +279,7 @@ struct FretboardView: View {
     }
 
     private func fretNumbers(_ m: Metrics) -> some View {
-        ForEach(Self.inlayFrets.filter { $0 <= m.frets }, id: \.self) { fret in
+        ForEach(teaching == nil ? Self.inlayFrets.filter { $0 <= m.frets } : Array(0...m.frets), id: \.self) { fret in
             Text(String(fret + capo))
                 .font(.system(size: m.expanded ? 10 : 8, weight: .semibold, design: .rounded))
                 .monospacedDigit()
@@ -279,7 +291,27 @@ struct FretboardView: View {
     private static let inlayFrets = [3, 5, 7, 9, 12, 15, 17, 19, 21, 24]
 
     @ViewBuilder
+    private func teachingBarre(_ teaching: FretboardTeaching, _ m: Metrics) -> some View {
+        if let barre = teaching.barre, soundingPositions.contains(where: { $0.fret == barre.fret && (barre.firstString...barre.lastString).contains($0.string) }) {
+            Capsule().fill(Palette.brand.opacity(0.6))
+                .frame(width: 9, height: m.stringY(barre.lastString-1) - m.stringY(barre.firstString-1) + 12)
+                .position(x: m.markerX(fret: barre.fret), y: (m.stringY(barre.firstString-1) + m.stringY(barre.lastString-1))/2)
+                .accessibilityLabel("Finger \(barre.finger) barre: strings \(barre.firstString) through \(barre.lastString), fret \(barre.fret)")
+        }
+    }
+
+    @ViewBuilder
     private func teachingOverlay(_ teaching: FretboardTeaching, _ m: Metrics) -> some View {
+        if let root = teaching.rootPitchClass {
+            ForEach(1...6, id: \.self) { string in
+                ForEach((0...teaching.maxFret).filter { (tuning.openMIDIPitches[string-1] + $0) % 12 == root }, id: \.self) { fret in
+                    Circle().stroke(.yellow.opacity(0.8), lineWidth: 2)
+                        .frame(width: m.markerSize + 5, height: m.markerSize + 5)
+                        .position(m.point(.init(string: string, fret: fret, midi: tuning.openMIDIPitches[string-1]+fret)))
+                        .accessibilityLabel("Root note, string \(string), fret \(fret)")
+                }
+            }
+        }
         ForEach(Array(teaching.mutedStrings).sorted(), id: \.self) { string in
             Text("×").font(.title3.bold()).foregroundStyle(Palette.onPlate)
                 .position(m.point(GuitarPosition(string: string, fret: 0, midi: tuning.openMIDIPitches[string - 1])))
@@ -287,11 +319,11 @@ struct FretboardView: View {
         }
         if let select = teaching.select {
             ForEach(1...6, id: \.self) { string in
-                ForEach(0...5, id: \.self) { fret in
+                ForEach(0...teaching.maxFret, id: \.self) { fret in
                     let position = GuitarPosition(string: string, fret: fret, midi: tuning.openMIDIPitches[string - 1] + fret)
                     Button { select(position) } label: {
                         Color.white.opacity(0.001)
-                            .frame(width: max(30, m.boardWidth / 7), height: max(38, m.boardHeight / 5))
+                            .frame(width: m.teachingHitWidth(fret: fret), height: m.boardHeight / 5)
                     }
                     .buttonStyle(.plain)
                     .position(m.point(position))
@@ -317,6 +349,7 @@ struct FretboardView: View {
         let frets: Int
         let leftHanded: Bool
         let expanded: Bool
+        let compactTeaching: Bool
 
         var gutter: CGFloat { expanded ? 42 : 32 }
         var top: CGFloat { expanded ? 24 : 18 }
@@ -358,10 +391,16 @@ struct FretboardView: View {
         /// has no space to sit in, so its marker steps just onto the board
         /// instead of straddling the nut.
         func markerX(fret: Int) -> CGFloat {
-            guard fret > 0 else { return mirrored(left + markerSize * 0.42) }
+            guard fret > 0 else { return mirrored(left + (compactTeaching ? 0 : markerSize * 0.42)) }
             let lower = fraction(fret - 1)
             let upper = fraction(fret)
             return mirrored(left + (lower + upper) / 2 * boardWidth)
+        }
+
+        func teachingHitWidth(fret: Int) -> CGFloat {
+            let next = abs(markerX(fret: fret + 1) - markerX(fret: fret))
+            let previous = fret == 0 ? next : abs(markerX(fret: fret) - markerX(fret: fret - 1))
+            return min(previous, next)
         }
 
         func point(_ position: GuitarPosition) -> CGPoint {

@@ -26,7 +26,7 @@ The highlighted marker and the note/string/fret readout show where to play the c
 
 ## Scope of this release
 
-StringMap includes a 12-lesson beginner tutorial and 18 bundled single-note exercises. Tutorial Mode demonstrates three authored open chord shapes: Em, Am, and D. Photo scanning, handwriting, general chord import, and public file import are not included. There is no account, purchase, or recognition service to configure.
+StringMap includes a 24-lesson course from beginner foundations to early-intermediate playing and 18 bundled single-note exercises. Tutorial Mode includes authored open chords, small major/minor triads, fingerpicking, and introductory hammer-ons and pull-offs. Photo scanning, handwriting, general chord import, and public file import are not included. There is no account, purchase, or recognition service to configure.
 
 ## If playback is silent
 

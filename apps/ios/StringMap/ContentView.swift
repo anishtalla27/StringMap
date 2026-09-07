@@ -83,7 +83,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if let lesson = tutorialLesson {
-                TutorialView(lesson: lesson, progress: tutorialProgress,
+                TutorialView(lesson: lesson, progress: tutorialProgress, lessonCount: tutorialCourse?.lessons.count ?? 0,
                     nextLesson: tutorialCourse?.lessons.first(where: { $0.number == lesson.number + 1 }).map { next in
                         { tutorialLesson = next }
                     }, close: { tutorialLesson = nil })

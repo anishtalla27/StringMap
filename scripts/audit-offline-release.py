@@ -16,8 +16,8 @@ for name in ['privacy','support']:
  content=(app/'Legal'/f'{name}.md').read_text()
  assert 'stringmap.support@gmail.com' in content
 course=json.loads((app/'Tutorial/course.json').read_text())
-assert course['version']==1 and len(course['lessons'])==12
+assert course['version']==1 and len(course['lessons'])==24
 phrases=[p['id'] for lesson in course['lessons'] for p in lesson['phrases']]
-assert len(set(phrases))==16
+assert len(set(phrases))==40
 assert set(phrases)=={p.stem for p in (app/'Tutorial').glob('*.musicxml')}
-print(json.dumps({'tutorialLessons':12,'tutorialExamples':16,'microphonePermissionAbsent':True,'listeningSymbolsAbsent':True,'scannerSymbolsAbsent' :True,'photoPermissionsAbsent':True,'recognitionURLAbsent':True,'collectedDataTypes':[],'bundledExercises':18}))
+print(json.dumps({'tutorialLessons':len(course['lessons']),'tutorialExamples':len(phrases),'microphonePermissionAbsent':True,'listeningSymbolsAbsent':True,'scannerSymbolsAbsent' :True,'photoPermissionsAbsent':True,'recognitionURLAbsent':True,'collectedDataTypes':[],'bundledExercises':18}))

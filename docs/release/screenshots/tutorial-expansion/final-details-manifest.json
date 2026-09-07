@@ -1,0 +1,17 @@
+[
+  {
+    "file": "final-active-triad-ipad.png",
+    "source": "artifacts/tutorial-expansion-targeted-ipad-shots/37F693FD-0CCF-449E-A353-8CBA24B7E78C.png",
+    "sha256": "be14aefd04beb81c082258c5783d13d45445f6c84a60d2d0bb5cca019abba571"
+  },
+  {
+    "file": "final-barre-iphone.png",
+    "source": "artifacts/tutorial-expansion-targeted-iphone-shots/725FDED9-911C-463E-8FCB-482E6B3D8E85.png",
+    "sha256": "7f95e4fb2094e97ca51b8908835284cf5df63bd98f770d4cdac55203438e958e"
+  },
+  {
+    "file": "final-capstone-bar-eight-ipad.png",
+    "source": "artifacts/tutorial-expansion-transitions-shots/CCC619E7-837C-4712-8CAD-487BB7B62F57.png",
+    "sha256": "205369cf2b9012bdb13fcaa25c00281f39e611f0a21a2bad6e31e54dd33d3ad0"
+  }
+]

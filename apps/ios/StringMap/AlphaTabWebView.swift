@@ -84,6 +84,7 @@ final class AlphaTabController {
     private(set) var endMilliseconds = 0.0
     private(set) var playbackSpeed = 1.0
     private(set) var showTab = true
+    private(set) var tutorialPresentation = false
     private(set) var isLooping = false
     private(set) var isMetronomeEnabled = false
     private(set) var isCountInEnabled = false
@@ -120,6 +121,11 @@ final class AlphaTabController {
         isPlaying = false
         startsWhenReady = false
         pendingAlphaTex = latestAlphaTex
+    }
+
+    func setTutorialPresentation(_ enabled: Bool) {
+        tutorialPresentation = enabled
+        callAsync("window.stringMap.setTutorialPresentation(enabled);", arguments: ["enabled": enabled])
     }
 
     func setShowTab(_ enabled: Bool) {
@@ -330,6 +336,7 @@ final class AlphaTabController {
     }
 
     private func applyPracticeSettings() {
+        setTutorialPresentation(tutorialPresentation)
         setShowTab(showTab)
         setPlaybackSpeed(playbackSpeed)
         setMetronome(enabled: isMetronomeEnabled)

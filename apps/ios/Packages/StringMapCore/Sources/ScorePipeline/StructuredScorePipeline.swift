@@ -50,6 +50,22 @@ public struct StructuredScorePipeline: Sendable {
             }
             fingering = try FingeringEngine.optimizePolyphonic(timed, options: options)
         } else { fingering = try FingeringEngine.optimize(fingeringNotes, options: options) }
+        let positions = Dictionary(uniqueKeysWithValues: fingering.steps.map { ($0.note.id, $0.position) })
+        var starts: [String: Double] = [:]; var offset = 0.0
+        for measure in score.measures {
+            for event in measure.events { starts[event.id] = offset + event.onsetQuarters }
+            offset += measure.durationQuarters
+        }
+        for note in score.notes where note.slurFromID != nil {
+            guard let origin = score.notes.first(where: { $0.id == note.slurFromID }),
+                  let from = positions[origin.id], let to = positions[note.id],
+                  from.string == to.string, origin.voice == note.voice,
+                  !note.tieStop, !origin.tieStart,
+                  abs((starts[origin.id]! + origin.durationQuarters) - starts[note.id]!) < 1e-8,
+                  (note.slurKind == .hammerOn && note.midi > origin.midi) || (note.slurKind == .pullOff && note.midi < origin.midi) else {
+                throw MusicXMLImportError.malformed("Guitar slurs require adjacent notes on one string with the correct pitch direction.")
+            }
+        }
         let alphaTex = try AlphaTexGenerator.generate(score: score, fingering: fingering)
         return PipelineResult(score: score, candidates: candidates, fingering: fingering, alphaTex: alphaTex)
     }

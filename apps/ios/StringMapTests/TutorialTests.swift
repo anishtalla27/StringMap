@@ -24,7 +24,7 @@ final class TutorialTests: XCTestCase {
         let defaults = try XCTUnwrap(UserDefaults(suiteName: suite)); defer { defaults.removePersistentDomain(forName: suite) }
         let progress = TutorialProgress(defaults: defaults)
         var phraseNumber = 0
-        for lesson in course.lessons {
+        for lesson in course.lessons.prefix(12) {
             XCTAssertTrue((1...6).contains(lesson.quizString)); XCTAssertTrue((0...3).contains(lesson.quizFret))
             let session = TutorialSession(lesson: lesson, progress: progress, showTab: false)
             for (index, phrase) in lesson.phrases.enumerated() {
@@ -65,6 +65,142 @@ final class TutorialTests: XCTestCase {
             session.leave()
         }
         XCTAssertEqual(phraseNumber, 16)
+    }
+
+    @MainActor
+    func testContinuationCourseAgainstIndependentReferences() throws {
+        let course = try TutorialCourse.load()
+        XCTAssertEqual(course.lessons.count, 24)
+        // Hand-reviewed sounding MIDI, independent of the content generator.
+        let references: [[Int]] = [
+            [64,64,64,64,64,64,64,64,59,64,59,64,59,64,59,64],
+            [59,60,62,64,67,65,64,62,60,59,64,65,67,64,62,59],
+            [64,65,67,64,67,65,64], [64,65,67,64,64,64,64],
+            [48,52,55,57,55,52,53,55], [57,55,52,50,52,55,48],
+            [65,67,69,71,69,67,65,64], [62,64,67,69,64,66,69,71],
+            [45,48,50,52,55,57,60,62,64,67,69,72],
+            [72,69,67,64,62,60,57,55,52,50,48,45],
+            [69,72,67,64,62,60,57], [64,67,69,72,69,64,69],
+            [40,55,59,64,40,55,59,64,40,55,59,64,40,55,59,64],
+            [45,57,60,64,45,57,60,64,45,57,60,64,45,57,60,64],
+            [57,62,66,57,62,65], [57,61,64,57,60,64],
+            [57,60,65,57,60,65], [57,60,65,55,59,64],
+            [64,67,64,59,62,59], [65,67,65,60,62,60],
+            [67,65,67,62,60,62], [65,67,65,60,62,60],
+            [67,69,69,72,69,72,69,67,64,67,62,60,57,64,67,69,72,72,69,72,62,60,57,55,57],
+            [50,57,62,66,50,57,62,66,50,57,62,65,50,57,62,65,45,57,61,64,45,57,61,64,45,57,60,64,45,57,60,64,
+             50,57,62,66,50,57,62,66,50,57,62,65,50,57,62,65,45,57,61,64,45,57,61,64,45,57,60,64,45,57,60,64]
+        ]
+        // Independently specified rhythmic cells include rests and each chord tone.
+        let eighths = Array(repeating: 0.5, count: 16)
+        let quarters = Array(repeating: 1.0, count: 8)
+        let ringingBar = [2.0,2,2,2,2,1.5,1,0.5]
+        let rhythms: [[Double]] = [
+            eighths, eighths,
+            [0.5,1.5,0.5,0.5,1,1.5,0.5,1,1], quarters,
+            [0.5,0.5,0.5,0.5,0.5,0.5,1.5,1.5], [0.5,0.5,0.5,0.5,0.5,0.5,3],
+            quarters, quarters, Array(repeating: 1, count: 12), Array(repeating: 1, count: 12),
+            [0.5,0.5,1,1,1,1,1,1,1], [1,0.5,0.5,2,1.5,0.5,1,1],
+            ringingBar + ringingBar, ringingBar + ringingBar,
+            [4,4,4,4,4,4], [4,4,4,4,4,4],
+            [1,1,1,1,2,2,2,2], Array(repeating: 2, count: 8),
+            quarters, quarters, quarters, quarters,
+            Array(repeating: 1, count: 12) + [1.5,0.5] + Array(repeating: 1, count: 14) + [2,2],
+            Array(repeating: ringingBar, count: 8).flatMap { $0 }
+        ]
+        let folder = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appending(path: "TutorialEvidence")
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: "TutorialContinuationTests"))
+        defer { defaults.removePersistentDomain(forName: "TutorialContinuationTests") }
+        var index = 0
+        for lesson in course.lessons.dropFirst(12) {
+            XCTAssertEqual(lesson.phrases.count, 2)
+            XCTAssertTrue(lesson.fretChoices.contains(lesson.quizFret))
+            XCTAssertTrue((5...8).contains(lesson.maxFret ?? 5))
+            let question = try XCTUnwrap(lesson.question)
+            XCTAssertTrue(question.answers.indices.contains(question.correctIndex))
+            XCTAssertFalse(question.hint.isEmpty)
+            let session = TutorialSession(lesson: lesson, progress: TutorialProgress(defaults: defaults), showTab: false)
+            for (phraseIndex, phrase) in lesson.phrases.enumerated() {
+                let result = try phrase.result()
+                XCTAssertEqual(result.score.notes.map(\.midi), references[index], phrase.id)
+                XCTAssertEqual(result, try phrase.result())
+                XCTAssertEqual(result.score.measures.flatMap(\.events).map(\.durationQuarters), rhythms[index], phrase.id)
+                let expectedSlurs = [18:2,19:2,20:2,21:4,22:3][index] ?? 0
+                XCTAssertEqual(result.score.notes.filter { $0.slurFromID != nil }.count, expectedSlurs, phrase.id)
+                XCTAssertEqual(result.score.notes.filter(\.tieStop).count, index == 3 ? 1 : 0)
+                if let barre = phrase.barre {
+                    XCTAssertEqual([barre.fret, barre.firstString, barre.lastString, barre.finger], [1,1,2,1])
+                    XCTAssertEqual(lesson.number, 21)
+                }
+                XCTAssertEqual(result.score.tempo, 60)
+                XCTAssertTrue(result.score.warnings.isEmpty, "\(phrase.id): \(result.score.warnings)")
+                XCTAssertEqual(result.score.measures.count, lesson.number == 24 ? 8 : lesson.number == 17 ? 3 : 2)
+                XCTAssertTrue(result.score.measures.allSatisfy { $0.durationQuarters == (lesson.number == 15 ? 3 : 4) })
+                session.choosePhrase(phraseIndex)
+                for event in session.events {
+                    let actual = try XCTUnwrap(result.score.measures[event.measure].events.first { $0.id == event.id })
+                    XCTAssertEqual(actual.onsetQuarters, event.onset)
+                    XCTAssertEqual(actual.durationQuarters, event.duration)
+                    if let p = event.position {
+                        XCTAssertEqual(result.fingering.steps.first { $0.note.id == event.id }?.position, p)
+                        XCTAssertEqual(p.midi, [64,59,55,50,45,40][p.string-1]+p.fret)
+                        XCTAssertEqual(p.fret == 0, event.finger == 0)
+                        XCTAssertTrue((0...4).contains(event.finger))
+                    }
+                    for speed in [0.5,1,1.5,2] {
+                        session.player.setPlaybackSpeed(speed)
+                        let time = event.start + min(event.duration/2, 0.1)
+                        session.seek(time*1000)
+                        let expected = session.events.filter { $0.start <= time && $0.start+$0.duration > time && $0.midi != nil }
+                        XCTAssertEqual(Set(session.activeEvents.compactMap(\.position)), Set(expected.compactMap(\.position)))
+                        XCTAssertEqual(Set(expected.map(\.string)).count, expected.count)
+                    }
+                }
+                struct Evidence: Encodable { let score: NormalizedScore; let alphaTex: String }
+                try JSONEncoder().encode(Evidence(score: result.score, alphaTex: result.alphaTex)).write(to: folder.appending(path: phrase.id + "-native.json"))
+                index += 1
+            }
+            session.leave()
+        }
+        XCTAssertEqual(index, 24)
+    }
+
+    @MainActor
+    func testSlurAuditionIncludesInitialPickAndConnectedPitches() throws {
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: "TutorialSlurAudition"))
+        defer { defaults.removePersistentDomain(forName: "TutorialSlurAudition") }
+        let course = try TutorialCourse.load()
+        let session = TutorialSession(lesson: course.lessons[22], progress: TutorialProgress(defaults: defaults), showTab: false)
+        session.choosePhrase(1)
+        for time in [0.0,1,2] {
+            session.seek(time*1000)
+            XCTAssertEqual(session.auditionRange, 0..<3)
+        }
+        session.leave()
+        let tied = TutorialSession(lesson: course.lessons[13], progress: TutorialProgress(defaults: defaults), showTab: false)
+        tied.choosePhrase(1)
+        for time in [3.0,4] {
+            tied.seek(time*1000)
+            XCTAssertEqual(tied.auditionRange, 3..<5)
+        }
+        tied.leave()
+    }
+
+    @MainActor
+    func testFingerpickingCueFollowsNewAttackWhileBassSustains() throws {
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: "TutorialAttackTests"))
+        defer { defaults.removePersistentDomain(forName: "TutorialAttackTests") }
+        let course = try TutorialCourse.load()
+        let session = TutorialSession(lesson: course.lessons[18], progress: TutorialProgress(defaults: defaults), showTab: false)
+        for (time, cue) in [(0.0, "p · thumb"), (0.5, "i · index"), (1.0, "m · middle"), (1.5, "a · ring")] {
+            session.seek(time * 1000)
+            XCTAssertEqual(session.currentAttack?.cue, cue)
+            XCTAssertEqual(session.currentAttack?.start, time)
+            XCTAssertEqual(session.auditionRange, time..<(time+0.5))
+            XCTAssertTrue(session.activeEvents.contains { $0.midi == 40 })
+        }
+        session.leave()
     }
 
     @MainActor
