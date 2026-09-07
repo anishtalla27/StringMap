@@ -98,6 +98,8 @@ targets:
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
     settings:
+      base:
+        DEVELOPMENT_TEAM: S8DY583234
       configs:
         Debug:
           APP_ATTEST_ENVIRONMENT: development

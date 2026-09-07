@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -78,11 +78,11 @@
 		03C3C4B5985D855537058675 /* Legal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Legal; path = StringMap/Resources/Legal; sourceTree = SOURCE_ROOT; };
 		062F2358B33D94C45269BFCC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1585DC05464512DAC655F647 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		17AB12447A0F507C51582DA2 /* StringMap.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = StringMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AB12447A0F507C51582DA2 /* StringMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FFAE5B1BABC8413D76CC6C /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		282C5B3EE4AC5B065555EA34 /* BundledExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledExerciseTests.swift; sourceTree = "<group>"; };
 		2A93444A6DC446796CB52F61 /* SongLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLibraryTests.swift; sourceTree = "<group>"; };
-		2B516850BACAC7E0DC6E035A /* review-study.musicxml */ = {isa = PBXFileReference; path = "review-study.musicxml"; sourceTree = "<group>"; };
+		2B516850BACAC7E0DC6E035A /* review-study.musicxml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "review-study.musicxml"; sourceTree = "<group>"; };
 		2BABF218195C12C1ADBF1928 /* TutorialCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCourse.swift; sourceTree = "<group>"; };
 		37D3C501E882AA14614899A9 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		37F51AA3774021185DAD0963 /* Tutorial */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Tutorial; path = StringMap/Resources/Tutorial; sourceTree = SOURCE_ROOT; };
@@ -119,7 +119,7 @@
 		C24319E724AEBE6586714DB3 /* StringMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StringMap.entitlements; sourceTree = "<group>"; };
 		C422C4F1B460357F0318AE53 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		C48D24E9509A0E893283B627 /* FretboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FretboardView.swift; sourceTree = "<group>"; };
-		D8311AB4DF5C67B6FBB2504A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D8311AB4DF5C67B6FBB2504A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DF67E18D94C8C23B787C2590 /* AlphaTabBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTabBridgeTests.swift; sourceTree = "<group>"; };
 		E139C4FF1BFCEF63875B3366 /* StringMapUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = StringMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B3464D779EAF3220FDF19C /* PageCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCropView.swift; sourceTree = "<group>"; };
@@ -344,7 +344,6 @@
 			packageReferences = (
 				B0CE4AE1B266C7D03AB2A1BB /* XCLocalSwiftPackageReference "Packages/StringMapCore" */,
 			);
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -503,6 +502,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8DY583234;
 				INFOPLIST_FILE = StringMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,6 +703,7 @@
 				CODE_SIGN_ENTITLEMENTS = StringMap/StringMap.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8DY583234;
 				INFOPLIST_FILE = "StringMap/Info-Debug.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
