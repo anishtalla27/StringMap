@@ -114,8 +114,8 @@ targets:
         SUPPORT_URL: https://anishtalla27.github.io/StringMap/support.html
         PRODUCT_BUNDLE_IDENTIFIER: com.anishtalla.StringMap
         PRODUCT_NAME: StringMap
-        MARKETING_VERSION: 1.0.0
-        CURRENT_PROJECT_VERSION: 5
+        MARKETING_VERSION: 1.0.1
+        CURRENT_PROJECT_VERSION: 7
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         SUPPORTS_MACCATALYST: false

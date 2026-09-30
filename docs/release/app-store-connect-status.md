@@ -1,6 +1,17 @@
+# Current resubmission status — September 8, 2026
+
+StringMap 1.0.0 (6) is **Waiting for Review**. Upload succeeded at 11:46 PM EDT. Reply sent at 11:51 PM with the physical iPhone/iOS26.6.2 walkthrough and content-rights ZIP; all six information items also saved in App Review Notes. Updated and resubmitted submission `889a503b-ffb6-40da-a94a-8629bfc0b741`; live row confirms build 6 Waiting for Review. Manual release retained. Apple approval is pending. See `build6-review-evidence.json`.
+
+## Earlier status history
+
+
 # App Store Connect submission
 
-## Current status — September 7, 2026, 3:17 PM EDT
+## Current status — September 8, 2026
+
+Live App Store Connect inspection confirms StringMap 1.0.0 (5) is **Rejected**, with one message: Guideline 2.1 — Information Needed — New App Submission. Apple requests a physical-device recording on the latest OS, purpose/audience, feature instructions, services, regional behavior, and applicable content-rights documentation. Expanded App Review Notes and a content-rights ZIP were saved. Physical-device recording and current-OS QA remain pending; no reply or resubmission has been sent. See `app-review-resubmission.md`. Manual release remains selected.
+
+## Historical status — September 7, 2026, 3:17 PM EDT
 
 StringMap 1.0.0 (5) submitted successfully; Apple shows **Waiting for Review**. Submission ID: 889a503b-ffb6-40da-a94a-8629bfc0b741. The account holder saved the affirmative third-party content rights declaration before submission. Manual release remains selected; approval will not automatically publish the app. EU trader status still requires the account holder's answer, and elapsed TestFlight qualification remains incomplete. The user explicitly requested expedited submission. No elapsed testing success is implied.
 

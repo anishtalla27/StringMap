@@ -1428,3 +1428,181 @@ final class ReleaseHomeUITests: XCTestCase {
         XCTAssertTrue(status.label.contains("Playback paused"), status.label)
     }
 }
+
+// Drives only public Release controls for a continuous physical-device App Review video.
+final class AppReviewDemonstrationUITests: XCTestCase {
+    @MainActor
+    func testPhysicalDeviceReviewDemonstration() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.terminate()
+        XCUIDevice.shared.press(.home)
+        print("APP_REVIEW_RECORDING_READY")
+        Thread.sleep(forTimeInterval: 25)
+        app.launch()
+        XCTAssertTrue(app.buttons["homeTutorial"].waitForExistence(timeout: 25))
+        pause(3)
+        tab("Learn", app)
+        app.segmentedControls["learnMode"].buttons["Tutorial Mode"].tap()
+        let lesson = app.buttons["lesson-01"]
+        reveal(lesson, app); pause(2); lesson.tap()
+        let status = app.staticTexts["tutorialStatus"]
+        ready(status)
+        pause(3)
+        app.buttons["tutorial-stage-hear"].tap()
+        let play = app.buttons["tutorialPlay"]
+        reveal(play, app)
+        let loop = app.switches["tutorialLoop"]
+        reveal(loop, app)
+        if loop.value as? String != "1" { loop.tap() }
+        reveal(play, app); play.tap(); pause(6)
+        play.tap(); pause(2)
+        let showTab = app.switches["tutorialShowTab"]
+        reveal(showTab, app)
+        if showTab.value as? String != "1" { showTab.tap() }
+        pause(2)
+        let bpm = app.steppers["tutorialBPM"]
+        reveal(bpm, app); bpm.buttons.element(boundBy: 1).tap()
+        reveal(play, app); play.tap(); pause(5); play.tap()
+        app.buttons["tutorial-stage-practice"].tap()
+        let answer = app.buttons["tutorial-answer-0"]
+        reveal(answer, app); answer.tap()
+        XCTAssertTrue(app.staticTexts["tutorialFeedback"].label.contains("Found it"))
+        pause(3)
+        app.buttons["tutorial-stage-recap"].tap()
+        let complete = app.buttons["tutorialComplete"]
+        reveal(complete, app)
+        if complete.label != "Completed" { complete.tap() }
+        pause(3)
+        app.buttons["closeTutorial"].tap()
+        app.segmentedControls["learnMode"].buttons["Free Practice"].tap()
+        let exercise = app.buttons["exercise-exercise-01"]
+        reveal(exercise, app); pause(2); exercise.tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        app.buttons["stopPlayback"].tap()
+        app.buttons["playPause"].tap(); pause(7)
+        app.buttons["playPause"].tap()
+        let seek = app.sliders["Playback position"]
+        reveal(seek, app); seek.adjust(toNormalizedSliderPosition: 0.35)
+        pause(2)
+        tab("Home", app)
+        XCTAssertTrue(app.buttons["homeSongbook"].waitForExistence(timeout: 10))
+        app.buttons["homeSongbook"].tap(); pause(2)
+        let melody = app.buttons["songbook-amazing-grace-melody"]
+        reveal(melody, app); melody.tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        app.buttons["stopPlayback"].tap()
+        app.buttons["playPause"].tap(); pause(8); app.buttons["playPause"].tap()
+        app.sliders["Playback position"].adjust(toNormalizedSliderPosition: 0.4)
+        let saved = app.staticTexts["playbackTime"].label
+        pause(2)
+        app.buttons["switch-chords"].tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        XCTAssertTrue(app.staticTexts["activeChord"].exists)
+        app.buttons["stopPlayback"].tap()
+        app.buttons["playPause"].tap(); pause(9); app.buttons["playPause"].tap()
+        pause(2)
+        app.buttons["switch-melody"].tap()
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        XCTAssertEqual(app.staticTexts["playbackTime"].label, saved)
+        pause(3)
+        tab("Library", app); pause(3)
+        tab("Settings", app)
+        pause(3)
+        let licenses = app.buttons["Licenses and acknowledgements"]
+        reveal(licenses, app); licenses.tap(); pause(4)
+        print("APP_REVIEW_RECORDING_COMPLETE")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "review-demo-complete"; shot.lifetime = .keepAlways; add(shot)
+        pause(10)
+    }
+
+    @MainActor private func pause(_ seconds: TimeInterval) { Thread.sleep(forTimeInterval: seconds) }
+    @MainActor private func ready(_ status: XCUIElement) {
+        XCTAssertTrue(status.waitForExistence(timeout: 40))
+        expectation(for: NSPredicate(format: "label == 'Playback ready'"), evaluatedWith: status)
+        waitForExpectations(timeout: 40)
+    }
+    @MainActor private func tab(_ title: String, _ app: XCUIApplication) {
+        let button = app.tabBars.buttons[title]
+        if button.exists { button.tap() } else { app.buttons[title].firstMatch.tap() }
+    }
+    @MainActor private func reveal(_ element: XCUIElement, _ app: XCUIApplication) {
+        for _ in 0..<18 {
+            let top = app.navigationBars.firstMatch.frame.maxY + 70
+            if element.exists && element.isHittable && element.frame.midY > top && element.frame.midY < app.frame.maxY - 50 { return }
+            let above = element.exists && element.frame.midY < top
+            app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.35 : 0.8))
+                .press(forDuration: 0.05, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.8 : 0.35)))
+        }
+        XCTAssertTrue(element.isHittable, "Unreachable public control: \(element)")
+    }
+}
+
+// Drives the Release app for the App Store preview recording. Prints PREVIEW_CUT
+// markers (Unix time) around each shot so loading waits can be trimmed out.
+final class AppPreviewRecordingUITests: XCTestCase {
+    @MainActor
+    func testAppStorePreview() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.buttons["homeSongbook"].waitForExistence(timeout: 30))
+        pause(2)
+        mark("in"); pause(2.5)
+        tab("Learn", app); pause(1)
+        app.segmentedControls["learnMode"].buttons["Tutorial Mode"].tap(); pause(1.5)
+        let lesson = app.buttons["lesson-01"]
+        reveal(lesson, app); lesson.tap()
+        mark("out")
+        let status = app.staticTexts["tutorialStatus"]
+        XCTAssertTrue(status.waitForExistence(timeout: 40))
+        expectation(for: NSPredicate(format: "label == 'Playback ready'"), evaluatedWith: status)
+        waitForExpectations(timeout: 40)
+        mark("in")
+        pause(2)
+        app.buttons["tutorial-stage-practice"].tap()
+        let answer = app.buttons["tutorial-answer-0"]
+        reveal(answer, app); pause(1); answer.tap()
+        pause(2.5)
+        mark("out")
+        app.buttons["closeTutorial"].tap()
+        tab("Home", app)
+        XCTAssertTrue(app.buttons["homeSongbook"].waitForExistence(timeout: 10))
+        app.buttons["homeSongbook"].tap()
+        let melody = app.buttons["songbook-minuet-g-melody"]
+        reveal(melody, app); pause(1)
+        mark("in"); pause(1.5); melody.tap()
+        mark("out")
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        app.buttons["stopPlayback"].tap(); pause(0.5)
+        mark("in")
+        app.buttons["playPause"].tap(); pause(8); app.buttons["playPause"].tap()
+        pause(0.5)
+        app.buttons["switch-chords"].tap()
+        mark("out")
+        XCTAssertTrue(app.staticTexts["Playback ready"].waitForExistence(timeout: 40))
+        app.buttons["stopPlayback"].tap(); pause(0.5)
+        mark("in")
+        app.buttons["playPause"].tap(); pause(7)
+        mark("out")
+        app.buttons["playPause"].tap()
+    }
+
+    @MainActor private func mark(_ kind: String) { print("PREVIEW_CUT \(kind) \(Date().timeIntervalSince1970)") }
+    @MainActor private func pause(_ seconds: TimeInterval) { Thread.sleep(forTimeInterval: seconds) }
+    @MainActor private func tab(_ title: String, _ app: XCUIApplication) {
+        let button = app.tabBars.buttons[title]
+        if button.exists { button.tap() } else { app.buttons[title].firstMatch.tap() }
+    }
+    @MainActor private func reveal(_ element: XCUIElement, _ app: XCUIApplication) {
+        for _ in 0..<18 {
+            let top = app.navigationBars.firstMatch.frame.maxY + 70
+            if element.exists && element.isHittable && element.frame.midY > top && element.frame.midY < app.frame.maxY - 50 { return }
+            let above = element.exists && element.frame.midY < top
+            app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.35 : 0.8))
+                .press(forDuration: 0.05, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: above ? 0.8 : 0.35)))
+        }
+        XCTAssertTrue(element.isHittable, "Unreachable public control: \(element)")
+    }
+}

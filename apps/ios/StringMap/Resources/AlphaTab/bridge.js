@@ -20,7 +20,10 @@
     core: {
       scriptFile: new URL("alphaTab.min.js", base).href,
       fontDirectory: new URL("font/", base).href,
-      useWorkers: true,
+      // A previous score's worker render can finish after tex() replaces the
+      // model, decoding its beat bounds against the new score. The bundled
+      // short guitar scores render synchronously to keep model/bounds atomic.
+      useWorkers: false,
     },
     display: {
       staveProfile: alphaTab.StaveProfile.ScoreTab,
