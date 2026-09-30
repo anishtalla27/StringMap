@@ -2,6 +2,8 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const { chromium } = require("/opt/node22/lib/node_modules/playwright");
+const VERTICAL = process.argv.includes("--vertical"); process.argv = process.argv.filter(a => a !== "--vertical");
+const VW = VERTICAL ? 1080 : 1920, VH = VERTICAL ? 1920 : 1080;
 import http from "http"; import fs from "fs"; import path from "path";
 const root = path.dirname(new URL(import.meta.url).pathname);
 const types = { ".html": "text/html", ".json": "application/json", ".png": "image/png", ".woff2": "font/woff2", ".css": "text/css" };
@@ -10,9 +12,9 @@ const port = server.address().port;
 const [out, ...times] = process.argv.slice(2);
 fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+const page = await browser.newPage({ viewport: { width: VW, height: VH } });
 page.on("console", m => console.log("console:", m.text())); page.on("pageerror", e => console.log("pageerror:", e.message));
-await page.goto(`http://127.0.0.1:${port}/index.html`);
+await page.goto(`http://127.0.0.1:${port}/index.html${VERTICAL ? "?vertical" : ""}`);
 await page.waitForFunction(() => window.READY === true, null, { timeout: 30000 });
 for (const t of times) {
   await page.evaluate(t => window.renderAt(t), parseFloat(t));

@@ -2,6 +2,8 @@
 
 `stringmap-promo.mp4` is a 26 second, 1920×1080, 30 fps ad for the StringMap iOS app. It cuts on every bar of the music: a hook, the brand, a fast product montage (lessons, Songbook, playback, practice tools), a quick look at the engine that picks each fingering, and an end card.
 
+`stringmap-promo-vertical.mp4` is the same ad laid out for TikTok and Reels at 1080×1920. Headlines, the brand and the call to action stay between y 220 and 1560 and left of x 960, clear of the caption area and the action rail.
+
 Every frame is drawn from real app material:
 
 - The phone and iPad screens are the unaltered App Store screenshots from the `codex/native-ios-app` branch.
@@ -40,6 +42,7 @@ python3 prep_data.py              # parse the Songbook score, run the fingering 
 python3 render_soundtrack.py      # SoundFont render -> soundtrack.wav
 node snap.mjs stills 1 9.4 16.2    # optional: stills at chosen seconds
 node render.mjs stringmap-promo.mp4
+node render.mjs stringmap-promo-vertical.mp4 --vertical
 ```
 
-Open `index.html?play` through any local web server to preview the animation live, or `index.html?t=11` for a single frame.
+Open `index.html?play` through any local web server to preview the animation live, or `index.html?t=11` for a single frame. Add `vertical` to the query (`index.html?vertical&play`) for the 9:16 layout.
