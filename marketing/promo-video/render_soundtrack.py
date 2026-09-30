@@ -5,7 +5,7 @@ from pathlib import Path
 from sf2 import SF2
 HERE=Path(__file__).parent
 IOS=Path(os.environ.get('STRINGMAP_IOS','../../../stringmap-ios'))/'apps/ios'
-SR=44100; BPM=90; Q=60/BPM; T0=1.0; LENGTH=68.0
+SR=44100; BPM=132; Q=60/BPM; T0=0.5; LENGTH=26.0; LAST_BAR=16
 sf=SF2(IOS/'StringMap/Resources/AlphaTab/soundfont/stringmap-guitar.sf2')
 zones=sf.instrument_zones(0)[1:]
 def zone_for(m):
@@ -36,6 +36,7 @@ def add(midi,t,dur,gain,pan=0.0,release=0.45):
         k=n-held; seg[held:]*=np.exp(-np.linspace(0,6,k)).astype(np.float32)
     lg=np.cos((pan+1)*np.pi/4); rg=np.sin((pan+1)*np.pi/4)
     L[i0:i0+n]+=seg*lg; R[i0:i0+n]+=seg*rg
+d['melody']=[n for n in d['melody'] if n['m']<=LAST_BAR]; d['chords']=[c for c in d['chords'] if c['m']<=LAST_BAR]
 end=max(n['on']+n['dur'] for n in d['melody'])
 for n in d['melody']:
     beat=n['on']%3
@@ -51,6 +52,21 @@ for on,notes in bars.items():
     for k,c in enumerate(notes):
         t=T0+on*Q+k*0.014
         add(c['midi'],t,c['dur']*Q-0.05+(2.2 if last else 0),0.42*(0.9+0.1*k/len(notes)),pan=-0.18+0.06*k,release=0.35 if not last else 1.2)
+# Percussion: a synthesized kick on each downbeat and StringMap's own metronome click
+# (bank 128, key 33 in the bundled SoundFont) on beats two and three.
+cz=sf.instrument_zones(1); cs=sf.shdr[[z for z in cz if 53 in z][0][53]]
+click=sf.smpl[cs[1]:cs[2]].copy()
+def add_raw(x,t,gain):
+    i0=int(t*SR); n=min(len(x),N-i0)
+    if n>0: L[i0:i0+n]+=x[:n]*gain; R[i0:i0+n]+=x[:n]*gain
+kt=np.arange(int(0.42*SR))/SR
+kick=(np.sin(2*np.pi*np.cumsum(46+95*np.exp(-kt*32))/SR)*np.exp(-kt*8.5)).astype(np.float32)
+kick[:int(0.004*SR)]+=np.linspace(0.5,0,int(0.004*SR)).astype(np.float32)
+for b in range(int(end//3)):
+    tb=T0+b*3*Q
+    add_raw(kick,tb,0.55 if b%4==0 else 0.42)
+    for k in (1,2): add_raw(click,tb+k*Q,0.10)
+add_raw(kick,T0+end*Q,0.5)
 # Light room reverb: exponentially decaying noise IR, applied via FFT.
 ir_len=int(1.6*SR); t=np.arange(ir_len)/SR
 irL=(rng.standard_normal(ir_len)*np.exp(-t/0.38)).astype(np.float32); irR=(rng.standard_normal(ir_len)*np.exp(-t/0.38)).astype(np.float32)
@@ -62,7 +78,7 @@ def conv(x,h):
 wet=0.16
 Lo=L+wet*conv(L,irL); Ro=R+wet*conv(R,irR)
 # Fade out tail
-fo=int(2.0*SR); Lo[-fo:]*=np.linspace(1,0,fo); Ro[-fo:]*=np.linspace(1,0,fo)
+fo=int(1.5*SR); Lo[-fo:]*=np.linspace(1,0,fo); Ro[-fo:]*=np.linspace(1,0,fo)
 peak=max(np.abs(Lo).max(),np.abs(Ro).max()); g=0.89/peak
 out=np.stack([Lo*g,Ro*g],1)
 print('peak before norm',peak,'gain',g,'melody end s',T0+end*Q)

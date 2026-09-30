@@ -14,8 +14,9 @@
 <script>
 "use strict";
 const W = 1920, H = 1080;
-const T0 = 1.0, Q = 2 / 3;            // music starts at 1.0 s; 90 BPM quarter = 2/3 s
-const DURATION = 68;
+const BPM = 132, Q = 60 / BPM, BAR = 3 * Q, T0 = 0.5;   // music starts at 0.5 s
+const DURATION = 26;
+const bt = k => T0 + (k - 1) * BAR;                  // start of bar k
 const cv = document.getElementById("c");
 const ctx = cv.getContext("2d");
 
@@ -316,438 +317,305 @@ function device(img, cx, cy, h, o = {}) {
   return { x, y, w, h };
 }
 
-// ---------- scenes ----------
-function sceneHero(t) {               // 0 – 17.2, dark
-  background(true, t);
-  // warm light pool behind the board
-  glowDot(W / 2, 640, 900, "#5A3620", 0.35);
-  const fin = easeOut(prog(t, 0.1, 1.1));
-  const framesK = easeInOut(prog(t, 8.4, 1.2));
-  const frets = lerp(12, 20, framesK);
-  const boardY = lerp(500, 390, easeInOut(prog(t, 8.4, 1.0)));
-  const live = liveRoute(t, D.profiles.balanced.route);
-  // stage 2 ghosts: every other playable position of the note sounding now
-  let ghosts = [];
-  const ghostA = win(t, 9.3, 16.9, 0.5, 0.5);
-  if (ghostA > 0 && live.i >= 0) {
-    const n = D.melody[live.i]; const cur = D.profiles.balanced.route[live.i];
-    const k = prog(t, noteT(n), 0.2);
-    ghosts = positionsFor(n.midi).filter(p => !(p.s === cur.s && p.f === cur.f)).map(p => ({ ...p, alpha: ghostA * easeOut(k) }));
-  }
-  drawFretboard({ x: 160 + (1 - fin) * 40, y: boardY + (1 - fin) * 30, w: 1600 - (1 - fin) * 80, h: 300, frets, alpha: fin,
-    markers: live.markers, route: live.route, ghosts });
-
-  // title lockup
-  const ta = win(t, 1.3, 8.9, 0.8, 0.5);
-  if (ta > 0) {
-    ctx.save(); ctx.globalAlpha = ta;
-    const k = easeOut(prog(t, 1.3, 1.0)), up = (1 - k) * 30 - easeIn(prog(t, 8.3, 0.6)) * 30;
-    const word = "StringMap", size = 150;
-    const ww = measure(word, size, 700, "display", -2);
-    const iconS = 150, gap = 40, total = iconS + gap + ww, x0 = W / 2 - total / 2;
-    ctx.save(); ctx.shadowColor = "rgba(224,118,92,0.45)"; ctx.shadowBlur = 50;
-    rrect(x0, 170 + up, iconS, iconS, iconS * 0.225); ctx.clip();
-    ctx.drawImage(IMG.icon, x0, 170 + up, iconS, iconS); ctx.restore();
-    txt(word, x0 + iconS + gap, 297 + up, { size, weight: 700, family: "display", color: C.cream, ls: -2 });
-    const k2 = easeOut(prog(t, 2.6, 0.8));
-    ctx.globalAlpha = ta * k2;
-    txt("Learn notes. Find your frets.", W / 2, 400 + up + (1 - k2) * 16, { size: 40, weight: 500, color: C.onPlate, align: "center" });
-    ctx.restore();
-  }
-  // stage 2 copy
-  textBlock(t, { a: 9.2, b: 13.1, x: W / 2, y: 110, align: "center", w: 1500, head: "Every note lives in up to five places.", headSize: 66,
-    body: "Which one should your hand go to?", bodySize: 34 });
-  // legend for the rings
-  const la = win(t, 9.8, 13.2, 0.5, 0.3);
-  if (la > 0) {
-    ctx.save(); ctx.globalAlpha = la;
-    const y = 768;
-    glowDot(W / 2 - 330, y - 9, 22, C.redD, 0.6); ctx.fillStyle = C.redD; ctx.beginPath(); ctx.arc(W / 2 - 330, y - 9, 11, 0, 7); ctx.fill();
-    txt("the position StringMap picked", W / 2 - 308, y, { size: 24, color: C.onPlate });
-    ctx.strokeStyle = hexA(C.inlay, 0.75); ctx.lineWidth = 2; ctx.setLineDash([4, 3]); ctx.beginPath(); ctx.arc(W / 2 + 90, y - 9, 11, 0, 7); ctx.stroke(); ctx.setLineDash([]);
-    txt("every other place that note exists", W / 2 + 112, y, { size: 24, color: C.onPlate });
-    ctx.restore();
-  }
-  // stage 3: the number
-  const na = win(t, 13.2, 17.4, 0.4, 0.3);
-  if (na > 0) {
-    ctx.save(); ctx.globalAlpha = na;
-    const k = easeOut(prog(t, 13.2, 0.6));
-    txt("Minuet in G has 126 notes.", W / 2, 150 + (1 - k) * 20, { size: 60, weight: 600, family: "display", color: C.cream, align: "center" });
-    const k2 = easeOut(prog(t, 13.9, 0.6));
-    ctx.globalAlpha = na * k2;
-    rich([{ t: "That’s ", color: C.onPlate }, { t: "1.2 × 10", color: C.redD, weight: 700 }, { t: "78", color: C.redD, weight: 700, size: 22, dy: -16 }, { t: " ways to finger it.", color: C.onPlate }],
-      W / 2, 230 + (1 - k2) * 16, { size: 38, align: "center" });
-    ctx.restore();
-    // the full 79-digit count, typed out under the board
-    const digits = D.routes.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    const n = Math.floor(digits.length * easeInOut(prog(t, 14.3, 1.6)));
-    if (n > 0) {
-      ctx.save(); ctx.globalAlpha = na;
-      txt(digits.slice(0, n), W / 2 - measure(digits, 19, 400, "mono") / 2, 790, { size: 19, family: "mono", color: C.amberD });
-      const k3 = easeOut(prog(t, 15.4, 0.6));
-      ctx.globalAlpha = na * k3;
-      txt("Checking them one by one would never finish.", W / 2, 880, { size: 32, weight: 500, color: C.cream, align: "center" });
+// ---------- motion helpers ----------
+const easeBack = k => { k = clamp(k); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(k - 1, 3) + c1 * Math.pow(k - 1, 2); };
+/** Word-by-word pop-in. hi: indices drawn in the accent colour. */
+function kinetic(str, x, y, t, a, o = {}) {
+  const size = o.size || 96, weight = o.weight || 600, family = o.family || "display";
+  const words = str.split(" "), space = measure(" ", size, weight, family);
+  const widths = words.map(w => measure(w, size, weight, family));
+  const total = widths.reduce((p, w) => p + w, 0) + space * (words.length - 1);
+  let cx = o.align === "left" ? x : x - total / 2;
+  words.forEach((w, i) => {
+    const k = prog(t, a + i * (o.stagger ?? 0.05), 0.24);
+    if (k > 0) {
+      const e = easeBack(k), s = 1 + 0.4 * (1 - easeOut(k)), wx = cx + widths[i] / 2;
+      ctx.save(); ctx.globalAlpha *= easeOut(k * 1.6);
+      ctx.translate(wx, y); ctx.scale(s, s); ctx.translate(-wx, -y);
+      txt(w, cx, y + (1 - e) * 36, { size, weight, family, ls: o.ls ?? -1, color: (o.hi || []).includes(i) ? (o.hiColor || C.redD) : (o.color || C.cream) });
       ctx.restore();
     }
-  }
+    cx += widths[i] + space;
+  });
 }
+function kicker(s, x, y, t, a, dark = true, align = "left") {
+  const k = easeOut(prog(t, a, 0.2));
+  txt(s, x + (1 - k) * -20, y, { size: 22, weight: 700, color: dark ? C.redD : C.red, ls: 4, alpha: k, align });
+}
+function drift(t, a) { return (t - a) * 18; }
 
-const PHONE_H = 900;
-function sceneProduct(t) {          // 16.8 – 33.4, cream
+// ---------- scenes (one per bar of the music, hard cuts on the downbeat) ----------
+function sHook(t, a) {
+  background(true, t);
+  glowDot(W / 2, 700, 900, "#6A3A20", 0.4);
+  const k = easeOut(prog(t, 0, 0.35));
+  const live = liveRoute(t, D.profiles.balanced.route);
+  // trail of the notes just played, fading
+  const i = Math.max(0, live.i), trail = [];
+  for (let j = Math.max(0, i - 6); j < i; j++) trail.push({ ...D.profiles.balanced.route[j], alpha: 0.12 + 0.06 * (j - i + 6) });
+  const z = 1.08 - 0.08 * easeOut(prog(t, 0, 1.8));
+  ctx.save(); ctx.translate(W / 2, 700); ctx.scale(z, z); ctx.translate(-W / 2, -700);
+  drawFretboard({ x: 160, y: 560, w: 1600, h: 300, frets: 12, alpha: k, markers: live.markers, route: live.route, trail });
+  ctx.restore();
+  kinetic("Know exactly where", W / 2, 250, t, 0.15, { size: 104 });
+  kinetic("every note goes.", W / 2, 380, t, 0.45, { size: 104, hi: [1] });
+}
+function sBrand(t, a) {
+  background(true, t);
+  glowDot(W / 2, 460, 800, "#7A3A1C", 0.45);
+  const k = prog(t, a, 0.3), s = 0.6 + 0.4 * easeBack(k);
+  const iconS = 230;
+  ctx.save(); ctx.globalAlpha = easeOut(k * 2);
+  ctx.translate(W / 2, 330); ctx.scale(s, s); ctx.rotate((1 - easeOut(k)) * -0.25); ctx.translate(-W / 2, -330);
+  ctx.shadowColor = "rgba(224,118,92,0.6)"; ctx.shadowBlur = 90;
+  rrect(W / 2 - iconS / 2, 330 - iconS / 2, iconS, iconS, iconS * 0.225); ctx.clip();
+  ctx.drawImage(IMG.icon, W / 2 - iconS / 2, 330 - iconS / 2, iconS, iconS);
+  ctx.restore();
+  kinetic("StringMap", W / 2, 640, t, a + 0.12, { size: 170, weight: 700, ls: -3 });
+  const k2 = easeOut(prog(t, a + 0.5, 0.3));
+  txt("Learn notes. Find your frets.", W / 2, 745 + (1 - k2) * 20, { size: 46, weight: 500, color: C.onPlate, align: "center", alpha: k2 });
+}
+function productScene(t, a, sp) {
   background(false, t);
-  const subs = [
-    { a: 17.0, kicker: "TUTORIAL MODE", head: "24 guided lessons.", body: "From six open strings to triads, fingerpicking and hammer-ons. See it, hear it, try it, at your own tempo.", devices: [["learn"], ["chord-shape"]] },
-    { a: 21.0, kicker: "SONGBOOK", head: "20 familiar classics.", body: "Every tune comes two ways: follow the melody note by note, or play the chords with each tone lit on its own string.", devices: [["library"], ["chords"]] },
-    { a: 25.0, kicker: "PLAY", head: "Notation, tab, sound and\nfretboard. One clock.", body: "Slow down without changing pitch. Loop a measure, count in, add a metronome, switch to left-handed.", devices: [["ipad-chords", true], ["melody"]] },
-    { a: 29.0, kicker: "PRIVATE BY DESIGN", head: "Works offline.\nNo account.", body: "18 original exercises, 24 lessons and every song live on your device. Nothing is collected.", devices: [["free-practice"], ["songbook-home"]], chips: true },
-  ];
-  for (const s of subs) {
-    const end = s.a + 4;
-    textBlock(t, { a: s.a, b: end + 0.05, x: 150, y: 300, dark: false, kicker: s.kicker, head: s.head, body: s.body, w: 700, bw: 640, headSize: 70 });
-    if (s.chips) {
-      const ca = win(t, s.a + 0.6, end + 0.05, 0.4, 0.35);
-      const labels = ["Offline", "No account", "Data Not Collected"];
-      let x = 150;
-      labels.forEach((l, i) => {
-        const k = easeOut(prog(t, s.a + 0.6 + i * 0.15, 0.4));
-        ctx.save(); ctx.globalAlpha = ca * k;
-        const w = measure(l, 25, 600) + 74;
-        ctx.fillStyle = C.raisedL; rrect(x, 760 + (1 - k) * 14, w, 54, 27); ctx.fill();
-        ctx.strokeStyle = C.hairL; ctx.lineWidth = 1.5; ctx.stroke();
-        ctx.fillStyle = C.green; ctx.beginPath(); ctx.arc(x + 29, 787 + (1 - k) * 14, 12, 0, 7); ctx.fill();
-        ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.beginPath();
-        ctx.moveTo(x + 23, 787 + (1 - k) * 14); ctx.lineTo(x + 27.5, 792 + (1 - k) * 14); ctx.lineTo(x + 35, 782 + (1 - k) * 14); ctx.stroke();
-        txt(l, x + 50, 796 + (1 - k) * 14, { size: 25, weight: 600, color: C.ink });
-        ctx.restore();
-        x += w + 16;
-      });
-    }
-    // devices
-    const inK = easeOut(prog(t, s.a - 0.05, 0.75)), inK2 = easeOut(prog(t, s.a + 0.1, 0.75));
-    const outK = easeIn(prog(t, end - 0.3, 0.4));
-    if (t < s.a - 0.1 || t > end + 0.2) continue;
-    const [d1, d2] = s.devices;
-    if (d1[1]) {          // iPad + phone
-      device(IMG[d1[0]], 1310 + (1 - inK) * 260 - outK * 200, 540, 860, { ipad: true, alpha: inK * (1 - outK) });
-      device(IMG[d2[0]], 1690 + (1 - inK2) * 260 - outK * 200, 610, 720, { alpha: inK2 * (1 - outK) });
-    } else {
-      device(IMG[d1[0]], 1170 + (1 - inK) * 260 - outK * 200, 540, PHONE_H, { alpha: inK * (1 - outK) });
-      device(IMG[d2[0]], 1615 + (1 - inK2) * 260 - outK * 200, 575, PHONE_H, { alpha: inK2 * (1 - outK) });
-    }
+  // accent sweep behind the devices
+  ctx.save(); ctx.globalAlpha = 0.9 * easeOut(prog(t, a, 0.3));
+  const g = ctx.createRadialGradient(1380, 560, 50, 1380, 560, 760);
+  g.addColorStop(0, sp.glow || "rgba(224,118,92,0.30)"); g.addColorStop(1, "rgba(224,118,92,0)");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.restore();
+  kicker(sp.kicker, 140, 330, t, a, false);
+  sp.lines.forEach((l, i) => kinetic(l, 140, 440 + i * 104, t, a + 0.05 + i * 0.14, { size: 96, align: "left", color: C.ink, hi: sp.hi?.[i] || [], hiColor: C.red }));
+  if (sp.chips) {
+    let x = 140;
+    sp.chips.forEach((l, i) => {
+      const k = prog(t, a + 0.4 + i * 0.09, 0.25); if (k <= 0) return;
+      const e = easeBack(k), w = measure(l, 27, 600) + 78, y = 690;
+      ctx.save(); ctx.globalAlpha = easeOut(k * 1.5);
+      ctx.translate(x + w / 2, y + 28); ctx.scale(e, e); ctx.translate(-x - w / 2, -y - 28);
+      ctx.fillStyle = C.raisedL; rrect(x, y, w, 58, 29); ctx.fill(); ctx.strokeStyle = C.hairL; ctx.lineWidth = 1.5; ctx.stroke();
+      ctx.fillStyle = C.green; ctx.beginPath(); ctx.arc(x + 31, y + 29, 13, 0, 7); ctx.fill();
+      ctx.strokeStyle = "#fff"; ctx.lineWidth = 3.2; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(x + 25, y + 29); ctx.lineTo(x + 29.5, y + 34); ctx.lineTo(x + 37.5, y + 24); ctx.stroke();
+      txt(l, x + 54, y + 39, { size: 27, weight: 600, color: C.ink });
+      ctx.restore(); x += w + 16;
+    });
+  }
+  const k1 = easeBack(prog(t, a, 0.32)), k2 = easeBack(prog(t, a + 0.08, 0.32)), d = drift(t, a);
+  const [d1, d2] = sp.devices;
+  if (d1[1]) {
+    device(IMG[d1[0]], 1330 + (1 - k1) * 700, 560 - d * 0.6, 860, { ipad: true, rot: (1 - k1) * 0.1 });
+    device(IMG[d2[0]], 1720 + (1 - k2) * 700, 640 - d, 700, { rot: (1 - k2) * 0.12 });
+  } else {
+    device(IMG[d1[0]], 1190 + (1 - k1) * 700, 560 - d * 0.6, 900, { rot: -0.035 + (1 - k1) * 0.1 });
+    device(IMG[d2[0]], 1610 + (1 - k2) * 700, 600 - d, 900, { rot: 0.035 + (1 - k2) * 0.12 });
   }
 }
-
-// Trellis for bars 17-18 of the melody (10 notes), real Balanced-profile DP output.
-const TR = { first: 0, count: 10, x0: 250, x1: 1670, y0: 470, dy: 96, nw: 132, nh: 64 };
-function trellisGeom() {
-  if (TR.first === 0) TR.first = D.melody.findIndex(n => n.m === 17);
+function sNumber(t, a) {
+  background(true, t);
+  // wall of the exact 79-digit count, scrolling
+  const digits = D.routes;
+  ctx.save();
+  for (let r = 0; r < 16; r++) {
+    const dir = r % 2 ? 1 : -1, off = ((t - a) * 260 * dir + r * 137) % 1200;
+    txt((digits + " " + digits).slice(r * 3), -300 + off, 40 + r * 70, { size: 46, family: "mono", color: C.amberD, alpha: 0.07 });
+  }
+  ctx.restore();
+  const k = prog(t, a, 0.28), s = 1.6 - 0.6 * easeOut(k);
+  ctx.save(); ctx.globalAlpha = easeOut(k * 2);
+  ctx.translate(W / 2, 520); ctx.scale(s, s); ctx.translate(-W / 2, -520);
+  rich([{ t: "1.2 × 10", weight: 700 }, { t: "78", weight: 700, size: 110, dy: -120 }], W / 2, 590, { size: 250, family: "display", color: C.redD, align: "center" });
+  ctx.restore();
+  kinetic("ways to play one song.", W / 2, 760, t, a + 0.25, { size: 72 });
+}
+function sEngine(t, a) {
+  background(true, t);
+  const second = t >= a + BAR;
+  if (!second) kinetic("StringMap finds the best one.", W / 2, 190, t, a, { size: 84, hi: [4] });
+  else kinetic("And shows you why.", W / 2, 190, t, a + BAR, { size: 84, hi: [3] });
+  drawTrellis(t, {
+    appear: j => a + 0.03 * j, path: [a + 0.45, 0.45], scan: [a + BAR, 0.45], call: a + BAR + 0.5,
+  });
+  const c = easeOut(prog(t, a + BAR + 0.55, 0.2));
+  if (c > 0) rich([{ t: "Fret 3 looks easier. Over the whole song it costs " }, { t: "+4.7", color: C.amberD, weight: 700, family: "mono" }], W / 2, 1000, { size: 34, weight: 500, align: "center", color: C.cream, alpha: c });
+  else txt("Exact dynamic programming over every playable position.", W / 2, 1000, { size: 30, color: C.onPlate, align: "center", alpha: easeOut(prog(t, a + 0.5, 0.25)) });
+}
+const TR = { first: 0, count: 10, x0: 240, x1: 1680, y0: 390, dy: 104, nw: 136, nh: 70 };
+function drawTrellis(t, T) {
+  if (!TR.first) TR.first = D.melody.findIndex(n => n.m === 17);
   const cols = [];
   for (let j = 0; j < TR.count; j++) {
-    const i = TR.first + j;
-    const layer = D.balanced.layers[i];
-    const x = TR.x0 + j * (TR.x1 - TR.x0) / (TR.count - 1);
-    cols.push({ i, x, nodes: layer.map((p, k) => ({ ...p, k, x, y: TR.y0 + k * TR.dy, delta: D.balanced.delta[i][k], sel: D.balanced.selected[i] === k, par: D.balanced.parents[i][k] })) });
+    const i = TR.first + j, x = TR.x0 + j * (TR.x1 - TR.x0) / (TR.count - 1);
+    cols.push({ i, x, nodes: D.balanced.layers[i].map((p, k) => ({ ...p, k, x, y: TR.y0 + k * TR.dy, delta: D.balanced.delta[i][k], sel: D.balanced.selected[i] === k, par: D.balanced.parents[i][k] })) });
   }
-  return cols;
-}
-function sceneEngine(t) {            // 33.0 – 41.4, dark
-  background(true, t);
-  const out = easeIn(prog(t, 40.9, 0.5));
-  ctx.save(); ctx.globalAlpha = 1 - out;
-  textBlock(t, { a: 33.25, b: 41.4, x: 150, y: 96, kicker: "UNDER THE HOOD", head: "An exact optimizer, not a lookup table.", headSize: 56, w: 1300 });
-  // formula
-  const fa = win(t, 34.3, 41.4, 0.6, 0.3);
-  if (fa > 0) {
-    ctx.save(); ctx.globalAlpha *= fa;
-    rich([{ t: "DP(i, p) = " }, { t: "U(p)", color: C.amberD }, { t: " + min" }, { t: "q", size: 18, dy: 8 }, { t: " [ DP(i−1, q) + " }, { t: "T(q, p)", color: C.blueD }, { t: " ]" }],
-      150, 300, { size: 28, family: "mono", color: C.cream });
-    txt("U = cost of a position    T = cost of moving between two", 150, 342, { size: 21, color: C.onPlateDim });
-    ctx.restore();
-  }
-  const cols = trellisGeom();
-  // backtrack progress: lights the optimal path right→left
-  const bt = easeInOut(prog(t, 37.05, 1.1));
-  const bw = easeInOut(prog(t, 38.45, 1.5));   // backward pass scan
+  const btp = easeInOut(prog(t, T.path[0], T.path[1]));
+  const bw = easeInOut(prog(t, T.scan[0], T.scan[1]));
   const scanX = lerp(TR.x1 + 120, TR.x0 - 120, bw);
-  const onPath = j => bt > 0 && (TR.count - 1 - j) / (TR.count - 1) <= bt + 1e-6;
-  // edges
+  const onPath = j => btp > 0 && (TR.count - 1 - j) / (TR.count - 1) <= btp + 1e-6;
   for (let j = 1; j < cols.length; j++) {
-    const appear = noteT(D.melody[cols[j].i]);
-    const ek = easeOut(prog(t, appear, 0.35));
-    if (ek <= 0) continue;
-    const pk = easeOut(prog(t, appear + 0.25, 0.3));
-    for (const b of cols[j].nodes) {
-      for (const a of cols[j - 1].nodes) {
-        const best = b.par === a.k;
-        const x1 = a.x + TR.nw / 2, y1 = a.y, x2 = lerp(x1, b.x - TR.nw / 2, ek), y2 = lerp(y1, b.y, ek);
-        const lit = best && b.sel && a.sel && onPath(j) && onPath(j - 1);
-        ctx.save();
-        if (lit) {
-          ctx.strokeStyle = C.redD; ctx.lineWidth = 4; ctx.shadowColor = C.redD; ctx.shadowBlur = 16;
-        } else {
-          ctx.strokeStyle = best ? hexA(C.inlay, 0.1 + 0.3 * pk * (1 - bt * 0.5)) : hexA(C.inlay, 0.09 * (1 - bt * 0.6));
-          ctx.lineWidth = best ? 2 : 1.2;
-        }
-        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.bezierCurveTo((x1 + x2) / 2, y1, (x1 + x2) / 2, y2, x2, y2); ctx.stroke();
-        ctx.restore();
-      }
+    const ek = easeOut(prog(t, T.appear(j), 0.25)); if (ek <= 0) continue;
+    for (const b of cols[j].nodes) for (const p of cols[j - 1].nodes) {
+      const lit = b.par === p.k && b.sel && p.sel && onPath(j) && onPath(j - 1);
+      const x1 = p.x + TR.nw / 2, y1 = p.y, x2 = lerp(x1, b.x - TR.nw / 2, ek), y2 = lerp(y1, b.y, ek);
+      ctx.save();
+      if (lit) { ctx.strokeStyle = C.redD; ctx.lineWidth = 5; ctx.shadowColor = C.redD; ctx.shadowBlur = 20; }
+      else { ctx.strokeStyle = hexA(C.inlay, 0.1 * (1 - btp * 0.5)); ctx.lineWidth = 1.2; }
+      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.bezierCurveTo((x1 + x2) / 2, y1, (x1 + x2) / 2, y2, x2, y2); ctx.stroke();
+      ctx.restore();
     }
   }
-  // nodes
-  let callNode = null;
-  for (let j = 0; j < cols.length; j++) {
-    const col = cols[j];
-    const n = D.melody[col.i];
-    const ap = noteT(n);
-    const k = easeOut(prog(t, ap, 0.35));
-    if (k <= 0) continue;
-    const sounding = t >= ap && (j === cols.length - 1 ? t < ap + n.dur * Q : t < noteT(D.melody[col.i + 1]));
-    ctx.save(); ctx.globalAlpha *= k;
-    txt(noteName(n.midi), col.x, TR.y0 - 70 + (1 - k) * 10, { size: 32, weight: 600, family: "display", color: sounding ? C.redD : C.cream, align: "center" });
-    ctx.restore();
+  let call = null;
+  cols.forEach((col, j) => {
+    const k = easeBack(prog(t, T.appear(j), 0.25)); if (k <= 0) return;
+    txt(noteName(D.melody[col.i].midi), col.x, TR.y0 - 70, { size: 34, weight: 600, family: "display", color: C.cream, align: "center", alpha: clamp(k) });
     for (const nd of col.nodes) {
       const lit = nd.sel && onPath(j);
-      const nk = easeOut(prog(t, ap + nd.k * 0.04, 0.35));
-      ctx.save(); ctx.globalAlpha *= nk;
-      const x = nd.x - TR.nw / 2, y = nd.y - TR.nh / 2 + (1 - nk) * 12;
-      if (lit) { glowDot(nd.x, nd.y, 95, C.redD, 0.35); }
-      ctx.fillStyle = lit ? C.redD : C.raisedD; rrect(x, y, TR.nw, TR.nh, 16); ctx.fill();
-      ctx.strokeStyle = lit ? "rgba(255,255,255,0.55)" : C.hairD; ctx.lineWidth = lit ? 2 : 1.5; ctx.stroke();
-      txt(nd.f === 0 ? "open" : `fret ${nd.f}`, nd.x, y + 29, { size: 22, weight: 700, color: lit ? "#fff" : C.cream, align: "center" });
-      txt(`string ${nd.s}`, nd.x, y + 51, { size: 15, weight: 500, color: lit ? "rgba(255,255,255,0.85)" : C.onPlateDim, align: "center" });
-      // price of the road not taken (backward pass)
+      ctx.save(); ctx.globalAlpha *= clamp(k);
+      const x = nd.x - TR.nw / 2, y = nd.y - TR.nh / 2 + (1 - k) * 20;
+      if (lit) glowDot(nd.x, nd.y, 110, C.redD, 0.4);
+      ctx.fillStyle = lit ? C.redD : C.raisedD; rrect(x, y, TR.nw, TR.nh, 18); ctx.fill();
+      ctx.strokeStyle = lit ? "rgba(255,255,255,0.6)" : C.hairD; ctx.lineWidth = lit ? 2 : 1.5; ctx.stroke();
+      txt(nd.f === 0 ? "open" : `fret ${nd.f}`, nd.x, y + 32, { size: 24, weight: 700, color: lit ? "#fff" : C.cream, align: "center" });
+      txt(`string ${nd.s}`, nd.x, y + 55, { size: 16, weight: 500, color: lit ? "rgba(255,255,255,0.85)" : C.onPlateDim, align: "center" });
       if (!nd.sel && scanX < nd.x + 10) {
-        const dk = easeOut(prog(scanX, nd.x + 10, -60));
-        const label = "+" + nd.delta.toFixed(1);
-        const lw = measure(label, 16, 600, "mono") + 16;
-        ctx.globalAlpha *= dk;
-        ctx.fillStyle = "#3A2A12"; rrect(x + TR.nw - lw + 8, y - 12, lw, 26, 13); ctx.fill();
-        txt(label, x + TR.nw - lw / 2 + 8, y + 6, { size: 16, weight: 600, family: "mono", color: C.amberD, align: "center" });
+        const label = "+" + nd.delta.toFixed(1), lw = measure(label, 17, 600, "mono") + 16;
+        ctx.globalAlpha *= easeOut(prog(scanX, nd.x + 10, -60));
+        ctx.fillStyle = "#3A2A12"; rrect(x + TR.nw - lw + 8, y - 13, lw, 28, 14); ctx.fill();
+        txt(label, x + TR.nw - lw / 2 + 8, y + 6, { size: 17, weight: 600, family: "mono", color: C.amberD, align: "center" });
       }
       ctx.restore();
-      if (j === 1 && nd.f === 3) callNode = nd;
+      if (j === 1 && nd.f === 3) call = nd;
     }
-  }
-  // backward scanline
-  if (bw > 0 && bw < 1) {
-    const g = ctx.createLinearGradient(scanX - 40, 0, scanX + 40, 0);
-    g.addColorStop(0, hexA(C.blueD, 0)); g.addColorStop(0.5, hexA(C.blueD, 0.35)); g.addColorStop(1, hexA(C.blueD, 0));
-    ctx.fillStyle = g; ctx.fillRect(scanX - 40, TR.y0 - 110, 80, 520);
-  }
-  // captions under the trellis
-  const c1 = win(t, 37.2, 38.5, 0.4, 0.3);
-  if (c1 > 0) txt("The cheapest complete route, found exactly. Not a guess.", W / 2, 985, { size: 32, weight: 500, color: C.cream, align: "center", alpha: c1 });
-  const c2 = win(t, 38.55, 40.0, 0.35, 0.3);
-  if (c2 > 0) txt("Then it runs backwards, so every road not taken gets a price.", W / 2, 985, { size: 32, weight: 500, color: C.cream, align: "center", alpha: c2 });
-  const c3 = win(t, 40.0, 41.4, 0.35, 0.2);
-  if (c3 > 0 && callNode) {
-    const pulse = 0.5 + 0.5 * Math.sin((t - 40) * 9);
-    ctx.save(); ctx.globalAlpha = c3;
-    ctx.strokeStyle = C.amberD; ctx.lineWidth = 3; rrect(callNode.x - TR.nw / 2 - 12 - pulse * 4, callNode.y - TR.nh / 2 - 26 - pulse * 4, TR.nw + 24 + pulse * 8, TR.nh + 38 + pulse * 8, 22); ctx.stroke();
-    ctx.restore();
-    rich([{ t: "G on fret 3 looks easier. Every full route through it costs ", color: C.cream }, { t: "4.7 more.", color: C.amberD, weight: 700 }], W / 2, 985, { size: 32, weight: 500, align: "center", alpha: c3 });
-  }
-  // stats
-  const sa = win(t, 37.3, 41.4, 0.5, 0.3);
-  if (sa > 0) {
-    ctx.save(); ctx.globalAlpha *= sa;
-    rich([{ t: "Whole song: " }, { t: "~10", color: C.redD, weight: 700 }, { t: "78", color: C.redD, weight: 700, size: 13, dy: -9 }, { t: " possible routes, solved in " }, { t: "2,223", color: C.redD, weight: 700 }, { t: " comparisons." }],
-      W - 150, 300, { size: 23, color: C.onPlate, align: "right" });
-    ctx.restore();
-  }
-  ctx.restore();
-}
-
-function sceneExplain(t) {           // 41.0 – 45.4, dark
-  background(true, t);
-  textBlock(t, { a: 41.15, b: 45.4, x: 150, y: 250, kicker: "EXPLAINABLE", head: "Every choice explains itself.", headSize: 70, w: 820,
-    body: "Tap Why? to see each weighted cost behind a position: fret movement, hand shifts, string changes and skips, stretch, open strings, and what the best alternative would have cost.", bw: 740 });
-  const k = easeOut(prog(t, 41.1, 0.8)), o = easeIn(prog(t, 45.0, 0.4));
-  device(IMG["trace-dark"], 1420 + (1 - k) * 220 - o * 140, 545, 920, { alpha: k * (1 - o), dark: true });
-}
-
-function sceneCraft(t) {             // 45.0 – 49.4, dark
-  background(true, t);
-  textBlock(t, { a: 45.1, b: 49.4, x: W / 2, y: 90, align: "center", kicker: "NATIVE SWIFTUI", head: "Drawn in code, down to the fret spacing.", headSize: 62, w: 1600 });
-  // linear -> log -> 60/40 blend, the actual FretboardView formula
-  const k1 = easeInOut(prog(t, 46.25, 0.55)), k2 = easeInOut(prog(t, 47.55, 0.6));
-  const blend = k1 * (1 - k2) + 0.6 * k2;
-  const fa = easeOut(prog(t, 45.1, 0.6)) * (1 - easeIn(prog(t, 49.0, 0.4)));
-  const live = liveRoute(t, D.profiles.balanced.route);
-  drawFretboard({ x: 160, y: 390, w: 1600, h: 300, frets: 20, logBlend: blend, alpha: fa, markers: live.markers, route: live.route });
-  const labels = [
-    { a: 45.4, b: 46.35, head: "Evenly spaced", body: "Easy to tap, but no guitar looks like this." },
-    { a: 46.5, b: 47.65, head: "Equal temperament, 2^(−n/12)", body: "A real neck, but the high frets get too small to tap." },
-    { a: 47.8, b: 49.4, head: "StringMap: 60% real, 40% even", body: "Keeps the taper. Every fret stays tappable." },
-  ];
-  for (const l of labels) {
-    const a = win(t, l.a, l.b, 0.3, 0.25) * fa;
-    if (a <= 0) continue;
-    txt(l.head, W / 2, 820, { size: 40, weight: 600, family: "display", color: C.cream, align: "center", alpha: a });
-    txt(l.body, W / 2, 876, { size: 28, color: C.onPlate, align: "center", alpha: a });
+  });
+  if (call && t > T.call) {
+    const p = 0.5 + 0.5 * Math.sin((t - T.call) * 14), k = easeBack(prog(t, T.call, 0.25));
+    ctx.save(); ctx.globalAlpha = clamp(k); ctx.strokeStyle = C.amberD; ctx.lineWidth = 4; ctx.shadowColor = C.amberD; ctx.shadowBlur = 20;
+    rrect(call.x - TR.nw / 2 - 14 - p * 4, call.y - TR.nh / 2 - 28 - p * 4, TR.nw + 28 + p * 8, TR.nh + 42 + p * 8, 24); ctx.stroke(); ctx.restore();
   }
 }
-
-const PROFILE_NAMES = [["beginner", "Beginner"], ["balanced", "Balanced"], ["stayInPosition", "Stay in Position"], ["minimumMovement", "Minimum Movement"], ["performance", "Performance"]];
-function sceneProfiles(t) {          // 49.0 – 53.4, dark
+function sProfiles(t, a) {
   background(true, t);
-  const fo = easeIn(prog(t, 53.0, 0.4));
-  ctx.save(); ctx.globalAlpha = 1 - fo;
-  textBlock(t, { a: 49.1, b: 53.4, x: W / 2, y: 70, align: "center", kicker: "PROFILES", head: "Five profiles. One cost function.", headSize: 60, w: 1600 });
-  // chips
-  let total = 0; const cw = PROFILE_NAMES.map(([, n]) => measure(n, 23, 600) + 44); total = cw.reduce((a, b) => a + b, 0) + 14 * 4;
+  kinetic("Play it your way.", W / 2, 180, t, a, { size: 92, hi: [3] });
+  const names = ["Beginner", "Balanced", "Stay in Position", "Minimum Movement", "Performance"];
+  const cw = names.map(n => measure(n, 24, 600) + 44), total = cw.reduce((p, w) => p + w, 0) + 14 * 4;
   let x = W / 2 - total / 2;
-  PROFILE_NAMES.forEach(([id, n], i) => {
-    const k = easeOut(prog(t, 49.45 + i * 0.08, 0.4));
-    const hi = id === "beginner" || id === "balanced";
-    ctx.save(); ctx.globalAlpha *= k;
-    ctx.fillStyle = hi ? hexA(C.redD, 0.18) : C.raisedD; rrect(x, 250 + (1 - k) * 10, cw[i], 48, 24); ctx.fill();
-    ctx.strokeStyle = hi ? C.redD : C.hairD; ctx.lineWidth = 1.5; ctx.stroke();
-    txt(n, x + cw[i] / 2, 282 + (1 - k) * 10, { size: 23, weight: 600, color: hi ? C.redD : C.onPlate, align: "center" });
-    ctx.restore(); x += cw[i] + 14;
+  names.forEach((n, i) => {
+    const k = prog(t, a + 0.15 + i * 0.05, 0.22); const hi = i < 2;
+    if (k > 0) {
+      const e = easeBack(k); ctx.save(); ctx.globalAlpha = easeOut(k * 1.5);
+      ctx.translate(x + cw[i] / 2, 262); ctx.scale(e, e); ctx.translate(-x - cw[i] / 2, -262);
+      ctx.fillStyle = hi ? hexA(C.redD, 0.2) : C.raisedD; rrect(x, 238, cw[i], 50, 25); ctx.fill(); ctx.strokeStyle = hi ? C.redD : C.hairD; ctx.lineWidth = 1.5; ctx.stroke();
+      txt(n, x + cw[i] / 2, 271, { size: 24, weight: 600, color: hi ? C.redD : C.onPlate, align: "center" });
+      ctx.restore();
+    }
+    x += cw[i] + 14;
   });
-  const rows = [
-    { id: "beginner", name: "Beginner", note: "reaches for the open G string", y: 360 },
-    { id: "balanced", name: "Balanced", note: "stays put around the fifth fret", y: 650 },
-  ];
-  const i = melodyIndexAt(t);
-  const barNotes = D.melody.map((n, idx) => ({ n, idx })).filter(o => o.n.m === D.melody[Math.max(0, i)].m);
-  rows.forEach((r, ri) => {
-    const k = easeOut(prog(t, 49.6 + ri * 0.15, 0.6));
-    const route = D.profiles[r.id].route;
-    const live = liveRoute(t, route);
-    const trail = barNotes.map(o => ({ ...route[o.idx], alpha: 0.4 }));
-    ctx.save(); ctx.globalAlpha *= k;
-    txt(r.name, 330, r.y + 38, { size: 34, weight: 600, family: "display", color: C.cream });
-    txt(r.note, 330 + measure(r.name, 34, 600, "display") + 18, r.y + 38, { size: 25, color: C.onPlate });
-    ctx.restore();
-    drawFretboard({ x: 330, y: r.y + 60, w: 1260, h: 205, frets: 7, scale: 0.8, alpha: k, markers: live.markers, route: live.route, trail });
+  const idx = D.melody.map((n, i) => n.m === 25 || n.m === 26 ? i : -1).filter(i => i >= 0);
+  const step = Math.min(idx.length - 1, Math.max(0, Math.floor((t - a - 0.25) / 0.13)));
+  [["beginner", "Beginner", "grabs the open G string", 350], ["balanced", "Balanced", "keeps your hand at fret 5", 660]].forEach(([id, nm, note, y], r) => {
+    const k = easeOut(prog(t, a + 0.1 + r * 0.08, 0.3)), route = D.profiles[id].route;
+    const cur = route[idx[step]], nxt = route[idx[Math.min(step + 1, idx.length - 1)]];
+    txt(nm, 330, y + 40, { size: 38, weight: 700, family: "display", color: C.cream, alpha: k });
+    txt(note, 330 + measure(nm, 38, 700, "display") + 20, y + 40, { size: 28, color: C.onPlate, alpha: k });
+    drawFretboard({ x: 330 + (1 - k) * 80, y: y + 64, w: 1260, h: 210, frets: 7, scale: 0.82, alpha: k,
+      trail: idx.map(i => ({ ...route[i], alpha: 0.35 })),
+      markers: [{ ...nxt, kind: "next" }, { ...cur, kind: "now" }], route: { from: cur, to: nxt } });
   });
-  const ca = win(t, 50.2, 53.4, 0.5, 0.3);
-  txt("Same exact search, different weights. All five are solved together, so switching is instant.", W / 2, 1010, { size: 26, color: C.onPlate, align: "center", alpha: ca });
-  ctx.restore();
 }
-
-function sceneChords(t) {            // 53.0 – 57.4, dark
+function sChords(t, a) {
   background(true, t);
-  const fo = easeIn(prog(t, 57.0, 0.4));
-  ctx.save(); ctx.globalAlpha = 1 - fo;
-  textBlock(t, { a: 53.1, b: 57.4, x: 150, y: 210, kicker: "CHORDS", head: "Chords are solved as whole hand shapes.", headSize: 62, w: 900,
-    body: "Every sounding note gets its own string at once, then the same exact search runs over complete shapes.", bw: 820 });
-  // chord grips from the Songbook chords arrangement, live with the music
-  const q = (t - T0) / Q;
-  const cur = D.chords.filter(c => q >= c.on && q < c.on + c.dur);
-  const label = D.chordLabels.find(l => q >= l.onset && q < l.onset + l.duration);
-  const fa = easeOut(prog(t, 53.2, 0.6));
-  const onK = cur.length ? prog(t, T0 + cur[0].on * Q, 0.12) : 1;
-  drawFretboard({ x: 1040, y: 250, w: 740, h: 340, frets: 5, scale: 1.1, alpha: fa, markers: cur.map(c => ({ s: c.s, f: c.f, kind: "now", scale: 1 + 0.15 * (1 - onK) })) });
-  if (label) {
-    const nm = ["C", "C♯", "D", "E♭", "E", "F", "F♯", "G", "A♭", "A", "B♭", "B"][label.root] + (label.quality === "m" ? "m" : "");
-    txt(nm, 1410, 690, { size: 64, weight: 700, family: "display", color: C.cream, align: "center", alpha: fa });
-    txt("Songbook · Minuet in G · Chords", 1410, 735, { size: 22, color: C.onPlateDim, align: "center", alpha: fa });
-  }
-  const checks = ["One string per note", "Four fingers, with barres", "Five-fret span at most", "Held notes stay put"];
-  checks.forEach((c, i) => {
-    const k = easeOut(prog(t, 54.0 + i * 0.3, 0.45));
-    const x = 150 + (i % 2) * 400, y = 600 + Math.floor(i / 2) * 88;
-    ctx.save(); ctx.globalAlpha *= k * fa;
-    ctx.fillStyle = C.raisedD; rrect(x, y + (1 - k) * 12, 380, 70, 18); ctx.fill(); ctx.strokeStyle = C.hairD; ctx.lineWidth = 1.5; ctx.stroke();
-    ctx.fillStyle = C.greenD; ctx.beginPath(); ctx.arc(x + 38, y + 35 + (1 - k) * 12, 14, 0, 7); ctx.fill();
-    ctx.strokeStyle = C.tobacco; ctx.lineWidth = 3.4; ctx.lineCap = "round"; ctx.beginPath();
-    ctx.moveTo(x + 31, y + 35 + (1 - k) * 12); ctx.lineTo(x + 36, y + 41 + (1 - k) * 12); ctx.lineTo(x + 45, y + 29 + (1 - k) * 12); ctx.stroke();
-    txt(c, x + 68, y + 44 + (1 - k) * 12, { size: 25, weight: 500, color: C.cream });
+  kinetic("Chords light up", 140, 400, t, a, { size: 96, align: "left" });
+  kinetic("on every string.", 140, 508, t, a + 0.12, { size: 96, align: "left", hi: [1] });
+  const grips = [[1, "G"], [3, "C"], [7, "D"]];
+  const bi = Math.min(2, Math.max(0, Math.floor((t - a) / Q)));
+  const [m, nm] = grips[bi], pts = D.chords.filter(c => c.m === m);
+  const kk = prog(t, a + bi * Q, 0.14);
+  drawFretboard({ x: 1000, y: 260, w: 780, h: 360, frets: 5, scale: 1.15, alpha: easeOut(prog(t, a, 0.2)),
+    markers: pts.map((c, i) => ({ s: c.s, f: c.f, kind: "now", scale: clamp(easeBack(prog(t, a + bi * Q + i * 0.02, 0.18)), 0, 2) })) });
+  const s = 1.4 - 0.4 * easeOut(kk);
+  ctx.save(); ctx.translate(1390, 740); ctx.scale(s, s); ctx.translate(-1390, -740);
+  txt(nm, 1390, 770, { size: 110, weight: 700, family: "display", color: C.cream, align: "center" }); ctx.restore();
+  const chips = ["One string per note", "Four fingers, barres OK", "Whole hand shapes, solved exactly"];
+  chips.forEach((c, i) => {
+    const k = easeOut(prog(t, a + 0.35 + i * 0.1, 0.22));
+    txt("✓  " + c, 140 + (1 - k) * -30, 620 + i * 54, { size: 30, weight: 500, color: i === 2 ? C.greenD : C.onPlate, alpha: k });
+  });
+}
+function sStats(t, a) {
+  ctx.fillStyle = C.red; ctx.fillRect(0, 0, W, H);
+  const g = ctx.createRadialGradient(W / 2, H / 2, 100, W / 2, H / 2, W * 0.7);
+  g.addColorStop(0, "rgba(255,160,120,0.25)"); g.addColorStop(1, "rgba(60,10,0,0.35)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  kinetic("Tested down to the audio.", W / 2, 250, t, a, { size: 84, color: "#FFF3EA" });
+  [[126, "automated tests"], [196, "audio tempo trials"], [3108, "sync checks"]].forEach(([n, l], i) => {
+    const x = W / 2 + (i - 1) * 560, k = prog(t, a + 0.12 + i * 0.1, 0.3), v = Math.round(n * easeOut(prog(t, a + 0.12 + i * 0.1, 0.7)));
+    if (k <= 0) return;
+    const e = easeBack(k);
+    ctx.save(); ctx.globalAlpha = easeOut(k * 1.6); ctx.translate(x, 560); ctx.scale(e, e); ctx.translate(-x, -560);
+    txt(v.toLocaleString("en-US"), x, 620, { size: 170, weight: 700, family: "display", color: "#FFF3EA", align: "center", ls: -4 });
+    txt(l, x, 700, { size: 36, weight: 600, color: "rgba(255,243,234,0.85)", align: "center" });
     ctx.restore();
   });
-  ctx.restore();
 }
-
-function sceneReceipts(t) {          // 57.0 – 61.4, dark
+function sOutro(t, a) {
   background(true, t);
-  const fo = easeIn(prog(t, 61.0, 0.4));
-  ctx.save(); ctx.globalAlpha = 1 - fo;
-  textBlock(t, { a: 57.1, b: 61.4, x: W / 2, y: 150, align: "center", kicker: "VERIFIED", head: "Tested all the way down to the audio.", headSize: 62, w: 1600 });
-  const tiles = [
-    { n: 126, fmt: v => Math.round(v).toString(), label: "automated tests across the engine and the app" },
-    { n: 196, fmt: v => Math.round(v).toString(), label: "tempo trials, each rendered to real audio and checked note by note" },
-    { n: 3108, fmt: v => Math.round(v).toLocaleString("en-US"), label: "clock and seek checks keep notation, sound and fretboard in step" },
-    { n: 0, fmt: () => "0", label: "accounts, ads or trackers. Everything works offline." },
-  ];
-  const tw = 380, gap = 26, x0 = W / 2 - (tiles.length * tw + (tiles.length - 1) * gap) / 2;
-  tiles.forEach((tile, i) => {
-    const a = 57.6 + i * 0.28;
-    const k = easeOut(prog(t, a, 0.55));
-    const x = x0 + i * (tw + gap), y = 420 + (1 - k) * 30;
-    ctx.save(); ctx.globalAlpha *= k;
-    ctx.fillStyle = C.raisedD; rrect(x, y, tw, 400, 28); ctx.fill(); ctx.strokeStyle = C.hairD; ctx.lineWidth = 1.5; ctx.stroke();
-    const v = tile.n * easeOut(prog(t, a, 1.0));
-    txt(tile.fmt(v), x + 36, y + 150, { size: 104, weight: 700, family: "display", color: i === 3 ? C.greenD : C.redD, ls: -2 });
-    para(tile.label, x + 36, y + 220, tw - 70, 38, { size: 26, color: C.onPlate });
-    ctx.restore();
-  });
-  txt("Counts from StringMap’s September 2026 release verification records.", W / 2, 920, { size: 20, color: C.onPlateDim, align: "center", alpha: win(t, 58.8, 61.4, 0.5, 0.3) });
-  ctx.restore();
-}
-
-function sceneOutro(t) {             // 61.0 – 68, dark
-  background(true, t);
-  const k = easeOut(prog(t, 61.2, 1.0));
-  glowDot(W / 2, 420, 700, "#6A3A20", 0.35 * k);
+  const k = prog(t, a, 0.35);
+  glowDot(W / 2, 360, 800, "#7A3A1C", 0.5 * easeOut(k));
   const live = liveRoute(t, D.profiles.balanced.route);
-  drawFretboard({ x: 360, y: 700, w: 1200, h: 230, frets: 12, scale: 0.85, alpha: 0.9 * easeOut(prog(t, 61.4, 1.2)), markers: live.markers, route: live.route });
-  ctx.save(); ctx.globalAlpha = k;
-  const s = 190;
-  ctx.save(); ctx.shadowColor = "rgba(224,118,92,0.55)"; ctx.shadowBlur = 70;
-  rrect(W / 2 - s / 2, 120 + (1 - k) * 30, s, s, s * 0.225); ctx.clip();
-  ctx.drawImage(IMG.icon, W / 2 - s / 2, 120 + (1 - k) * 30, s, s); ctx.restore();
-  txt("StringMap", W / 2, 440 + (1 - k) * 20, { size: 120, weight: 700, family: "display", color: C.cream, align: "center", ls: -2 });
-  const k2 = easeOut(prog(t, 61.9, 0.8));
-  ctx.globalAlpha = k2;
-  txt("Learn notes. Find your frets.", W / 2, 520, { size: 40, weight: 500, color: C.onPlate, align: "center" });
-  const k3 = easeOut(prog(t, 62.5, 0.8));
-  ctx.globalAlpha = k3;
-  const lbl = "Free for iPhone and iPad";
-  const lw = measure(lbl, 28, 600) + 64;
-  ctx.fillStyle = C.redD; rrect(W / 2 - lw / 2, 568, lw, 64, 32); ctx.fill();
-  txt(lbl, W / 2, 610, { size: 28, weight: 600, color: "#fff", align: "center" });
-  ctx.restore();
-  const ca = easeOut(prog(t, 63.2, 1.0));
-  txt("Music: Minuet in G (Petzold), from the StringMap Songbook, played with the app’s own guitar sound bank.", W / 2, 1030, { size: 19, color: C.onPlateDim, align: "center", alpha: ca });
-  // final fade to black
-  const fb = easeIn(prog(t, 66.6, 1.4));
+  drawFretboard({ x: 360, y: 740, w: 1200, h: 230, frets: 12, scale: 0.85, alpha: 0.9 * easeOut(prog(t, a + 0.2, 0.6)), markers: live.markers, route: live.route });
+  const s = 0.5 + 0.5 * easeBack(k), iconS = 190;
+  ctx.save(); ctx.globalAlpha = easeOut(k * 2); ctx.translate(W / 2, 215); ctx.scale(s, s); ctx.translate(-W / 2, -215);
+  ctx.shadowColor = "rgba(224,118,92,0.6)"; ctx.shadowBlur = 80;
+  rrect(W / 2 - iconS / 2, 120, iconS, iconS, iconS * 0.225); ctx.clip(); ctx.drawImage(IMG.icon, W / 2 - iconS / 2, 120, iconS, iconS); ctx.restore();
+  kinetic("StringMap", W / 2, 450, t, a + 0.1, { size: 130, weight: 700, ls: -3 });
+  const k2 = easeOut(prog(t, a + 0.45, 0.35));
+  txt("Learn notes. Find your frets.", W / 2, 540, { size: 42, weight: 500, color: C.onPlate, align: "center", alpha: k2 });
+  const k3 = prog(t, a + 0.8, 0.3);
+  if (k3 > 0) {
+    const e = easeBack(k3), lbl = "Free on iPhone and iPad", lw = measure(lbl, 32, 700) + 76;
+    const pulse = 1 + 0.03 * Math.sin((t - a) * 5);
+    ctx.save(); ctx.globalAlpha = easeOut(k3 * 1.5); ctx.translate(W / 2, 622); ctx.scale(e * pulse, e * pulse); ctx.translate(-W / 2, -622);
+    ctx.shadowColor = "rgba(224,118,92,0.6)"; ctx.shadowBlur = 40;
+    ctx.fillStyle = C.redD; rrect(W / 2 - lw / 2, 586, lw, 72, 36); ctx.fill(); ctx.shadowBlur = 0;
+    txt(lbl, W / 2, 634, { size: 32, weight: 700, color: "#fff", align: "center" }); ctx.restore();
+  }
+  txt("Soundtrack: Minuet in G from the StringMap Songbook, played on the app’s own guitar sound bank.", W / 2, 1040, { size: 18, color: C.onPlateDim, align: "center", alpha: easeOut(prog(t, a + 1.2, 0.6)) });
+  const fb = easeIn(prog(t, 24.9, 1.1));
   if (fb > 0) { ctx.fillStyle = `rgba(0,0,0,${fb})`; ctx.fillRect(0, 0, W, H); }
 }
 
-// Scene table with wipe/crossfade transitions.
+const P = (kick, lines, devices, extra = {}) => (t, a) => productScene(t, a, { kicker: kick, lines, devices, ...extra });
 const SCENES = [
-  { a: 0, b: 17.25, draw: sceneHero },
-  { a: 16.75, b: 33.35, draw: sceneProduct, wipe: [16.75, 0.5] },
-  { a: 32.85, b: 41.45, draw: sceneEngine, wipe: [32.85, 0.5] },
-  { a: 41.0, b: 45.45, draw: sceneExplain, fade: [41.0, 0.45] },
-  { a: 45.0, b: 49.45, draw: sceneCraft, fade: [45.0, 0.45] },
-  { a: 49.0, b: 53.45, draw: sceneProfiles, fade: [49.0, 0.45] },
-  { a: 53.0, b: 57.45, draw: sceneChords, fade: [53.0, 0.45] },
-  { a: 57.0, b: 61.45, draw: sceneReceipts, fade: [57.0, 0.45] },
-  { a: 61.0, b: 68.1, draw: sceneOutro, fade: [61.0, 0.45] },
+  { a: 0, draw: sHook },
+  { a: bt(2), draw: sBrand },
+  { a: bt(3), draw: P("TUTORIAL MODE", ["24 guided", "lessons."], [["learn"], ["chord-shape"]], { hi: [[0], []] }) },
+  { a: bt(4), draw: P("SONGBOOK", ["20 classics.", "Melody or chords."], [["library"], ["chords"]], { hi: [[0], []] }) },
+  { a: bt(5), draw: P("PLAY", ["Watch it", "light up."], [["ipad-chords", true], ["melody"]], { hi: [[], [1]] }) },
+  { a: bt(6), draw: P("PRACTICE", ["Slow it down.", "Loop it. Nail it."], [["play"], ["free-practice"]], { hi: [[], [2]] }) },
+  { a: bt(7), draw: sNumber },
+  { a: bt(8), draw: sEngine },
+  { a: bt(10), draw: sProfiles },
+  { a: bt(11), draw: sChords },
+  { a: bt(12), draw: sStats },
+  { a: bt(13), draw: P("PRIVATE BY DESIGN", ["Offline.", "No account."], [["songbook-home"], ["home"]], { chips: ["No ads", "No tracking", "Data Not Collected"], hi: [[0], []] }) },
+  { a: bt(14), draw: sOutro },
 ];
+const WIPE = 0.2;
 function renderAt(t) {
+  let ci = 0; SCENES.forEach((s, i) => { if (t >= s.a) ci = i; });
+  const cur = SCENES[ci], prev = SCENES[ci - 1];
+  // beat bounce on each downbeat while the music plays
+  const q = (t - T0) / BAR, ph = (q - Math.floor(q)) * BAR, bounce = q >= 0 && q < 16 ? Math.exp(-ph * 10) : 0;
   ctx.save();
   ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
-  for (const s of SCENES) {
-    if (t < s.a || t > s.b) continue;
-    ctx.save();
-    if (s.wipe) {
-      const k = easeInOut(prog(t, s.wipe[0], s.wipe[1]));
-      if (k < 1) { const y = H * (1 - k); ctx.beginPath(); ctx.rect(0, y, W, H - y); ctx.clip(); }
-    }
-    if (s.fade) ctx.globalAlpha = easeInOut(prog(t, s.fade[0], s.fade[1]));
-    s.draw(t);
-    ctx.restore();
-  }
-  // opening fade from black
-  const fi = 1 - easeOut(prog(t, 0, 0.8));
-  if (fi > 0) { ctx.fillStyle = `rgba(0,0,0,${fi})`; ctx.fillRect(0, 0, W, H); }
+  ctx.translate(W / 2, H / 2); ctx.scale(1 + 0.012 * bounce, 1 + 0.012 * bounce); ctx.translate(-W / 2, -H / 2);
+  const k = prev ? easeInOut(prog(t, cur.a, WIPE)) : 1;
+  if (k < 1) {
+    ctx.save(); prev.draw(t, prev.a); ctx.restore();
+    const dir = ci % 2 ? 1 : -1, edge = dir > 0 ? W * k : W * (1 - k);
+    ctx.save(); ctx.beginPath(); dir > 0 ? ctx.rect(0, 0, edge, H) : ctx.rect(edge, 0, W - edge, H); ctx.clip();
+    cur.draw(t, cur.a); ctx.restore();
+    ctx.fillStyle = C.redD; ctx.shadowColor = C.redD; ctx.shadowBlur = 40; ctx.fillRect(edge - 9, 0, 18, H); ctx.shadowBlur = 0;
+  } else cur.draw(t, cur.a);
   ctx.restore();
+  const fi = 1 - easeOut(prog(t, 0, 0.3));
+  if (fi > 0) { ctx.fillStyle = `rgba(0,0,0,${fi})`; ctx.fillRect(0, 0, W, H); }
 }
 
 async function init() {
